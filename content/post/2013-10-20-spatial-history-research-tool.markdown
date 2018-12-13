@@ -1,0 +1,30 @@
+---
+author: admin
+comments: true
+date: 2013-10-20 16:21:14+00:00
+type: post
+link: http://www.amanda-regan.com/2013/10/20/spatial-history-research-tool/
+slug: spatial-history-research-tool
+title: Spatial History as a Research Tool
+wordpress_id: 412
+categories:
+- Clio Wired I
+- Coursework
+---
+
+In Richard White's article ["What is Spatial History?,"](https://www.stanford.edu/group/spatialhistory/cgi-bin/site/pub.php?id=29) he discusses the turn to spatial history and the ways in which it can be used as a research tool to enhance historical scholarship. His article was fascinating and really got me thinking about different spatial history projects I've seen. Two that come to mind is ["Visualizing Emancipation"](http://dsl.richmond.edu/emancipation/), run by Scott Nesbit and Edward Ayers at the University of Richmond's Digital Scholarship Lab, and [The Geography of Hate](http://users.humboldt.edu/mstephens/hate/hate_map.html), run by Monica Stephens at Humboldt State University. I also have been thinking about mapping for my own research and what that might look like and how it might enhance my research.
+
+White's statement about spatial history and visualization toward the end of his article really struck me as important. He concludes by asserting that "visualization is itself a research tool." He explains:
+
+
+<blockquote>visualization and spatial history are not about producing illustrations or maps to communicate things that you have discovered by other means. It is a means of doing research; it generates questions that might otherwise go unasked, it reveals historical relations that might otherwise go unnoticed, and it undermines, or substantiates, stories upon which we build our own versions of the past.</blockquote>
+
+
+White's point that the mapping and visualization of historical research is more than just a way to communicate ideas. It allows researchers to display data in a way that brings complex ideas and trends to the forefront. Spatial History does more than just create supplementary material to visualize an argument, it is a research tool itself. White uses his work on Railroads as an example. Without mapping this data, complex trends and spatial relationships might have been lost. Mapping the routes, shipping logs, and other data related to railroads allowed him to view the evidence in a way he couldn't have and, as a result, make a larger and more nuanced argument about the progression and impact of railroads in American history.
+
+Thinking about using spatial history in my own work is challenging. I'm interested in the ways that ideas about the body and physical culture were represented in the popular media from about 1880-1940. I've been contemplating whether mapping could be useful for my research. One thing that came to mind is the usefulness of GIS and mapping technology for looking at regional ideas about beauty. While I was working on my master's I took a class on GIS technology and for the final project I came across an interesting trend. The final project was based off of research for my thesis which focused on a woman named Sylvia Ullback. Ullback was a Hollywood beauty expert in the 1920s and 1930s and wrote for Photoplay magazine. I argued that she was representative of a larger shift in ideas about the body and physical culture between 1920 and 1940. [![Media mentioning Sylvia Ullback overlaid with the percentage of the total population that was female.](http://www.amanda-regan.com/wp-content/uploads/2013/10/letters.discourse.femalpop-300x231.png)](http://www.amanda-regan.com/wp-content/uploads/2013/10/letters.discourse.femalpop.png)For my final project in the GIS class I wanted to attempt to map her readership as well as the reach of her ideas. I plotted all of the newspaper articles I had about her from across the country (over 300) and also mapped all the letters from readers that were published with her articles in Photoplay. While my findings really told me more about newspaper syndication during this time rather than about her reach, I did find one interesting trend. Almost all of the areas where se was discussed or mentioned were above the Mason Dixon line. It led me to wonder if there were regional differences in the ideas about beauty. It probably had a lot to do with the African American population in the south, which still largely illiterate, and that her articles were aimed, almost exclusively, at white women. But, nevertheless, it made me wonder if there were regional differences.
+
+[![The Geography of Hate is a GIS mapping project run by Monica Stephens at Humbolt University. This image show the number of tweets using racial slurs.](http://www.amanda-regan.com/wp-content/uploads/2013/10/Screen-Shot-2013-10-20-at-11.38.08-AM-300x193.png)](http://www.amanda-regan.com/wp-content/uploads/2013/10/Screen-Shot-2013-10-20-at-11.38.08-AM.png)I think it would be interesting to map the locations of syndicated beauty columns, the locations of gyms during this period, and where diet advertisements appeared. In a perfect world that could be overlaid with data about newspaper syndication and subscriptions but, as far as I know, that data doesn't exist. [
+](http://users.humboldt.edu/mstephens/hate/hate_map.html)I also think it might be useful to mine these articles for common themes and motifs using text analysis software and then map the findings. I'm thinking of the type of map used on the [Geography of Hate](http://users.humboldt.edu/mstephens/hate/hate_map.html), which maps the geographic location of tweets with certain racial slurs.
+
+However, I'm just not sure how to go about any of this or if it is even worth it. I think there would be serious questions about the validity of any findings because of the news industry and the way it functions during this period. There is also the challenge of obtaining not just the articles from pro quest but getting the plain text versions of the articles rather than the images so that they could be fed into a text analysis program. As far as I can tell, there isn't a way to do this and transcription would take massive amounts of time.

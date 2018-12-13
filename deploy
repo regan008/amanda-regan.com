@@ -1,0 +1,8 @@
+#!/bin/sh
+USER=amandau9
+HOST=amanda-regan.com
+DIR=/public_html/
+
+hugo && rsync -avz public/ ${USER}@${HOST}:~/${DIR}
+
+exit 0

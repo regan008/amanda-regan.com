@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Pre-Processing Text for MALLET  &middot; Amanda Regan</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="hacking-that-camps-yack, ">
+
+
+<meta property="og:title" content="Pre-Processing Text for MALLET  &middot; Amanda Regan ">
+<meta property="og:site_name" content="Amanda Regan"/>
+<meta property="og:url" content="http://www.amanda-regan.com/2014/02/18/pre-processing-text-mallet/" />
+<meta property="og:locale" content="en-EN">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2014-02-18T14:00:29Z" />
+<meta property="og:article:modified_time" content="2014-02-18T14:00:29Z" />
+
+  
+    
+<meta property="og:article:tag" content="hacking-that-camps-yack">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@@regan008" />
+<meta name="twitter:creator" content="@@regan008" />
+<meta name="twitter:title" content="Pre-Processing Text for MALLET" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="http://www.amanda-regan.com/2014/02/18/pre-processing-text-mallet/" />
+<meta name="twitter:domain" content="http://www.amanda-regan.com/">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Pre-Processing Text for MALLET",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2014-02-18",
+    "description": "",
+    "wordCount": 1805
+  }
+</script>
+
+
+
+<link rel="canonical" href="http://www.amanda-regan.com/2014/02/18/pre-processing-text-mallet/" />
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.amanda-regan.com/touch-icon-144-precomposed.png">
+<link href="http://www.amanda-regan.com/favicon.png" rel="icon">
+
+<meta name="generator" content="Hugo 0.47.1" />
+
+  
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link href='https://fonts.googleapis.com/css?family=Merriweather:300%7CRaleway%7COpen+Sans' rel='stylesheet' type='text/css'>
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="http://www.amanda-regan.com/css/style.css">
+<link rel="stylesheet" href="http://www.amanda-regan.com/css/highlight/default.css">
+
+  
+  
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-38020914-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+</head>
+<body>
+  <main id="main-wrapper" class="container main_wrapper has-sidebar">
+    <header id="main-header" class="container main_header">
+  <div class="container brand">
+  <div class="container title h1-like">
+  <a class="baselink" href="http://www.amanda-regan.com/">
+  Amanda Regan
+
+</a>
+
+</div>
+
+  
+
+</div>
+
+  <nav class="container nav primary no-print">
+  
+
+<a class="homelink" href="http://www.amanda-regan.com/">About</a>
+
+
+  
+<a href="http://www.amanda-regan.com/c-v" title="My C.V.">C.V.</a>
+
+<a href="http://www.amanda-regan.com/shapingup" title="Dissertation">Dissertation</a>
+
+<a href="http://www.amanda-regan.com/post" title="Show list of posts">Blog</a>
+
+<a href="http://www.amanda-regan.com/teaching" title="Teaching">Teaching</a>
+
+
+</nav>
+
+<div class="container nav secondary no-print">
+  
+<a id="contact-link-email" class="contact_link" href="mailto:aregan2@gmu.edu">
+  <i class="fas fa-envelope"></i></a>
+
+
+
+<a id="contact-link-github" class="contact_link" href="https://github.com/regan008">
+  <i class="fab fa-github"></i></a>
+
+
+
+
+
+
+
+
+
+
+
+<a id="contact-link-twitter" class="contact_link" href="https://twitter.com/@regan008">
+  <i class="fab fa-twitter"></i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+
+</header>
+
+
+<article id="main-content" class="container main_content single">
+  <header class="container hat">
+  <h1>Pre-Processing Text for MALLET
+</h1>
+
+  <div class="metas">
+<time datetime="2014-02-18">18 Feb, 2014</time>
+
+
+  
+    &middot; by admin
+  
+  <br>
+  
+<a class="label" href="http://www.amanda-regan.com/tags/hacking-that-camps-yack">hacking-that-camps-yack</a>
+
+
+
+</div>
+
+</header>
+
+  <div class="container content">
+  
+
+<p><strong>This post is the third in a set of 5 written by the <a href="http://chnm.gmu.edu/courses/fellowship/?page_id=11">Digital History Fellows</a> at the <a href="http://chnm.gmu.edu/">Roy Rosenzweig Center for History and New Media</a>. The original post can be found on the <a href="http://chnm.gmu.edu/courses/fellowship/">Digital History Fellowship Blog</a>.</strong></p>
+
+<p>In our previous <a href="http://chnm.gmu.edu/courses/fellowship/?p=439">post</a>, we described the process of writing a python script that pulled from the THATCamp MySQL Database. In this post, we will continue with this project and work to clean up the data we&rsquo;ve collected and prepare it for some analysis. This process is known as &laquo;pre-processing&raquo;. After running our script in the THATCamp database all of the posts were collected and saved as text files. At this stage, the files are filled with extraneous information relating to the structure of the posts. Most of these are tags and metadata that would disrupt any attempts to look across the dataset. Our task here was to clean them up so they could be fed into MALLET. In order to do this, we needed to strip the html tags, remove punctuation, and remove common stopwords. To do this, we used chunks of code from the <a href="http://programminghistorian.org/lessons/from-html-to-list-of-words-1">Programming Historian&rsquo;s lesson on text analysis</a> with python and modified the code to work with the files we had already downloaded.</p>
+
+<h2 id="defining-a-strip-tags-function">Defining a Strip Tags Function</h2>
+
+<p>We began by writing some functions so that we could import and call all of them at once. First, we removed the html tags from the document. Essentially we asked python to look at each character in the document and locate each opening tag, &lsquo;&lt;&lsquo;. If an opening tag was identified, it would ignore it and any following characters until the closing tag, &lsquo;&gt;&rsquo;. We drew on the code that is used in the Programming Historian and modified it so that it would begin at the start of the text file. The end-result of the function was this:</p>
+
+<pre><code>def stripTags(pageContents):
+
+    content = pageContents[0:]
+
+    inside = 0
+    text = ' '
+
+    for char in content:
+        if char == '&lt;':             inside = 1      elif (inside == 1 and char == '&gt;'):
+            inside = 0
+        elif inside == 1:
+            continue
+        else:
+            text += char
+
+    return text
+</code></pre>
+
+<p>The function begins at the beginning of a variable called page contents and essentially returns any character that is not in between the opening and closing html tags.</p>
+
+<h2 id="removing-non-alpha-numeric-characters">Removing Non-Alpha Numeric Characters</h2>
+
+<p>Next, we needed to define a function that would remove all of the non-alpha numeric characters in the text. Punctuation is removed because it also distorts the results of text analysis. Borrowing again from the Programming Historian we defined a function that imported regular expression functions. According to the python documentation a Regular Expression (RE) specifies a set of strings that matches it. The function we adapted from the Programming Historian asks python to remove everything that doesn&rsquo;t match the string of unicode characters defined by RE (A-Z,a-z,0-9). It then splits them into a list.</p>
+
+<pre><code>def stripNonAlphaNum(text):
+    import re
+    return re.compile(r'\W+', re.UNICODE).split(text)
+</code></pre>
+
+<h2 id="removing-stopwords">Removing Stopwords</h2>
+
+<p>The last function we needed to define was one that would remove stopwords from the text. This process is meant to filter out common function words. We used the same function defined in the Programming Historian lesson and the open source list of stopwords that the lesson drew on to accomplish this.</p>
+
+<p>The stop words were defined at the top of list of functions:</p>
+
+<pre><code>stopwords = ['a', 'about', 'above', 'across', 'after', 'afterwards']
+stopwords += ['again', 'against', 'all', 'almost', 'alone', 'along']
+stopwords += ['already', 'also', 'although', 'always', 'am', 'among']
+stopwords += ['amongst', 'amoungst', 'amount', 'an', 'and', 'another']
+stopwords += ['any', 'anyhow', 'anyone', 'anything', 'anyway', 'anywhere']
+stopwords += ['are', 'around', 'as', 'at', 'back', 'be', 'became']
+stopwords += ['because', 'become', 'becomes', 'becoming', 'been']
+stopwords += ['before', 'beforehand', 'behind', 'being', 'below']
+stopwords += ['beside', 'besides', 'between', 'beyond', 'bill', 'both']
+stopwords += ['bottom', 'but', 'by', 'call', 'can', 'cannot', 'cant']
+stopwords += ['co', 'computer', 'con', 'could', 'couldnt', 'cry', 'de']
+stopwords += ['describe', 'detail', 'did', 'do', 'done', 'down', 'due']
+stopwords += ['during', 'each', 'eg', 'eight', 'either', 'eleven', 'else']
+stopwords += ['elsewhere', 'empty', 'enough', 'etc', 'even', 'ever']
+stopwords += ['every', 'everyone', 'everything', 'everywhere', 'except']
+stopwords += ['few', 'fifteen', 'fifty', 'fill', 'find', 'fire', 'first']
+stopwords += ['five', 'for', 'former', 'formerly', 'forty', 'found']
+stopwords += ['four', 'from', 'front', 'full', 'further', 'get', 'give']
+stopwords += ['go', 'had', 'has', 'hasnt', 'have', 'he', 'hence', 'her']
+stopwords += ['here', 'hereafter', 'hereby', 'herein', 'hereupon', 'hers']
+stopwords += ['herself', 'him', 'himself', 'his', 'how', 'however']
+stopwords += ['hundred', 'i', 'ie', 'if', 'in', 'inc', 'indeed']
+stopwords += ['interest', 'into', 'is', 'it', 'its', 'itself', 'keep']
+stopwords += ['last', 'latter', 'latterly', 'least', 'less', 'ltd', 'made']
+stopwords += ['many', 'may', 'me', 'meanwhile', 'might', 'mill', 'mine']
+stopwords += ['more', 'moreover', 'most', 'mostly', 'move', 'much']
+stopwords += ['must', 'my', 'myself', 'name', 'namely', 'neither', 'never']
+stopwords += ['nevertheless', 'next', 'nine', 'no', 'nobody', 'none']
+stopwords += ['noone', 'nor', 'not', 'nothing', 'now', 'nowhere', 'of']
+stopwords += ['off', 'often', 'on','once', 'one', 'only', 'onto', 'or']
+stopwords += ['other', 'others', 'otherwise', 'our', 'ours', 'ourselves']
+stopwords += ['out', 'over', 'own', 'part', 'per', 'perhaps', 'please']
+stopwords += ['put', 'rather', 're', 's', 'same', 'see', 'seem', 'seemed']
+stopwords += ['seeming', 'seems', 'serious', 'several', 'she', 'should']
+stopwords += ['show', 'side', 'since', 'sincere', 'six', 'sixty', 'so']
+stopwords += ['some', 'somehow', 'someone', 'something', 'sometime']
+stopwords += ['sometimes', 'somewhere', 'still', 'such', 'system', 'take']
+stopwords += ['ten', 'than', 'that', 'the', 'their', 'them', 'themselves']
+stopwords += ['then', 'thence', 'there', 'thereafter', 'thereby']
+stopwords += ['therefore', 'therein', 'thereupon', 'these', 'they']
+stopwords += ['thick', 'thin', 'third', 'this', 'those', 'though', 'three']
+stopwords += ['three', 'through', 'throughout', 'thru', 'thus', 'to']
+stopwords += ['together', 'too', 'top', 'toward', 'towards', 'twelve']
+stopwords += ['twenty', 'two', 'un', 'under', 'until', 'up', 'upon']
+stopwords += ['us', 'very', 'via', 'was', 'we', 'well', 'were', 'what']
+stopwords += ['whatever', 'when', 'whence', 'whenever', 'where']
+stopwords += ['whereafter', 'whereas', 'whereby', 'wherein', 'whereupon']
+stopwords += ['wherever', 'whether', 'which', 'while', 'whither', 'who']
+stopwords += ['whoever', 'whole', 'whom', 'whose', 'why', 'will', 'with']
+stopwords += ['within', 'without', 'would', 'yet', 'you', 'your']
+stopwords += ['yours', 'yourself', 'yourselves']
+</code></pre>
+
+<p>The function definition was called below all of the other functions:</p>
+
+<pre><code>def removeStopwords(wordlist, stopwords):
+    return [w for w in wordlist if w not in stopwords]
+</code></pre>
+
+<p>The function essentially asks python to compare a list of words called &lsquo;wordlist&rsquo; to the list of stopwords defined above. It returns every word not defined in the list of stopwords.</p>
+
+<p>We named the file with all of these functions &lsquo;rmv.py&rsquo; and then started a new python script that would import these functions and apply them to all of the text files we downloaded from the THATCamp database.</p>
+
+<h2 id="defining-a-script-to-remove-all-of-the-tags">Defining a script to remove all of the tags</h2>
+
+<p>After we had defined all the necessary functions to remove html tags, strip out any non-alphanumeric characters, and remove stopwords, we needed to write a script that would import and apply all of these functions.</p>
+
+<p>First, we import both the os and sys modules so that we can ask python to interact with the files located on our computer. We also import the rmv file that contains all of the functions.</p>
+
+<pre><code>import os, sys
+import rmv
+</code></pre>
+
+<p>Next, we begin to define a loop that will apply each of those functions to a text document and then loop back and continue until it has done this with every text file. Setting x = 1 allows us to define where in the list of documents the script to start and we also instruct python to only complete the following loop while x is less than 300. This gives python a starting and stopping point.</p>
+
+<pre><code>x = 2
+while x &lt; 300:
+</code></pre>
+
+<p>Everything that follows the &lsquo;while&rsquo; statement is part of the loop and we&rsquo;ll use a try and except statement to tell python what to do if a file doesn&rsquo;t exist. We begin by defining the file name and opening the text file. In the previous post, we downloaded all of the posts from each that camp and named them &lsquo;wp_x_posts.txt&rsquo;. &lsquo;X&rsquo; increased sequentially and matched the table number in the THATCamp database. We&rsquo;ll do the same thing here asking python to open a text file called &lsquo;wp_x_posts.txt&rsquo; and increase x sequentially each time it loops through. We use the os commands to open the file, read it, and then store it in a variable called content.</p>
+
+<pre><code>try:
+        f = open('wp_' + str(x) + '_posts.txt', 'r')
+        content = f.read()
+</code></pre>
+
+<p>Now that python has opened and read the content we can begin to call the functions we defined in &lsquo;rmv.py&rsquo; on the content. We&rsquo;ll work through those functions in the order we added them to the &lsquo;rmv&rsquo; module and call them using several variables. First, we call &lsquo;rmv.stripTags&rsquo; on the content variable we defined above and store it in a variable called &lsquo;words&rsquo;. Then we call &lsquo;rmv.stripNonAlphaNum&rsquo; on the variable words we just created and store it in a variable called &lsquo;fullwordlist&rsquo;. We&rsquo;ve now removed the tags and all of the non-alphanumeric characters from the post. The final function we need to call is the &lsquo;removeStopwords&rsquo;. We have to define what to remove the stopwords from and where the stopwords can be found. To do this we call the function we defined, &lsquo;rmv.removeStopwords&rsquo;, on &lsquo;fullwordlist&rsquo; and ask it to remove any of the words from the stoplist by referring to &lsquo;rmv.stopwords&rsquo;. We tell python to store this all in a variable called &lsquo;wordlist&rsquo;.</p>
+
+<pre><code>words = rmv.stripTags(content).lower()
+        fullwordlist = rmv.stripNonAlphaNum(words)
+        wordlist = rmv.removeStopwords(fullwordlist, rmv.stopwords)
+</code></pre>
+
+<p>Now that python has stripped the tags, non-alphanumeric characters, and the stopwords from the file the resulting text is in a variable called wordlist. That data needs to be re-written to the file. To accomplish this we asked the os module to create a new file, defined as &lsquo;fo&rsquo; rather than &lsquo;f&rsquo; this time, and open the same string as before: &lsquo;wp_x_posts.txt&rsquo;. Then we tell it to write fo to the file with a line break after each word. However, because the text in wordlist is now a python list we have to instruct python to write a list rather than a string to the file. To do this we call &lsquo;.join&rsquo; on the wordlist variable which is a built-in type in python that concatenates the lists. The &lsquo;.join&rsquo; function combines a word list into a string and by adding a line break, &lsquo;/n&rsquo;, each of our words is returned neatly onto a new line in our file.</p>
+
+<pre><code>fo = open('wp_' + str(x) + '_posts.txt', 'w')
+        fo.write('\n' .join(wordlist))
+</code></pre>
+
+<p>Lastly we need to tell python what to do if a file doesn&rsquo;t exist and add one to the loop causing it to repeat on the next sequentially numbered file. The except statement here tells python what to do if a file doesn&rsquo;t exist. Normally it would throw an error and stop the script from running but by telling python to clear the exception it just ignores the error. Finally, adding one to x causes the script to repeat.</p>
+
+<pre><code>except Exception:
+        sys.exc_clear()
+
+    x += 1
+</code></pre>
+
+<p>The result is 191 cleaned up text files ready to be processed using MALLET.</p>
+
+</div>
+
+
+  <footer class="container">
+
+</footer>
+
+</article>
+      <footer id="main-footer" class="container main_footer">
+  
+
+  
+  <div class="container credits">
+  
+</div>
+
+</footer>
+
+    </main>
+    
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//amanda-regan.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+<script src="http://www.amanda-regan.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    
+  </body>
+</html>
+

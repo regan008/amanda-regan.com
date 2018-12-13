@@ -1,0 +1,31 @@
+
+[posts]
+    Name = "Blog"
+    Title = "Show list of posts"
+    URL = "/post"
+
+[cv]
+  Name = "C.V."
+  Title = "My C.V."
+  URL = "/c-v"
+
+[teaching]
+  Name = "Teaching"
+  Title = "Teaching"
+  URL = "/teaching"
+
+[dissertation]
+  Name = "Dissertation"
+  Title = "Dissertation"
+  URL = "/shapingup"
+
+
+# [digitalhistoryportfolio]
+#   Name = "Digital History Portfolio"
+#   Title = "Digital History Portfolio"
+#   URL = "http://www.amanda-regan.com/DigitalHistoryPortfolio/"
+#
+# [teaching]
+#   Name = "Teaching"
+#   Title = "Teaching"
+#   URL = "/teaching"

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Topic Modeling on Amanda Regan</title>
+    <link>http://www.amanda-regan.com/tags/topic-modeling/</link>
+    <description>Recent content in Topic Modeling on Amanda Regan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-EN</language>
+    <managingEditor>aregan2@gmu.edu (Amanda Regan)</managingEditor>
+    <webMaster>aregan2@gmu.edu (Amanda Regan)</webMaster>
+    <copyright>2017. licensed under creative commons by-nc-sa.</copyright>
+    <lastBuildDate>Wed, 26 Feb 2014 14:30:57 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.amanda-regan.com/tags/topic-modeling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>THATCamp Topic Modeling Results</title>
+      <link>http://www.amanda-regan.com/2014/02/26/thatcamp-topic-modeling-results/</link>
+      <pubDate>Wed, 26 Feb 2014 14:30:57 +0000</pubDate>
+      <author>aregan2@gmu.edu (Amanda Regan)</author>
+      <guid>http://www.amanda-regan.com/2014/02/26/thatcamp-topic-modeling-results/</guid>
+      <description>**This post is the last in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post, which was collectively written by the DH Fellows, can be found on our Digital History Fellowship Blog.
+We have spent the last few weeks working to build a python script that would allow us to download and prep all of the THATCamp blog posts for topic modeling in MALLET (for those catching up, we detailed this process in a series of previous posts).</description>
+    </item>
+    
+  </channel>
+</rss>
