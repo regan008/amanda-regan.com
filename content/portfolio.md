@@ -1,29 +1,67 @@
 ---
 title: "Digital Humanities Portfolio"
 description: ""
+draft: true
 lastmod: "2016-05-15"
 date: "2017-04-20"
 slug: "digitalprojects"
 ---
-# PressForward
-<figure style="width:300px; float: left; margin-right: 15px;">
+
+<figure style="width:250px; float: left; margin-right: 35px;">
 <img src="/images/portfolio_pressforward.png" >
 </figure>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus erat a molestie facilisis. Fusce tincidunt neque viverra euismod ultricies. Nullam eu ex aliquam, maximus urna at, eleifend nulla. Proin hendrerit consectetur ex non ullamcorper. Fusce sit amet iaculis ligula. Quisque scelerisque lorem nibh, eget efficitur sapien vehicula ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo eleifend est nec hendrerit. Donec tristique massa a tempor mattis. Quisque vel ornare nisi. Aliquam faucibus sem id purus pellentesque tincidunt. Maecenas vel blandit sem, sit amet cursus lectus. Suspendisse vitae porttitor justo.
 
-Integer quis turpis lorem. Aenean lorem nulla, laoreet aliquet enim a, bibendum scelerisque mauris. Nulla in mattis ante. Curabitur posuere eu sem tempor malesuada. Vivamus a nisi tortor. Maecenas eget tristique magna, ut sollicitudin elit. Phasellus et rhoncus tellus. Aenean pharetra aliquet elit, ac cursus nulla aliquet eu. Sed vel luctus arcu. Maecenas elementum imperdiet nisi, a placerat leo malesuada eu.
-# Digital Humanities Now
+## **PressForward**
 
-## Visualizations
+* Software Development Manager, 2016-2018
+  * Oversaw development and testing. Helped to outline development priorities and milestone goals. Managed a team of graduate students.
+* Website Design, 2017
+* Graduate Research Assistant, 2014-2016
 
-# Web Designs for Digital Humanities Projects
-* Wearing Gay History
-* Appalachian Trail Histories
+---
 
-# Mapping Gymnasiums in Boston
+<figure style="width:250px; float: left; margin-right: 35px;">
+<img src="/images/Portfolio-DHNow.png" >
+</figure>
 
-# Hacking THATCamp's Yack
+## **Digital Humanities Now**
+* Managing Editor, 2016-2018
+* Developed internal backend user management software.
 
-# RRCHNM 20 Archive and Network Visualization
+---
 
-# Coursework
+## **Mapping Gymnasiums in Boston**
+
+<figure style="width:250px; float: left; margin-right: 35px;">
+<img src="/images/Screenshot-2014-12-09-17.06.27.png" >
+</figure>
+
+* Coursework for Lincoln Mullen's Clio Wired 3: Programming for Historians.
+
+---
+
+## **RRCHNM 20 Archive and Network Visualization**
+
+<figure style="width:250px; float: left; margin-right: 35px;">
+<img src="/images/portfolio-rrchnm20.png" >
+</figure>
+
+* D3.js Network Visualization created from the RRCHNM20 Archive
+
+---
+
+## **Design for Digital Humanities Projects**
+
+<figure style="width:250px; float: left; margin-right: 35px;">
+<img src="/images/portfolio-wgh.png" >
+</figure>
+<figure style="width:250px; float: left; margin-right: 35px;">
+<img src="/images/portfolio-aptrails.png" >
+</figure>
+
+* Wearing Gay History, Digital Design Consultant - content organization and Omeka theme.
+* Appalachian Trail History, site design and Omeka theme.
+
+---
+
+## **Digital Campus Podcasts**, producer
