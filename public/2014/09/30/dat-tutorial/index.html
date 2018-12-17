@@ -62,7 +62,7 @@
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.amanda-regan.com/touch-icon-144-precomposed.png">
 <link href="http://www.amanda-regan.com/favicon.png" rel="icon">
 
-<meta name="generator" content="Hugo 0.47.1" />
+<meta name="generator" content="Hugo 0.52" />
 
   
 <!--[if lt IE 9]>
@@ -273,49 +273,28 @@ dat init`
 
 <p>Now that our data is stored in dat it would be useful to be able to view it. To view the data we can launch the Dat GUI by running <code>dat listen</code> in the terminal. This command returns a message that says “Listening on port xxxx. (In my case port 6461 but change it to whatever is printed in your terminal.) What this means is that Dat has started a new local webserver on our computer and if we navigate to localhost:6461 in a web browser we’ll see the Dat GUI. This interface, built on the LevelUp Database, allows us to interact with the data like we would a database.</p>
 
-
 <figure>
-    
-        <img src="/images/Screen-Shot-2014-09-28-at-4.58.01-PM.png" />
-    
-    
-    <figcaption>
-        <h4>Dat’s Graphical User Interface (GUI)</h4>
-        
-    </figcaption>
-    
+    <img src="/images/Screen-Shot-2014-09-28-at-4.58.01-PM.png"/> <figcaption>
+            <h4>Dat’s Graphical User Interface (GUI)</h4>
+        </figcaption>
 </figure>
 
 
 <p>In this interface we can update any cell by clicking on the green edit button that appears when hovering over it. If we make a change to any cell and click update, Dat will store a new version of that row and change the version number to 2. Notice that the row’s version number changes but the key doesn’t.</p>
 
-
 <figure>
-    
-        <img src="/images/Screen-Shot-2014-09-28-at-4.58.12-PM.png" />
-    
-    
-    <figcaption>
-        <h4>Editing an individual cell</h4>
-        
-    </figcaption>
-    
+    <img src="/images/Screen-Shot-2014-09-28-at-4.58.12-PM.png"/> <figcaption>
+            <h4>Editing an individual cell</h4>
+        </figcaption>
 </figure>
 
 
 <p>Clicking on the icon in the far left cell brings up a Row summary with each column name, corresponding value, and an option to upload a Blob. A “Blob” is simply an attached file. Here we could upload a file that relates to the data in a particular row. Dat will store the metadata for the file and any changes to to it in the database but will not store changes to the contents of the file.</p>
 
-
 <figure>
-    
-        <img src="/images/Screen-Shot-2014-09-28-at-5.43.11-PM.png" />
-    
-    
-    <figcaption>
-        <h4>The ‘Inspect Row’ dialog box. Here you can view a summary of the data in the row and attach a Blob (a file).</h4>
-        
-    </figcaption>
-    
+    <img src="/images/Screen-Shot-2014-09-28-at-5.43.11-PM.png"/> <figcaption>
+            <h4>The ‘Inspect Row’ dialog box. Here you can view a summary of the data in the row and attach a Blob (a file).</h4>
+        </figcaption>
 </figure>
 
 
@@ -354,17 +333,10 @@ dat init`
 
 <p>That’s useful but it might be better to import more than one line at once. We can do this by streaming in a file of line separated JSON. The file BostonGyms.json contains some data we haven’t added. The json looks like this:</p>
 
-
 <figure>
-    
-        <img src="/images/Screen-Shot-2014-09-28-at-5.11.21-PM.png" />
-    
-    
-    <figcaption>
-        <h4>Data formatted as Line Separated JSON</h4>
-        
-    </figcaption>
-    
+    <img src="/images/Screen-Shot-2014-09-28-at-5.11.21-PM.png"/> <figcaption>
+            <h4>Data formatted as Line Separated JSON</h4>
+        </figcaption>
 </figure>
 
 

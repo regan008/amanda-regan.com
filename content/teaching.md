@@ -13,7 +13,7 @@ The Digital Past is an undergraduate history class at George Mason University wh
 
 * Summer 2019
 * Spring 2019
-* Fall 2018 - [Section 02](http://amanda-regan.com/390fall18-02/), [Section 3](http://amanda-regan.com/390fall18-03/)
+* Fall 2018 - [Section 02](http://amanda-regan.com/390fall18-2/), [Section 3](http://amanda-regan.com/390fall18-3/)
 * [Summer 2018](http://amanda-regan.com/390summer18/)
 * [Summer 2017](http://amanda-regan.com/390summer17/)
 
