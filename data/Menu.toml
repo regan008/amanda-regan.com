@@ -1,8 +1,5 @@
 
-[posts]
-    Name = "Blog"
-    Title = "Show list of posts"
-    URL = "/post"
+
 
 [cv]
   Name = "C.V."
@@ -19,6 +16,15 @@
   Title = "Dissertation"
   URL = "/shapingup"
 
+[portfolio]
+  Name = "Portfolio"
+  Title = "Digital Humanities Portfolio"
+  URL = "/portfolio"
+
+[posts]
+  Name = "Blog"
+  Title = "Show list of posts"
+  URL = "/post"
 
 # [digitalhistoryportfolio]
 #   Name = "Digital History Portfolio"
