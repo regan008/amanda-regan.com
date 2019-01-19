@@ -12,7 +12,7 @@ slug: "teaching"
 The Digital Past is an undergraduate history class at George Mason University which fulfills the University's IT Requirement. In this class students explore technologies such as maps, data sets, and visualizations within the context of an upper division history class. Students learn how to find and use digital information for research as well as how question, analyze, summarize, and interpret it. The class is centered around using digital tools to ask and answer historical questions but is also grounded in traditional historical pedagogy including rigorous reading and writing.
 
 * Summer 2019
-* Spring 2019
+* [Spring 2019](http://www.amanda-regan.com/390spring19)
 * Fall 2018 - [Section 02](http://amanda-regan.com/390fall18-2/), [Section 3](http://amanda-regan.com/390fall18-3/)
 * [Summer 2018](http://amanda-regan.com/390summer18/)
 * [Summer 2017](http://amanda-regan.com/390summer17/)

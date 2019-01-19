@@ -47,7 +47,7 @@ Review of Emily S. Rosenberg and Shannon Fitzpatrick, ed., _Body and Nation: The
 
 ## Teaching Experience
 
-History 390: The Digital Past, George Mason University, [Summer 2017](http://www.amanda-regan.com/390summer17/), [Summer 2018](http://www.amanda-regan.com/390summer18), [Fall 18](http://www.amanda-regan.com/390fall18-02), Spring and Summer 2019.
+History 390: The Digital Past, George Mason University, [Summer 2017](http://www.amanda-regan.com/390summer17/), [Summer 2018](http://www.amanda-regan.com/390summer18), [Fall 18](http://www.amanda-regan.com/390fall18-02), [Spring](http://www.amanda-regan.com/390spring19) and Summer 2019.
 
 Text Analysis with Voyant Tools, Collections As Data: Hack-to-Learn, Library of Congress, Washington D.C., May 2017.
 
