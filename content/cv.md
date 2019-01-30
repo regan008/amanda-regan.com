@@ -1,8 +1,7 @@
 ---
 title: "Curriculum Vitae"
 description: "Amanda Regan's Curriculum Vitae"
-lastmod: "2018-02-22"
-date: "2017-04-20"
+lastmod: "2018-01-30"
 slug: "c-v"
 ---
 
@@ -12,14 +11,14 @@ slug: "c-v"
 
   * PhD Candidate, Department of History and Art History (expected Spring 2019)
   * Specialties: US History, Digital History, Women's History.
-  * Dissertation: [''Shaping Up: Physical Culture Initiatives for Women in the United States, 1890-1965''](/shapingup)
+  * Dissertation: [“Shaping Up: Physical Culture Initiatives for Women in the United States, 1890-1965”](/shapingup)
   * Dissertation Committee: Alison Landsberg, Sharon Leon, Sun-Young Park
 
 
 **California State University, San Marcos**
 
   * MA, History (2013)
-    * Thesis: "Madame Sylvia of Hollywood and Physical Culture, 1920-1940". Chair: Dr. Jill Watts.
+    * Thesis: “Madame Sylvia of Hollywood and Physical Culture, 1920-1940.” Chair: Dr. Jill Watts.
   * BA, History (2011)
 
 ## Teaching and Research Fields
@@ -79,7 +78,7 @@ History 101: World Civilization to 1500, Teaching Assistant, California State Un
 **Digital and Institutional Review Board Consultant;** [_War at Home and Abroad Digital: A Digital History Archive_,](http://www.csusmhistory.org/WAHA) Department of History, California State University San Marcos, August 2012-January 2013.
 
 ## Digital Projects
-Website redesign, PressForward, January 2018, http://www.pressforward.org
+Website redesign, [PressForward](http://www.pressforward.org), January 2018,
 
 [''Mining Eleanor Roosevelt's _My Day_ Columns,''](https://regan008.shinyapps.io/mining_my_day/) with Joshua Catalano, May 2017.
 

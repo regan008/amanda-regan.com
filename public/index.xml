@@ -9,10 +9,40 @@
     <managingEditor>aregan2@gmu.edu (Amanda Regan)</managingEditor>
     <webMaster>aregan2@gmu.edu (Amanda Regan)</webMaster>
     <copyright>2017. licensed under creative commons by-nc-sa.</copyright>
-    <lastBuildDate>Sun, 21 May 2017 15:41:40 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.amanda-regan.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Shaping Up: Physical Fitness Initiatives for Women, 1880-1965</title>
+      <link>http://www.amanda-regan.com/shapingup/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      <author>aregan2@gmu.edu (Amanda Regan)</author>
+      <guid>http://www.amanda-regan.com/shapingup/</guid>
+      <description>Throughout the late-nineteenth and twentieth-centuries, the notion of a “fit” female body was of constant concern to government officials, medical professionals and reformers: they saw the female body as an important site for intervention. Beginning in 1880 and ending during the Cold War, Shaping Up examines why the fitness of female bodies was of concern and what the concern about women&amp;rsquo;s bodies conveyed. Although what it meant to be “in shape” or to acquire “shapeliness” changed numerous times between 1880 and 1965, the patriarchal focus on the fit female body remained a constant and served various economic, social, and political purposes.</description>
+    </item>
+    
+    <item>
+      <title>Digital Humanities Portfolio</title>
+      <link>http://www.amanda-regan.com/portfolio/</link>
+      <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
+      <author>aregan2@gmu.edu (Amanda Regan)</author>
+      <guid>http://www.amanda-regan.com/portfolio/</guid>
+      <description>Throughout my graduate career at George Mason, I have been active in the digital humanities community. My digital humanities work is reflective of my commitment to using digital technology to highlight diverse voices and promote the reevaluation of research methodologies, pedagogical approaches, and scholarly infrastructure.
+Over the course of my graduate career I have dedicated time to learning digital history tools and techniques--such as text analysis, databases, and mapping—as well as relevant programming languages such as R, Python, JavaScript, and PHP.</description>
+    </item>
+    
+    <item>
+      <title>Curriculum Vitae</title>
+      <link>http://www.amanda-regan.com/c-v/</link>
+      <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
+      <author>aregan2@gmu.edu (Amanda Regan)</author>
+      <guid>http://www.amanda-regan.com/c-v/</guid>
+      <description>Education George Mason University
+ PhD Candidate, Department of History and Art History (expected Spring 2019) Specialties: US History, Digital History, Women&amp;rsquo;s History. Dissertation: “Shaping Up: Physical Culture Initiatives for Women in the United States, 1890-1965” Dissertation Committee: Alison Landsberg, Sharon Leon, Sun-Young Park  California State University, San Marcos
+ MA, History (2013)  Thesis: “Madame Sylvia of Hollywood and Physical Culture, 1920-1940.” Chair: Dr. Jill Watts.  BA, History (2011)  Teaching and Research Fields U.</description>
+    </item>
     
     <item>
       <title>Mining Eleanor Roosevelt&#39;s &#34;My Day&#34; Columns</title>
@@ -22,27 +52,6 @@
       <guid>http://www.amanda-regan.com/2017/05/21/mining-myday/</guid>
       <description>This post is co-written by Amanda Regan and Joshua Catalano. It is cross-posted on Josh’s blog. 
 Two weeks ago, Josh Catalano and I participated in the Collections as Data Hack-to-Learn event sponsored by the Library of Congress, George Washington University, and George Mason University. For the event, George Washington University, the Library of Congress and the Smithsonian provided participants with a series of datasets. The corpus that we gravitated toward included all of Eleanor Roosevelt&amp;rsquo;s My Day columns.</description>
-    </item>
-    
-    <item>
-      <title>Curriculum Vitae</title>
-      <link>http://www.amanda-regan.com/c-v/</link>
-      <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
-      <author>aregan2@gmu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/c-v/</guid>
-      <description>Education George Mason University
- PhD Candidate, Department of History and Art History (expected Spring 2019) Specialties: US History, Digital History, Women&amp;rsquo;s History. Dissertation: &amp;ldquo;Shaping Up: Physical Culture Initiatives for Women in the United States, 1890-1965&amp;rdquo; Dissertation Committee: Alison Landsberg, Sharon Leon, Sun-Young Park  California State University, San Marcos
- MA, History (2013)  Thesis: &amp;laquo;Madame Sylvia of Hollywood and Physical Culture, 1920-1940&amp;raquo;. Chair: Dr. Jill Watts.  BA, History (2011)  Teaching and Research Fields U.</description>
-    </item>
-    
-    <item>
-      <title>Digital Humanities Portfolio</title>
-      <link>http://www.amanda-regan.com/portfolio/</link>
-      <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
-      <author>aregan2@gmu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/portfolio/</guid>
-      <description>Throughout my graduate career at George Mason, I have been active in the digital humanities community. My digital humanities work is reflective of my commitment to using digital technology to highlight diverse voices and promote the reevaluation of research methodologies, pedagogical approaches, and scholarly infrastructure.
-Over the course of my graduate career I have dedicated time to learning digital history tools and techniques--such as text analysis, databases, and mapping—as well as relevant programming languages such as R, Python, JavaScript, and PHP.</description>
     </item>
     
     <item>
@@ -61,15 +70,6 @@ Over the course of my graduate career I have dedicated time to learning digital 
       <author>aregan2@gmu.edu (Amanda Regan)</author>
       <guid>http://www.amanda-regan.com/2017/04/19/custom-fields-and-pressforward/</guid>
       <description>One of the questions that the PressForward team gets repeatedly is how publications can use custom fields to automatically print data about a post once it is published. Publications often wish to display a generic name, such as “The Editors,” on a post rather than the name of the user who published the post. On Digital Humanities Now we use custom fields to store the names of our Editors-at-Large for the week a piece is featured as well as the name of the Editor-in-Chief for that week.</description>
-    </item>
-    
-    <item>
-      <title>Shaping Up: Physical Fitness Initiatives for Women, 1880-1965</title>
-      <link>http://www.amanda-regan.com/shapingup/</link>
-      <pubDate>Wed, 26 Oct 2016 00:00:00 +0000</pubDate>
-      <author>aregan2@gmu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/shapingup/</guid>
-      <description>Throughout the late-nineteenth and twentieth-centuries, the notion of a “fit” female body was of constant concern to government officials, medical professionals and reformers: they saw the female body as an important site for intervention. Beginning in 1880 and ending during the Cold War, Shaping Up examines why the fitness of female bodies was of concern and what the concern about women&amp;rsquo;s bodies conveyed. Although what it meant to be “in shape” or to acquire “shapeliness” changed numerous times between 1880 and 1965, the patriarchal focus on the fit female body remained a constant and served various economic, social, and political purposes.</description>
     </item>
     
     <item>

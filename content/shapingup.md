@@ -1,8 +1,7 @@
 ---
 title: "Shaping Up: Physical Fitness Initiatives for Women, 1880-1965"
 description: ""
-lastmod: "2018-01-16"
-date: "2016-10-26"
+lastmod: "2019-01-30"
 slug: "shapingup"
 ---
 Throughout the late-nineteenth and twentieth-centuries, the notion of a “fit” female body was of constant concern to government officials, medical professionals and reformers: they saw the female body as an important site for intervention. Beginning in 1880 and ending during the Cold War, Shaping Up examines why the fitness of female bodies was of concern and what the concern about women's bodies conveyed. Although what it meant to be “in shape” or to acquire “shapeliness” changed numerous times between 1880 and 1965, the patriarchal focus on the fit female body remained a constant and served various economic, social, and political purposes. Each chapter focuses on a moment when the fit female body was deemed a necessary component of productive citizenship and illustrates the consistent fascination with overseeing, regulating, and controlling the body through physical culture. Addressing themes such as the anxieties over immigration and suffrage in the Progressive Era, the globalization of sport culture, production in World War II, and gender roles in the Cold War this dissertation provides insight into how the fit female body became essential to the nation.

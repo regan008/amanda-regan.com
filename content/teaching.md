@@ -1,7 +1,7 @@
 ---
 title: "Teaching"
 description: ""
-lastmod: "2016-05-15"
+lastmod: "2019-01-25"
 date: "2017-04-20"
 slug: "teaching"
 ---
