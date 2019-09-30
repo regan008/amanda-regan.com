@@ -11,9 +11,9 @@
   Title = "Teaching"
   URL = "/teaching"
 
-[dissertation]
-  Name = "Dissertation"
-  Title = "Dissertation"
+[shaping-up]
+  Name = "Shaping Up"
+  Title = "Shaping Up"
   URL = "/shapingup"
 
 [portfolio]

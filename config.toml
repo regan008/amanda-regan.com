@@ -2,10 +2,10 @@
 baseurl = "http://www.amanda-regan.com/"
 
 # Site title
-title = "Amanda Regan"
+title = "Dr. Amanda Regan"
 
 # Copyright
-copyright = "2017. licensed under creative commons by-nc-sa."
+copyright = "2019. licensed under creative commons by-nc-sa."
 
 # Language
 languageCode = "en-EN"
@@ -34,7 +34,7 @@ disqusShortname = "amanda-regan"
 
 [author]
     name = "Amanda Regan"
-    email = "aregan2@gmu.edu"
+    email = "aregan2@smu.edu"
 
 #
 # All parameters below here are optional and can be mixed and matched.

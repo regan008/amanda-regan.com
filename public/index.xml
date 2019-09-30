@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About on Amanda Regan</title>
+    <title>About on Dr. Amanda Regan</title>
     <link>http://www.amanda-regan.com/</link>
-    <description>Recent content in About on Amanda Regan</description>
+    <description>Recent content in About on Dr. Amanda Regan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-EN</language>
     <managingEditor>aregan2@gmu.edu (Amanda Regan)</managingEditor>
     <webMaster>aregan2@gmu.edu (Amanda Regan)</webMaster>
-    <copyright>2017. licensed under creative commons by-nc-sa.</copyright>
-    <lastBuildDate>Wed, 30 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <copyright>2019. licensed under creative commons by-nc-sa.</copyright>
+    <lastBuildDate>Mon, 03 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.amanda-regan.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Curriculum Vitae</title>
+      <link>http://www.amanda-regan.com/c-v/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
+      <author>aregan2@gmu.edu (Amanda Regan)</author>
+      <guid>http://www.amanda-regan.com/c-v/</guid>
+      <description>Current Position Post-Doctoral Fellow, Center for Presidential History, Southern Methodist University, Beginning August 2019.
+Education George Mason University
+ PhD, History and Art History (2019) Specialties: US History, Digital History, Women&amp;rsquo;s History. Dissertation: “Shaping Up: Physical Culture Initiatives for Women in the United States, 1890-1965” Dissertation Committee: Alison Landsberg (Chair), Sharon Leon, Sun-Young Park, Jennifer Ritterhouse  California State University, San Marcos
+ MA, History (2013)  Thesis: “Madame Sylvia of Hollywood and Physical Culture, 1920-1940.</description>
+    </item>
     
     <item>
       <title>Shaping Up: Physical Fitness Initiatives for Women, 1880-1965</title>
@@ -24,6 +36,17 @@
     </item>
     
     <item>
+      <title>Stonehill Digital Innovation Lab Mapping Demo</title>
+      <link>http://www.amanda-regan.com/stonehill/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      <author>aregan2@gmu.edu (Amanda Regan)</author>
+      <guid>http://www.amanda-regan.com/stonehill/</guid>
+      <description>Useful links:
+ Download the data. Get the Longitude and Latitude from Google&amp;rsquo;s Geocoder Begin uploading your data to Kepler.gl  Other useful links:
+ Negro Motorist&amp;rsquo;s Green Book  </description>
+    </item>
+    
+    <item>
       <title>Digital Humanities Portfolio</title>
       <link>http://www.amanda-regan.com/portfolio/</link>
       <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
@@ -31,17 +54,6 @@
       <guid>http://www.amanda-regan.com/portfolio/</guid>
       <description>Throughout my graduate career at George Mason, I have been active in the digital humanities community. My digital humanities work is reflective of my commitment to using digital technology to highlight diverse voices and promote the reevaluation of research methodologies, pedagogical approaches, and scholarly infrastructure.
 Over the course of my graduate career I have dedicated time to learning digital history tools and techniques--such as text analysis, databases, and mapping—as well as relevant programming languages such as R, Python, JavaScript, and PHP.</description>
-    </item>
-    
-    <item>
-      <title>Curriculum Vitae</title>
-      <link>http://www.amanda-regan.com/c-v/</link>
-      <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
-      <author>aregan2@gmu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/c-v/</guid>
-      <description>Education George Mason University
- PhD Candidate, Department of History and Art History (expected Spring 2019) Specialties: US History, Digital History, Women&amp;rsquo;s History. Dissertation: “Shaping Up: Physical Culture Initiatives for Women in the United States, 1890-1965” Dissertation Committee: Alison Landsberg, Sharon Leon, Sun-Young Park  California State University, San Marcos
- MA, History (2013)  Thesis: “Madame Sylvia of Hollywood and Physical Culture, 1920-1940.” Chair: Dr. Jill Watts.  BA, History (2011)  Teaching and Research Fields U.</description>
     </item>
     
     <item>
