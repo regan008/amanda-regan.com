@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hacking That Camps Yack on Dr. Amanda Regan</title>
+    <title>hacking-that-camps-yack on Dr. Amanda Regan</title>
     <link>http://www.amanda-regan.com/tags/hacking-that-camps-yack/</link>
-    <description>Recent content in Hacking That Camps Yack on Dr. Amanda Regan</description>
+    <description>Recent content in hacking-that-camps-yack on Dr. Amanda Regan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-EN</language>
-    <managingEditor>aregan2@gmu.edu (Amanda Regan)</managingEditor>
-    <webMaster>aregan2@gmu.edu (Amanda Regan)</webMaster>
+    <managingEditor>aregan2@smu.edu (Amanda Regan)</managingEditor>
+    <webMaster>aregan2@smu.edu (Amanda Regan)</webMaster>
     <copyright>2019. licensed under creative commons by-nc-sa.</copyright>
     <lastBuildDate>Wed, 26 Feb 2014 14:30:57 +0000</lastBuildDate>
     
@@ -18,7 +18,7 @@
       <title>THATCamp Topic Modeling Results</title>
       <link>http://www.amanda-regan.com/2014/02/26/thatcamp-topic-modeling-results/</link>
       <pubDate>Wed, 26 Feb 2014 14:30:57 +0000</pubDate>
-      <author>aregan2@gmu.edu (Amanda Regan)</author>
+      <author>aregan2@smu.edu (Amanda Regan)</author>
       <guid>http://www.amanda-regan.com/2014/02/26/thatcamp-topic-modeling-results/</guid>
       <description>This post is the last in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post, which was collectively written by the DH Fellows, can be found on our Digital History Fellowship Blog.
 We have spent the last few weeks working to build a python script that would allow us to download and prep all of the THATCamp blog posts for topic modeling in MALLET (for those catching up, we detailed this process in a series of previous posts).</description>
@@ -28,7 +28,7 @@ We have spent the last few weeks working to build a python script that would all
       <title>Unexpected Challenges Result in Important and Informative Discussions: a transparent discussion about stripping content and stopwords</title>
       <link>http://www.amanda-regan.com/2014/02/19/unexpected-challenges-result-important-informative-discussions-transparent-discussion-stripping-content-stopwords/</link>
       <pubDate>Wed, 19 Feb 2014 14:00:07 +0000</pubDate>
-      <author>aregan2@gmu.edu (Amanda Regan)</author>
+      <author>aregan2@smu.edu (Amanda Regan)</author>
       <guid>http://www.amanda-regan.com/2014/02/19/unexpected-challenges-result-important-informative-discussions-transparent-discussion-stripping-content-stopwords/</guid>
       <description>This post is the fourth in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post by Jannelle Legg can be found on the Digital History Fellowship Blog.
 As described in previous posts, the first year Digital Fellows at CHNM have been working on a project under the Research division that involves collecting, cleaning, and analyzing data from a corpus of THATCamp content.</description>
@@ -38,7 +38,7 @@ As described in previous posts, the first year Digital Fellows at CHNM have been
       <title>Pre-Processing Text for MALLET</title>
       <link>http://www.amanda-regan.com/2014/02/18/pre-processing-text-mallet/</link>
       <pubDate>Tue, 18 Feb 2014 14:00:29 +0000</pubDate>
-      <author>aregan2@gmu.edu (Amanda Regan)</author>
+      <author>aregan2@smu.edu (Amanda Regan)</author>
       <guid>http://www.amanda-regan.com/2014/02/18/pre-processing-text-mallet/</guid>
       <description>This post is the third in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post can be found on the Digital History Fellowship Blog.
 In our previous post, we described the process of writing a python script that pulled from the THATCamp MySQL Database. In this post, we will continue with this project and work to clean up the data we&amp;rsquo;ve collected and prepare it for some analysis.</description>
@@ -48,7 +48,7 @@ In our previous post, we described the process of writing a python script that p
       <title>Extracting Data from the THATCamp Database Using Python and MySQL</title>
       <link>http://www.amanda-regan.com/2014/02/09/extracting-data-python-mysql/</link>
       <pubDate>Sun, 09 Feb 2014 20:54:45 +0000</pubDate>
-      <author>aregan2@gmu.edu (Amanda Regan)</author>
+      <author>aregan2@smu.edu (Amanda Regan)</author>
       <guid>http://www.amanda-regan.com/2014/02/09/extracting-data-python-mysql/</guid>
       <description>This post is the second in a set of 4 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post can be found on the Digital History Fellowship Blog.
 This week we&amp;rsquo;ve continued to work on building a python script that will extract all of the blog posts from the various THATCamp websites. As Jannelle described last week, our goal was to write a script that downloads the blog posts in plain text form and strips all of the html tags, stopwords, and punctuation so that we can feed it into MALLET for topic modeling and text analysis.</description>
@@ -58,7 +58,7 @@ This week we&amp;rsquo;ve continued to work on building a python script that wil
       <title>Spring Semester in Research and a THATCamp Challenge</title>
       <link>http://www.amanda-regan.com/2014/02/09/spring-semester-research-thatcamp-challenge/</link>
       <pubDate>Sun, 09 Feb 2014 19:39:04 +0000</pubDate>
-      <author>aregan2@gmu.edu (Amanda Regan)</author>
+      <author>aregan2@smu.edu (Amanda Regan)</author>
       <guid>http://www.amanda-regan.com/2014/02/09/spring-semester-research-thatcamp-challenge/</guid>
       <description>This post is the first in a set of 4 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post by Jannelle Legg can be found on the Digital History Fellowship Blog.
 The spring semester is here and the first year DH fellows have begun our rotation into the Research division of CHNM.
