@@ -4,6 +4,7 @@ description: "Amanda Regan's Curriculum Vitae"
 lastmod: "2019-09-30"
 slug: "c-v"
 ---
+[_Download as a PDF_](https://github.com/regan008/C-V/raw/master/ARegan-cv.pdf)
 
 ## Current Position
 
@@ -103,6 +104,11 @@ Graffiti Houses: The Civil War from the Perspective of Individual Soldiers; An N
 DC History Grad Zotero Workshop, with Jannelle Legg, George Mason University, October 2015.
 
 DH Bridge: Encouraging Computational Thinking and Digital Skills in the Humanities, Coach, Roy Rosenzweig Center for History and New Media, George Mason University, October 2014.
+
+## Service
+Mentor, Diversity Outreach High School Program, Southern Methodist University, 2019-2020.
+
+Participant, 2019 Mason Core assessment in IT and Computing, George Mason University, Spring 2019.
 
 ## Other Digital Work
 Website redesign, [PressForward](http://www.pressforward.org), January 2018.
