@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Mining My Day: Using Text Analysis to Understand Eleanor Roosevelt&#39;s Newspaper Columns" />
+<meta property="og:description" content="Mining My Day is a Shiny app that visualizes the common themes, or &lsquo;topics&rsquo;, in Eleanor Roosevelt&rsquo;s My Day columns. You can read the blog post about the visualization or jump straight into exploring the app.
+From December 1935 until September 1962, Roosevelt authored a nationally syndicated newspaper column entitled My Day and because Roosevelt did not keep any sort of diary and her appointment books were often incomplete, the My Day columns have become a valuable source for historians." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://amanda-regan.com/projects/mininger/" /><meta property="og:image" content="https://amanda-regan.com/portfolio-miningmyday.png" /><meta property="article:section" content="projects" />
+
+<meta property="article:modified_time" content="2021-10-27T00:00:00+00:00" />
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://amanda-regan.com/portfolio-miningmyday.png"/>
+
+<meta name="twitter:title" content="Mining My Day: Using Text Analysis to Understand Eleanor Roosevelt&#39;s Newspaper Columns"/>
+<meta name="twitter:description" content="Mining My Day is a Shiny app that visualizes the common themes, or &lsquo;topics&rsquo;, in Eleanor Roosevelt&rsquo;s My Day columns. You can read the blog post about the visualization or jump straight into exploring the app.
+From December 1935 until September 1962, Roosevelt authored a nationally syndicated newspaper column entitled My Day and because Roosevelt did not keep any sort of diary and her appointment books were often incomplete, the My Day columns have become a valuable source for historians."/>
+
+
+
+    <link rel="canonical" href="https://amanda-regan.com/projects/mininger/">
+
+    <title>
+      
+        Mining My Day: Using Text Analysis to Understand Eleanor Roosevelt&#39;s Newspaper Columns | Amanda Regan
+      
+    </title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href='/css/style.css' rel="stylesheet">
+
+    
+
+    
+  </head>
+  <body>
+    
+      
+
+<header class="blog-header">
+    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="/">
+                Amanda Regan
+            </a><br>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between flex-row-reverse" id="navbarNav">
+                <ul class="navbar-nav">
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/">ABOUT</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="https://raw.githubusercontent.com/regan008/C-V/master/ARegan-cv.pdf">CV</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/projects">RESEARCH &amp; PROJECTS</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/teaching">TEACHING</a>
+                        
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+    
+
+    
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-9  blog-main">
+
+          
+
+<header>
+    <h2 class="blog-post-title">
+    <a class="text-dark text-decoration-none" href="/projects/mininger/">Mining My Day: Using Text Analysis to Understand Eleanor Roosevelt&rsquo;s Newspaper Columns</a>
+</h2>
+
+    <hr>
+</header>
+<article class="blog-post">
+    <p><figure class="image-right"><img src="/images/portfolio-miningmyday.png" height="350px"/>
+</figure>
+
+<em>Mining My Day</em> is a <a href="http://shinyapps.io">Shiny</a> app that visualizes the common themes, or &lsquo;topics&rsquo;, in Eleanor Roosevelt&rsquo;s <em>My Day</em> columns. You can <a href="http://amanda-regan.com/2017/05/21/mining-myday/">read the blog post about the visualization</a> or jump straight into <a href="https://regan008.shinyapps.io/mining_my_day/">exploring the app.</a></p>
+<p>From December 1935 until September 1962, Roosevelt authored a nationally syndicated newspaper column entitled <em>My Day</em> and because Roosevelt did not keep any sort of diary and her appointment books were often incomplete, the <em>My Day</em> columns have become a valuable source for historians. The columns, authored six days a week until January 1961 and then three days a week thereafter, represent the only consistent account of her public activities. Thanks to the work of the Eleanor Roosevelt Papers’ staff, who transcribed each My Day column and made them available online, anyone with internet access can now explore this important piece of history.</p>
+<p>The <a href="https://www2.gwu.edu/~erpapers/myday/browsebyyear.cfm">online repository of My Day columns</a> allows users to look for columns by year or find a particular word or phrase within the collection through keyword search. Keyword search however, requires a level of specificity and familiarity with the topics discussed within the archive. A topic model allows for a more thematic and interactive way of exploring the archive. Providing a thematic overview, a topic model allows users a different entry point into the archive generated by the content (words) of the documents rather than a predetermined organizing schemata such as Library of Congress subject headings or even keywords.</p>
+<p>In collaboration with <a href="ttp://joshuacatalano.org">Joshua Catalano</a>, we used MALLET to divide all of the 7,987 My Day columns (as plain text files) into 70 &lsquo;topics.&rsquo; Each &lsquo;topic&rsquo; is a set of words that frequently co-occur together throughout the corpus. These words indicate themes or discourses within the corpus. With Python and R, we then transformed the MALLET output into several different types of visualizations using Shiny and a number of other packages. The benefit of using Shiny is that it allows users to change specific input parameters such as the topic, number of words, and the number of documents to display. The resulting app includes a word cloud representing the top words in the topic, a chart depicting the prominence of the topic over time, a map detailing the locations where the most prominent columns in the topic were written, and a list of the prominent columns in the topic (with a link to the text). Additionally, a tab at the bottom of the page allows users to view the top words in all 60 topics.</p>
+
+
+    
+
+    <footer>
+
+
+</footer>
+
+</article>
+
+
+
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+
+    
+      
+
+
+
+
+<footer class="blog-footer w-100">
+    <nav class="navbar navbar-light bg-light">
+        <p class="w-100 text-center"></p>
+        <p class="w-100 text-center"><a href="#">Back to top</a></p>
+    </nav>
+</footer>
+
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>

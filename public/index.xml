@@ -1,57 +1,106 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About on Dr. Amanda Regan</title>
-    <link>http://www.amanda-regan.com/</link>
-    <description>Recent content in About on Dr. Amanda Regan</description>
+    <title>About on Amanda Regan</title>
+    <link>https://amanda-regan.com/</link>
+    <description>Recent content in About on Amanda Regan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-EN</language>
-    <managingEditor>aregan2@smu.edu (Amanda Regan)</managingEditor>
-    <webMaster>aregan2@smu.edu (Amanda Regan)</webMaster>
-    <copyright>2019. licensed under creative commons by-nc-sa.</copyright>
-    <lastBuildDate>Mon, 30 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://amanda-regan.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shaping Up: Physical Fitness Initatives for Women, 1880-1965</title>
+      <link>https://amanda-regan.com/projects/shapingup/</link>
+      <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/projects/shapingup/</guid>
+      <description>Beginning in 1880 and ending during the Cold War, Shaping Up examines why the fitness of female bodies was a matter of national concern and interest. It argues that the shape of the female body and the discourses surrounding it were frequently correlated with larger social, political and economic issues. While the definition of being “in shape” or acquiring “shapeliness” changed numerous times between 1880 and 1965, the patriarchal focus on developing fit female bodies remained a constant and served various economic, social, and political purposes.</description>
+    </item>
     
-	<atom:link href="http://www.amanda-regan.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mapping the Gay Guides</title>
+      <link>https://amanda-regan.com/projects/mgg/</link>
+      <pubDate>Thu, 28 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/projects/mgg/</guid>
+      <description>Mapping the Gay Guides (MGG) is an in-progress digital history project and collaboration between myself and Dr. Eric Gonzaba. MGG draws on Bob Damron&amp;rsquo;s Address Book, an early but longstanding travel guide aimed at gay men since the early 1960s. An LGBT equivalent to the African American “green books,” the Damron guides contained lists of bars, bathhouses, cinemas, hotels, advocacy organizations and cruising sites in every U.S. state. MGG seeks to associate geographical coordinates with each location mentioned within the Damron Guides and provide an interface for visualizing and stuyding the growth in LGBTQ sites between 1965 and 2005.</description>
+    </item>
     
+    <item>
+      <title>Digital Humanities Now</title>
+      <link>https://amanda-regan.com/projects/dhnow/</link>
+      <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/projects/dhnow/</guid>
+      <description>Digital Humanities Now is PressForward’s flagship publication which seeks to curate and publish scholarly literature such as white papers and grant reports that otherwise may not have had a venue for publication. Using the PressForward plugin and relying on a community of volunteer editors, DHNow has sought to encourage scholars to share their research and learned expertise on the open web. DHNow had developed methodologies and technologies to facilitate the aggregation and curation of gray literature-scholarly work (white papers, presentations, research reports, essays etc.</description>
+    </item>
+    
+    <item>
+      <title>Mining My Day: Using Text Analysis to Understand Eleanor Roosevelt&#39;s Newspaper Columns</title>
+      <link>https://amanda-regan.com/projects/mininger/</link>
+      <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/projects/mininger/</guid>
+      <description>Mining My Day is a Shiny app that visualizes the common themes, or &amp;lsquo;topics&amp;rsquo;, in Eleanor Roosevelt&amp;rsquo;s My Day columns. You can read the blog post about the visualization or jump straight into exploring the app.
+From December 1935 until September 1962, Roosevelt authored a nationally syndicated newspaper column entitled My Day and because Roosevelt did not keep any sort of diary and her appointment books were often incomplete, the My Day columns have become a valuable source for historians.</description>
+    </item>
+    
+    <item>
+      <title>PressForward</title>
+      <link>https://amanda-regan.com/projects/pressforward/</link>
+      <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/projects/pressforward/</guid>
+      <description>PressForward is a free and open-source software project that enables teams of researchers to aggregate, filter, and disseminate relevant scholarship using the popular WordPress web publishing platform. First, as the Graduate Research Assistant, and later the Software Development Manager, I collaborated with team members to outline development priorities and milestone goals while also overseeing the testing and release processes. I also built the PressForward TurnKey Themewhich allows publications to make PressForward statistics easily viewable by readers.</description>
+    </item>
+    
+    <item>
+      <title>RRCHNM20 Digital Archive &amp; Network Visualization</title>
+      <link>https://amanda-regan.com/projects/rrchnm20/</link>
+      <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/projects/rrchnm20/</guid>
+      <description>As a Digital History Fellow at the Roy Rosenzweig Center for History and New Media, I collaborated with Jannelle Leggto create an Omeka archive that contains grants and supporting documents from the first twenty years of RRCHNM. We designed an information architecture that would capture the data contained on the coversheet of grant applications and we each input documents related to one of the center&amp;rsquo;s major projects. The item metadata is designed in a way that is meant to be flexible and allow researchers to use the API to ask and answer questions about the history of RRCHNM.</description>
+    </item>
     
     <item>
       <title>Digital Humanities Portfolio</title>
-      <link>http://www.amanda-regan.com/portfolio/</link>
+      <link>https://amanda-regan.com/portfoliooooo/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/portfolio/</guid>
+      
+      <guid>https://amanda-regan.com/portfoliooooo/</guid>
       <description>My digital humanities work is reflective of my commitment to using digital technology to highlight diverse voices and promote the reevaluation of research methodologies, pedagogical approaches, and scholarly infrastructure.
 I have dedicated time to learning digital history tools and techniques--such as text analysis, databases, and mapping—as well as relevant programming languages such as R, Python, JavaScript, and PHP. I am also fluent in basic web design principals and languages including HTML, CSS, as well as basic server management.</description>
     </item>
     
     <item>
-      <title>Curriculum Vitae</title>
-      <link>http://www.amanda-regan.com/c-v/</link>
-      <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/c-v/</guid>
-      <description>Download as a PDF
-Current Position Post-Doctoral Fellow, Center for Presidential History, Southern Methodist University, August 2019 - Present.
-Education George Mason University
- PhD, History and Art History (2019) Specialties: US History, Digital History, Women&amp;rsquo;s History. Dissertation: “Shaping Up: Physical Culture Initiatives for Women in the United States, 1890-1965” Dissertation Committee: Alison Landsberg (Chair), Sharon Leon, Sun-Young Park, Jennifer Ritterhouse  California State University, San Marcos
- MA, History (2013)  Thesis: “Madame Sylvia of Hollywood and Physical Culture, 1920-1940.</description>
+      <title>Digital Humanities Portfolio</title>
+      <link>https://amanda-regan.com/portfolio-test/</link>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/portfolio-test/</guid>
+      <description>My digital humanities work is reflective of my commitment to using digital technology to highlight diverse voices and promote the reevaluation of research methodologies, pedagogical approaches, and scholarly infrastructure.
+I have dedicated time to learning digital history tools and techniques&amp;ndash;such as text analysis, databases, and mapping—as well as relevant programming languages such as R, Python, JavaScript, and PHP. I am also fluent in basic web design principals and languages including HTML, CSS, as well as basic server management.</description>
     </item>
     
     <item>
-      <title>Shaping Up: Physical Fitness Initiatives for Women, 1880-1965</title>
-      <link>http://www.amanda-regan.com/shapingup/</link>
-      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/shapingup/</guid>
-      <description>Beginning in 1880 and ending during the Cold War, Shaping Up examines why the fitness of female bodies was a matter of national concern and interest. It argues that the shape of the female body and the discourses surrounding it were frequently correlated with larger social, political and economic issues. While the definition of being “in shape” or acquiring “shapeliness” changed numerous times between 1880 and 1965, the patriarchal focus on developing fit female bodies remained a constant and served various economic, social, and political purposes.</description>
+      <title>Curriculum Vitae</title>
+      <link>https://amanda-regan.com/cv/</link>
+      <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/cv/</guid>
+      <description>Download as a PDF
+Appointments Lecturer, Department of History and Geography, Clemson University, 2021-present.
+Post-Doctoral Fellow, Center for Presidential History, Southern Methodist University, 2019-2021.
+Education George Mason University
+ PhD, History and Art History (2019) Specialties: US History, Digital History, Women&amp;rsquo;s History. Dissertation: “Shaping Up: Physical Culture Initiatives for Women in the United States, 1890-1965” Dissertation Committee: Alison Landsberg (Chair), Sharon Leon, Sun-Young Park, Jennifer Ritterhouse  California State University, San Marcos</description>
     </item>
     
     <item>
       <title>Stonehill Digital Innovation Lab Mapping Demo</title>
-      <link>http://www.amanda-regan.com/stonehill/</link>
+      <link>https://amanda-regan.com/stonehill/</link>
       <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/stonehill/</guid>
+      
+      <guid>https://amanda-regan.com/stonehill/</guid>
       <description>Useful links:
  Download the data. Get the Longitude and Latitude from Google&amp;rsquo;s Geocoder Begin uploading your data to Kepler.gl  Other useful links:
  Negro Motorist&amp;rsquo;s Green Book  </description>
@@ -59,237 +108,236 @@ Education George Mason University
     
     <item>
       <title>Mining Eleanor Roosevelt&#39;s &#34;My Day&#34; Columns</title>
-      <link>http://www.amanda-regan.com/2017/05/21/mining-myday/</link>
+      <link>https://amanda-regan.com/2017/05/mining-eleanor-roosevelts-my-day-columns/</link>
       <pubDate>Sun, 21 May 2017 15:41:40 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2017/05/21/mining-myday/</guid>
-      <description>This post is co-written by Amanda Regan and Joshua Catalano. It is cross-posted on Josh’s blog. 
-Two weeks ago, Josh Catalano and I participated in the Collections as Data Hack-to-Learn event sponsored by the Library of Congress, George Washington University, and George Mason University. For the event, George Washington University, the Library of Congress and the Smithsonian provided participants with a series of datasets. The corpus that we gravitated toward included all of Eleanor Roosevelt&amp;rsquo;s My Day columns.</description>
+      
+      <guid>https://amanda-regan.com/2017/05/mining-eleanor-roosevelts-my-day-columns/</guid>
+      <description>This post is co-written by Amanda Regan and Joshua Catalano. It is cross-posted on Josh’s blog. Two weeks ago, Josh Catalano and I participated in the Collections as Data Hack-to-Learn event sponsored by the Library of Congress, George Washington University, and George Mason University. For the event, George Washington University, the Library of Congress and the Smithsonian provided participants with a series of datasets. The corpus that we gravitated toward included all of Eleanor Roosevelt&amp;rsquo;s My Day columns.</description>
     </item>
     
     <item>
       <title>Teaching</title>
-      <link>http://www.amanda-regan.com/teaching/</link>
+      <link>https://amanda-regan.com/teaching/</link>
       <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/teaching/</guid>
-      <description>Courses History 390: The Digital Past, George Mason University The Digital Past is an undergraduate history class at George Mason University which fulfills the University&amp;rsquo;s IT Requirement. In this class students explore technologies such as maps, data sets, and visualizations within the context of an upper division history class. Students learn how to find and use digital information for research as well as how question, analyze, summarize, and interpret it.</description>
+      
+      <guid>https://amanda-regan.com/teaching/</guid>
+      <description>Clemson University  History 1010: United States History to 1877  Fall 2021    George Mason University  History 390: The Digital Past  The Digital Past is an undergraduate history class at George Mason University which fulfills the University&amp;rsquo;s IT Requirement. In this class students explore technologies such as maps, data sets, and visualizations within the context of an upper division history class. Students learn how to find and use digital information for research as well as how question, analyze, summarize, and interpret it.</description>
     </item>
     
     <item>
       <title>Using Custom Fields with PressForward and Wordpress</title>
-      <link>http://www.amanda-regan.com/2017/04/19/custom-fields-and-pressforward/</link>
+      <link>https://amanda-regan.com/2017/04/using-custom-fields-with-pressforward-and-wordpress/</link>
       <pubDate>Wed, 19 Apr 2017 15:41:40 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2017/04/19/custom-fields-and-pressforward/</guid>
+      
+      <guid>https://amanda-regan.com/2017/04/using-custom-fields-with-pressforward-and-wordpress/</guid>
       <description>One of the questions that the PressForward team gets repeatedly is how publications can use custom fields to automatically print data about a post once it is published. Publications often wish to display a generic name, such as “The Editors,” on a post rather than the name of the user who published the post. On Digital Humanities Now we use custom fields to store the names of our Editors-at-Large for the week a piece is featured as well as the name of the Editor-in-Chief for that week.</description>
     </item>
     
     <item>
       <title>Mapping Gymnasiums in Boston, 1914-1924 (A Visualization for Clio 3)</title>
-      <link>http://www.amanda-regan.com/2014/12/09/mapping-gymnasiums-boston/</link>
+      <link>https://amanda-regan.com/2014/12/mapping-gymnasiums-in-boston-1914-1924-a-visualization-for-clio-3/</link>
       <pubDate>Tue, 09 Dec 2014 22:13:24 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/12/09/mapping-gymnasiums-boston/</guid>
+      
+      <guid>https://amanda-regan.com/2014/12/mapping-gymnasiums-in-boston-1914-1924-a-visualization-for-clio-3/</guid>
       <description>Mapping Gymnasiums in Boston   In 1889 Josiah Quincey was elected Mayor of Boston. Throughout his term as mayor he implemented a new system of municipal baths and gymnasiums in the city designed to encourage moral behavior, hygiene, foster community, and encourage exercise for the cities residents. These gymnasiums, although open to all residents, were placed largely in immigrant heavy neighborhoods and reflected a focus on physical culture that was reminiscent of life in Eastern Europe.</description>
     </item>
     
     <item>
       <title>Dat Tutorial</title>
-      <link>http://www.amanda-regan.com/2014/09/30/dat-tutorial/</link>
+      <link>https://amanda-regan.com/2014/09/dat-tutorial/</link>
       <pubDate>Tue, 30 Sep 2014 02:54:05 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/09/30/dat-tutorial/</guid>
-      <description>What is Dat? Dat is a set of tools used to “build and share data pipelines.” Dat was created with the goal of bringing “to data a style of collaboration similar to what git brings to source code.” The project, developed by Max Ogden, is designed to allow not only easy data sharing but also row by row version tracking. The five key features of Dat’s tools (as described by Dat’s GitHub page) are:</description>
+      
+      <guid>https://amanda-regan.com/2014/09/dat-tutorial/</guid>
+      <description>What is Dat? Dat is a set of tools used to “build and share data pipelines.” Dat was created with the goal of bringing “to data a style of collaboration similar to what git brings to source code.” The project, developed by Max Ogden, is designed to allow not only easy data sharing but also row by row version tracking. The five key features of Dat’s tools [(as described by Dat’s GitHub page)](make%20data syncable.</description>
     </item>
     
     <item>
       <title>Reflections on the Spring Semester and Year 1 as a Digital History Fellow</title>
-      <link>http://www.amanda-regan.com/2014/08/24/reflections-on-spring-semester-and-year-1-as-digital-history-fellows/</link>
+      <link>https://amanda-regan.com/2014/08/reflections-on-the-spring-semester-and-year-1-as-a-digital-history-fellow/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:49 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/08/24/reflections-on-spring-semester-and-year-1-as-digital-history-fellows/</guid>
+      
+      <guid>https://amanda-regan.com/2014/08/reflections-on-the-spring-semester-and-year-1-as-a-digital-history-fellow/</guid>
       <description>It seems like just yesterday we walked into the Center for History and New Media a bit unsure about what our first year as DH fellows would entail. Looking back it has been an extremely rewarding and valuable experience. Last fall we blogged about our rotations in both the Education and Public Projects divisions. In the Spring we moved to Research for seven weeks where we worked on a programming project for THATCamp and on the PressForward project before moving onto a seminar about the history of CHNM.</description>
     </item>
     
     <item>
       <title>Digital History Minor Field, Part 5: Topic Modeling</title>
-      <link>http://www.amanda-regan.com/2014/08/05/digital-history-minor-field-part-5-topic-modeling/</link>
+      <link>https://amanda-regan.com/2014/08/digital-history-minor-field-part-5-topic-modeling/</link>
       <pubDate>Tue, 05 Aug 2014 03:25:56 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/08/05/digital-history-minor-field-part-5-topic-modeling/</guid>
+      
+      <guid>https://amanda-regan.com/2014/08/digital-history-minor-field-part-5-topic-modeling/</guid>
       <description>This week our readings focused on Topic Modeling. I’ve been looking forward to this week for some time partly because I plan to use Topic Modeling for my dissertation but also because I was eager to understand some of the theoretical underpinnings of the methodology.
 During the Digital History Fellows in the Research Division last spring, we were asked to do a topic modeling project on all of the blog posts from the the various THATCamps.</description>
     </item>
     
     <item>
       <title>Minor Field Readings, Part 4: Space</title>
-      <link>http://www.amanda-regan.com/2014/07/31/minor-field-readings-part-4-space/</link>
+      <link>https://amanda-regan.com/2014/07/minor-field-readings-part-4-space/</link>
       <pubDate>Thu, 31 Jul 2014 19:23:37 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/07/31/minor-field-readings-part-4-space/</guid>
+      
+      <guid>https://amanda-regan.com/2014/07/minor-field-readings-part-4-space/</guid>
       <description>I’m a few weeks behind with this blog post about our minor field readings meeting on Space in Digital History. For this meeting we read a variety of works that discussed Geographic Information Systems (GIS), spatial history, the possibilities and and the complexities of presenting historical material geographically using digital technology and methodologies.
 GIS has been around for years now, yet historians have never embraced it like geographers have. Partly, as many of the authors point out, this is because of the software’s need for exact data rather than fuzzy or general information.</description>
     </item>
     
     <item>
       <title>Minor Field Readings, Part 3: Changing Theories of History</title>
-      <link>http://www.amanda-regan.com/2014/07/05/changing-theories-history/</link>
+      <link>https://amanda-regan.com/2014/07/minor-field-readings-part-3-changing-theories-of-history/</link>
       <pubDate>Sat, 05 Jul 2014 22:25:41 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/07/05/changing-theories-history/</guid>
+      
+      <guid>https://amanda-regan.com/2014/07/minor-field-readings-part-3-changing-theories-of-history/</guid>
       <description>This weeks readings on “Changing Theories of History” discussed the ways digital methods are changing how historians practice or “do” history. Several authors discussed how digital research methods change the scale of materials that we can draw upon while researching a topic. Others discussed the possibility of using visualizations to communicate historical arguments rather than narrative.
 Armitage and Guildi discuss in their article “The Return of the Longue Duree: An Anglo-American Perspective” the origins of the Longue Duree and the shift away from histories that seek to tell the grand macro-narrative to the small focused micro-histories of the 1980s.</description>
     </item>
     
     <item>
       <title>Minor Field Readings, Part 2: Perspectives on New Media</title>
-      <link>http://www.amanda-regan.com/2014/06/22/perspectives-new-media/</link>
+      <link>https://amanda-regan.com/2014/06/minor-field-readings-part-2-perspectives-on-new-media/</link>
       <pubDate>Sun, 22 Jun 2014 22:20:52 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/06/22/perspectives-new-media/</guid>
+      
+      <guid>https://amanda-regan.com/2014/06/minor-field-readings-part-2-perspectives-on-new-media/</guid>
       <description>This weeks readings on “Perspectives of New Media” discussed from varying viewpoints how new media is and has changed the ways scholarship is produced and conceptualized. The readings contemplate what new media tools and technologies change for how we think about, produce, and evaluate information. Out of these readings came a consistent concern with scale, linearity, and how digital technologies and tools will affect narrative, or for my purposes, a historical argument.</description>
     </item>
     
     <item>
       <title>Minor Field Readings, Part 1: Digital Humanities</title>
-      <link>http://www.amanda-regan.com/2014/06/06/dhs-histories-debates-promises/</link>
+      <link>https://amanda-regan.com/2014/06/minor-field-readings-part-1-digital-humanities/</link>
       <pubDate>Fri, 06 Jun 2014 11:59:46 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/06/06/dhs-histories-debates-promises/</guid>
+      
+      <guid>https://amanda-regan.com/2014/06/minor-field-readings-part-1-digital-humanities/</guid>
       <description>This summer I am completing a readings course for my minor field in Digital History. This weeks readings have discussed the digital humanities, the history of the field, and have offered critiques as well as predictions about where the field is going. Most volumes about Digital Humanities discuss the history of the field and place its origins in the history of humanities computing. While there is certainly truth in these accounts, they often overlook the histories of disciplines such as history and how these fields merged together to form the “Digital Humanities” around 2004.</description>
     </item>
     
     <item>
       <title>Readings Course on Digital History in Theory and Practice</title>
-      <link>http://www.amanda-regan.com/2014/05/26/readings-series-digital-history-theory-practice/</link>
+      <link>https://amanda-regan.com/2014/05/readings-course-on-digital-history-in-theory-and-practice/</link>
       <pubDate>Mon, 26 May 2014 20:07:56 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/05/26/readings-series-digital-history-theory-practice/</guid>
+      
+      <guid>https://amanda-regan.com/2014/05/readings-course-on-digital-history-in-theory-and-practice/</guid>
       <description>This summer I&amp;rsquo;ll be completing a readings course for my Digital History minor field with Stephen Robertson. The course will cover Digital History in both Theory and Practice.
 You can view the proposed abstract and bibliography for this course here. In addition to a traditional readings course, I felt it was important to not only understand the major debates in the field but also to learn practical skills that will aid me as I move toward the dissertation stage.</description>
     </item>
     
     <item>
       <title>Final Clio Wired II Project</title>
-      <link>http://www.amanda-regan.com/2014/05/03/final-clio-wired-ii-project/</link>
+      <link>https://amanda-regan.com/2014/05/final-clio-wired-ii-project/</link>
       <pubDate>Sat, 03 May 2014 20:27:21 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/05/03/final-clio-wired-ii-project/</guid>
+      
+      <guid>https://amanda-regan.com/2014/05/final-clio-wired-ii-project/</guid>
       <description>I still have a few small changes to make but for the most part my final project for Clio II is finished. I&amp;rsquo;d like to go back and add a few more primary sources and I still need to fix the gallery of reducing advertisements. Also, the footnotes have mysteriously gone missing on one of my pages so I need to fix that too. I&amp;rsquo;ll get to those things over the next day or so, but in the meantime you can view it here.</description>
     </item>
     
     <item>
       <title>Final Project Design</title>
-      <link>http://www.amanda-regan.com/2014/04/20/final-project-design/</link>
+      <link>https://amanda-regan.com/2014/04/final-project-design/</link>
       <pubDate>Sun, 20 Apr 2014 20:00:39 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/04/20/final-project-design/</guid>
-      <description>I&amp;rsquo;ve been thinking about the final project and trying to make some decisions about design so that I can finish coding the basics of the site over the next week or so. I&amp;rsquo;ve decided to do the website on the &amp;laquo;Reducing Craze&amp;raquo; of 1920. It&amp;rsquo;ll look at the American Medical Association&amp;rsquo;s condemnation of quackery in 1927 and the rejection of what was deemed &amp;laquo;Reduceosanity&amp;raquo;.
+      
+      <guid>https://amanda-regan.com/2014/04/final-project-design/</guid>
+      <description>I&amp;rsquo;ve been thinking about the final project and trying to make some decisions about design so that I can finish coding the basics of the site over the next week or so. I&amp;rsquo;ve decided to do the website on the &amp;ldquo;Reducing Craze&amp;rdquo; of 1920. It&amp;rsquo;ll look at the American Medical Association&amp;rsquo;s condemnation of quackery in 1927 and the rejection of what was deemed &amp;ldquo;Reduceosanity&amp;rdquo;.
 For fonts I&amp;rsquo;ve decided on several google fonts that I&amp;rsquo;ll layer to create a 1920s feel.</description>
     </item>
     
     <item>
       <title>Image Assignment </title>
-      <link>http://www.amanda-regan.com/2014/04/11/image-assignment/</link>
+      <link>https://amanda-regan.com/2014/04/image-assignment/</link>
       <pubDate>Fri, 11 Apr 2014 15:51:18 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/04/11/image-assignment/</guid>
+      
+      <guid>https://amanda-regan.com/2014/04/image-assignment/</guid>
       <description>I&amp;rsquo;m all finished with my image assignment. As I&amp;rsquo;ve been talking about for the last few weeks I used some images from a scrapbook I scanned a few years ago. The images were pretty damaged since they were glued into the scrapbook and were often yellowed and wrinkled. This created quite the challenge for restoration but I think they turned out pretty good or at least far better than they were.</description>
     </item>
     
     <item>
       <title>Attempts at Restoration</title>
-      <link>http://www.amanda-regan.com/2014/04/06/attempts-restoration/</link>
+      <link>https://amanda-regan.com/2014/04/attempts-at-restoration/</link>
       <pubDate>Sun, 06 Apr 2014 15:17:56 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/04/06/attempts-restoration/</guid>
+      
+      <guid>https://amanda-regan.com/2014/04/attempts-at-restoration/</guid>
       <description>I&amp;rsquo;ve been slowly making progress on my image assignment. One of the things I&amp;rsquo;ve been attempting to do is to restore some images that were part of a scrapbook I scanned while I was working on my masters. The scrapbook contained magazine and newspaper clippings that were glued onto pages and tied together with some twine. Unfortunately, after being stored in a closet for seventy plus years the pages are crumbling, the photos are yellowed, and most of the photos have some odd crease in them likely from the glue that was used.</description>
     </item>
     
     <item>
       <title>Restoring an Image from a Microfilm Copy</title>
-      <link>http://www.amanda-regan.com/2014/03/28/restoring-comic-microfilm/</link>
+      <link>https://amanda-regan.com/2014/03/restoring-an-image-from-a-microfilm-copy/</link>
       <pubDate>Fri, 28 Mar 2014 20:14:14 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/03/28/restoring-comic-microfilm/</guid>
+      
+      <guid>https://amanda-regan.com/2014/03/restoring-an-image-from-a-microfilm-copy/</guid>
       <description>I&amp;rsquo;ve been working on making some of the small changes to my typography project that we discussed in class last week. Most of the spacing fixes and the changes to the lines were super easy to fix but restoring the comic has taken a bit of time. I played with doing different things to it, but the challenge with this particular image was that because it was printed from a microfilm reader (and then scanned) the image&amp;rsquo;s quality is pretty poor even though the resolution is high.</description>
     </item>
     
     <item>
       <title>Color</title>
-      <link>http://www.amanda-regan.com/2014/03/16/color/</link>
+      <link>https://amanda-regan.com/2014/03/color/</link>
       <pubDate>Sun, 16 Mar 2014 15:45:25 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/03/16/color/</guid>
+      
+      <guid>https://amanda-regan.com/2014/03/color/</guid>
       <description>The last couple weeks we&amp;rsquo;ve been reading about color and the do&amp;rsquo;s and don&amp;rsquo;ts of picking a color scheme. I think the reading in White Space is Not Your Enemy was very helpful and got me thinking about the color scheme for the design project.
 Something that was extremely useful for me was the explanation of the differences between CMYK, PANTONE, and RGB. Prior to reading this I sort of understood the difference just from experience but the reading really pinpointed what each system is for, when to use it, and how it works.</description>
     </item>
     
     <item>
       <title>THATCamp Topic Modeling Results</title>
-      <link>http://www.amanda-regan.com/2014/02/26/thatcamp-topic-modeling-results/</link>
+      <link>https://amanda-regan.com/2014/02/thatcamp-topic-modeling-results/</link>
       <pubDate>Wed, 26 Feb 2014 14:30:57 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/02/26/thatcamp-topic-modeling-results/</guid>
+      
+      <guid>https://amanda-regan.com/2014/02/thatcamp-topic-modeling-results/</guid>
       <description>This post is the last in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post, which was collectively written by the DH Fellows, can be found on our Digital History Fellowship Blog.
 We have spent the last few weeks working to build a python script that would allow us to download and prep all of the THATCamp blog posts for topic modeling in MALLET (for those catching up, we detailed this process in a series of previous posts).</description>
     </item>
     
     <item>
       <title>Typography Assignment</title>
-      <link>http://www.amanda-regan.com/2014/02/23/typography-assignment/</link>
+      <link>https://amanda-regan.com/2014/02/typography-assignment/</link>
       <pubDate>Sun, 23 Feb 2014 01:39:32 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/02/23/typography-assignment/</guid>
+      
+      <guid>https://amanda-regan.com/2014/02/typography-assignment/</guid>
       <description>For the typography assignment I decided to make a page using some of the content from my masters thesis. I said last week I wasn&amp;rsquo;t going to use my thesis for this class, but then I decided that for this assignment it might be kind of fun. I&amp;rsquo;ll get back to physical culture in the progressive era for the design and final assignments. I pieced together some text from my thesis that introduces a woman named Sylvia Ullback who was a beauty expert to the Hollywood stars in the 1920s.</description>
     </item>
     
     <item>
       <title>Unexpected Challenges Result in Important and Informative Discussions: a transparent discussion about stripping content and stopwords</title>
-      <link>http://www.amanda-regan.com/2014/02/19/unexpected-challenges-result-important-informative-discussions-transparent-discussion-stripping-content-stopwords/</link>
+      <link>https://amanda-regan.com/2014/02/unexpected-challenges-result-in-important-and-informative-discussions-a-transparent-discussion-about-stripping-content-and-stopwords/</link>
       <pubDate>Wed, 19 Feb 2014 14:00:07 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/02/19/unexpected-challenges-result-important-informative-discussions-transparent-discussion-stripping-content-stopwords/</guid>
+      
+      <guid>https://amanda-regan.com/2014/02/unexpected-challenges-result-in-important-and-informative-discussions-a-transparent-discussion-about-stripping-content-and-stopwords/</guid>
       <description>This post is the fourth in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post by Jannelle Legg can be found on the Digital History Fellowship Blog.
 As described in previous posts, the first year Digital Fellows at CHNM have been working on a project under the Research division that involves collecting, cleaning, and analyzing data from a corpus of THATCamp content.</description>
     </item>
     
     <item>
       <title>Pre-Processing Text for MALLET</title>
-      <link>http://www.amanda-regan.com/2014/02/18/pre-processing-text-mallet/</link>
+      <link>https://amanda-regan.com/2014/02/pre-processing-text-for-mallet/</link>
       <pubDate>Tue, 18 Feb 2014 14:00:29 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/02/18/pre-processing-text-mallet/</guid>
+      
+      <guid>https://amanda-regan.com/2014/02/pre-processing-text-for-mallet/</guid>
       <description>This post is the third in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post can be found on the Digital History Fellowship Blog.
 In our previous post, we described the process of writing a python script that pulled from the THATCamp MySQL Database. In this post, we will continue with this project and work to clean up the data we&amp;rsquo;ve collected and prepare it for some analysis.</description>
     </item>
     
     <item>
       <title>Design Using a Grid</title>
-      <link>http://www.amanda-regan.com/2014/02/16/design-using-grid/</link>
+      <link>https://amanda-regan.com/2014/02/design-using-a-grid/</link>
       <pubDate>Sun, 16 Feb 2014 15:38:31 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/02/16/design-using-grid/</guid>
+      
+      <guid>https://amanda-regan.com/2014/02/design-using-a-grid/</guid>
       <description>The reading for this week in _Thinking with Type _about grids was extremely interesting to me. The section about tables and grids in html particularly peaked my interest. I think the hardest part of html and css is learning layout but I think a grid makes the whole idea of layout easier to understand. I&amp;rsquo;ve always used grids when I code, particularly I like the 960 grid system which makes layout very easy and allows you to work of a variety of grid layouts.</description>
     </item>
     
     <item>
       <title>Extracting Data from the THATCamp Database Using Python and MySQL</title>
-      <link>http://www.amanda-regan.com/2014/02/09/extracting-data-python-mysql/</link>
+      <link>https://amanda-regan.com/2014/02/extracting-data-from-the-thatcamp-database-using-python-and-mysql/</link>
       <pubDate>Sun, 09 Feb 2014 20:54:45 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/02/09/extracting-data-python-mysql/</guid>
+      
+      <guid>https://amanda-regan.com/2014/02/extracting-data-from-the-thatcamp-database-using-python-and-mysql/</guid>
       <description>This post is the second in a set of 4 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post can be found on the Digital History Fellowship Blog.
 This week we&amp;rsquo;ve continued to work on building a python script that will extract all of the blog posts from the various THATCamp websites. As Jannelle described last week, our goal was to write a script that downloads the blog posts in plain text form and strips all of the html tags, stopwords, and punctuation so that we can feed it into MALLET for topic modeling and text analysis.</description>
     </item>
     
     <item>
       <title>Spring Semester in Research and a THATCamp Challenge</title>
-      <link>http://www.amanda-regan.com/2014/02/09/spring-semester-research-thatcamp-challenge/</link>
+      <link>https://amanda-regan.com/2014/02/spring-semester-in-research-and-a-thatcamp-challenge/</link>
       <pubDate>Sun, 09 Feb 2014 19:39:04 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/02/09/spring-semester-research-thatcamp-challenge/</guid>
+      
+      <guid>https://amanda-regan.com/2014/02/spring-semester-in-research-and-a-thatcamp-challenge/</guid>
       <description>This post is the first in a set of 4 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post by Jannelle Legg can be found on the Digital History Fellowship Blog.
 The spring semester is here and the first year DH fellows have begun our rotation into the Research division of CHNM.
 To get the ball rolling, we spent a week working through the helpful tutorials at theProgramming Historian.</description>
@@ -297,167 +345,167 @@ To get the ball rolling, we spent a week working through the helpful tutorials a
     
     <item>
       <title>Typographical Design and Communication</title>
-      <link>http://www.amanda-regan.com/2014/02/09/typographical-design-communication-via-web/</link>
+      <link>https://amanda-regan.com/2014/02/typographical-design-and-communication/</link>
       <pubDate>Sun, 09 Feb 2014 18:25:16 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/02/09/typographical-design-communication-via-web/</guid>
-      <description>This week&amp;rsquo;s materials on Typography were really interesting. I especially enjoyed Morris&amp;rsquo;s article &amp;laquo;Hear, All Ye People; Hearken, O Earth.&amp;raquo; I&amp;rsquo;ve always been interested in Typography but I had never realized the extent to which a typeface can affect the credibility of a site. Typography is one of the most important, if not the most important, element in the design of a website yet it&amp;rsquo;s something that we rarely consciously think about.</description>
+      
+      <guid>https://amanda-regan.com/2014/02/typographical-design-and-communication/</guid>
+      <description>This week&amp;rsquo;s materials on Typography were really interesting. I especially enjoyed Morris&amp;rsquo;s article &amp;ldquo;Hear, All Ye People; Hearken, O Earth.&amp;quot; I&amp;rsquo;ve always been interested in Typography but I had never realized the extent to which a typeface can affect the credibility of a site. Typography is one of the most important, if not the most important, element in the design of a website yet it&amp;rsquo;s something that we rarely consciously think about.</description>
     </item>
     
     <item>
       <title>&#34;Building&#34; in the Digital Humanities </title>
-      <link>http://www.amanda-regan.com/2014/02/03/building-digital-humanities/</link>
+      <link>https://amanda-regan.com/2014/02/building-in-the-digital-humanities/</link>
       <pubDate>Mon, 03 Feb 2014 01:43:29 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2014/02/03/building-digital-humanities/</guid>
-      <description>This week&amp;rsquo;s readings, specifically Stephen Ramsey&amp;rsquo;s article &amp;laquo;Who&amp;rsquo;s In? Who&amp;rsquo;s Out?,&amp;raquo; really got me thinking about (again) about how Digital History is defined and why (or if) coding is an important skill for any digital historian. There are a large number of tools available to allow historians to analyze sources and make arguments using technology, many that don&amp;rsquo;t require a significant amount of coding knowledge. Specifically, I&amp;rsquo;m thinking of something such as MALLET, which a number of us used for our final Clio I projects.</description>
+      
+      <guid>https://amanda-regan.com/2014/02/building-in-the-digital-humanities/</guid>
+      <description>This week&amp;rsquo;s readings, specifically Stephen Ramsey&amp;rsquo;s article &amp;ldquo;Who&amp;rsquo;s In? Who&amp;rsquo;s Out?,&amp;rdquo; really got me thinking about (again) about how Digital History is defined and why (or if) coding is an important skill for any digital historian. There are a large number of tools available to allow historians to analyze sources and make arguments using technology, many that don&amp;rsquo;t require a significant amount of coding knowledge. Specifically, I&amp;rsquo;m thinking of something such as MALLET, which a number of us used for our final Clio I projects.</description>
     </item>
     
     <item>
       <title>Reflections on the Public Projects Division </title>
-      <link>http://www.amanda-regan.com/2013/12/19/reflections-public-projects-division/</link>
+      <link>https://amanda-regan.com/2013/12/reflections-on-the-public-projects-division/</link>
       <pubDate>Thu, 19 Dec 2013 02:55:58 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/12/19/reflections-public-projects-division/</guid>
+      
+      <guid>https://amanda-regan.com/2013/12/reflections-on-the-public-projects-division/</guid>
       <description>I&amp;rsquo;m all finished with my first semester in the PhD program at George Mason University. Below is a reflection on the time the Digital History Fellows have spent in the Public Projects Division at the Roy Rosenzweig Center for History and New Media. My first semester here has been deeply rewarding and I think the Digital History Fellowship has allowed me to really develop a deeper understanding of Digital History and the goals for both public history, education, and particularly the potential of digital tools for historical research.</description>
     </item>
     
     <item>
       <title>Final Digital Scholarship Project</title>
-      <link>http://www.amanda-regan.com/2013/12/06/final-project/</link>
+      <link>https://amanda-regan.com/2013/12/final-digital-scholarship-project/</link>
       <pubDate>Fri, 06 Dec 2013 19:07:17 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/12/06/final-project/</guid>
-      <description>The final version of my Clio Wired Project, &amp;laquo;Shifts in Physical Culture,&amp;raquo; is online now. It has been quite the process getting everything formatted correctly&amp;ndash;I realized after I presented that I had made a mistake and did not included all of the articles when I ran the topic modeling software so I had to adjust that. Overall the results are the same&amp;ndash;there is a definite change in the discussion of physical culture between 1932 and 1937.</description>
+      
+      <guid>https://amanda-regan.com/2013/12/final-digital-scholarship-project/</guid>
+      <description>The final version of my Clio Wired Project, &amp;ldquo;Shifts in Physical Culture,&amp;quot; is online now. It has been quite the process getting everything formatted correctly&amp;ndash;I realized after I presented that I had made a mistake and did not included all of the articles when I ran the topic modeling software so I had to adjust that. Overall the results are the same&amp;ndash;there is a definite change in the discussion of physical culture between 1932 and 1937.</description>
     </item>
     
     <item>
       <title>Shifts in Physical Culture: A Textual Analysis</title>
-      <link>http://www.amanda-regan.com/2013/11/25/shifts-physical-culture-textual-analysis/</link>
+      <link>https://amanda-regan.com/2013/11/shifts-in-physical-culture-a-textual-analysis/</link>
       <pubDate>Mon, 25 Nov 2013 20:59:38 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/11/25/shifts-physical-culture-textual-analysis/</guid>
+      
+      <guid>https://amanda-regan.com/2013/11/shifts-in-physical-culture-a-textual-analysis/</guid>
       <description>My work of digital scholarship uses Topic Modeling to analyze a set of articles written by Sylvia Ullback, a beauty expert in the 1930s, between 1932 and 1937. Ullback&amp;rsquo;s articles shift during this period and the change in her discussion of beauty can be seen in the topic models. For more background on Sylvia Ullback and her career see the website for this project. This is a work in progress and I&amp;rsquo;ll give more detail about the changes tonight in class but here is what I have so far:</description>
     </item>
     
     <item>
       <title>Digital Humanities and Collaboration</title>
-      <link>http://www.amanda-regan.com/2013/11/18/digital-humanities-collaboration/</link>
+      <link>https://amanda-regan.com/2013/11/digital-humanities-and-collaboration/</link>
       <pubDate>Mon, 18 Nov 2013 20:46:13 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/11/18/digital-humanities-collaboration/</guid>
+      
+      <guid>https://amanda-regan.com/2013/11/digital-humanities-and-collaboration/</guid>
       <description>Collaboration isn’t new for historians. A piece of historical scholarship has always involved a range of people. The prologue of most traditional monographs includes a list of those who helped make the book possible. From the support and assistance of archivists and librarians, to review and support by fellow scholars and students, and often financial support from institutions and publishers publishing a work of traditional scholarship is by no means an individual endeavor.</description>
     </item>
     
     <item>
       <title>Technology and the Classroom</title>
-      <link>http://www.amanda-regan.com/2013/11/11/technology-classroom/</link>
+      <link>https://amanda-regan.com/2013/11/technology-and-the-classroom/</link>
       <pubDate>Mon, 11 Nov 2013 16:59:06 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/11/11/technology-classroom/</guid>
+      
+      <guid>https://amanda-regan.com/2013/11/technology-and-the-classroom/</guid>
       <description>I TA’d for the first time last spring, my last semester in my masters program. It was the first time I had ever taught and I quickly learned that leading a discussion section and getting freshman interested in World History was challenging. I came away from the semester realizing, what may be obvious to those more experienced teachers, that teaching history to undergrads from a variety of majors is more difficult that it appears.</description>
     </item>
     
     <item>
       <title>Big Data for Historians</title>
-      <link>http://www.amanda-regan.com/2013/11/03/big-data-historians/</link>
+      <link>https://amanda-regan.com/2013/11/big-data-for-historians/</link>
       <pubDate>Sun, 03 Nov 2013 17:19:15 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/11/03/big-data-historians/</guid>
+      
+      <guid>https://amanda-regan.com/2013/11/big-data-for-historians/</guid>
       <description>Franco Moretti’s article “Graphs, Maps, and Trees: Abstract Models for Literary History,” shows how most histories of the book have focused on a few particular books rather than the novel as a genre. This has probably had to do with scale. It would be an overwhelming and almost impossible task to read every single novel in order to write a comprehensive and all-encompassing history of the novel. However, this is where Big Data allows historians to look at large trends in ways that are impractical without computers.</description>
     </item>
     
     <item>
       <title>Mapping Regional Ideals of Beauty, 1900-1940: A Digital Research Resouce</title>
-      <link>http://www.amanda-regan.com/2013/10/26/mappingregionalidealsofbeauty/</link>
+      <link>https://amanda-regan.com/2013/10/mapping-regional-ideals-of-beauty-1900-1940-a-digital-research-resouce/</link>
       <pubDate>Sat, 26 Oct 2013 15:17:50 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/10/26/mappingregionalidealsofbeauty/</guid>
+      
+      <guid>https://amanda-regan.com/2013/10/mapping-regional-ideals-of-beauty-1900-1940-a-digital-research-resouce/</guid>
       <description>As I&amp;rsquo;ve mentioned a few times before I am interested in ideas about the body and beauty in the early twentieth century. My digital resource is a research tool that would help me to analyze the mass amounts of newspaper articles available.
 Background Between 1900 and 1940 there were several distinct shifts in the ideas of beauty and physical culture for women in the United States. Shifts in the image and role of the New Woman, from the Gibson Girl to the Flapper, were accompanied by changes in the ideal female body.</description>
     </item>
     
     <item>
       <title>Spatial History as a Research Tool</title>
-      <link>http://www.amanda-regan.com/2013/10/20/spatial-history-research-tool/</link>
+      <link>https://amanda-regan.com/2013/10/spatial-history-as-a-research-tool/</link>
       <pubDate>Sun, 20 Oct 2013 16:21:14 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/10/20/spatial-history-research-tool/</guid>
-      <description>In Richard White&amp;rsquo;s article &amp;laquo;What is Spatial History?,&amp;raquo; he discusses the turn to spatial history and the ways in which it can be used as a research tool to enhance historical scholarship. His article was fascinating and really got me thinking about different spatial history projects I&amp;rsquo;ve seen. Two that come to mind is &amp;laquo;Visualizing Emancipation&amp;raquo;, run by Scott Nesbit and Edward Ayers at the University of Richmond&amp;rsquo;s Digital Scholarship Lab, and The Geography of Hate, run by Monica Stephens at Humboldt State University.</description>
+      
+      <guid>https://amanda-regan.com/2013/10/spatial-history-as-a-research-tool/</guid>
+      <description>In Richard White&amp;rsquo;s article &amp;ldquo;What is Spatial History?,&amp;quot; he discusses the turn to spatial history and the ways in which it can be used as a research tool to enhance historical scholarship. His article was fascinating and really got me thinking about different spatial history projects I&amp;rsquo;ve seen. Two that come to mind is &amp;ldquo;Visualizing Emancipation&amp;rdquo;, run by Scott Nesbit and Edward Ayers at the University of Richmond&amp;rsquo;s Digital Scholarship Lab, and The Geography of Hate, run by Monica Stephens at Humboldt State University.</description>
     </item>
     
     <item>
       <title>Examples of Spatial History</title>
-      <link>http://www.amanda-regan.com/2013/10/20/examples-spatial-history/</link>
+      <link>https://amanda-regan.com/2013/10/examples-of-spatial-history/</link>
       <pubDate>Sun, 20 Oct 2013 09:00:07 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/10/20/examples-spatial-history/</guid>
+      
+      <guid>https://amanda-regan.com/2013/10/examples-of-spatial-history/</guid>
       <description>I posted these in the Zotero group, but I thought I would add them here as well. I think these are two interesting examples of spatial history. Mapping Decline: St. Louis and the American City is an example of using a spatial history component to bolster an argument. We have been talking about Digital History and whether it needs to make an argument all semester and I think _Mapping Decline _is a great example of a project that does that.</description>
     </item>
     
     <item>
       <title>How can technology help teachers to teach historical and critical thinking?</title>
-      <link>http://www.amanda-regan.com/2013/10/07/can-technology-help-teachers-teach-historical-critical-thinking/</link>
+      <link>https://amanda-regan.com/2013/10/how-can-technology-help-teachers-to-teach-historical-and-critical-thinking/</link>
       <pubDate>Mon, 07 Oct 2013 16:48:34 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/10/07/can-technology-help-teachers-teach-historical-critical-thinking/</guid>
+      
+      <guid>https://amanda-regan.com/2013/10/how-can-technology-help-teachers-to-teach-historical-and-critical-thinking/</guid>
       <description>*This was blog post was originally posted on the Center for History and New Media&amp;rsquo;s blog as part of my Digital History Fellowship at George Mason University.
 How can technology help teachers to teach historical and critical thinking? Getting students to think critically about historical events rather than just memorizing the facts is challenging, but digital technology can help. With so many new digital tools being developed each year, teachers are eager for resources to help locate free, quality tools that can help students become better critical thinkers and historians.</description>
     </item>
     
     <item>
       <title>On the Overwhelming Challenge of Preserving Born Digital Materials</title>
-      <link>http://www.amanda-regan.com/2013/10/07/395/</link>
+      <link>https://amanda-regan.com/2013/10/on-the-overwhelming-challenge-of-preserving-born-digital-materials/</link>
       <pubDate>Mon, 07 Oct 2013 16:12:54 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/10/07/395/</guid>
+      
+      <guid>https://amanda-regan.com/2013/10/on-the-overwhelming-challenge-of-preserving-born-digital-materials/</guid>
       <description>The Preserving our Digital Heritage: Plan for the National Digital Information Infrastructure and Preservation Program stated that the average length of a website is 44 days. That really surprised me. I think the preservation of born digital material is an important issue right now, and it&amp;rsquo;s only going to get more important as our world increasingly becomes more digital. It is really an overwhelming issue with so many hurdles and potential issues.</description>
     </item>
     
     <item>
       <title>Crowdsourced Collections: A Democratic Approach</title>
-      <link>http://www.amanda-regan.com/2013/09/23/crowdsourced-collections-democratic-approach/</link>
+      <link>https://amanda-regan.com/2013/09/crowdsourced-collections-a-democratic-approach/</link>
       <pubDate>Mon, 23 Sep 2013 15:58:57 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/09/23/crowdsourced-collections-democratic-approach/</guid>
-      <description>I came across a project of Berry College and Bloomsberg University this week called the Martha Berry Digital Archive. The site is built on Omeka and a plugin the developers created for the site called &amp;laquo;Crowd-Ed&amp;raquo;. The plugin allows the digitization of their entire collection to be crowdsourced. In other words, the archive digitizes the documents and users annotate, tag, and fill in the metadata for each item.
+      
+      <guid>https://amanda-regan.com/2013/09/crowdsourced-collections-a-democratic-approach/</guid>
+      <description>I came across a project of Berry College and Bloomsberg University this week called the Martha Berry Digital Archive. The site is built on Omeka and a plugin the developers created for the site called &amp;ldquo;Crowd-Ed&amp;rdquo;. The plugin allows the digitization of their entire collection to be crowdsourced. In other words, the archive digitizes the documents and users annotate, tag, and fill in the metadata for each item.
 Crowdsourcing has been gaining popularity recently and has become a way for archives to digitize mass amounts of data fairly quickly and at a minimal cost.</description>
     </item>
     
     <item>
       <title>Open Access, Open Source, and the Responsibilities of Historians in the Digital World</title>
-      <link>http://www.amanda-regan.com/2013/09/22/open-access-open-source-responsibilities-historians-digital-world/</link>
+      <link>https://amanda-regan.com/2013/09/open-access-open-source-and-the-responsibilities-of-historians-in-the-digital-world/</link>
       <pubDate>Sun, 22 Sep 2013 16:00:00 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/09/22/open-access-open-source-responsibilities-historians-digital-world/</guid>
-      <description>Yesterday I attended WordCamp Baltimore, a WordPress developers conference. Aaron Jorbin, a well-known WordPress developer in the D.C. area, gave the keynote address which was about open source platforms and the open source community. If you aren&amp;rsquo;t familiar with the &amp;laquo;.org&amp;raquo; version of WordPress, it is open source and free to anyone who wants to use, modify, or develop the software. Jorbin&amp;rsquo;s keynote was entitled &amp;laquo;Citizenship in the Open Source World&amp;raquo; and he talked a lot about the responsibilities and the rights of a citizen in the &amp;laquo;Open Source World.</description>
+      
+      <guid>https://amanda-regan.com/2013/09/open-access-open-source-and-the-responsibilities-of-historians-in-the-digital-world/</guid>
+      <description>Yesterday I attended WordCamp Baltimore, a WordPress developers conference. Aaron Jorbin, a well-known WordPress developer in the D.C. area, gave the keynote address which was about open source platforms and the open source community. If you aren&amp;rsquo;t familiar with the &amp;ldquo;.org&amp;rdquo; version of WordPress, it is open source and free to anyone who wants to use, modify, or develop the software. Jorbin&amp;rsquo;s keynote was entitled &amp;ldquo;Citizenship in the Open Source World&amp;rdquo; and he talked a lot about the responsibilities and the rights of a citizen in the &amp;ldquo;Open Source World.</description>
     </item>
     
     <item>
       <title>Webdesign for Academics </title>
-      <link>http://www.amanda-regan.com/2013/09/16/webdesign-for-academics/</link>
+      <link>https://amanda-regan.com/2013/09/webdesign-for-academics/</link>
       <pubDate>Mon, 16 Sep 2013 18:24:27 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/09/16/webdesign-for-academics/</guid>
+      
+      <guid>https://amanda-regan.com/2013/09/webdesign-for-academics/</guid>
       <description>Web Design is not something academic are traditionally trained in. However, as the discipline continues to change and Digital History continues to develop and grow, knowing a little bit about what constitutes a good historical website is necessary.
-Alexander Dawson makes excellent points about the development and organization of a website in his article &amp;laquo;Improve Usability by Studying Museums.&amp;raquo;  He compares the layout of a museum to that of a website and argues that many web designers could take some tips from the organization of museums.</description>
+Alexander Dawson makes excellent points about the development and organization of a website in his article &amp;ldquo;Improve Usability by Studying Museums.&amp;rdquo;  He compares the layout of a museum to that of a website and argues that many web designers could take some tips from the organization of museums.</description>
     </item>
     
     <item>
       <title>What are the digital humanities, what do they do, and how does digital history fit in?</title>
-      <link>http://www.amanda-regan.com/2013/09/09/what-are-the-digital-humanities-what-do-they-do-and-how-does-digital-history-fit-in/</link>
+      <link>https://amanda-regan.com/2013/09/what-are-the-digital-humanities-what-do-they-do-and-how-does-digital-history-fit-in/</link>
       <pubDate>Mon, 09 Sep 2013 15:41:40 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/09/09/what-are-the-digital-humanities-what-do-they-do-and-how-does-digital-history-fit-in/</guid>
+      
+      <guid>https://amanda-regan.com/2013/09/what-are-the-digital-humanities-what-do-they-do-and-how-does-digital-history-fit-in/</guid>
       <description>What are the digital humanities, what do they do, and how does digital history fit in? It’s a valid question and one that I think has several answers.Northwestern University’s “A Guide to Digital Humanities”confronts this question and attempts to make sense of the many different definitions that exist for Digital Humanities. The consensus seems to be that the Digital Humanities are centered on scholarship. The digital humanities are both a methodology and a presentation technique.</description>
     </item>
     
     <item>
       <title>Clio I--Introduction and RSS Feeds</title>
-      <link>http://www.amanda-regan.com/2013/08/26/clio-i-introduction-and-rss-feeds/</link>
+      <link>https://amanda-regan.com/2013/08/clio-i-introduction-and-rss-feeds/</link>
       <pubDate>Mon, 26 Aug 2013 20:22:24 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/2013/08/26/clio-i-introduction-and-rss-feeds/</guid>
+      
+      <guid>https://amanda-regan.com/2013/08/clio-i-introduction-and-rss-feeds/</guid>
       <description>I&amp;rsquo;ll be using this website as my blog for Clio I this fall at George Mason University.
 I am a PhD student and Digital History Fellow at George Mason University. My research interest is primarily U.S. Women’s history with a particular focus on physical culture and beauty in the early twentieth century as well as Digital History. As part of the Digital History Fellowship I will be working in the Center for History and Media at GMU for the next few years.</description>
     </item>

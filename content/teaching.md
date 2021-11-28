@@ -6,24 +6,28 @@ date: "2017-04-20"
 slug: "teaching"
 ---
 
-## Courses
+### Clemson University
+* **History 1010: United States History to 1877**
+  * Fall 2021
 
-### History 390: The Digital Past, George Mason University
-The Digital Past is an undergraduate history class at George Mason University which fulfills the University's IT Requirement. In this class students explore technologies such as maps, data sets, and visualizations within the context of an upper division history class. Students learn how to find and use digital information for research as well as how question, analyze, summarize, and interpret it. The class is centered around using digital tools to ask and answer historical questions but is also grounded in traditional historical pedagogy including rigorous reading and writing.
+### George Mason University
 
-* [Summer 2019](http://www.amanda-regan.com/390summer19)
-* [Spring 2019](http://www.amanda-regan.com/390spring19)
-* Fall 2018 - [Section 02](http://amanda-regan.com/390fall18-2/), [Section 3](http://amanda-regan.com/390fall18-3/)
-* [Summer 2018](http://amanda-regan.com/390summer18/)
-* [Summer 2017](http://amanda-regan.com/390summer17/)
+* **History 390: The Digital Past**
+  * The Digital Past is an undergraduate history class at George Mason University which fulfills the University's IT Requirement. In this class students explore technologies such as maps, data sets, and visualizations within the context of an upper division history class. Students learn how to find and use digital information for research as well as how question, analyze, summarize, and interpret it. The class is centered around using digital tools to ask and answer historical questions but is also grounded in traditional historical pedagogy including rigorous reading and writing.
+  * [Summer 2019](http://www.amanda-regan.com/390summer19)
+  * [Spring 2019](http://www.amanda-regan.com/390spring19)
+  * Fall 2018 - [Section 02](http://amanda-regan.com/390fall18-2/), [Section 3](http://amanda-regan.com/390fall18-3/)
+  * [Summer 2018](http://amanda-regan.com/390summer18/)
+  * [Summer 2017](http://amanda-regan.com/390summer17/)
 
-### History 121: U.S. History to 1865, North Virginia Community College
+### North Virginia Community College
+* **History 121: U.S. History to 1865**
+  * [Summer 2018](http://www.amanda-regan.com/121su18)
 
-* [Summer 2018](http://www.amanda-regan.com/121su18)
-
-## Digital Humanities Workshops
+### Digital Humanities Workshops
 In addition to teaching traditional history courses at the university level, I also often teach workshops on digital tools and methodologies. In the past I've led workshops on text analysis and computational thinking as well as on tools such as [Omeka](www.omeka.org), [Zotero](www.zotero.org), and [PressForward](www.pressforward.org).
 
+* Doing Research in the Digital Age: Managing Your Personal Archive with Zotero and Tropy, Workshop for Intro to Digital Humanities at Southern Methodist University, February 2020.
 * Building a Community Edited Publication: User Management and PressForward, invited talk, Social Science Research Council, April 2018.
 * Text Analysis with Voyant Tools, Collections As Data: Hack-to-Learn, Library of Congress, Washington D.C., May 2017.
 * [Text Analysis for Digital Humanists](http://www.amanda-regan.com/Workshop-UCR/), invited workshop and talk, University of California, Riverside, California, November 2016.

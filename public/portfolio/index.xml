@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolios on Amanda E. Regan</title>
+    <link>https://example.com/portfolio/</link>
+    <description>Recent content in Portfolios on Amanda E. Regan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mapping the Gay Guides</title>
+      <link>https://example.com/portfolio/mgg/</link>
+      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/portfolio/mgg/</guid>
+      <description>Mapping the Gay Guides (MGG) is an in-progress digital history project and collaboration between myself and Dr. Eric Gonzaba. MGG draws on Bob Damron&amp;rsquo;s Address Book, an early but longstanding travel guide aimed at gay men since the early 1960s. An LGBT equivalent to the African American “green books,” the Damron guides contained lists of bars, bathhouses, cinemas, hotels, advocacy organizations and cruising sites in every U.S. state.
+Rare and hard to fine, MGG seeks to make these valuable sources available by digitizing, transcribing and mapping the locations within each guide.</description>
+    </item>
+    
+  </channel>
+</rss>

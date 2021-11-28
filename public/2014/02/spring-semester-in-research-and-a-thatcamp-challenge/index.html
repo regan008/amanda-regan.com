@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Spring Semester in Research and a THATCamp Challenge" />
+<meta property="og:description" content="This post is the first in a set of 4 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post by Jannelle Legg can be found on the Digital History Fellowship Blog.
+The spring semester is here and the first year DH fellows have begun our rotation into the Research division of CHNM.
+To get the ball rolling, we spent a week working through the helpful tutorials at theProgramming Historian." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://amanda-regan.com/2014/02/spring-semester-in-research-and-a-thatcamp-challenge/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-02-09T19:39:04+00:00" />
+<meta property="article:modified_time" content="2014-02-09T19:39:04+00:00" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spring Semester in Research and a THATCamp Challenge"/>
+<meta name="twitter:description" content="This post is the first in a set of 4 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post by Jannelle Legg can be found on the Digital History Fellowship Blog.
+The spring semester is here and the first year DH fellows have begun our rotation into the Research division of CHNM.
+To get the ball rolling, we spent a week working through the helpful tutorials at theProgramming Historian."/>
+
+
+
+    <link rel="canonical" href="https://amanda-regan.com/2014/02/spring-semester-in-research-and-a-thatcamp-challenge/">
+
+    <title>
+      
+        Spring Semester in Research and a THATCamp Challenge | Amanda Regan
+      
+    </title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href='/css/style.css' rel="stylesheet">
+
+    
+
+    
+  </head>
+  <body>
+    
+      
+
+<header class="blog-header">
+    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="/">
+                Amanda Regan
+            </a><br>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between flex-row-reverse" id="navbarNav">
+                <ul class="navbar-nav">
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/">ABOUT</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="https://raw.githubusercontent.com/regan008/C-V/master/ARegan-cv.pdf">CV</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/projects">RESEARCH &amp; PROJECTS</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/teaching">TEACHING</a>
+                        
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+    
+
+    
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-9  blog-main">
+
+          
+
+<header>
+    <h2 class="blog-post-title">
+    <a class="text-dark text-decoration-none" href="/2014/02/spring-semester-in-research-and-a-thatcamp-challenge/">Spring Semester in Research and a THATCamp Challenge</a>
+</h2>
+
+    <hr>
+</header>
+<article class="blog-post">
+    <p><strong>This post is the first in a set of 4 written by the <a href="http://chnm.gmu.edu/courses/fellowship/?page_id=11">Digital History Fellows</a> at the <a href="http://chnm.gmu.edu/">Roy Rosenzweig Center for History and New Media</a>. The original post by Jannelle Legg can be found on the <a href="http://chnm.gmu.edu/courses/fellowship/">Digital History Fellowship Blog</a>.</strong></p>
+<p>The spring semester is here and the first year DH fellows have begun our rotation into the Research division of CHNM.</p>
+<p>To get the ball rolling, we spent a week working through the helpful tutorials at the<a href="http://programminghistorian.org/">Programming Historian</a>. As someone new to DH, with admittedly limited technical skill and knowledge, these were immeasurably useful. Each tutorial breaks content into smaller, less intimidating units. These can be completed in succession or selected for a particular topic or skill. While there is useful content for anyone, we focused our attention on <a href="http://programminghistorian.org/lessons/introduction-and-installation">Python</a> and <a href="http://programminghistorian.org/lessons/topic-modeling-and-mallet">Topic Modeling</a> with the aim of solving our own programming dilemma.</p>
+<p>Our central challenge was to extract content across the THATCamp WordPress site to enable us to do some text analysis.</p>
+<p>THATCamp, or “The Humanities and Technology Camp”, an unconference begun in 2008 at George Mason University, provides participants with space to collaborate and discuss the intersection of technology and the humanities. In five years there have been 148 THATCamps (Amanda French, THATCamp coordinator, works out the scale and scope of the camp’s impact in a blog post <a href="http://thatcamp.org/04/24/how-long-how-much-how-many/">here</a>).</p>
+<p>Each THATCamp has their own domain containing various posts about the event, proposals from attendees, and notes from sessions (for example:<a href="http://dc2014.thatcamp.org/">dc2014.thatcamp.org</a>). While some camps are more active than others, every camp generates a large number of distinct posts. All of that content is uploaded to one multi-site WordPress install. On the backend, every additional THATCamp is given a distinctive number and a brand new set of tables is created (with upwards of 10 tables for each camp). With 148 separate camps (and an additional 32 upcoming camps), that translates into a massive database.</p>
+<p>Given the wealth of information available, the THATCamp website offers an attractive opportunity to examine trends in DH discussion. However, there is no effective way for individuals to do so. If one wanted to learn more about the content discussed across multiple THATcamps, he or she could, theoretically, go to each individual page to read the text, but given the sizable amount of posts and the available, a more efficient option is necessary.</p>
+<p>The goal of this project is to create a program using MySQL and Python that will allow us to collect the content available on the site and prepare it for further analysis (using tools like MALLET). This will require several steps:</p>
+<ul>
+<li>
+<p>access wordpress content which is stored in a MySQL database</p>
+<ul>
+<li>create python code that logs into the database remotely</li>
+</ul>
+</li>
+<li>
+<p>identify the tables from each THATCamp’s wordpress site within the database.</p>
+<ul>
+<li>they are labeled sequentially i.e “wp_2_posts”, “wp_3_posts”, ect and interspersed with other tables like “wp_5_terms” and “wp_42_comments”.</li>
+</ul>
+</li>
+<li>
+<p>grab content from each table that contains the blog posts</p>
+<ul>
+<li>
+<p>identify the difference between posts, pages, attachments (information found in the “post_type” column) and “publish” or “inherit”</p>
+</li>
+<li>
+<p>query the content so that the script only pulls posts (not pages or attachments) and only published posts (rather than drafts).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>create a text file of that content and save it</p>
+</li>
+<li>
+<p>loop through the previous steps with each successive table until done.</p>
+</li>
+</ul>
+<p>Essentially, python builds the string using MySQL, drops it into the WordPress content as a query, where it digs around for the correct data until it receives the content back and then saves the file.</p>
+<p>After all that content is downloaded, it needs to be cleaned up. Each post may (or may not) contain some stylistic information and deleted/modified posts may produce error messages that require a bit more work. There are two ways to do this: write another program to open each of those text files and strip out tags, then save them again as text files. Or, we can get the first string to work, then add additional scripts that process out the tags before saving the text file. Then the content is ready for analysis using tools like MALLET.</p>
+
+
+    
+
+    <footer>
+
+
+</footer>
+
+</article>
+
+
+
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+
+    
+      
+
+
+
+
+<footer class="blog-footer w-100">
+    <nav class="navbar navbar-light bg-light">
+        <p class="w-100 text-center"></p>
+        <p class="w-100 text-center"><a href="#">Back to top</a></p>
+    </nav>
+</footer>
+
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>

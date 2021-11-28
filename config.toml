@@ -1,86 +1,86 @@
-# hostname (and path) to the root eg. http://spf13.com/
-baseurl = "http://www.amanda-regan.com/"
-
-# Site title
-title = "Dr. Amanda Regan"
-
-# Copyright
-copyright = "2019. licensed under creative commons by-nc-sa."
-
-# Language
-languageCode = "en-EN"
-
-# Metadata format
-# "yaml", "toml", "json"
-metaDataFormat = "yaml"
-
-# Theme to use (located in /themes/THEMENAME/)
-theme = "hyde-y"
+baseurl = "https://amanda-regan.com/"
+title = "Amanda Regan"
+languageCode = "en-us"
+defaultContentLanguage = "en"
 
 # Pagination
-paginate = 5
+paginate = 3
 paginatePath = "page"
 
-# Enable Disqus integration
-disqusShortname = "amanda-regan"
-
-[permalinks]
-    post = "/:year/:month/:day/:slug/"
-    code = "/:slug/"
+# Theme to use
+theme = "hugo-bootstrap-5"
 
 [taxonomies]
-    tag = "tags"
-    topic = "topics"
+  tag = "tags"
+  category = "categories"
 
-[author]
-    name = "Amanda Regan"
-    email = "aregan2@smu.edu"
+# Google analytics
+# googleAnalytics = ""
 
-#
-# All parameters below here are optional and can be mixed and matched.
-#
+[languages.en]
+  languageName = "English"
+
+  # Replace the default footer message with a localized message
+  # copyright = "Hugo template made with ❤ by Xzya"
+
+[[menu.main]]
+  url = "/"
+  name = "ABOUT"
+  weight = 1
+
+[[menu.main]]
+  url = "https://raw.githubusercontent.com/regan008/C-V/master/ARegan-cv.pdf"
+  name = "CV"
+  weight = 2
+
+[[menu.main]]
+  url = "/projects"
+  name = "RESEARCH & PROJECTS"
+  weight = 4
+
+[[menu.main]]
+  url = "/teaching"
+  name = "TEACHING"
+  weight = 5
+
+
+
+
+
+
+
+# Links format
+
+[permalinks]
+  post = "/:year/:month/:title/"
+
 [params]
-    # You can use markdown here.
-    brand = "Amanda Regan"
+  # Main sections (currently used for the recent posts in the sidebar)
+  mainSections = ["post"]
 
-    footline = ""
-    topline = ""
-    # Sidebar position
-    # false, true, "left", "right"
-    sidebar = "left"
+  # Default author
+  author = "Amanda Regan"
 
-    # Text for the top menu link, which goes the root URL for the site.
-    # Default (if omitted) is "Home".
-    home = "About"
+  # Date format (default: Jan 2, 2006)
+  # date_format = "Jan 2, 2006"
 
-    # Select a syntax highight.
-    # Check the static/css/highlight directory for options.
-    highlight = "default"
+  # Display post summaries instead of content in list templates (default: true)
+  truncate = true
 
-    # Google Analytics.
-    googleAnalytics = "UA-38020914-1"
+  [params.sidebar]
+    # Whether to show the recent posts or not (default: true)
+    # showRecent = false
 
-    # Sidebar social links.
-    github = "regan008" # Your Github profile ID
-    bitbucket = "" # Your Bitbucket profile ID
-    linkedin = "" # Your LinkedIn profile ID (from public URL)
-    googleplus = "" # Your Google+ profile ID
-    facebook = "" # Your Facebook profile ID
-    twitter = "@regan008" # Your Twitter profile ID
-    youtube = ""  # Your Youtube channel ID
-    flattr = ""  # populate with your flattr uid
-    flickr = "" # Your Flickr profile ID
-    vimeo = "" # Your Vimeo profile ID
+    # Whether to show the taxonomies or not (default: true)
+    # showTaxonomy = false
 
-    # Sidebar RSS link: will only show up if there is a RSS feed
-    # associated with the current page
-    rss = false
+    # How many posts to show on the sidebar (Default: 5)
+    # num_recent_posts = 5
 
-[blackfriday]
-    angledQuotes = true
-    fractions = false
-    hrefTargetBlank = false
-    latexDashes = true
-    plainIdAnchors = true
-    extensions = []
-    extensionmask = []
+  [params.header]
+    # Color scheme for the header (default: "light")
+    # colorScheme = "dark"
+
+  [params.footer]
+    # Color scheme for the footer (default: "light")
+    # colorScheme = "dark"

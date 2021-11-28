@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="THATCamp Topic Modeling Results" />
+<meta property="og:description" content="This post is the last in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post, which was collectively written by the DH Fellows, can be found on our Digital History Fellowship Blog.
+We have spent the last few weeks working to build a python script that would allow us to download and prep all of the THATCamp blog posts for topic modeling in MALLET (for those catching up, we detailed this process in a series of previous posts)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://amanda-regan.com/2014/02/thatcamp-topic-modeling-results/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-02-26T14:30:57+00:00" />
+<meta property="article:modified_time" content="2014-02-26T14:30:57+00:00" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="THATCamp Topic Modeling Results"/>
+<meta name="twitter:description" content="This post is the last in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post, which was collectively written by the DH Fellows, can be found on our Digital History Fellowship Blog.
+We have spent the last few weeks working to build a python script that would allow us to download and prep all of the THATCamp blog posts for topic modeling in MALLET (for those catching up, we detailed this process in a series of previous posts)."/>
+
+
+
+    <link rel="canonical" href="https://amanda-regan.com/2014/02/thatcamp-topic-modeling-results/">
+
+    <title>
+      
+        THATCamp Topic Modeling Results | Amanda Regan
+      
+    </title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href='/css/style.css' rel="stylesheet">
+
+    
+
+    
+  </head>
+  <body>
+    
+      
+
+<header class="blog-header">
+    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="/">
+                Amanda Regan
+            </a><br>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between flex-row-reverse" id="navbarNav">
+                <ul class="navbar-nav">
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/">ABOUT</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="https://raw.githubusercontent.com/regan008/C-V/master/ARegan-cv.pdf">CV</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/projects">RESEARCH &amp; PROJECTS</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/teaching">TEACHING</a>
+                        
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+    
+
+    
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-9  blog-main">
+
+          
+
+<header>
+    <h2 class="blog-post-title">
+    <a class="text-dark text-decoration-none" href="/2014/02/thatcamp-topic-modeling-results/">THATCamp Topic Modeling Results</a>
+</h2>
+
+    <hr>
+</header>
+<article class="blog-post">
+    <p><strong>This post is the last in a set of 5 written by the <a href="http://chnm.gmu.edu/courses/fellowship/?page_id=11">Digital History Fellows</a> at the <a href="http://chnm.gmu.edu/">Roy Rosenzweig Center for History and New Media</a>. The original post, which was collectively written by the DH Fellows, can be found on our <a href="http://chnm.gmu.edu/courses/fellowship/">Digital History Fellowship Blog</a>.</strong></p>
+<p>We have spent the last few weeks working to build a python script that would allow us to download and prep all of the THATCamp blog posts for topic modeling in MALLET (for those catching up, we detailed this process in a series of <a href="http://chnm.gmu.edu/courses/fellowship/">previous posts</a>). As our last post <a href="http://chnm.gmu.edu/courses/fellowship/?p=448">detailed</a>, we encountered a few more complications than expected due to foreign languages in the corpus of the text.  After some discussion, we worked through these issues and were able to add stoplists to the script for German, French, and Spanish.  Although this didn’t solve all of our issues and some terms do still show up (we didn’t realize there was Dutch too), it led to some interesting discussion about the methodology behind topic modeling.  Finally we were able to rerun the python script with the new stopwords and then feed this new data into MALLET.</p>
+<p>MALLET, or MAchine Learning for Language Toolkit, is an open source java package that can be used for natural language processing.  We used the <a href="http://programminghistorian.org/lessons/topic-modeling-and-mallet">Programming Historian’s tutorial on MALLET</a>.  Topic modeling is an important digital tool that analyzes a corpus of text and seeks to extract ‘topics’ or sets of words that are statistically relevant to each other.  The result is a particular number of word sets also known as “topics.” In our case we asked MALLET to return twenty topics based on our set of THATCamp blog posts. The topics returned by MALLET were:</p>
+<ol>
+<li>
+<p>xa digital art history research university scholarship graduate field center publishing open today institute cultural knowledge professor online world</p>
+</li>
+<li>
+<p>university games pm humanities http digital september knowledge kansas saturday game conference state registration play information representation workshop boise</p>
+</li>
+<li>
+<p>thatcamp session sessions day participants free technology page unconference university nwe conference discussion information google propose hope event proposals</p>
+</li>
+<li>
+<p>people make time questions things idea access process ideas world work great making lot build add kind interesting nthe</p>
+</li>
+<li>
+<p>digital humanities data tools text projects research scholars omeka texts tool analysis scholarly archive reading online based book scholarship</p>
+</li>
+<li>
+<p>digital humanities session dh library libraries support projects open discussion librarians amp talk work journal sessions propose faculty list</p>
+</li>
+<li>
+<p>history public digital historical collections museum media project projects mobile online maps museums collection historians users sites site applications</p>
+</li>
+<li>
+<p>games zotero thinking place game code end cultural chnm hack year documentation humanists version number pretty application visualization set</p>
+</li>
+<li>
+<p>session open area data workshop tool knowledge teach interested bay prime bootcamp gis workshops reality night thatcampva virginia lab</p>
+</li>
+<li>
+<p>work interested students ways teaching post working talk writing blog love issues don conversation create collaborative thinking start discuss</p>
+</li>
+<li>
+<p>project web content information tools community resources archives experience research create learn creating learning share development materials specific provide</p>
+</li>
+<li>
+<p>xb xa del se humanidades digitales xad al madrid www mi este aires buenos digital personas taller cuba parte</p>
+</li>
+<li>
+<p>caption online id align width open attachment accessibility women read university american building accessible gender media november floor race</p>
+</li>
+<li>
+<p>data http org session www open twitter texas good wikipedia nhttp status wiki start commons drupal metadata people crowd</p>
+</li>
+<li>
+<p>xa workshop session omeka publishing http gt propose org workshops friday docs open hands amp doc studies topic discuss</p>
+</li>
+<li>
+<p>students digital learning technology education media college faculty humanities research game pedagogy student courses classroom assignments skills arts social</p>
+</li>
+<li>
+<p>xa oral digital humanities video event local application community offer interviews planning center education software jewish weekend college histories</p>
+</li>
+<li>
+<p>een het voor op te zijn deze met workshop kunnen om digitale bronnen data onderzoek historici nl wat worden</p>
+</li>
+<li>
+<p>social media technology studies arts performance museums xcf play participants cultural performing reading st email object platforms interaction technologies</p>
+</li>
+<li>
+<p>xa thatcamp org http thatcamps details read movement published planned access nthatcamp browse software follow break series google join</p>
+</li>
+</ol>
+<p>As you can see we have an impressive list of terms. Before we organize them in a meaningful way, we will briefly point out a common problem that scholars may confront when working with MALLET. As you may notice, we realized that we have quite a few errors such as ‘xa’ that appear in the results.  While we don’t have a great answer for why this is, we think it has to do with complex encoding issues related to moving content from a Wordpress post that is stored in a MySQL database using Python. Each of these uses a different coding system and the error appears to be related to non-breaking spaces.  A little bit of Googling revealed that the non-breaking space character used by Wordpress is ‘&amp;nbsp’ which is different that the ASCII encoding of a non-breaking space ‘/xa0’.  When Python reads Wordpress’s non-breaking space character ‘&amp;nbsp’, it understands the space but encodes it as the UTF-8 version ‘/xa0’.  As second year fellow Spencer Roberts explained the issue is that meaning is lost in translation. He used this analogy: Python reads and understands the French word for “dog” then translates it and returns the English word.</p>
+<p>In this case, what shows up in our results is not ‘/xa0’ but rather ‘xa’ because we had stripped out all of the non-alphanumeric characters prior to running the data through MALLET.  We think the errors such as ‘xa’ and ‘xb’ are because of these encoding issues.  Anyone interested in clarifying or continuing this discussion with us can do so in the comments.</p>
+<p>Returning to our MALLET results, our next challenge was to present and analyze the large amount of data.  We drew from both <a href="http://historying.org/2010/04/01/topic-modeling-martha-ballards-diary/">Cameron Blevins</a> and <a href="http://dsl.richmond.edu/dispatch/">Robert K. Nelson</a> in our approach and decided to group the topics by theme so that trends could be more easily identified.  We determined that there were about seven broad themes in the corpus of THATCamp blog posts from 2008 to present:</p>
+<ol>
+<li>
+<p>Accessibility</p>
+</li>
+<li>
+<p>Building</p>
+</li>
+<li>
+<p>Community</p>
+</li>
+<li>
+<p>International</p>
+</li>
+<li>
+<p>Pedagogy</p>
+</li>
+<li>
+<p>Public Digital Humanities</p>
+</li>
+<li>
+<p>THATCamp Structure</p>
+</li>
+</ol>
+<p>Utilizing these larger categories, we were able to create several charts that demonstrate the changes over time with the THATCamps. The charts are available below; you’ll note that we have graphed them using percentages. The percentages that appear represent the number of times that topic occurred within the posts at that camp.</p>
+<p>[caption id=&ldquo;attachment_489&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;584&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.27.42-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.27.42-PM-1024x780.png" alt="Chart of Topics Overall"></a> Topics Overall[/caption]</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>[caption id=&ldquo;attachment_504&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.16-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.16-PM-150x150.png" alt="Chart of the topic Accessibility."></a> Topics relating to Accessibility[/caption]</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>[caption id=&ldquo;attachment_503&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.27-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.27-PM-150x150.png" alt="Graph of the Community Topic"></a> Topics relating to Community[/caption]</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>[caption id=&ldquo;attachment_502&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.35-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.35-PM-150x150.png" alt="Graph of the THATCamp Structure Topics"></a> Topics relating to THATCamp Structure[/caption]</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>[caption id=&ldquo;attachment_501&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.47-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.47-PM-150x150.png" alt="Graph of topics relating to Pedagogy"></a> Topics relating to Pedagogy[/caption]</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>[caption id=&ldquo;attachment_500&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.56-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.56-PM-150x150.png" alt="Graph of topics relating to Public Digital Humanities"></a> Topics relating to Public Digital Humanities[/caption]</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>[caption id=&ldquo;attachment_499&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.04-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.04-PM-150x150.png" alt="Graph of topics relating to building in the humanities."></a> Topics relating to Building[/caption]</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>[caption id=&ldquo;attachment_498&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.13-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.13-PM-150x150.png" alt="Topics relating to the international influence of THATCamp."></a> International Digital Humanities[/caption]</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>We found these results to be particularly interesting. A larger overall conclusion is that THATCamp content emphasizes the various applications of digital technology to scholarship, from public uses to tool building or teaching. Since THATCamp was founded, it has become a more varied community. However close examination of the topic models this exercise produced reveals that a number of the same terms appear frequently across all of the topic models (“digital”, for instance, appears in 8 of the 20 topics). This references the way in which ideas are circulated throughout camps and unifies the community. It also reflects the subjects that are the focus of the community.</p>
+<p>If you’re interested in the data, you can view the various files here:</p>
+<ul>
+<li>
+<p><a href="https://docs.google.com/spreadsheet/ccc?key=0AsGU0Xg7inL5dEQ2M2FjRXdNSGhJdG9xb0dJb3hOZ2c&amp;usp=sharing">Averages for each year and the overall chart </a>(Google Spreadsheet)</p>
+</li>
+<li>
+<p>[Data for each individual camp and charts by grouping](Screen Shot 2014-02-20 at 5.53.13 PM Screen Shot 2014-02-20 at 5.53.04 PM Screen Shot 2014-02-20 at 5.52.56 PM Screen Shot 2014-02-20 at 5.52.47 PM Screen Shot 2014-02-20 at 5.52.35 PM Screen Shot 2014-02-20 at 5.52.27 PM Screen Shot 2014-02-20 at 5.52.16 PM) (Google Spreadsheet)</p>
+</li>
+<li>
+<p><a href="https://www.dropbox.com/sh/ufxbl2dfzl6x8jf/fOFjvXWY2H">Data from MALLET</a></p>
+</li>
+<li>
+<p><a href="https://www.dropbox.com/sh/upvnv5a59fr52xr/3T1IsPYqO2">Raw data</a></p>
+</li>
+</ul>
+
+
+    
+
+    <footer>
+
+
+    <h4>See also</h4>
+    <ul>
+        
+            <li><a href="/2014/02/unexpected-challenges-result-in-important-and-informative-discussions-a-transparent-discussion-about-stripping-content-and-stopwords/">Unexpected Challenges Result in Important and Informative Discussions: a transparent discussion about stripping content and stopwords</a></li>
+        
+            <li><a href="/2014/02/pre-processing-text-for-mallet/">Pre-Processing Text for MALLET</a></li>
+        
+            <li><a href="/2014/02/extracting-data-from-the-thatcamp-database-using-python-and-mysql/">Extracting Data from the THATCamp Database Using Python and MySQL</a></li>
+        
+            <li><a href="/2014/02/spring-semester-in-research-and-a-thatcamp-challenge/">Spring Semester in Research and a THATCamp Challenge</a></li>
+        
+    </ul>
+
+</footer>
+
+</article>
+
+
+
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+
+    
+      
+
+
+
+
+<footer class="blog-footer w-100">
+    <nav class="navbar navbar-light bg-light">
+        <p class="w-100 text-center"></p>
+        <p class="w-100 text-center"><a href="#">Back to top</a></p>
+    </nav>
+</footer>
+
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>

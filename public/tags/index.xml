@@ -1,88 +1,81 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Dr. Amanda Regan</title>
-    <link>http://www.amanda-regan.com/tags/</link>
-    <description>Recent content in Tags on Dr. Amanda Regan</description>
+    <title>Tags on Amanda Regan</title>
+    <link>https://amanda-regan.com/tags/</link>
+    <description>Recent content in Tags on Amanda Regan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-EN</language>
-    <managingEditor>aregan2@smu.edu (Amanda Regan)</managingEditor>
-    <webMaster>aregan2@smu.edu (Amanda Regan)</webMaster>
-    <copyright>2019. licensed under creative commons by-nc-sa.</copyright>
-    <lastBuildDate>Wed, 19 Apr 2017 15:41:40 +0000</lastBuildDate>
-    
-	<atom:link href="http://www.amanda-regan.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Apr 2017 15:41:40 +0000</lastBuildDate><atom:link href="https://amanda-regan.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Digital Humanities Now</title>
-      <link>http://www.amanda-regan.com/tags/digital-humanities-now/</link>
+      <link>https://amanda-regan.com/tags/digital-humanities-now/</link>
       <pubDate>Wed, 19 Apr 2017 15:41:40 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/tags/digital-humanities-now/</guid>
+      
+      <guid>https://amanda-regan.com/tags/digital-humanities-now/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PressForward</title>
-      <link>http://www.amanda-regan.com/tags/pressforward/</link>
+      <link>https://amanda-regan.com/tags/pressforward/</link>
       <pubDate>Wed, 19 Apr 2017 15:41:40 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/tags/pressforward/</guid>
+      
+      <guid>https://amanda-regan.com/tags/pressforward/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CHNM</title>
-      <link>http://www.amanda-regan.com/tags/chnm/</link>
+      <link>https://amanda-regan.com/tags/chnm/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:49 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/tags/chnm/</guid>
+      
+      <guid>https://amanda-regan.com/tags/chnm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DH Fellowship</title>
-      <link>http://www.amanda-regan.com/tags/dh-fellowship/</link>
+      <link>https://amanda-regan.com/tags/dh-fellowship/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:49 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/tags/dh-fellowship/</guid>
+      
+      <guid>https://amanda-regan.com/tags/dh-fellowship/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DH Support</title>
-      <link>http://www.amanda-regan.com/tags/dh-support/</link>
+      <link>https://amanda-regan.com/tags/dh-support/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:49 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/tags/dh-support/</guid>
+      
+      <guid>https://amanda-regan.com/tags/dh-support/</guid>
       <description></description>
     </item>
     
     <item>
       <title>reflections</title>
-      <link>http://www.amanda-regan.com/tags/reflections/</link>
+      <link>https://amanda-regan.com/tags/reflections/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:49 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/tags/reflections/</guid>
+      
+      <guid>https://amanda-regan.com/tags/reflections/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Research Division</title>
-      <link>http://www.amanda-regan.com/tags/research-division/</link>
+      <link>https://amanda-regan.com/tags/research-division/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:49 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/tags/research-division/</guid>
+      
+      <guid>https://amanda-regan.com/tags/research-division/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hacking-that-camps-yack</title>
-      <link>http://www.amanda-regan.com/tags/hacking-that-camps-yack/</link>
+      <link>https://amanda-regan.com/tags/hacking-that-camps-yack/</link>
       <pubDate>Wed, 26 Feb 2014 14:30:57 +0000</pubDate>
-      <author>aregan2@smu.edu (Amanda Regan)</author>
-      <guid>http://www.amanda-regan.com/tags/hacking-that-camps-yack/</guid>
+      
+      <guid>https://amanda-regan.com/tags/hacking-that-camps-yack/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Amanda Regan</title>
+    <link>https://amanda-regan.com/categories/</link>
+    <description>Recent content in Categories on Amanda Regan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Dec 2014 22:13:24 +0000</lastBuildDate><atom:link href="https://amanda-regan.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coursework</title>
+      <link>https://amanda-regan.com/categories/coursework/</link>
+      <pubDate>Tue, 09 Dec 2014 22:13:24 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/categories/coursework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming for Historians</title>
+      <link>https://amanda-regan.com/categories/programming-for-historians/</link>
+      <pubDate>Tue, 09 Dec 2014 22:13:24 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/categories/programming-for-historians/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Digital History Fellowship</title>
+      <link>https://amanda-regan.com/categories/digital-history-fellowship/</link>
+      <pubDate>Sun, 24 Aug 2014 16:41:49 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/categories/digital-history-fellowship/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Digital History Readings Course</title>
+      <link>https://amanda-regan.com/categories/digital-history-readings-course/</link>
+      <pubDate>Tue, 05 Aug 2014 03:25:56 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/categories/digital-history-readings-course/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clio Wired II</title>
+      <link>https://amanda-regan.com/categories/clio-wired-ii/</link>
+      <pubDate>Sat, 03 May 2014 20:27:21 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/categories/clio-wired-ii/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clio Wired I</title>
+      <link>https://amanda-regan.com/categories/clio-wired-i/</link>
+      <pubDate>Sun, 16 Mar 2014 15:45:25 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/categories/clio-wired-i/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hacking THAT Camp&#39;s Yack</title>
+      <link>https://amanda-regan.com/categories/hacking-that-camps-yack/</link>
+      <pubDate>Wed, 26 Feb 2014 14:30:57 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/categories/hacking-that-camps-yack/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

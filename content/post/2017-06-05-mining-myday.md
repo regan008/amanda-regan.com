@@ -9,9 +9,10 @@ draft: false
 ---
 
 <i><small>This post is co-written by Amanda Regan and Joshua Catalano. It is cross-posted on [Josh’s blog](http://www.joshuacatalano.org).</small></i>
-<figure style="width:300px; float: right; margin-left: 15px;">
+
+{{< rawhtml >}}<figure style="width:350px; float: right; margin-left: 15px;">
 <img src="/images/hacktolearn-black.png">
-</figure>
+</figure>{{< /rawhtml >}}
 
 Two weeks ago, Josh Catalano and I participated in the [Collections as Data Hack-to-Learn](http://www.digitalpreservation.gov/meetings/hack-to-learn/hack-to-learn-site.html) event sponsored by the Library of Congress, George Washington University, and George Mason University. For the event, George Washington University, the Library of Congress and the Smithsonian provided participants with a series of datasets. The corpus that we gravitated toward included all of Eleanor Roosevelt's __My Day__ columns. During the workshop, we ran a 60 topic model on the columns. Due to time constraints and technical challenges during the workshop we were not able to accomplish much beyond creating the topics. The dataset, composed of almost 8,000 columns, resulted in large files that required manipulation with a tool such as R in order to create visualizations and analyze the results. This made it  difficult for participants to do much with the topic modeling results during the workshop. Over the last two weeks, we have worked to take the topic model, manipulate the results, and create an interactive app with several visualizations that allows for an exploration of the topic model. This blog post will detail some of the process of making this visualization and describe how it might be used and interpreted.
 
@@ -33,19 +34,18 @@ We used [MALLET](http://mallet.cs.umass.edu/) to divide all of the 7,987 _My Day
 * **Top Columns**: This chart contains the metadata for the top 30 columns associated with a topic and a link to the original column on the Eleanor Roosevelt Papers website.
 
 ## Interpreting the Visualization
-
-<figure style="width:300px; float: left; margin-right: 15px;">
+{{< rawhtml >}}
+<figure style="width:250px; float: left; margin-right: 15px;">
 <img src="/images/miningmyday.png" >
-
 </figure>
-
+{{< /rawhtml >}}
 Looking at the resulting visualization, we can get a sense of the themes and discourses that exist within the _My Day_ corpus. For example, Topic 6 (fig 1) includes the words germany, europe, war, people, countries, french, country, and refugees. Looking at the proportion of words in the topic over time, it is clear that the topic spikes between 1946 and 1948. This cluster of words or topic corresponds to a period of time beginning in December 1945 when Eleanor Roosevelt served as a delegate to the United Nations and later as the first chairperson of the United Nations Commission on Human Rights. The words contained in this topic reflect her work serving in this capacity and are gleamed from  the reports and comments she made following her visits to refugee camps. Topic 20, another similar topic, is also about Roosevelt’s work with the United Nations but, upon closer inspection it is revealed that the topic is particularly about Roosevelt’s work as the Chair of the Commission on Civil Rights. The spikes in 1948 and 1949 correspond with the United Nation’s adoption of the Universal Declaration of Human Rights in December 1948.
-
-<figure style="width:300px; float: right; margin-left: 15px;">
+{{< rawhtml >}}
+<figure style="width:350px; float: right; margin-left: 15px;">
 <img src="/images/topic6.png" >
 <figcaption style="float:right; border-top: 1px solid black;">Figure 1: The top words in topic 6. <a href="https://regan008.shinyapps.io/mining_my_day/">See the full visualization here.</a></figcaption>
 </figure>
-
+{{< /rawhtml >}}
 Another example that speaks to the potential of topic modeling as a tool for exploring themes in a corpus is topic 30. The top words:
 ```“christmas year children birthday family season party day friends eve cards gifts presents tree joy happy good gift child”```
 are clearly about holidays, birthdays, and festivities. Almost all of the most heavily associated documents were written in December just before or after the Christmas holiday. Roosevelt often described family traditions and gatherings such as singing Christmas carols or decorating for the holidays.  For example, she once recounted thinking as she drove into New York City “how lovely [the] modern electric lighting can make Christmas in the city.”[^1]  The few relevant articles in this topic that were not written in December discuss other celebrations or birthdays.

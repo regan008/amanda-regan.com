@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Digital History Minor Field, Part 5: Topic Modeling" />
+<meta property="og:description" content="This week our readings focused on Topic Modeling. I’ve been looking forward to this week for some time partly because I plan to use Topic Modeling for my dissertation but also because I was eager to understand some of the theoretical underpinnings of the methodology.
+During the Digital History Fellows in the Research Division last spring, we were asked to do a topic modeling project on all of the blog posts from the the various THATCamps." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://amanda-regan.com/2014/08/digital-history-minor-field-part-5-topic-modeling/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-08-05T03:25:56+00:00" />
+<meta property="article:modified_time" content="2014-08-05T03:25:56+00:00" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Digital History Minor Field, Part 5: Topic Modeling"/>
+<meta name="twitter:description" content="This week our readings focused on Topic Modeling. I’ve been looking forward to this week for some time partly because I plan to use Topic Modeling for my dissertation but also because I was eager to understand some of the theoretical underpinnings of the methodology.
+During the Digital History Fellows in the Research Division last spring, we were asked to do a topic modeling project on all of the blog posts from the the various THATCamps."/>
+
+
+
+    <link rel="canonical" href="https://amanda-regan.com/2014/08/digital-history-minor-field-part-5-topic-modeling/">
+
+    <title>
+      
+        Digital History Minor Field, Part 5: Topic Modeling | Amanda Regan
+      
+    </title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href='/css/style.css' rel="stylesheet">
+
+    
+
+    
+  </head>
+  <body>
+    
+      
+
+<header class="blog-header">
+    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="/">
+                Amanda Regan
+            </a><br>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between flex-row-reverse" id="navbarNav">
+                <ul class="navbar-nav">
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/">ABOUT</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="https://raw.githubusercontent.com/regan008/C-V/master/ARegan-cv.pdf">CV</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/projects">RESEARCH &amp; PROJECTS</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/teaching">TEACHING</a>
+                        
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+    
+
+    
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-9  blog-main">
+
+          
+
+<header>
+    <h2 class="blog-post-title">
+    <a class="text-dark text-decoration-none" href="/2014/08/digital-history-minor-field-part-5-topic-modeling/">Digital History Minor Field, Part 5: Topic Modeling</a>
+</h2>
+
+    <hr>
+</header>
+<article class="blog-post">
+    <p>This week our readings focused on Topic Modeling. I’ve been looking forward to this week for some time partly because I plan to use Topic Modeling for my dissertation but also because  I was eager to understand some of the theoretical underpinnings of the methodology.</p>
+<p>During the Digital History Fellows in the Research Division  last spring, we were asked to do a <a href="http://chnm.gmu.edu/courses/fellowship/?p=470">topic modeling project</a> on all of the blog posts from the the various THATCamps. We jumped in, attempted to learn python, managed to download every blog post from each THATCamp (well over 200), and then ran that data through MALLET for topic modeling. To make a very long story short, we managed to mess up the topic modeling and, consequently, our results for a variety of reasons. We encountered a number  of challenges but the results were skewed mostly because we didn’t understand the black box that is MALLET. However, although the project turned out to be a mess, I came to the readings this week with a bit of background on topic modeling and have gained a new perspective on the mistakes made during that project. (I think the project also has some lessons regarding failure in the digital humanities, but I’ll come back to that in another blog post.)</p>
+<p>The articles we read this week all discussed the theoretical and mathematical underpinnings of topic modeling&ndash;specifically LDA topic modeling with MALLET. The Winter 2012 issue of the _Journal of Digital Humanities _is focused on “The Digital Humanities Contribution to Topic Modeling” and features a discussion of the methodology as a concept, the application of the methodology, and a critique of the tool. In “Topic Modeling and Digital Humanities” David Blei explains the mathematics behind MALLET and provides an explanation of how topics are derived and what they represent. Topic Modeling, he explains, discovers a set of recurring themes in a corpus and “the degree to which each document exhibits those topics.”  LDA, the algorithm behind MALLET, makes two crucial assumption. First, it assumes there are a fixed number of patterns of word use that occur together in documents (topics). Second, it assumes that each document in the corpus exhibits the topics, at least to some degree.[1. Blei, Topic Modeling and Digital Humanities]  Topics are really “a probability distribution over terms” but they look like “topics” because “terms that frequently occur together tend to be about the same subject.”[Blei, ibid] The results can be analyzed by either looking at a subset of texts based on what combination of topics they exhibit or by looking at the words of the texts themselves and restricting attention to the words within the topic. This factors out other topics from each text and focuses on the relationship between the words in the topic of interest. Blei argues that “some of the more important questions in topic modeling have to do with how we use the output of the algorithm” and the next several articles discussed this approach.</p>
+<p>In Lisa Rhody’s article “Topic Modeling and Figurative Language” she discusses how she applied topic modeling to a corpus of poems and used the results to look at figurative language. Using topic modeling on figurative language, Rhody argues, “yields precisely the kind of results that literary scholars might hope for — models of language that, having taken form, are at the same moment at odds with the laws of their creation.”  Rody’s analysis stresses the need to combine both close and distant reading in order to interpret the results of the Topic Modeling algorithm. Her focus on figurative language necessitates “a methodology that deals with language at the level of word and document” and can be used to “identify latent patterns in poetic discourse”.</p>
+<p>In “Words Alone: Dismantling Topic Models in the Humanities,” Benjamin Schmidt offers a valuable critique of topic modeling and warns that “simplifying topic models for humanists who will not (and should not) study the underlying algorithms creates an enormous potential for groundless &ndash; or even misleading&ndash;’insights’”. He warns that topics shouldn’t (and can’t) be studied without looking at the word counts that build them. The topics, he argues, “are messy, ambiguous, and elusive”. Through a study of some geographical data that he has topic modeled, he offers two ways to reintegrate words in topic models. First, he suggests that there is a significant issue with relying on the first words that appear in topic model to label the topic. Secondly, he shows the danger in visualizations such as plotting topic frequencies over time and assuming “topic stability across different sorts of documents.”  Schmidt’s article calls for a better understanding of the ways that topic models are created and he cautions humanists against using the topics at face value.</p>
+<p>Ted Underwood’s piece “Theorizing the research Practices we Forgot to theorize twenty years ago”, I think, makes another important contribution to the discussion about algorithmic text analysis by discussing key-word searching. Underwood discusses the practice of using keyword searches during the research process and argues that by even choosing certain search terms we’re making a “tacit hypothesis about the literary significance of a symbol” and our findings are often deemed to be somewhat significant if we get enough results. However as he explains, this practice is much closer to data mining using bayesian algorithms than it is to “old-school” bibliographical searches. Underwood argues that “full-text search is not a finding aid analogous to the card catalog”. Search however is limited in that it only returns exactly what you asked for. Most historians probably wouldn’t immediately think of this as an issue however, as Underwood explains:</p>
+<p>[blockquote]the deeper problem is that by sorting sources in order of relevance to your query, it also tends to filter out all the alternative theses you didn’t bring. Search is a form of data mining, but a strangely focused form that only shows you what you already know to expect.[/blockquote]</p>
+<p>By not understanding how our search engines work, we’re potentially missing sources and skewing the results based on our search terms. Underwood continues by arguing that topic modeling and bayesian algorithms in particular can provide “reasoning about interpretation that can help us approach large collections in a more principled way.”[3. Underwood, 4] Rather than the scholar trying to search a corpus by choosing keywords that describe what they are looking for, Topic Models help to remove some of the assumptions by telling the scholar what words were relevant in a particular time. For example, in my research I know the terms used to describe physical culture shift over time. Topic modeling has the potential to help alleviate some of the presumptions I would make when limiting myself to a keyword search.</p>
+<p>What both Schmidt, Underwood, and Rhody’s articles point to is a danger in not understanding the black box. Looking back on our own topic modeling project we were completely guilty of this. We never looked at individual word counts (or even knew you could ask mallet to provide a document containing word counts) and we took the topics at face value without digging deeper. We even plotted the topics over time. Oops. I think this hits at a larger issue in the digital humanities that has come up recently in several places: DHers have worked to create tools that allow humanists to utilize computational analyses of humanistic issues however, there has been a gap in the documentation that sets a high bar for entry. Underwood’s article is an important reminder that we need to think critically about the technology we’re using to navigate through source material whether thats in a ProQuest database or in a corpus of our own materials. We’ve often accepted keyword searches without thinking twice and we should pause to understand how the “black box” works. Additionally, Schmidt’s article offers a cautionary tale and provides a valuable example of how to critically engage with and analyze the results of topic modeling.</p>
+<p>The readings for this week’s meeting were extremely useful. I’m hoping to utilize topic modeling to look at a span of about 50 years of columns and editorials about physical culture for my dissertation and these readings provided excellent context and things to consider as I begin to play with MALLET’s outputs. We’re wrapping up the readings portion of our course and only have one more meeting before we move into the practical portion of the course in Clio Wired III (Programming for Historians). I can’t wait to learn some D3.js with the hopes of being able to manipulate and visualize topic modeled data and to build some visualization prototypes based on my research.</p>
+
+
+    
+
+    <footer>
+
+
+</footer>
+
+</article>
+
+
+
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+
+    
+      
+
+
+
+
+<footer class="blog-footer w-100">
+    <nav class="navbar navbar-light bg-light">
+        <p class="w-100 text-center"></p>
+        <p class="w-100 text-center"><a href="#">Back to top</a></p>
+    </nav>
+</footer>
+
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>

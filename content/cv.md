@@ -2,15 +2,16 @@
 title: "Curriculum Vitae"
 description: "Amanda Regan's Curriculum Vitae"
 lastmod: "2019-09-30"
-slug: "c-v"
+slug: "cv"
 ---
 [_Download as a PDF_](https://github.com/regan008/C-V/raw/master/ARegan-cv.pdf)
 
-## Current Position
+### Appointments
+**Lecturer**, Department of History and Geography, Clemson University, 2021-present.
 
-**Post-Doctoral Fellow**, Center for Presidential History, Southern Methodist University, August 2019 - Present.
+**Post-Doctoral Fellow**, Center for Presidential History, Southern Methodist University, 2019-2021.
 
-## Education
+### Education
 
 **George Mason University**
 
@@ -27,18 +28,18 @@ slug: "c-v"
   * BA, History (2011)
 
 
-## Peer Reviewed Publications
+### Peer Reviewed Publications
 
 _Shaping Up: Physical Culture Initiatives for Women, 1880-1965_, (book manuscript in progress).
 
 “Mapping the ‘New Gay South:’ Queer Space and Southern Life 1965-1980,“ _Southern History
-Quarterly_, with Eric Gonzaba, (under review).
+Quarterly_, with Eric Gonzaba, (forthcoming).
 
 ''Mining Mind and Body: Approaches and Considerations for Using Topic Modeling to Identify Discourses in Digitized Publications'', _Journal of Sport History_ 44, no. 2 (Summer 2017).
 
-## Digital History Projects
+### Digital History Projects
 
-[''Mapping the Gay Guides,''](http://www.mappingthegayguides.org) with Eric Gonzaba. (In progress.)
+[''Mapping the Gay Guides,''](http://www.mappingthegayguides.org) with Eric Gonzaba.
 
 [''Mining Eleanor Roosevelt's _My Day_ Columns,''](https://regan008.shinyapps.io/mining_my_day/) with Joshua Catalano, May 2017.
 
@@ -48,14 +49,27 @@ Quarterly_, with Eric Gonzaba, (under review).
 
 [Roy Rosenzweig Center for History and New Media 20th Anniversary site](http://20.rrchnm.org/), November 2014. Website development, with Jannelle Legg and Anne Ladyem McDivitt.
 
-## Reviews
+### Grants
+Co-Project Director, ”Mapping the Gay Guides: Understanding Historical LGBTQ Spaces through Gay Travel Guides.” Humanities Collections and Reference Resources grant from the National Endowment for the Humanities. (2021-2024) $349,894.
+
+Co-Primary Investigator (with Eric Gonzaba) Mapping the Gay Guides. California State University, Fullerton. Research, Scholarship, and Creative Activities Incentive Grant. $14,715.
+
+### Reviews
 
 Review of _Governing Bodies: American Politics and the Shaping of the Modern Physique_, by Rachel Louise Moran, _The Journal of Social History_, forthcoming.
 
 Review of Emily S. Rosenberg and Shannon Fitzpatrick, ed., _Body and Nation: The Global Realm of U.S. Body Politics in the Twentieth Century_ in _The Journal of Social History_, Winter 2015.
 
 
-## Conferences and Presentations
+### Conferences and Presentations
+
+“Mapping the Gay Guides: Using Digital History to Explore LGBTQ Travel Guides, 1965-1980,“ Association for Computing in the Humanities, July 2021.
+
+“Shaping the ’Soft American’: The Presidential Council on Physical Fitness 1955-1963," Tasting Freedom at George W. Bush Presidential Library & Museum, April 2021.
+
+“Mapping the Gay Guides: Using Digital History to Explore LGBTQ Travel Guides, 1965-1980,“ with Eric Gonzaba, Southern Methodist Univeristy, November 2020.
+
+“Mapping the Gay Guides: Understanding Queer Spaces in Pre- and Post-Stonewall America‘,‘ with Eric Gonzaba, DH2020, July 2020. [Cancelled due to COVID-19.]
 
 “Awash in a Sea of Content? Keep Up with the Field Using PressForward,“ with Joshua Catalano and Laura Crossley, Keystone DH, The Pennsylvania State University, July 2018.
 
@@ -67,7 +81,8 @@ Review of Emily S. Rosenberg and Shannon Fitzpatrick, ed., _Body and Nation: The
 
 ''Teaching Graduate Students to Code,'' contributor to poster session with Dr. Lincoln Mullen, American Historical Association conference, New York, January 2015.
 
-## Academic and Research Positions
+### Academic and Research Positions
+**Producer;** _The Past, The Promise, The Presidency Podcast: Season 1 Race and the American Legacy_; Center for Presidential History, Southern Methodist University, 2020-present. www.pastpromisepresidency.com
 
 **Graduate Lecturer;** Department of History and Art History, George Mason University, 2018-present.
 
@@ -85,7 +100,9 @@ Review of Emily S. Rosenberg and Shannon Fitzpatrick, ed., _Body and Nation: The
 
 **Digital and Institutional Review Board Consultant;** [_War at Home and Abroad Digital: A Digital History Archive_,](http://www.csusmhistory.org/WAHA) Department of History, California State University San Marcos, August 2012-January 2013.
 
-## Teaching Experience
+### Teaching Experience
+
+History 1010: United States History to 1877, Clemson University, [Fall 2021](http://www.amanda-regan.com/1010fall21)
 
 History 390: The Digital Past, George Mason University, [Summer 2017](http://www.amanda-regan.com/390summer17/), [Summer 2018](http://www.amanda-regan.com/390summer18), [Fall 2018](http://www.amanda-regan.com/390fall18-02), [Spring](http://www.amanda-regan.com/390spring19) and [Summer 2019](http://www.amanda-regan.com/390summer19).
 
@@ -93,7 +110,7 @@ History 121: U.S. History to 1865, North Virginia Community College, Summer 2018
 
 History 101: World Civilization to 1500, Teaching Assistant, California State University San Marcos, Spring 2013.
 
-## Digital Humanities Workshops
+### Digital Humanities Workshops
 
 Text Analysis with Voyant Tools, Collections As Data: Hack-to-Learn, Library of Congress, Washington D.C., May 2017.
 
@@ -105,19 +122,23 @@ DC History Grad Zotero Workshop, with Jannelle Legg, George Mason University, Oc
 
 DH Bridge: Encouraging Computational Thinking and Digital Skills in the Humanities, Coach, Roy Rosenzweig Center for History and New Media, George Mason University, October 2014.
 
-## Service
+### Service
 Mentor, Diversity Outreach High School Program, Southern Methodist University, 2019-2020.
 
 Participant, 2019 Mason Core assessment in IT and Computing, George Mason University, Spring 2019.
 
-## Other Digital Work
+### Other Digital Work
 Website redesign, [PressForward](http://www.pressforward.org), January 2018.
 
 Website redesign, [_Appalachian Trail Histories_,](http://appalachiantrailhistory.org/) January 2016.
 
 Digital Design Consultant, [_Wearing Gay History: A Digital Archive of Historical LGBTQ T-Shirts_,](http://www.wearinggayhistory.org) July 2015.
 
-## Awards and Honors
+### Awards and Honors
+Honorable Mention, Garﬁnkel Prize in Digital Humanities for _Mapping the Gay Guides_, 2020, Digital Humanities Caucus of the American Studies Association.
+
+Emerging Open Scholarship Award for _Mapping the Gay Guides_, 2021, Canadian Social Knowledge Institute.
+
 Louise and Rudolf Fishel Graduate Fellowship, 2018, George Mason University, Fairfax, VA.
 
 Joseph and Dorothy Censer Fellowship, 2016, George Mason University, Fairfax, VA.
@@ -134,11 +155,11 @@ Digital Humanities Summer Institute Tuition Scholarship 2014, 2015, University o
 
 Distinguished Master's Thesis Award, 2013, California State University, San Marcos, Department of History, San Marcos CA.
 
-## Teaching and Research Fields
+### Teaching and Research Fields
 
 U.S. History, U.S. Women’s and Gender History, History of the Body, Leisure and Recreation in the United States, Women in Medicine, Digital and Digital Public History, and Programming for Humanists.
 
-## Languages and Digital Humanities Skills
+### Languages and Digital Humanities Skills
 **Programming Languages:** R, PHP, JavaScript, Python
 
 **Web Development Languages:** CSS, HTML
