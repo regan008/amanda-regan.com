@@ -1,5 +1,5 @@
 ---
-title: "Boston's Gymnasiums, 1909-1924"
+title: "Boston's Gymnasiums, 1909-1922"
 description: "Amanda Regan's Curriculum Vitae"
 lastmod: "2021-11-01"
 slug: "bostongymnasiums"

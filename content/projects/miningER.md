@@ -8,10 +8,10 @@ lastmod: "2021-10-27"
 category: "projects"
 images: ["portfolio-miningmyday.png"]
 img: "portfolio-miningmyday.png"
-projectlink: http://amanda-regan.com/2017/05/21/mining-myday/
+projectlink: https://regan008.shinyapps.io/mining_my_day/
 ---
 {{< figure src="/images/portfolio-miningmyday.png" height=350px class="image-right" >}}
-_Mining My Day_ is a [Shiny](http://shinyapps.io) app that visualizes the common themes, or 'topics', in Eleanor Roosevelt's _My Day_ columns. You can [read the blog post about the visualization](http://amanda-regan.com/2017/05/21/mining-myday/) or jump straight into [exploring the app.](https://regan008.shinyapps.io/mining_my_day/)
+_Mining My Day_ is a [Shiny](http://shinyapps.io) app that visualizes the common themes, or 'topics', in Eleanor Roosevelt's _My Day_ columns. You can [read the blog post about the visualization](http://amanda-regan.com/2017/05/mining-eleanor-roosevelts-my-day-columns/) or jump straight into [exploring the app.](https://regan008.shinyapps.io/mining_my_day/)
 
 From December 1935 until September 1962, Roosevelt authored a nationally syndicated newspaper column entitled _My Day_ and because Roosevelt did not keep any sort of diary and her appointment books were often incomplete, the _My Day_ columns have become a valuable source for historians. The columns, authored six days a week until January 1961 and then three days a week thereafter, represent the only consistent account of her public activities. Thanks to the work of the Eleanor Roosevelt Papers’ staff, who transcribed each My Day column and made them available online, anyone with internet access can now explore this important piece of history.
 

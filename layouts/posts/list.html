@@ -1,7 +1,6 @@
 {{ define "main" }}
 
 {{ $truncate := default true .Site.Params.truncate }}
-
 {{ if .Content }}
 <header>
     <h1 class="blog-post-title">
@@ -14,52 +13,17 @@
 </section>
 {{ end }}
 
-<div class="row">
-<h1>Posts</h1>
+{{ $paginator := .Paginate .Pages }}
+{{ range $paginator.Pages }}
 
-
-       {{ $paginator := .Paginate (where .Site.RegularPages "Section" "post") 500 }}
-       {{ range $paginator.Pages }}
-       <div class="row pack">
-       <div class="card mb-3" style="border:none;">
-<div class="row g-0">
-<div class="col-md-4">
-  <img src="{{ .Site.BaseURL }}images/{{ .Params.img }}" class="img-fluid rounded" alt="Logo for Mapping the Gay Guides">
-</div>
-<div class="col-md-8">
-  <div class="card-body" style="border: none;">
-    <h3 class="card-title"> {{ .Title }}</h3>
-    {{ if isset .Params "role" }}
-    <p class="project-role"><i>{{.Params.role}}</i></p>
+    {{ if $truncate }}
+        {{ .Render "summary" }}
+    {{ else }}
+        {{ .Render "content" }}
     {{ end }}
-    <p>{{ .Render "summary" }}</p>
-    <a type="button" href="{{ .Permalink }}" class="btn btn-sm btn-outline-primary">Read More</a>
-    {{ if isset .Params "projectlink" }}
-    <a type="button" class="btn btn-sm btn-outline-primary" href="{{.Params.projectlink}}" target="_blank">View Project</a>
-    {{end}}
-    {{ if isset .Params "projecttwitter" }}
-    <a type="button" href="http://www.twitter.com/{{.Params.projecttwitter}}" class="btn btn-sm btn-outline-primary"><i class="fab fa-twitter"></i>Follow</a>
-    {{end}}
 
-  </div>
-</div>
-</div>
-</div>
-                 <!-- <div class="panel-body">
-                   <p class="card-text">{{ .Description | plainify | truncate 250 }}</p>
-                   <div class="read-more-button">
-                  {{ if isset .Params "affiliate" }}
-                   <a href="{{ .Params.affiliatelink }}" target="_blank" class="btn btn-primary" type="button">Read More</a>
-                  {{else}}
-                   <a href="{{ .Permalink }}" class="btn btn-primary" type="button">Read More</a>
-                  {{end}}
-                   </div>
-                 </div> -->
-               </div>
+{{ end }}
 
+{{ partial "paginator" . }}
 
-         {{ end }}
-       </div>
-   </div>
-   </div>
 {{ end }}

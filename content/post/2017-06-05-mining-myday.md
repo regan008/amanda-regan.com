@@ -1,7 +1,7 @@
 ---
 type: post
 author: Amanda Regan and Joshua Catalano
-comments: true
+comments: false
 date: 2017-05-21 15:41:40+00:00
 slug: mining-myday
 title: Mining Eleanor Roosevelt's "My Day" Columns
