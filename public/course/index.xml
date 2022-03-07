@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Courses on Amanda Regan</title>
+    <link>https://amanda-regan.com/course/</link>
+    <description>Recent content in Courses on Amanda Regan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://amanda-regan.com/course/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>History 3890: Mapping the Gay Guides</title>
+      <link>https://amanda-regan.com/course/3890spring22/</link>
+      <pubDate>Sun, 09 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/course/3890spring22/</guid>
+      <description>Course Overview In this creative inquiry course students will work on Mapping the Gay Guides, a digital history project that seeks to digitize LGBTQ guidebooks from the 1960s through the 1990s. While on his frequent business trips around the United States in the late 1950s and early 1960s, Bob Damron wanted to find bars and other locales to meet other men like him. A gay man, Damron sought friends, companions, and safety at friendly businesses in the various cities he visited.</description>
+    </item>
+    
+  </channel>
+</rss>

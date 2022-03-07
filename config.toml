@@ -39,7 +39,7 @@ theme = "hugo-bootstrap-5"
   weight = 4
 
 [[menu.main]]
-  url = "/teaching"
+  url = "/courses"
   name = "TEACHING"
   weight = 5
 

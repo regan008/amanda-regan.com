@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 19 Apr 2017 15:41:40 +0000</lastBuildDate><atom:link href="https://amanda-regan.com/tags/digital-humanities-now/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Custom Fields with PressForward and Wordpress</title>
-      <link>https://amanda-regan.com/2017/04/using-custom-fields-with-pressforward-and-wordpress/</link>
+      <link>https://amanda-regan.com/posts/custom-fields-and-pressforward/</link>
       <pubDate>Wed, 19 Apr 2017 15:41:40 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/2017/04/using-custom-fields-with-pressforward-and-wordpress/</guid>
+      <guid>https://amanda-regan.com/posts/custom-fields-and-pressforward/</guid>
       <description>One of the questions that the PressForward team gets repeatedly is how publications can use custom fields to automatically print data about a post once it is published. Publications often wish to display a generic name, such as “The Editors,” on a post rather than the name of the user who published the post. On Digital Humanities Now we use custom fields to store the names of our Editors-at-Large for the week a piece is featured as well as the name of the Editor-in-Chief for that week.</description>
     </item>
     

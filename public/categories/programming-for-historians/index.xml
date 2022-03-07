@@ -9,19 +9,19 @@
     <lastBuildDate>Tue, 09 Dec 2014 22:13:24 +0000</lastBuildDate><atom:link href="https://amanda-regan.com/categories/programming-for-historians/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mapping Gymnasiums in Boston, 1914-1924 (A Visualization for Clio 3)</title>
-      <link>https://amanda-regan.com/2014/12/mapping-gymnasiums-in-boston-1914-1924-a-visualization-for-clio-3/</link>
+      <link>https://amanda-regan.com/posts/mapping-gymnasiums-boston/</link>
       <pubDate>Tue, 09 Dec 2014 22:13:24 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/2014/12/mapping-gymnasiums-in-boston-1914-1924-a-visualization-for-clio-3/</guid>
+      <guid>https://amanda-regan.com/posts/mapping-gymnasiums-boston/</guid>
       <description>Mapping Gymnasiums in Boston   In 1889 Josiah Quincey was elected Mayor of Boston. Throughout his term as mayor he implemented a new system of municipal baths and gymnasiums in the city designed to encourage moral behavior, hygiene, foster community, and encourage exercise for the cities residents. These gymnasiums, although open to all residents, were placed largely in immigrant heavy neighborhoods and reflected a focus on physical culture that was reminiscent of life in Eastern Europe.</description>
     </item>
     
     <item>
       <title>Dat Tutorial</title>
-      <link>https://amanda-regan.com/2014/09/dat-tutorial/</link>
+      <link>https://amanda-regan.com/posts/dat-tutorial/</link>
       <pubDate>Tue, 30 Sep 2014 02:54:05 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/2014/09/dat-tutorial/</guid>
+      <guid>https://amanda-regan.com/posts/dat-tutorial/</guid>
       <description>What is Dat? Dat is a set of tools used to “build and share data pipelines.” Dat was created with the goal of bringing “to data a style of collaboration similar to what git brings to source code.” The project, developed by Max Ogden, is designed to allow not only easy data sharing but also row by row version tracking. The five key features of Dat’s tools [(as described by Dat’s GitHub page)](make%20data syncable.</description>
     </item>
     

@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Dat Tutorial" />
+<meta property="og:description" content="What is Dat? Dat is a set of tools used to “build and share data pipelines.” Dat was created with the goal of bringing “to data a style of collaboration similar to what git brings to source code.” The project, developed by Max Ogden, is designed to allow not only easy data sharing but also row by row version tracking. The five key features of Dat’s tools [(as described by Dat’s GitHub page)](make%20data syncable." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://amanda-regan.com/posts/dat-tutorial/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-09-30T02:54:05+00:00" />
+<meta property="article:modified_time" content="2014-09-30T02:54:05+00:00" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dat Tutorial"/>
+<meta name="twitter:description" content="What is Dat? Dat is a set of tools used to “build and share data pipelines.” Dat was created with the goal of bringing “to data a style of collaboration similar to what git brings to source code.” The project, developed by Max Ogden, is designed to allow not only easy data sharing but also row by row version tracking. The five key features of Dat’s tools [(as described by Dat’s GitHub page)](make%20data syncable."/>
+
+
+
+    <link rel="canonical" href="https://amanda-regan.com/posts/dat-tutorial/">
+
+    <title>
+      
+        Dat Tutorial | Amanda Regan
+      
+    </title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href='/css/style.css' rel="stylesheet">
+
+    
+
+    
+  </head>
+  <body>
+    
+      
+
+<header class="blog-header no-print">
+    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="/">
+                Amanda Regan
+            </a><br>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between flex-row-reverse" id="navbarNav">
+                <ul class="navbar-nav">
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/">ABOUT</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="https://raw.githubusercontent.com/regan008/C-V/master/ARegan-cv.pdf">CV</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/projects">RESEARCH &amp; PROJECTS</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/teaching">TEACHING</a>
+                        
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+    
+
+    
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-9  blog-main">
+
+          
+
+<header>
+    <h2 class="blog-post-title">
+    <a class="text-dark text-decoration-none" href="/posts/dat-tutorial/">Dat Tutorial</a>
+</h2>
+
+    <hr>
+</header>
+<article class="blog-post">
+    <h2 id="what-is-dat">What is Dat?</h2>
+<p><a href="www.data-dat.com">Dat</a> is a set of tools used to “build and share data pipelines.”  Dat was created with the goal of bringing “to data a style of collaboration similar to what git brings to source code.”  The project, developed by <a href="http://maxogden.com/">Max Ogden</a>, is designed to allow not only easy data sharing but also row by row version tracking. The five key features of Dat’s tools [(as described by Dat’s GitHub page)](make%20data syncable. automatic sync and updates of data sets data sets can be very large (billions of rows or terabytes in size) and/or updated frequently (real time data) data can be either tabular (rows &amp; cells) or blobs (large files and/or unstructured) plugin APIs to connect dat to any existing database/format/language/storage backends built with automated workflows in mind) are:</p>
+<ul>
+<li>
+<p>making data syncable (much like Git or GitHub)</p>
+</li>
+<li>
+<p>data sets can be very large (billions of rows or terabytes in size) and/or updated frequently (real time data)</p>
+</li>
+<li>
+<p>data can be either tabular (rows &amp; cells) or blobs (large files and/or unstructured)</p>
+</li>
+<li>
+<p>plugin APIs to connect <code>dat</code> to any existing database/format/language/storage backends</p>
+</li>
+<li>
+<p>built with automated workflows in mind</p>
+</li>
+</ul>
+<p>This tutorial will walk through the basics of using dat for creating and managing a data set. We’ll begin with a simple dataset, then we’ll import the data into a new dat store, view the data, make changes, add new data, and view version history.  We’ll be working with dat on our local machine but keep in mind that Dat can also be deployed on a server to facilitate data sharing. Starting with just the basics of Dat showcases the tools potential and hopefully will be helpful for anybody creating large datasets by hand for class.</p>
+<h2 id="dat-for-digital-historians">Dat for Digital Historians</h2>
+<p><img src="http://www.amanda-regan.com/wp-content/uploads/2014/09/dat-hex-2.png" alt="dat-hex-2"></p>
+<p>I think Dat has the potential to be useful and for historians in several ways.  First, I think it’s useful to verify and keep track of the history of historical data sets. Because Dat allows you to track the version history, its easy to go through and verify the data.  Secondly, Dat is designed to allow data syncing.  So in theory, if you were collaborating with someone on creating a data set it would be possible to only sync the data that has changed since the last time you synced.  I think this has the potential to make collaborating and creating large datasets an easier and verifiable practice.  Max Ogden originally designed dat to be useful for Governments or large organizations who often make data available on their website in one massive csv file.  When it changes, you then have to go back in and redownload the csv, figure out whats new, and redo any formatting, reshaping, or calculations.  The goal of dat is to make that process easier by allowing the syncing of only the data that has changed.  Historical data doesn’t change very often but if you’re collecting data from various locations or sources I think Dat could be very useful.  If you’re interested you can read more about the history of dat and Ogden’s vision <a href="http://www.wired.com/2014/08/dat/">here</a>.</p>
+<h2 id="get-the-data">Get the Data</h2>
+<p>I’ve uploaded a GitHub repository that has some data for this tutorial. You can clone this repository so you can follow along with the data I’ve provided or you can use your own data. To clone the data run this in the terminal:</p>
+<pre><code>`git clone https://github.com/regan008/DatTutorial.git`
+</code></pre>
+<h2 id="installation">Installation</h2>
+<p>Dat is a node module and needs to be installed using the Node Package Manager(NPM) in the command line. You’ll need to have Node installed. More details on installing the proper version of Node.js can be found on the <a href="https://github.com/maxogden/dat">Dat GitHub Repository</a>. You can use this command to install node via the command line:</p>
+<pre><code>`npm install dat -g`
+</code></pre>
+<p>If you get an error, you may need to use sudo before the command.</p>
+<h2 id="ways-to-use-dat">Ways to Use Dat</h2>
+<p>There are three main interfaces or APIs for Dat:</p>
+<ul>
+<li>
+<p><a href="https://github.com/maxogden/dat/blob/master/docs/cli-usage.md">Command Line</a></p>
+</li>
+<li>
+<p><a href="https://github.com/maxogden/dat/blob/master/docs/rest-api.md">REST API</a></p>
+</li>
+<li>
+<p><a href="https://github.com/maxogden/dat/blob/master/docs/js-api.md">Javascript API</a></p>
+</li>
+</ul>
+<p>We’ll cover the first two of these interfaces in this tutorial. The Command Line interface allows users to stream data to the dat store from CSV, TSV, or JSON files. The REST API provides access to the Dat graphical user interface (gui). In the GUI you can update data, attach files, and view various versions. Using this API you can also query the data store and generate csv/json copies of your data. The Javascript API is also useful but requires you to write your own code to interact with the database. I’ll include links to the examples in the Dat documentation and leave this api for you to experiment with.</p>
+<h2 id="creating-a-dat-adding--viewing-data">Creating a Dat, Adding &amp; Viewing Data</h2>
+<h3 id="initializing-a-dat-data-store">Initializing a Dat Data Store</h3>
+<p>Dat’s command line interface is similar to Git. To begin, we need to initialize a new data store by using the <code>dat init</code> command. First lets navigate into the directory we cloned from GitHub and then use the <code>dat init</code> command.</p>
+<pre><code>`cd DatTutorial
+dat init`
+</code></pre>
+<p>Dat will prompt you for the Name, a description, and the publisher of the data. Once you’ve provided a value for each of those, Dat will create a new hidden directory called &lsquo;.dat’. This directory will house all of the data you stream into it. You can confirm that <code>dat inti</code> worked by running <code>ls -a</code> in your terminal to view all the hidden files.</p>
+<h3 id="adding-data">Adding Data</h3>
+<p>Dat will accept data in two forms: csv and line-seperated JSON. We’ll use csv data since that’s the most common way historians store data. To get a csv into dat we need to stream it in using the command line. You can stream your csv in using:</p>
+<pre><code>`dat import --csv BostonGyms.csv`
+</code></pre>
+<p>Or:</p>
+<pre><code>`cat BostonGyms.csv | dat import --csv`
+</code></pre>
+<p>Both commands do the same thing just in a slightly different way. The second command uses a pipe to direct the output of <code>cat BostonGyms.csv</code> into dat. When data is added Dat assigns each row of the csv a key and a version number. The key is a unique identifier that we can use to reference the row later. The version number is automatically updated every time a change is made to that row.</p>
+<h3 id="viewing-data-in-the-dat-gui">Viewing Data in the Dat GUI</h3>
+<p>Now that our data is stored in dat it would be useful to be able to view it. To view the data we can launch the Dat GUI by running <code>dat listen</code> in the terminal. This command returns a message that says “Listening on port xxxx. (In my case port 6461 but change it to whatever is printed in your terminal.) What this means is that Dat has started a new local webserver on our computer and if we navigate to localhost:6461 in a web browser we’ll see the Dat GUI. This interface, built on the LevelUp Database, allows us to interact with the data like we would a database.</p>
+<figure><img src="/images/Screen-Shot-2014-09-28-at-4.58.01-PM.png"/><figcaption>
+            <h4>Dat’s Graphical User Interface (GUI)</h4>
+        </figcaption>
+</figure>
+
+<p>In this interface we can update any cell by clicking on the green edit button that appears when hovering over it. If we make a change to any cell and click update, Dat will store a new version of that row and change the version number to 2. Notice that the row’s version number changes but the key doesn’t.</p>
+<figure><img src="/images/Screen-Shot-2014-09-28-at-4.58.12-PM.png"/><figcaption>
+            <h4>Editing an individual cell</h4>
+        </figcaption>
+</figure>
+
+<p>Clicking on the icon in the far left cell brings up a Row summary with each column name, corresponding value, and an option to upload a Blob. A “Blob” is simply an attached file. Here we could upload a file that relates to the data in a particular row. Dat will store the metadata for the file and any changes to to it in the database but will not store changes to the contents of the file.</p>
+<figure><img src="/images/Screen-Shot-2014-09-28-at-5.43.11-PM.png"/><figcaption>
+            <h4>The ‘Inspect Row’ dialog box. Here you can view a summary of the data in the row and attach a Blob (a file).</h4>
+        </figcaption>
+</figure>
+
+<h3 id="viewing-data-via-the-rest-api">Viewing Data via the REST API</h3>
+<p>In addition to the dat-editor GUI data in Dat can also be explored through the Rest API. The api exits when the local web server is launched (<code>dat listen</code>) and the views can be found at localhost:6461/api. Try going to:</p>
+<p><strong>localhost:6461/api</strong> This page will return JSON data about the dat. This is particularly useful if you’re accessing data that isn’t yours. The API will list the:</p>
+<ul>
+<li>
+<p>the name of the dat store</p>
+</li>
+<li>
+<p>the version</p>
+</li>
+<li>
+<p>how many changes have been made</p>
+</li>
+<li>
+<p>how many rows</p>
+</li>
+<li>
+<p>the approximate size of the store</p>
+</li>
+</ul>
+<p><strong>localhost:6461/api/rows</strong> This page will return a list of the rows and all of the data associated with them. This is useful if you need to access the key of a particular item or if you want to pull the JSON into another program.</p>
+<p><strong>localhost:6461/api/rows:key</strong> Adding a particular key onto the end of the url will return the data in that particular row.</p>
+<p>This is just a brief overview of the REST API. More details can be found on the <a href="https://github.com/maxogden/dat/blob/master/docs/rest-api.md">Dat GitHub Wiki</a>.</p>
+<p>Back in the command line, we can exit the local server by quitting the process with control-c</p>
+<h3 id="adding-more-data">Adding More Data</h3>
+<p>Once we’ve got data into Dat we may want to add an additional row or row(s). This is easy to do in the dat CLI interface. We can add a new row by using JSON and referencing the column names and corresponding data. That might look something like this:</p>
+<pre><code>`echo '{“name”: “Dover-street Bath-house”, “month”: “March”, “Year”: 1913, “males”:10150, “females”: 2591}' | dat import --json`
+</code></pre>
+<p>That’s useful but it might be better to import more than one line at once. We can do this by streaming in a file of line separated JSON. The file BostonGyms.json contains some data we haven’t added. The json looks like this:</p>
+<figure><img src="/images/Screen-Shot-2014-09-28-at-5.11.21-PM.png"/><figcaption>
+            <h4>Data formatted as Line Separated JSON</h4>
+        </figcaption>
+</figure>
+
+<p>To pipe it into our dat database we can run: <code>cat BostonGyms.json | dat import --json</code></p>
+<p>The new rows will show up in our database. We can see them by running <code>dat listen</code> and going to the last page.</p>
+<h2 id="the-javascript-interface">The Javascript Interface</h2>
+<p>The command line and REST API in Dat is useful and allows you to add, change, and view data quickly and easily. However, Dat also offers a JavaScript API which can be extremely useful as well. There are several excellent examples of how to use the api on the <a href="https://github.com/maxogden/dat/tree/master/docs/dat-js-examples">Dat GitHub repository</a>.</p>
+<h2 id="conclusions-dat-and-reproducible-research">Conclusions: Dat and Reproducible Research</h2>
+<p>Dat is a powerful tool for data sharing, collaboration, and version control.  We’ve only used it on our local server, but Dat provides tools for uploading data to a server and creating pipelines through which large datasets can be easily shared, updated, and managed.  For digital historians practicing reproducible research, Dat makes it easy to share data with others.  Dat is only in its Alpha release but with funding from the Sloan Foundation the tools will continue to be built out and can be extremely beneficial for researchers in all disciplines.</p>
+
+
+    
+
+    <footer>
+
+
+</footer>
+
+</article>
+
+
+
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+
+    
+      
+
+
+
+
+<footer class="blog-footer w-100 no-print">
+    <nav class="navbar navbar-light bg-light">
+        <p class="w-100 text-center"><a href="#">Back to top</a></p>
+    </nav>
+</footer>
+
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+{{ define "main" }}
+
+<header>
+  <h2 class="course-title">
+      <a class="text-dark text-decoration-none" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+  </h2>
+  <h3 class="course-subtitle">{{.Params.subtitle}}</h3>
+
+</header>
+<article class="blog-post">
+<div class="row">
+<img src="{{.Params.coursebanner}}" height=250px class="course-banner">
+</div>
+<div class="row syllabus-header">
+<hr>
+  <div class="col-6">
+    <h3> Course Details</h3>
+    <p><b> {{ .Params.semester }}<br>
+    {{.Params.University}} <br>
+    {{ .Params.meetingdays }}
+    </b></p>
+
+    <p>{{ .Params.extras }}</p>
+    <p> {{.Params.credithours}} credit hours.<br>
+    <b>Section {{ .Params.section1num }}:</b>
+      {{ .Params.section1time }} <br>
+   {{ if .Params.section2num}}
+      <b>Section {{ .Params.section2num }}:</b>
+        {{ .Params.section2time }} <br>
+    {{ end }}
+    <b>Location:</b> {{ .Params.location }} </p>
+  </div>
+<div class="col-6">
+    <h3>Instructor Info</h3>
+    <p><b>Instructor:</b>
+    Dr. Amanda Regan<br>
+    aeregan (at) clemson.edu</p>
+
+    <p><b>Pronouns:</b> <a href="https://www.mypronouns.org/she-her">She/Her</a></p>
+
+    <p><b>Office Location:</b>
+      {{ .Params.officelocation }}</p>
+
+    <p><b>Office Hours:</b>
+      {{ .Params.officehours }}<br>
+    <a href="{{ .Params.officehourslink }}"> Zoom Office Hours Link</a></p>
+
+</div>
+<hr>
+  </div>
+<div class="col-12">
+  <ul class="nav d-print-none justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" href="#course-overview">Course Overview</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#assignments--grades">Assignments & Grading</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#policies--procedures">Course Policies</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#schedule">Schedule</a>
+    </li>
+
+
+  </ul>
+  </div>
+
+
+    {{ .Content }}
+
+    {{ partial "translations.html" . }}
+    {{ partial "related" . }}
+</article>
+
+{{ end }}

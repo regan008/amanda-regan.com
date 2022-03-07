@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://amanda-regan.com/courses/</loc>
+    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://amanda-regan.com/courses/3890spring22/</loc>
+    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://amanda-regan.com/courses/computationalhistory/</loc>
+    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://amanda-regan.com/courses/1010spring22/</loc>
+    <lastmod>2021-12-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://amanda-regan.com/bostongymnasiums/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -41,10 +53,10 @@
     <loc>https://amanda-regan.com/stonehill/</loc>
     <lastmod>2019-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2017/05/mining-eleanor-roosevelts-my-day-columns/</loc>
+    <loc>https://amanda-regan.com/posts/mining-myday/</loc>
     <lastmod>2017-05-21T15:41:40+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/post/</loc>
+    <loc>https://amanda-regan.com/posts/</loc>
     <lastmod>2017-05-21T15:41:40+00:00</lastmod>
   </url><url>
     <loc>https://amanda-regan.com/teaching/</loc>
@@ -59,7 +71,7 @@
     <loc>https://amanda-regan.com/tags/</loc>
     <lastmod>2017-04-19T15:41:40+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2017/04/using-custom-fields-with-pressforward-and-wordpress/</loc>
+    <loc>https://amanda-regan.com/posts/custom-fields-and-pressforward/</loc>
     <lastmod>2017-04-19T15:41:40+00:00</lastmod>
   </url><url>
     <loc>https://amanda-regan.com/categories/</loc>
@@ -68,13 +80,13 @@
     <loc>https://amanda-regan.com/categories/coursework/</loc>
     <lastmod>2014-12-09T22:13:24+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/12/mapping-gymnasiums-in-boston-1914-1924-a-visualization-for-clio-3/</loc>
+    <loc>https://amanda-regan.com/posts/mapping-gymnasiums-boston/</loc>
     <lastmod>2014-12-09T22:13:24+00:00</lastmod>
   </url><url>
     <loc>https://amanda-regan.com/categories/programming-for-historians/</loc>
     <lastmod>2014-12-09T22:13:24+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/09/dat-tutorial/</loc>
+    <loc>https://amanda-regan.com/posts/dat-tutorial/</loc>
     <lastmod>2014-09-30T02:54:05+00:00</lastmod>
   </url><url>
     <loc>https://amanda-regan.com/tags/chnm/</loc>
@@ -92,55 +104,55 @@
     <loc>https://amanda-regan.com/tags/reflections/</loc>
     <lastmod>2014-08-24T16:41:49+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/08/reflections-on-the-spring-semester-and-year-1-as-a-digital-history-fellow/</loc>
+    <loc>https://amanda-regan.com/posts/reflections-on-spring-semester-and-year-1-as-digital-history-fellows/</loc>
     <lastmod>2014-08-24T16:41:49+00:00</lastmod>
   </url><url>
     <loc>https://amanda-regan.com/tags/research-division/</loc>
     <lastmod>2014-08-24T16:41:49+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/08/digital-history-minor-field-part-5-topic-modeling/</loc>
+    <loc>https://amanda-regan.com/posts/digital-history-minor-field-part-5-topic-modeling/</loc>
     <lastmod>2014-08-05T03:25:56+00:00</lastmod>
   </url><url>
     <loc>https://amanda-regan.com/categories/digital-history-readings-course/</loc>
     <lastmod>2014-08-05T03:25:56+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/07/minor-field-readings-part-4-space/</loc>
+    <loc>https://amanda-regan.com/posts/minor-field-readings-part-4-space/</loc>
     <lastmod>2014-07-31T19:23:37+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/07/minor-field-readings-part-3-changing-theories-of-history/</loc>
+    <loc>https://amanda-regan.com/posts/changing-theories-history/</loc>
     <lastmod>2014-07-05T22:25:41+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/06/minor-field-readings-part-2-perspectives-on-new-media/</loc>
+    <loc>https://amanda-regan.com/posts/perspectives-new-media/</loc>
     <lastmod>2014-06-22T22:20:52+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/06/minor-field-readings-part-1-digital-humanities/</loc>
+    <loc>https://amanda-regan.com/posts/dhs-histories-debates-promises/</loc>
     <lastmod>2014-06-06T11:59:46+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/05/readings-course-on-digital-history-in-theory-and-practice/</loc>
+    <loc>https://amanda-regan.com/posts/readings-series-digital-history-theory-practice/</loc>
     <lastmod>2014-05-26T20:07:56+00:00</lastmod>
   </url><url>
     <loc>https://amanda-regan.com/categories/clio-wired-ii/</loc>
     <lastmod>2014-05-03T20:27:21+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/05/final-clio-wired-ii-project/</loc>
+    <loc>https://amanda-regan.com/posts/final-clio-wired-ii-project/</loc>
     <lastmod>2014-05-03T20:27:21+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/04/final-project-design/</loc>
+    <loc>https://amanda-regan.com/posts/final-project-design/</loc>
     <lastmod>2014-04-20T20:00:39+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/04/image-assignment/</loc>
+    <loc>https://amanda-regan.com/posts/image-assignment/</loc>
     <lastmod>2014-04-11T15:51:18+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/04/attempts-at-restoration/</loc>
+    <loc>https://amanda-regan.com/posts/attempts-restoration/</loc>
     <lastmod>2014-04-06T15:17:56+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/03/restoring-an-image-from-a-microfilm-copy/</loc>
+    <loc>https://amanda-regan.com/posts/restoring-comic-microfilm/</loc>
     <lastmod>2014-03-28T20:14:14+00:00</lastmod>
   </url><url>
     <loc>https://amanda-regan.com/categories/clio-wired-i/</loc>
     <lastmod>2014-03-16T15:45:25+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/03/color/</loc>
+    <loc>https://amanda-regan.com/posts/color/</loc>
     <lastmod>2014-03-16T15:45:25+00:00</lastmod>
   </url><url>
     <loc>https://amanda-regan.com/categories/hacking-that-camps-yack/</loc>
@@ -149,79 +161,79 @@
     <loc>https://amanda-regan.com/tags/hacking-that-camps-yack/</loc>
     <lastmod>2014-02-26T14:30:57+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/02/thatcamp-topic-modeling-results/</loc>
+    <loc>https://amanda-regan.com/posts/thatcamp-topic-modeling-results/</loc>
     <lastmod>2014-02-26T14:30:57+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/02/typography-assignment/</loc>
+    <loc>https://amanda-regan.com/posts/typography-assignment/</loc>
     <lastmod>2014-02-23T01:39:32+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/02/unexpected-challenges-result-in-important-and-informative-discussions-a-transparent-discussion-about-stripping-content-and-stopwords/</loc>
+    <loc>https://amanda-regan.com/posts/unexpected-challenges-result-important-informative-discussions-transparent-discussion-stripping-content-stopwords/</loc>
     <lastmod>2014-02-19T14:00:07+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/02/pre-processing-text-for-mallet/</loc>
+    <loc>https://amanda-regan.com/posts/pre-processing-text-mallet/</loc>
     <lastmod>2014-02-18T14:00:29+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/02/design-using-a-grid/</loc>
+    <loc>https://amanda-regan.com/posts/design-using-grid/</loc>
     <lastmod>2014-02-16T15:38:31+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/02/extracting-data-from-the-thatcamp-database-using-python-and-mysql/</loc>
+    <loc>https://amanda-regan.com/posts/extracting-data-python-mysql/</loc>
     <lastmod>2014-02-09T20:54:45+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/02/spring-semester-in-research-and-a-thatcamp-challenge/</loc>
+    <loc>https://amanda-regan.com/posts/spring-semester-research-thatcamp-challenge/</loc>
     <lastmod>2014-02-09T19:39:04+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/02/typographical-design-and-communication/</loc>
+    <loc>https://amanda-regan.com/posts/typographical-design-communication-via-web/</loc>
     <lastmod>2014-02-09T18:25:16+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2014/02/building-in-the-digital-humanities/</loc>
+    <loc>https://amanda-regan.com/posts/building-digital-humanities/</loc>
     <lastmod>2014-02-03T01:43:29+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/12/reflections-on-the-public-projects-division/</loc>
+    <loc>https://amanda-regan.com/posts/reflections-public-projects-division/</loc>
     <lastmod>2013-12-19T02:55:58+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/12/final-digital-scholarship-project/</loc>
+    <loc>https://amanda-regan.com/posts/final-project/</loc>
     <lastmod>2013-12-06T19:07:17+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/11/shifts-in-physical-culture-a-textual-analysis/</loc>
+    <loc>https://amanda-regan.com/posts/shifts-physical-culture-textual-analysis/</loc>
     <lastmod>2013-11-25T20:59:38+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/11/digital-humanities-and-collaboration/</loc>
+    <loc>https://amanda-regan.com/posts/digital-humanities-collaboration/</loc>
     <lastmod>2013-11-18T20:46:13+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/11/technology-and-the-classroom/</loc>
+    <loc>https://amanda-regan.com/posts/technology-classroom/</loc>
     <lastmod>2013-11-11T16:59:06+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/11/big-data-for-historians/</loc>
+    <loc>https://amanda-regan.com/posts/big-data-historians/</loc>
     <lastmod>2013-11-03T17:19:15+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/10/mapping-regional-ideals-of-beauty-1900-1940-a-digital-research-resouce/</loc>
+    <loc>https://amanda-regan.com/posts/mappingregionalidealsofbeauty/</loc>
     <lastmod>2013-10-26T15:17:50+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/10/spatial-history-as-a-research-tool/</loc>
+    <loc>https://amanda-regan.com/posts/spatial-history-research-tool/</loc>
     <lastmod>2013-10-20T16:21:14+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/10/examples-of-spatial-history/</loc>
+    <loc>https://amanda-regan.com/posts/examples-spatial-history/</loc>
     <lastmod>2013-10-20T09:00:07+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/10/how-can-technology-help-teachers-to-teach-historical-and-critical-thinking/</loc>
+    <loc>https://amanda-regan.com/posts/can-technology-help-teachers-teach-historical-critical-thinking/</loc>
     <lastmod>2013-10-07T16:48:34+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/10/on-the-overwhelming-challenge-of-preserving-born-digital-materials/</loc>
+    <loc>https://amanda-regan.com/posts/395/</loc>
     <lastmod>2013-10-07T16:12:54+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/09/crowdsourced-collections-a-democratic-approach/</loc>
+    <loc>https://amanda-regan.com/posts/crowdsourced-collections-democratic-approach/</loc>
     <lastmod>2013-09-23T15:58:57+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/09/open-access-open-source-and-the-responsibilities-of-historians-in-the-digital-world/</loc>
+    <loc>https://amanda-regan.com/posts/open-access-open-source-responsibilities-historians-digital-world/</loc>
     <lastmod>2013-09-22T16:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/09/webdesign-for-academics/</loc>
+    <loc>https://amanda-regan.com/posts/webdesign-for-academics/</loc>
     <lastmod>2013-09-16T18:24:27+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/09/what-are-the-digital-humanities-what-do-they-do-and-how-does-digital-history-fit-in/</loc>
+    <loc>https://amanda-regan.com/posts/what-are-the-digital-humanities-what-do-they-do-and-how-does-digital-history-fit-in/</loc>
     <lastmod>2013-09-09T15:41:40+00:00</lastmod>
   </url><url>
-    <loc>https://amanda-regan.com/2013/08/clio-i-introduction-and-rss-feeds/</loc>
+    <loc>https://amanda-regan.com/posts/clio-i-introduction-and-rss-feeds/</loc>
     <lastmod>2013-08-26T20:22:24+00:00</lastmod>
   </url>
 </urlset>

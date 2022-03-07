@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Extracting Data from the THATCamp Database Using Python and MySQL" />
+<meta property="og:description" content="This post is the second in a set of 4 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post can be found on the Digital History Fellowship Blog.
+This week we&rsquo;ve continued to work on building a python script that will extract all of the blog posts from the various THATCamp websites. As Jannelle described last week, our goal was to write a script that downloads the blog posts in plain text form and strips all of the html tags, stopwords, and punctuation so that we can feed it into MALLET for topic modeling and text analysis." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://amanda-regan.com/posts/extracting-data-python-mysql/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2014-02-09T20:54:45+00:00" />
+<meta property="article:modified_time" content="2014-02-09T20:54:45+00:00" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Extracting Data from the THATCamp Database Using Python and MySQL"/>
+<meta name="twitter:description" content="This post is the second in a set of 4 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post can be found on the Digital History Fellowship Blog.
+This week we&rsquo;ve continued to work on building a python script that will extract all of the blog posts from the various THATCamp websites. As Jannelle described last week, our goal was to write a script that downloads the blog posts in plain text form and strips all of the html tags, stopwords, and punctuation so that we can feed it into MALLET for topic modeling and text analysis."/>
+
+
+
+    <link rel="canonical" href="https://amanda-regan.com/posts/extracting-data-python-mysql/">
+
+    <title>
+      
+        Extracting Data from the THATCamp Database Using Python and MySQL | Amanda Regan
+      
+    </title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href='/css/style.css' rel="stylesheet">
+
+    
+
+    
+  </head>
+  <body>
+    
+      
+
+<header class="blog-header no-print">
+    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="/">
+                Amanda Regan
+            </a><br>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between flex-row-reverse" id="navbarNav">
+                <ul class="navbar-nav">
+                    
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/">ABOUT</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="https://raw.githubusercontent.com/regan008/C-V/master/ARegan-cv.pdf">CV</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/projects">RESEARCH &amp; PROJECTS</a>
+                        
+                    </li>
+                    
+                    
+                    <li class="nav-item ">
+                        
+                            
+                            <a class="nav-link " href="/teaching">TEACHING</a>
+                        
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+    
+
+    
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-9  blog-main">
+
+          
+
+<header>
+    <h2 class="blog-post-title">
+    <a class="text-dark text-decoration-none" href="/posts/extracting-data-python-mysql/">Extracting Data from the THATCamp Database Using Python and MySQL</a>
+</h2>
+
+    <hr>
+</header>
+<article class="blog-post">
+    <p><strong>This post is the second in a set of 4 written by the <a href="http://chnm.gmu.edu/courses/fellowship/?page_id=11">Digital History Fellows</a> at the <a href="http://chnm.gmu.edu/">Roy Rosenzweig Center for History and New Media</a>. The original post can be found on the <a href="http://chnm.gmu.edu/courses/fellowship/">Digital History Fellowship Blog</a>.</strong></p>
+<p>This week we&rsquo;ve continued to work on building a python script that will extract all of the blog posts from the various THATCamp websites. As <a href="http://chnm.gmu.edu/courses/fellowship/?p=421">Jannelle described last week</a>, our goal was to write a script that downloads the blog posts in plain text form and strips all of the html tags, stopwords, and punctuation so that we can feed it into MALLET for topic modeling and text analysis. After several long days and a lot of help from second year fellow Spencer Roberts, we&rsquo;ve successfully gotten the code to work.</p>
+<p>To recap, the script should do the following:</p>
+<ol>
+<li>
+<p>connect to the mySQL database</p>
+</li>
+<li>
+<p>select the relevant table using a sql query.</p>
+</li>
+<li>
+<p>open a text file and write the content from the database</p>
+</li>
+<li>
+<p>loop over the code and do this for each table</p>
+</li>
+</ol>
+<p>Connecting to the MySQL database has to be done in two places. First in the terminal using a secure shell and secondly in the script. To connect in the terminal, we used a secure shell port tunnel which allowed our computer to communicate with the database.</p>
+<pre><code>ssh -L 3306:localhost:3306 user@host.edu
+</code></pre>
+<p>Next, we began writing a python script that would connect to the database and download all of the blog posts from each of the THATCamp sub-sites. The THATCamp website is a wordpress <a href="http://codex.wordpress.org/Glossary#Multisite">multisite </a>install with multiple tables for each individual THATCamp (over 200 individual camps). The blog posts are stored in a table labeled &lsquo;wp_xx_posts&rsquo;, with xx being the number assigned to a particular THATCamp. To complicate matters, the posts are not perfectly sequential. There are several skipped numbers for content that has been deleted or created erroneously. Our script would need to respond to these challenges.</p>
+<p>The first step was to import the relevant python libraries. For this script, we first imported the <a href="http://mysql-python.sourceforge.net/MySQLdb.html">MySQLdb </a>module and asked python to refer to library as &lsquo;mdb&rsquo;. We also imported the <a href="http://docs.python.org/2/library/os.html">os python module</a> which allows the script to interact with the operating system. In this case, we used it to open and write to text files.</p>
+<pre><code>import MySQLdb as mdb
+import os
+</code></pre>
+<p>The next portion of the script defined a loop and designated where in the database to find the blog post data. Because of the naming convention we needed python to start by looking for wp_1_posts and continue to run the same operation for each sequentially numbered table.</p>
+<pre><code>x = 1
+while x &lt; 500:
+	table= 'wp_' + str(x) + '_posts'
+	query= &quot;SELECT post_content FROM &quot;+ str(table) + &quot; WHERE post_status = 'publish' AND post_type = 'post'&quot;
+</code></pre>
+<p>The beginning portion of the code defines a loop and tells python to begin at 1 and count up to 500. Each time python loops back it will look for a table named ‘wp_x_posts’. The script then defines a <a href="https://dev.mysql.com/doc/refman/5.0/en/select.html">MySQL SELECT query</a> which tells python where to look for the content and defines what content it should pull. In this case, we had to specify that the query should pull the contents of data that matched the following criteria:</p>
+<ul>
+<li>
+<p>In the post_content column</p>
+</li>
+<li>
+<p>From the table defined by the string above (wp_x_posts where x increases sequentially each loop)</p>
+</li>
+<li>
+<p>Where the Post_status is published</p>
+</li>
+<li>
+<p>And where the Post_type is post</p>
+</li>
+</ul>
+<p>So far the code has given python instructions on where to query the information from and has set up a loop. The next step is to actually tell python how and where to connect to the database as well as what to do with the information it receives. First, python should open a new file and save it with the same name as the table. The string defined above will name the file wp_x_posts.txt and will count up sequentially because of the loop. The file permission is set to ‘a’ so that python can add to the document each time it pulls a row from the database.</p>
+<pre><code>f = open('wp_' + str(x) + '_posts.txt', 'a')
+</code></pre>
+<p>Next, we set up a compound statement in python using <a href="http://docs.python.org/2/reference/compound_stmts.html">try and except </a>to create a statement that will download and write the content to the file. It will also provide an exception that will tell python what to do if the table doesn’t exist in the database.</p>
+<pre><code>try:
+        con = mdb.connect(host=&quot;127.0.0.1&quot;, port=3306, user=&quot;usrname&quot;, passwd=&quot;pass&quot;, db=&quot;clone-thatcamp&quot;);
+
+        cur = con.cursor()
+        cur.execute(str(query))
+
+        rows = cur.fetchall()
+
+        for row in rows:
+            line = str(row)
+            f.write(line +'\n')
+</code></pre>
+<p>The MySQLdb module that we imported at the top of the script uses the <a href="http://docs.python.org/release/2.5.2/lib/sqlite3-Cursor-Objects.html">cursor method</a> to create a cursor object for processing MySQL statements. The cursor is first created then it executes the query which we defined above. It then fetches all of the rows that are returned by the query and prints each one to the open text file. It prints the rows one by one inserting a line break after each one.</p>
+<p>An additional challenge, described above, was that while tables in the database were numbered sequentially, there are occasional skips. For example there isn’t a &ldquo;wp_1_posts&rdquo; but there is a &ldquo;wp_2_posts&rdquo;. When we were writing the script we kept encountering an error when python couldn’t find a table. To get around this we used the <a href="http://docs.python.org/2/reference/compound_stmts.html">except statement</a>. The except statement tells python to remove the empty text file if the table does not exist so that we don’t have a bunch of empty and useless text files. Using the <a href="http://docs.python.org/2/library/os.html">operating system function</a>, python deletes any file that it can’t pull data for.</p>
+<pre><code> except:
+	os.remove('wp_' + str(x) + '_posts.txt')
+	f.close
+</code></pre>
+<p>Finally, python adds one to x, causing the script to loop back to the top and follow the instructions for each sequential table.</p>
+<pre><code> x += 1
+</code></pre>
+<p>When we ran the program it downloaded over 200 plain text files for us to work with. However, the files were often a mess. They had html tags and some very odd formatting so we had to go through and clean them up. Our next blog post will describe how we cleaned up these text files to prepare them for topic modeling with MALLET.</p>
+<p>The final code looks like this:</p>
+<pre><code>import MySQLdb as mdb
+import os
+
+x = 1
+while x &lt; 500:
+	table= 'wp_' + str(x) + '_posts'
+	query= &quot;SELECT post_content FROM &quot;+ str(table) + &quot; WHERE post_status = 'publish' AND post_type = 'post'&quot;
+
+# save as file
+	f = open('wp_' + str(x) + '_posts.txt', 'a')
+
+	try:
+        con = mdb.connect(host=&quot;127.0.0.1&quot;, port=3306, user=&quot;usr&quot;, passwd=&quot;password&quot;, db=&quot;clone-thatcamp&quot;);
+
+        cur = con.cursor()
+        cur.execute(str(query))
+
+        rows = cur.fetchall()
+
+        for row in rows:
+            line = str(row)
+            f.write(line +'\n')
+
+	except:
+        os.remove('wp_' + str(x) + '_posts.txt')
+        f.close
+	x += 1
+</code></pre>
+<p>Download the entire code here.</p>
+
+
+    
+
+    <footer>
+
+
+    <h4>See also</h4>
+    <ul>
+        
+            <li><a href="/posts/spring-semester-research-thatcamp-challenge/">Spring Semester in Research and a THATCamp Challenge</a></li>
+        
+    </ul>
+
+</footer>
+
+</article>
+
+
+
+        </div>
+
+        
+
+      </div>
+    </div>
+    
+
+    
+      
+
+
+
+
+<footer class="blog-footer w-100 no-print">
+    <nav class="navbar navbar-light bg-light">
+        <p class="w-100 text-center"><a href="#">Back to top</a></p>
+    </nav>
+</footer>
+
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>
