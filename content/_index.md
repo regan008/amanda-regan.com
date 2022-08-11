@@ -9,7 +9,7 @@ lastmod: "2022-03-07"
 
 {{< figure src="/images/IMG_8007.jpg" height=300px class="image-right" >}}
 
-Currently, I am a Lecturer in the [Department of History and Geography](https://www.clemson.edu/caah/departments/history/) at Clemson University. In Fall 2022, I will transition into a new role as an Assistant Professor of History at Clemson. I specialize in digital history as well as late-nineteenth and twentieth-century U.S. history with a focus on women and gender.
+I am an Assistant Professor in the [Department of History and Geography](https://www.clemson.edu/caah/departments/history/) at Clemson University. I specialize in digital history as well as late-nineteenth and twentieth-century U.S. history with a focus on women and gender.
 
 Previously, I was a Digital Humanities Postdoctoral Fellow at Southern Methodist University's [Center for Presidential History.](https://www.smu.edu/cph)I earned my Ph.D. from George Mason University in 2019. From 2013 to 2015 I was a Digital History Fellow at the [Roy Rosenzweig Center for History and New Media (RRCHNM)](https://rrchnm.org). Following my fellowship, I continued at RRCHNM where I served as the Software Development Manger for the [PressForward Project](https://pressforward.org) and as the Managing Editor of [Digital Humanities Now](https://digitalhumanitiesnow.org).
 
