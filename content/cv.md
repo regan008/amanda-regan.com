@@ -1,13 +1,15 @@
 ---
 title: "Curriculum Vitae"
 description: "Amanda Regan's Curriculum Vitae"
-lastmod: "2019-09-30"
+lastmod: "2022-08-15"
 slug: "cv"
 ---
 [_Download as a PDF_](https://github.com/regan008/C-V/raw/master/ARegan-cv.pdf)
 
 ### Appointments
-**Lecturer**, Department of History and Geography, Clemson University, 2021-present.
+**Assistant Professor**, Department of History and Geography, Clemson University, 2022-present.
+
+**Lecturer**, Department of History and Geography, Clemson University, 2021-2022.
 
 **Post-Doctoral Fellow**, Center for Presidential History, Southern Methodist University, 2019-2021.
 
