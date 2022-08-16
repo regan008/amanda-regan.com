@@ -4,7 +4,7 @@ draft: false
 author: Amanda Regan
 description: "Dr. Amanda Regan is a historian of the late-nineteenth and twentieth-centuries. She is also a specialist in digital history."
 title: About
-lastmod: "2022-03-07"
+lastmod: "2022-08-15"
 ---
 
 {{< figure src="/images/IMG_8007.jpg" height=300px class="image-right" >}}
