@@ -40,7 +40,7 @@
       <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://amanda-regan.com/projects/mininger/</guid>
-      <description>Mining My Day is a Shiny app that visualizes the common themes, or &amp;lsquo;topics&amp;rsquo;, in Eleanor Roosevelt&amp;rsquo;s My Day columns. You can read the blog post about the visualization or jump straight into exploring the app.
+      <description>Mining My Day is a Shiny app that visualizes the common themes, or &amp;rsquo;topics&amp;rsquo;, in Eleanor Roosevelt&amp;rsquo;s My Day columns. You can read the blog post about the visualization or jump straight into exploring the app.
 From December 1935 until September 1962, Roosevelt authored a nationally syndicated newspaper column entitled My Day and because Roosevelt did not keep any sort of diary and her appointment books were often incomplete, the My Day columns have become a valuable source for historians.</description>
     </item>
     
@@ -50,7 +50,7 @@ From December 1935 until September 1962, Roosevelt authored a nationally syndica
       <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://amanda-regan.com/projects/pressforward/</guid>
-      <description>PressForward is a free and open-source software project that enables teams of researchers to aggregate, filter, and disseminate relevant scholarship using the popular WordPress web publishing platform. First, as the Graduate Research Assistant, and later the Software Development Manager, I collaborated with team members to outline development priorities and milestone goals while also overseeing the testing and release processes. I also built the PressForward TurnKey Themewhich allows publications to make PressForward statistics easily viewable by readers.</description>
+      <description>PressForward is a free and open-source software project that enables teams of researchers to aggregate, filter, and disseminate relevant scholarship using the popular WordPress web publishing platform. First, as the Graduate Research Assistant, and later the Software Development Manager, I collaborated with team members to outline development priorities and milestone goals while also overseeing the testing and release processes. I also built the PressForward TurnKey Theme which allows publications to make PressForward statistics easily viewable by readers.</description>
     </item>
     
     <item>
@@ -59,7 +59,7 @@ From December 1935 until September 1962, Roosevelt authored a nationally syndica
       <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://amanda-regan.com/projects/rrchnm20/</guid>
-      <description>As a Digital History Fellow at the Roy Rosenzweig Center for History and New Media, I collaborated with Jannelle Leggto create an Omeka archive that contains grants and supporting documents from the first twenty years of RRCHNM. We designed an information architecture that would capture the data contained on the coversheet of grant applications and we each input documents related to one of the center&amp;rsquo;s major projects. The item metadata is designed in a way that is meant to be flexible and allow researchers to use the API to ask and answer questions about the history of RRCHNM.</description>
+      <description>As a Digital History Fellow at the Roy Rosenzweig Center for History and New Media, I collaborated with Jannelle Legg to create an Omeka archive that contains grants and supporting documents from the first twenty years of RRCHNM. We designed an information architecture that would capture the data contained on the coversheet of grant applications and we each input documents related to one of the center&amp;rsquo;s major projects. The item metadata is designed in a way that is meant to be flexible and allow researchers to use the API to ask and answer questions about the history of RRCHNM.</description>
     </item>
     
   </channel>

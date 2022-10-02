@@ -6,7 +6,41 @@
     <description>Recent content in About on Amanda Regan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://amanda-regan.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://amanda-regan.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Curriculum Vitae</title>
+      <link>https://amanda-regan.com/cv/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/cv/</guid>
+      <description>Download as a PDF
+Appointments Assistant Professor, Department of History and Geography, Clemson University, 2022-present.
+Lecturer, Department of History and Geography, Clemson University, 2021-2022.
+Post-Doctoral Fellow, Center for Presidential History, Southern Methodist University, 2019-2021.
+Education George Mason University
+PhD, History and Art History (2019) Specialties: US History, Digital History, Women&amp;rsquo;s History. Dissertation: “Shaping Up: Physical Culture Initiatives for Women in the United States, 1890-1965” Dissertation Committee: Alison Landsberg (Chair), Sharon Leon, Sun-Young Park, Jennifer Ritterhouse California State University, San Marcos</description>
+    </item>
+    
+    <item>
+      <title>History 3050: The United States, 1918-1945</title>
+      <link>https://amanda-regan.com/courses/3050fall22/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/courses/3050fall22/</guid>
+      <description>Course Overview Welcome! This course will explore American History between the years of 1918 and 1945. Bookended by World War I and World War II, we&amp;rsquo;ll examine the profound social, cultural, and political changes that occurred in American life.
+The course begins in the midst of a world war and a crushing pandemic before moving into what has been described as the &amp;ldquo;Roaring Twenties.&amp;rdquo; We&amp;rsquo;ll interrogate this period and ask how the pandemic, war, and expansion of the American state under Prohibition changed America.</description>
+    </item>
+    
+    <item>
+      <title>History 3180: History of American Women</title>
+      <link>https://amanda-regan.com/courses/3180fall22/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://amanda-regan.com/courses/3180fall22/</guid>
+      <description>Course Overview Today, it may seem, women are more publicly visible than they have ever been. We have a female vice president, several women sit on the Supreme Court, and women are the executives of major corporations, superheroes, scientists. This course will chart how we got here and what has changed for women as well as the challenges that continue to face women in our society and culture.
+Beginning in early America and ending in the modern day, we will endeavor to understand the social, political, economic, and cultural histories of women in the United States.</description>
+    </item>
+    
     <item>
       <title>History 1010: US History to 1877</title>
       <link>https://amanda-regan.com/courses/1010spring22/</link>
@@ -32,7 +66,8 @@ In this course we will explore American history beginning with the initial settl
       <pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://amanda-regan.com/courses/computationalhistory/</guid>
-      <description>This is a sample syllabus for History 8510: Methods in Digital History II at Clemson University. If you would like to view the online version of this syllabus you can do so at www.amanda-regan.com/courses/computationalhistory.  Course Description Welcome to History 8510, Methods in Digital History II. This course in computational history will teach you to create, manipulate, explore, and visualize historical data with the goal of advancing historical arguments.</description>
+      <description>This is a sample syllabus for History 8510: Methods in Digital History II at Clemson University. If you would like to view the online version of this syllabus you can do so at www.amanda-regan.com/courses/computationalhistory. Course Description Welcome to History 8510, Methods in Digital History II. This course in computational history will teach you to create, manipulate, explore, and visualize historical data with the goal of advancing historical arguments.
+This class is the second in a series of digital history courses at Clemson University.</description>
     </item>
     
     <item>
@@ -51,7 +86,7 @@ Course Overview In this course we will explore American history beginning with t
       <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://amanda-regan.com/bostongymnasiums/</guid>
-      <description>   iframe { min-width: 100%; }    iFrameResize({ heightCalculationMethod: &#39;taggedElement&#39; });  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -87,7 +122,7 @@ Course Overview In this course we will explore American history beginning with t
       <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://amanda-regan.com/projects/mininger/</guid>
-      <description>Mining My Day is a Shiny app that visualizes the common themes, or &amp;lsquo;topics&amp;rsquo;, in Eleanor Roosevelt&amp;rsquo;s My Day columns. You can read the blog post about the visualization or jump straight into exploring the app.
+      <description>Mining My Day is a Shiny app that visualizes the common themes, or &amp;rsquo;topics&amp;rsquo;, in Eleanor Roosevelt&amp;rsquo;s My Day columns. You can read the blog post about the visualization or jump straight into exploring the app.
 From December 1935 until September 1962, Roosevelt authored a nationally syndicated newspaper column entitled My Day and because Roosevelt did not keep any sort of diary and her appointment books were often incomplete, the My Day columns have become a valuable source for historians.</description>
     </item>
     
@@ -97,7 +132,7 @@ From December 1935 until September 1962, Roosevelt authored a nationally syndica
       <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://amanda-regan.com/projects/pressforward/</guid>
-      <description>PressForward is a free and open-source software project that enables teams of researchers to aggregate, filter, and disseminate relevant scholarship using the popular WordPress web publishing platform. First, as the Graduate Research Assistant, and later the Software Development Manager, I collaborated with team members to outline development priorities and milestone goals while also overseeing the testing and release processes. I also built the PressForward TurnKey Themewhich allows publications to make PressForward statistics easily viewable by readers.</description>
+      <description>PressForward is a free and open-source software project that enables teams of researchers to aggregate, filter, and disseminate relevant scholarship using the popular WordPress web publishing platform. First, as the Graduate Research Assistant, and later the Software Development Manager, I collaborated with team members to outline development priorities and milestone goals while also overseeing the testing and release processes. I also built the PressForward TurnKey Theme which allows publications to make PressForward statistics easily viewable by readers.</description>
     </item>
     
     <item>
@@ -106,7 +141,7 @@ From December 1935 until September 1962, Roosevelt authored a nationally syndica
       <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://amanda-regan.com/projects/rrchnm20/</guid>
-      <description>As a Digital History Fellow at the Roy Rosenzweig Center for History and New Media, I collaborated with Jannelle Leggto create an Omeka archive that contains grants and supporting documents from the first twenty years of RRCHNM. We designed an information architecture that would capture the data contained on the coversheet of grant applications and we each input documents related to one of the center&amp;rsquo;s major projects. The item metadata is designed in a way that is meant to be flexible and allow researchers to use the API to ask and answer questions about the history of RRCHNM.</description>
+      <description>As a Digital History Fellow at the Roy Rosenzweig Center for History and New Media, I collaborated with Jannelle Legg to create an Omeka archive that contains grants and supporting documents from the first twenty years of RRCHNM. We designed an information architecture that would capture the data contained on the coversheet of grant applications and we each input documents related to one of the center&amp;rsquo;s major projects. The item metadata is designed in a way that is meant to be flexible and allow researchers to use the API to ask and answer questions about the history of RRCHNM.</description>
     </item>
     
     <item>
@@ -130,27 +165,14 @@ I have dedicated time to learning digital history tools and techniques&amp;ndash
     </item>
     
     <item>
-      <title>Curriculum Vitae</title>
-      <link>https://amanda-regan.com/cv/</link>
-      <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://amanda-regan.com/cv/</guid>
-      <description>Download as a PDF
-Appointments Lecturer, Department of History and Geography, Clemson University, 2021-present.
-Post-Doctoral Fellow, Center for Presidential History, Southern Methodist University, 2019-2021.
-Education George Mason University
- PhD, History and Art History (2019) Specialties: US History, Digital History, Women&amp;rsquo;s History. Dissertation: “Shaping Up: Physical Culture Initiatives for Women in the United States, 1890-1965” Dissertation Committee: Alison Landsberg (Chair), Sharon Leon, Sun-Young Park, Jennifer Ritterhouse  California State University, San Marcos</description>
-    </item>
-    
-    <item>
       <title>Stonehill Digital Innovation Lab Mapping Demo</title>
       <link>https://amanda-regan.com/stonehill/</link>
       <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://amanda-regan.com/stonehill/</guid>
       <description>Useful links:
- Download the data. Get the Longitude and Latitude from Google&amp;rsquo;s Geocoder Begin uploading your data to Kepler.gl  Other useful links:
- Negro Motorist&amp;rsquo;s Green Book  </description>
+Download the data. Get the Longitude and Latitude from Google&amp;rsquo;s Geocoder Begin uploading your data to Kepler.gl Other useful links:
+Negro Motorist&amp;rsquo;s Green Book </description>
     </item>
     
     <item>
@@ -159,7 +181,8 @@ Education George Mason University
       <pubDate>Sun, 21 May 2017 15:41:40 +0000</pubDate>
       
       <guid>https://amanda-regan.com/posts/mining-myday/</guid>
-      <description>This post is co-written by Amanda Regan and Joshua Catalano. It is cross-posted on Josh’s blog. Two weeks ago, Josh Catalano and I participated in the Collections as Data Hack-to-Learn event sponsored by the Library of Congress, George Washington University, and George Mason University. For the event, George Washington University, the Library of Congress and the Smithsonian provided participants with a series of datasets. The corpus that we gravitated toward included all of Eleanor Roosevelt&amp;rsquo;s My Day columns.</description>
+      <description>This post is co-written by Amanda Regan and Joshua Catalano. It is cross-posted on Josh’s blog.
+Two weeks ago, Josh Catalano and I participated in the Collections as Data Hack-to-Learn event sponsored by the Library of Congress, George Washington University, and George Mason University. For the event, George Washington University, the Library of Congress and the Smithsonian provided participants with a series of datasets. The corpus that we gravitated toward included all of Eleanor Roosevelt&amp;rsquo;s My Day columns.</description>
     </item>
     
     <item>
@@ -168,7 +191,7 @@ Education George Mason University
       <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://amanda-regan.com/teaching/</guid>
-      <description>Clemson University  History 1010: United States History to 1877  Fall 2021    George Mason University  History 390: The Digital Past  The Digital Past is an undergraduate history class at George Mason University which fulfills the University&amp;rsquo;s IT Requirement. In this class students explore technologies such as maps, data sets, and visualizations within the context of an upper division history class. Students learn how to find and use digital information for research as well as how question, analyze, summarize, and interpret it.</description>
+      <description>Clemson University History 1010: United States History to 1877 Fall 2021 George Mason University History 390: The Digital Past The Digital Past is an undergraduate history class at George Mason University which fulfills the University&amp;rsquo;s IT Requirement. In this class students explore technologies such as maps, data sets, and visualizations within the context of an upper division history class. Students learn how to find and use digital information for research as well as how question, analyze, summarize, and interpret it.</description>
     </item>
     
     <item>
@@ -186,7 +209,7 @@ Education George Mason University
       <pubDate>Tue, 09 Dec 2014 22:13:24 +0000</pubDate>
       
       <guid>https://amanda-regan.com/posts/mapping-gymnasiums-boston/</guid>
-      <description>Mapping Gymnasiums in Boston   In 1889 Josiah Quincey was elected Mayor of Boston. Throughout his term as mayor he implemented a new system of municipal baths and gymnasiums in the city designed to encourage moral behavior, hygiene, foster community, and encourage exercise for the cities residents. These gymnasiums, although open to all residents, were placed largely in immigrant heavy neighborhoods and reflected a focus on physical culture that was reminiscent of life in Eastern Europe.</description>
+      <description>Mapping Gymnasiums in Boston In 1889 Josiah Quincey was elected Mayor of Boston. Throughout his term as mayor he implemented a new system of municipal baths and gymnasiums in the city designed to encourage moral behavior, hygiene, foster community, and encourage exercise for the cities residents. These gymnasiums, although open to all residents, were placed largely in immigrant heavy neighborhoods and reflected a focus on physical culture that was reminiscent of life in Eastern Europe.</description>
     </item>
     
     <item>
@@ -396,7 +419,7 @@ To get the ball rolling, we spent a week working through the helpful tutorials a
       <pubDate>Sun, 09 Feb 2014 18:25:16 +0000</pubDate>
       
       <guid>https://amanda-regan.com/posts/typographical-design-communication-via-web/</guid>
-      <description>This week&amp;rsquo;s materials on Typography were really interesting. I especially enjoyed Morris&amp;rsquo;s article &amp;ldquo;Hear, All Ye People; Hearken, O Earth.&amp;quot; I&amp;rsquo;ve always been interested in Typography but I had never realized the extent to which a typeface can affect the credibility of a site. Typography is one of the most important, if not the most important, element in the design of a website yet it&amp;rsquo;s something that we rarely consciously think about.</description>
+      <description>This week&amp;rsquo;s materials on Typography were really interesting. I especially enjoyed Morris&amp;rsquo;s article &amp;ldquo;Hear, All Ye People; Hearken, O Earth.&amp;rdquo; I&amp;rsquo;ve always been interested in Typography but I had never realized the extent to which a typeface can affect the credibility of a site. Typography is one of the most important, if not the most important, element in the design of a website yet it&amp;rsquo;s something that we rarely consciously think about.</description>
     </item>
     
     <item>
@@ -423,7 +446,7 @@ To get the ball rolling, we spent a week working through the helpful tutorials a
       <pubDate>Fri, 06 Dec 2013 19:07:17 +0000</pubDate>
       
       <guid>https://amanda-regan.com/posts/final-project/</guid>
-      <description>The final version of my Clio Wired Project, &amp;ldquo;Shifts in Physical Culture,&amp;quot; is online now. It has been quite the process getting everything formatted correctly&amp;ndash;I realized after I presented that I had made a mistake and did not included all of the articles when I ran the topic modeling software so I had to adjust that. Overall the results are the same&amp;ndash;there is a definite change in the discussion of physical culture between 1932 and 1937.</description>
+      <description>The final version of my Clio Wired Project, &amp;ldquo;Shifts in Physical Culture,&amp;rdquo; is online now. It has been quite the process getting everything formatted correctly&amp;ndash;I realized after I presented that I had made a mistake and did not included all of the articles when I ran the topic modeling software so I had to adjust that. Overall the results are the same&amp;ndash;there is a definite change in the discussion of physical culture between 1932 and 1937.</description>
     </item>
     
     <item>
@@ -478,7 +501,7 @@ Background Between 1900 and 1940 there were several distinct shifts in the ideas
       <pubDate>Sun, 20 Oct 2013 16:21:14 +0000</pubDate>
       
       <guid>https://amanda-regan.com/posts/spatial-history-research-tool/</guid>
-      <description>In Richard White&amp;rsquo;s article &amp;ldquo;What is Spatial History?,&amp;quot; he discusses the turn to spatial history and the ways in which it can be used as a research tool to enhance historical scholarship. His article was fascinating and really got me thinking about different spatial history projects I&amp;rsquo;ve seen. Two that come to mind is &amp;ldquo;Visualizing Emancipation&amp;rdquo;, run by Scott Nesbit and Edward Ayers at the University of Richmond&amp;rsquo;s Digital Scholarship Lab, and The Geography of Hate, run by Monica Stephens at Humboldt State University.</description>
+      <description>In Richard White&amp;rsquo;s article &amp;ldquo;What is Spatial History?,&amp;rdquo; he discusses the turn to spatial history and the ways in which it can be used as a research tool to enhance historical scholarship. His article was fascinating and really got me thinking about different spatial history projects I&amp;rsquo;ve seen. Two that come to mind is &amp;ldquo;Visualizing Emancipation&amp;rdquo;, run by Scott Nesbit and Edward Ayers at the University of Richmond&amp;rsquo;s Digital Scholarship Lab, and The Geography of Hate, run by Monica Stephens at Humboldt State University.</description>
     </item>
     
     <item>
@@ -535,7 +558,7 @@ Crowdsourcing has been gaining popularity recently and has become a way for arch
       
       <guid>https://amanda-regan.com/posts/webdesign-for-academics/</guid>
       <description>Web Design is not something academic are traditionally trained in. However, as the discipline continues to change and Digital History continues to develop and grow, knowing a little bit about what constitutes a good historical website is necessary.
-Alexander Dawson makes excellent points about the development and organization of a website in his article &amp;ldquo;Improve Usability by Studying Museums.&amp;rdquo;  He compares the layout of a museum to that of a website and argues that many web designers could take some tips from the organization of museums.</description>
+Alexander Dawson makes excellent points about the development and organization of a website in his article &amp;ldquo;Improve Usability by Studying Museums.&amp;rdquo; He compares the layout of a museum to that of a website and argues that many web designers could take some tips from the organization of museums.</description>
     </item>
     
     <item>

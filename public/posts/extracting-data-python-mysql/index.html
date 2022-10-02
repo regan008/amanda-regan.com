@@ -164,16 +164,16 @@ while x &lt; 500:
 </code></pre>
 <p>Next, we set up a compound statement in python using <a href="http://docs.python.org/2/reference/compound_stmts.html">try and except </a>to create a statement that will download and write the content to the file. It will also provide an exception that will tell python what to do if the table doesn’t exist in the database.</p>
 <pre><code>try:
-        con = mdb.connect(host=&quot;127.0.0.1&quot;, port=3306, user=&quot;usrname&quot;, passwd=&quot;pass&quot;, db=&quot;clone-thatcamp&quot;);
+		con = mdb.connect(host=&quot;127.0.0.1&quot;, port=3306, user=&quot;usrname&quot;, passwd=&quot;pass&quot;, db=&quot;clone-thatcamp&quot;);
 
-        cur = con.cursor()
-        cur.execute(str(query))
+		cur = con.cursor()
+		cur.execute(str(query))
 
-        rows = cur.fetchall()
+		rows = cur.fetchall()
 
-        for row in rows:
-            line = str(row)
-            f.write(line +'\n')
+		for row in rows:
+			line = str(row)
+			f.write(line +'\n')
 </code></pre>
 <p>The MySQLdb module that we imported at the top of the script uses the <a href="http://docs.python.org/release/2.5.2/lib/sqlite3-Cursor-Objects.html">cursor method</a> to create a cursor object for processing MySQL statements. The cursor is first created then it executes the query which we defined above. It then fetches all of the rows that are returned by the query and prints each one to the open text file. It prints the rows one by one inserting a line break after each one.</p>
 <p>An additional challenge, described above, was that while tables in the database were numbered sequentially, there are occasional skips. For example there isn’t a &ldquo;wp_1_posts&rdquo; but there is a &ldquo;wp_2_posts&rdquo;. When we were writing the script we kept encountering an error when python couldn’t find a table. To get around this we used the <a href="http://docs.python.org/2/reference/compound_stmts.html">except statement</a>. The except statement tells python to remove the empty text file if the table does not exist so that we don’t have a bunch of empty and useless text files. Using the <a href="http://docs.python.org/2/library/os.html">operating system function</a>, python deletes any file that it can’t pull data for.</p>
@@ -198,20 +198,20 @@ while x &lt; 500:
 	f = open('wp_' + str(x) + '_posts.txt', 'a')
 
 	try:
-        con = mdb.connect(host=&quot;127.0.0.1&quot;, port=3306, user=&quot;usr&quot;, passwd=&quot;password&quot;, db=&quot;clone-thatcamp&quot;);
+		con = mdb.connect(host=&quot;127.0.0.1&quot;, port=3306, user=&quot;usr&quot;, passwd=&quot;password&quot;, db=&quot;clone-thatcamp&quot;);
 
-        cur = con.cursor()
-        cur.execute(str(query))
+		cur = con.cursor()
+		cur.execute(str(query))
 
-        rows = cur.fetchall()
+		rows = cur.fetchall()
 
-        for row in rows:
-            line = str(row)
-            f.write(line +'\n')
+		for row in rows:
+			line = str(row)
+			f.write(line +'\n')
 
 	except:
-        os.remove('wp_' + str(x) + '_posts.txt')
-        f.close
+		os.remove('wp_' + str(x) + '_posts.txt')
+		f.close
 	x += 1
 </code></pre>
 <p>Download the entire code here.</p>

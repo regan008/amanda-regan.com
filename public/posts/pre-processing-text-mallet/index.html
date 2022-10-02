@@ -125,12 +125,12 @@ In our previous post, we described the process of writing a python script that p
 	text = ' '
 
 	for char in content:
-        if char == '&lt;': 			inside = 1 		elif (inside == 1 and char == '&gt;'):
-            inside = 0
-        elif inside == 1:
-            continue
-        else:
-            text += char
+		if char == '&lt;': 			inside = 1 		elif (inside == 1 and char == '&gt;'):
+			inside = 0
+		elif inside == 1:
+			continue
+		else:
+			text += char
 
 	return text
 </code></pre>
@@ -214,21 +214,21 @@ while x &lt; 300:
 </code></pre>
 <p>Everything that follows the &lsquo;while&rsquo; statement is part of the loop and we&rsquo;ll use a try and except statement to tell python what to do if a file doesn&rsquo;t exist. We begin by defining the file name and opening the text file. In the previous post, we downloaded all of the posts from each that camp and named them &lsquo;wp_x_posts.txt&rsquo;. &lsquo;X&rsquo; increased sequentially and matched the table number in the THATCamp database. We&rsquo;ll do the same thing here asking python to open a text file called &lsquo;wp_x_posts.txt&rsquo; and increase x sequentially each time it loops through. We use the os commands to open the file, read it, and then store it in a variable called content.</p>
 <pre><code>try:
-        f = open('wp_' + str(x) + '_posts.txt', 'r')
-        content = f.read()
+		f = open('wp_' + str(x) + '_posts.txt', 'r')
+		content = f.read()
 </code></pre>
 <p>Now that python has opened and read the content we can begin to call the functions we defined in &lsquo;rmv.py&rsquo; on the content. We&rsquo;ll work through those functions in the order we added them to the &lsquo;rmv&rsquo; module and call them using several variables. First, we call &lsquo;rmv.stripTags&rsquo; on the content variable we defined above and store it in a variable called &lsquo;words&rsquo;. Then we call &lsquo;rmv.stripNonAlphaNum&rsquo; on the variable words we just created and store it in a variable called &lsquo;fullwordlist&rsquo;. We&rsquo;ve now removed the tags and all of the non-alphanumeric characters from the post. The final function we need to call is the &lsquo;removeStopwords&rsquo;. We have to define what to remove the stopwords from and where the stopwords can be found. To do this we call the function we defined, &lsquo;rmv.removeStopwords&rsquo;, on &lsquo;fullwordlist&rsquo; and ask it to remove any of the words from the stoplist by referring to &lsquo;rmv.stopwords&rsquo;. We tell python to store this all in a variable called &lsquo;wordlist&rsquo;.</p>
 <pre><code>words = rmv.stripTags(content).lower()
-        fullwordlist = rmv.stripNonAlphaNum(words)
-        wordlist = rmv.removeStopwords(fullwordlist, rmv.stopwords)
+		fullwordlist = rmv.stripNonAlphaNum(words)
+		wordlist = rmv.removeStopwords(fullwordlist, rmv.stopwords)
 </code></pre>
 <p>Now that python has stripped the tags, non-alphanumeric characters, and the stopwords from the file the resulting text is in a variable called wordlist. That data needs to be re-written to the file. To accomplish this we asked the os module to create a new file, defined as &lsquo;fo&rsquo; rather than &lsquo;f&rsquo; this time, and open the same string as before: &lsquo;wp_x_posts.txt&rsquo;. Then we tell it to write fo to the file with a line break after each word. However, because the text in wordlist is now a python list we have to instruct python to write a list rather than a string to the file. To do this we call &lsquo;.join&rsquo; on the wordlist variable which is a built-in type in python that concatenates the lists. The &lsquo;.join&rsquo; function combines a word list into a string and by adding a line break, &lsquo;/n&rsquo;, each of our words is returned neatly onto a new line in our file.</p>
 <pre><code>fo = open('wp_' + str(x) + '_posts.txt', 'w')
-        fo.write('\n' .join(wordlist))
+		fo.write('\n' .join(wordlist))
 </code></pre>
 <p>Lastly we need to tell python what to do if a file doesn&rsquo;t exist and add one to the loop causing it to repeat on the next sequentially numbered file. The except statement here tells python what to do if a file doesn&rsquo;t exist. Normally it would throw an error and stop the script from running but by telling python to clear the exception it just ignores the error. Finally, adding one to x causes the script to repeat.</p>
 <pre><code>except Exception:
-        sys.exc_clear()
+		sys.exc_clear()
 
 	x += 1
 </code></pre>

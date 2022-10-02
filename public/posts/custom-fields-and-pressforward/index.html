@@ -112,7 +112,7 @@
 </header>
 <article class="blog-post">
     <p>One of the questions that the PressForward team gets repeatedly is how publications can use custom fields to automatically print data about a post once it is published. Publications often wish to display a generic name, such as “The Editors,” on a post rather than the name of the user who published the post. On Digital Humanities Now we use custom fields to store the names of our Editors-at-Large for the week a piece is featured as well as the name of the Editor-in-Chief for that week.</p>
-<p><img src="/images/wpcf-edchief-output.png" alt="Editor statement located at the bottom of every Editors' Choice Post on DHNow"></p>
+<p><img src="/images/wpcf-edchief-output.png" alt="Editor statement located at the bottom of every Editors&amp;rsquo; Choice Post on DHNow"></p>
 <p>Storing this data in custom fields means it is stored in the database and always associated with that post for archiving purposes. The post will always include the name of the Editor-in-Chief and the Editor-at-Large for that week even if the user were to delete their account. A second post will detail the process used on DHNow to display a generic name as the author on some posts while displaying the PressForward author on others.</p>
 <p>In addition to a publication specific field, such as Editor-in-Chief, PressForward uses custom fields to store several pieces of data about each post, such as the original url, the author’s name, the number of nominations a post has received, and the date of the original post. WordPress, by default, doesn’t display any of these fields. However with a few simple changes to a site’s theme it is possible to display some or all of the information stored in the custom fields for your site’s readers.</p>
 <h2 id="understanding-custom-fields">Understanding Custom Fields</h2>
@@ -139,28 +139,28 @@
 <h3 id="printing-select-fields-associated-with-a-post">Printing Select Fields Associated with a Post</h3>
 <p>Rather than calling all custom fields it is often more useful to call the individual fields that should be displayed and wrap them in a conditional statement that prevents them from being displayed if the value has been left blank. This is useful if the field is meant to only be displayed on a featured post or on a post in an individual category.  To do this, WordPress provides a template that takes the post id (acquired from the loop) and queries for a custom field by name. This template can be wrapped in a conditional statement so that it only prints information out if the custom field exists on the post. For example, adding the code below into the loop below the content but above the comments would print the information stored in a field titled “Editor-in-Chief.”</p>
 <pre><code>`$chief = get_post_meta($post-&gt;ID, &quot;editor-in-chief&quot;, true);
-        if (!empty($chief)) {
-            echo &quot;&lt;p&gt;The Editor-in-Chief this week is: &quot; . $chief . &quot;. &lt;/p&gt;&quot;;
-        }`
+		if (!empty($chief)) {
+			echo &quot;&lt;p&gt;The Editor-in-Chief this week is: &quot; . $chief . &quot;. &lt;/p&gt;&quot;;
+		}`
 </code></pre>
 <p>This snippet queries for a custom field with a key of ‘editor-in-chief’ and then stores the value in the variable $chief. The variable, which I’ve called <code>$chief</code> but can be called anything, stores the data temporarily. Next, a conditional statement, in this case an IF statement, is used to check that the variable we just created is not empty. If the variable isn’t empty &ndash; meaning the field did exist and did have a value &ndash; the snippet echoes (or prints) out some explanatory text as well the value stored in $chief. The third line <code>echo &quot;&lt;p&gt;The Editor-in-Chief this week is: &quot; . $chief . &quot;. &lt;/p&gt;&quot;;</code> uses a PHP string operator, in this case the period or the concatenation operator (‘.’), to construct a line of html and insert the value of our variable <code>$chief</code>. The resulting html gets inserted into our post like this:</p>
 <p><img src="/images/wpcf-printselectedfield.png" alt=""></p>
 <p>Custom Fields can be used to display information such as this on any post or page within WordPress. With a little knowledge of php they can become a powerful tool for managing data about a post (or page) in WordPress. In combination with PressForward, they allow publications automate the display of backend statistics about the original post and their community’s usage of PressForward.</p>
 <p>Custom fields are powerful tools and questions about how to use them are among the most frequent questions we get. Oh Digital Humanities Now, the team long ago made the decision to obscure author information on news items since they were frequently job ads, announcements, or Calls for Proposals which typically don’t have a formal author.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>“The Loop.” Wordpress Codex. <a href="https://codex.wordpress.org/The_Loop">https://codex.wordpress.org/The_Loop</a> (retrieved April 19, 2017).&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>Keep in mind that any changes made to the theme will be overwritten by a theme update so if you plan to use a theme that is updated frequently you may want to look into building a child theme.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
+<li id="fn:3">
 <p>This example uses Wordpress&rsquo;s Twenty Fifteen theme.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 
     
