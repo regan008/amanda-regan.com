@@ -116,11 +116,11 @@ For the most part, I've provided datasets for all of the assignments in this cla
 * **Readings:**
 	* Anelise Hanson Shrout. ["(Re)Humanizing Data: Digitally Navigating the Bellevue Almshouse"](https://crdh.rrchnm.org/essays/v01-10-(re)-humanizing-data/) in _Current Research in Digital History_ 1 (2018), [https://doi.org/10.31835/crdh.2018.10](https://doi.org/10.31835/crdh.2018.10)
 	* Jessica Marie Johnson. ["Markup Bodies: Black [Life] Studies and Slavery [Death] Studies at the Digital Crossroads"](https://read.dukeupress.edu/social-text/article-abstract/36/4%20(137)/57/137032/Markup-BodiesBlack-Life-Studies-and-Slavery-Death) in *Social Text* 36, no 4, [https://doi.org/10.1215/01642472-7145658](https://doi.org/10.1215/01642472-7145658)
-	* Ben Schmidt. [Two Volumes: the lessons of Time on the Cross](https://benschmidt.org/post/2019-12-05-totc/2019-aha/), 2019.
 	* Abraham Gibson & Cindy Ermus. [The History of Science and the Science of History: Computational Methods, Algorithms, and the Future of the Field](https://www.journals.uchicago.edu/doi/full/10.1086/705543), *Isis* 110, no 3 (2019). [http://dx.doi.org/10.1086/705543](http://dx.doi.org/10.1086/705543)
-	* Stephen Robertson and Lincoln Mullen. ["Arguing with Digital History: Patterns of Historical Interpretation."](https://model-articles.rrchnm.org/articles/introduction/)  
-		* After you read Robertson & Mullen's piece, explore [Models of Argument-Driven Digital History](https://model-articles.rrchnm.org/) and select one of the annotated articles. Be prepared to discuss it in class.
-
+	* The Turing Way Community, Becky Arnold, Louise Bowler et.al, [_The Turing Way: A Handbook for Reproducible Data Science_.](https://the-turing-way.netlify.app/welcome.html) v0.0.4, Zenodo, 2019. _DOI.org (Datacite)_, https://doi.org/10.5281/ZENODO.3233986.
+	* Geir Kjetil Sandve, Anton Nekrutenko, James Taylor, and Eivind Hovig. [Ten Simple Rules for Reproducible Computational Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285), PLOS Computational Biology 9(10): e1003285. [https://doi.org/10.1371/journal.pcbi.1003285](https://doi.org/10.1371/journal.pcbi.1003285)
+	* Ben Marwick, Carl Boettiger & Lincoln Mullen (2018) [Packaging Data Analytical Work Reproducibly Using R (and Friends),](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375986) *The American Statistician*, 72:1, 80-88, DOI: [10.1080/00031305.2017.1375986](https://doi.org/10.1080/00031305.2017.1375986)
+	* Read through Karl Broman's [Git/GitHub Tutorial](https://kbroman.org/github_tutorial/)
 ---
 
 {{< rawhtml >}}
