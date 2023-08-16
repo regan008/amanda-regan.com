@@ -5,12 +5,12 @@ date: 2023-06-14
 title: "Annotated Syllabi Guidelines for Ph.D. Students"
 type: resources
 updated: "2023-08-16"
-draft: TRUE
+draft: FALSE
 ---
 
 Students in the Digital History Ph.D. program at Clemson University prepare comprehensive portfolios in lieu of a traditional comprehensive exam. A component of that portfolio includes annotated syllabi for each of the three fields. The exact topics and breakdown of those 3 syllabi should be discussed with your advisory committee during your Portfolio Plan meeting which typically is filled out the semester before you prepare and defend your portfolio. 
 
-Note that these are Dr. Regan’s guidelines for annotated syllabi. If you are not preparing a portfolio for Dr. Regan you should check with your advisory committee about standards and guidelines for the annotated syllabi. 
+_**Please note that these are Dr. Regan’s guidelines for annotated syllabi. If you are not preparing a portfolio for Dr. Regan you should check with your advisory committee about standards and guidelines for the annotated syllabi.**_ 
 
 ### Components of the Annotated Syllabi
 

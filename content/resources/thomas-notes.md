@@ -6,7 +6,7 @@ title: "Template for taking Notes on Historical Scholarship"
 slug: "notes-template"
 type: resources
 updated: "2023-08-16"
-draft: TRUE
+draft: FALSE
 ---
 
 If you are in a Ph.D. program, you are training to be a professional historian. As part of that training you will build a base of knowledge and familiarity with key works of historical scholarship in your field. Its a good idea to develop a system early in your career for taking notes and keeping track of everything you've read. You never know when you'll need to come back to a book. 
