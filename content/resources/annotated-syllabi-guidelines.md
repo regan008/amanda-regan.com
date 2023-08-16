@@ -2,9 +2,9 @@
 author: Amanda Regan
 comments: false
 date: 2023-06-14
-title: "Annotated Syllabi Guidelines"
+title: "Annotated Syllabi Guidelines for Ph.D. Students"
 type: resources
-updated: "2023-06-14"
+updated: "2023-08-16"
 draft: TRUE
 ---
 
