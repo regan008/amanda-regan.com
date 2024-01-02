@@ -1,4 +1,4 @@
-baseurl = "https://amanda-regan.com/"
+baseurl = "https://www.amanda-regan.com/"
 title = "Amanda Regan"
 languageCode = "en-us"
 defaultContentLanguage = "en"
@@ -43,6 +43,10 @@ theme = "hugo-bootstrap-5"
   name = "TEACHING"
   weight = 5
 
+[[menu.main]]
+url = "/office-hours"
+name = "OFFICE HOURS"
+weight = 6
 
 
 
