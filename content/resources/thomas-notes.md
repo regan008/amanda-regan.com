@@ -1,7 +1,7 @@
 ---
 author: Amanda Regan
 comments: false
-date: 2023-06-14
+date: 2024-01-02
 title: "Template for taking Notes on Historical Scholarship"
 slug: "notes-template"
 type: resources
@@ -59,4 +59,4 @@ Use this outline to take notes as you read and then conclude your work on the bo
 
 
 
-**Last updated:** June 2023.
+**Last updated:** January 2024.
