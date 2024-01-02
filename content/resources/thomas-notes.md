@@ -36,6 +36,11 @@ Use this outline to take notes as you read and then conclude your work on the bo
 
 (1-2 paragraph synopsis. include book's argument, key findings, and evidence with thesis.)
 
+---
+##### About the Author
+
+* Who is the author? What else have they written? Was this their dissertation? Where did they get their Ph.D.? Who did they work with?
+
 --- 
 
 ##### THOMAS
