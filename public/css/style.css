@@ -128,7 +128,9 @@ Print styles
     margin-top: 0;
   }
 
-  *, *:before, *:after {
+  *,
+  *:before,
+  *:after {
     /* background: transparent !important;
     /* color: #000 !important; */
     /* box-shadow: none !important;

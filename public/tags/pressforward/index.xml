@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PressForward on Amanda Regan</title>
-    <link>https://amanda-regan.com/tags/pressforward/</link>
+    <link>https://www.amanda-regan.com/tags/pressforward/</link>
     <description>Recent content in PressForward on Amanda Regan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Apr 2017 15:41:40 +0000</lastBuildDate><atom:link href="https://amanda-regan.com/tags/pressforward/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Apr 2017 15:41:40 +0000</lastBuildDate><atom:link href="https://www.amanda-regan.com/tags/pressforward/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Custom Fields with PressForward and Wordpress</title>
-      <link>https://amanda-regan.com/posts/custom-fields-and-pressforward/</link>
+      <link>https://www.amanda-regan.com/posts/custom-fields-and-pressforward/</link>
       <pubDate>Wed, 19 Apr 2017 15:41:40 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/posts/custom-fields-and-pressforward/</guid>
+      <guid>https://www.amanda-regan.com/posts/custom-fields-and-pressforward/</guid>
       <description>One of the questions that the PressForward team gets repeatedly is how publications can use custom fields to automatically print data about a post once it is published. Publications often wish to display a generic name, such as “The Editors,” on a post rather than the name of the user who published the post. On Digital Humanities Now we use custom fields to store the names of our Editors-at-Large for the week a piece is featured as well as the name of the Editor-in-Chief for that week.</description>
     </item>
     

@@ -2,63 +2,63 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Amanda Regan</title>
-    <link>https://amanda-regan.com/projects/</link>
+    <link>https://www.amanda-regan.com/projects/</link>
     <description>Recent content in Projects on Amanda Regan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://amanda-regan.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.amanda-regan.com/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shaping Up: Physical Fitness Initatives for Women, 1880-1965</title>
-      <link>https://amanda-regan.com/projects/shapingup/</link>
+      <link>https://www.amanda-regan.com/projects/shapingup/</link>
       <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/projects/shapingup/</guid>
+      <guid>https://www.amanda-regan.com/projects/shapingup/</guid>
       <description>Beginning in 1880 and ending during the Cold War, Shaping Up examines why the fitness of female bodies was a matter of national concern and interest. It argues that the shape of the female body and the discourses surrounding it were frequently correlated with larger social, political and economic issues. While the definition of being “in shape” or acquiring “shapeliness” changed numerous times between 1880 and 1965, the patriarchal focus on developing fit female bodies remained a constant and served various economic, social, and political purposes.</description>
     </item>
     
     <item>
       <title>Mapping the Gay Guides</title>
-      <link>https://amanda-regan.com/projects/mgg/</link>
+      <link>https://www.amanda-regan.com/projects/mgg/</link>
       <pubDate>Thu, 28 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/projects/mgg/</guid>
+      <guid>https://www.amanda-regan.com/projects/mgg/</guid>
       <description>Mapping the Gay Guides (MGG) is an in-progress digital history project and collaboration between myself and Dr. Eric Gonzaba. MGG draws on Bob Damron&amp;rsquo;s Address Book, an early but longstanding travel guide aimed at gay men since the early 1960s. An LGBT equivalent to the African American “green books,” the Damron guides contained lists of bars, bathhouses, cinemas, hotels, advocacy organizations and cruising sites in every U.S. state. MGG seeks to associate geographical coordinates with each location mentioned within the Damron Guides and provide an interface for visualizing and stuyding the growth in LGBTQ sites between 1965 and 2005.</description>
     </item>
     
     <item>
       <title>Digital Humanities Now</title>
-      <link>https://amanda-regan.com/projects/dhnow/</link>
+      <link>https://www.amanda-regan.com/projects/dhnow/</link>
       <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/projects/dhnow/</guid>
+      <guid>https://www.amanda-regan.com/projects/dhnow/</guid>
       <description>Digital Humanities Now is PressForward’s flagship publication which seeks to curate and publish scholarly literature such as white papers and grant reports that otherwise may not have had a venue for publication. Using the PressForward plugin and relying on a community of volunteer editors, DHNow has sought to encourage scholars to share their research and learned expertise on the open web. DHNow had developed methodologies and technologies to facilitate the aggregation and curation of gray literature-scholarly work (white papers, presentations, research reports, essays etc.</description>
     </item>
     
     <item>
       <title>Mining My Day: Using Text Analysis to Understand Eleanor Roosevelt&#39;s Newspaper Columns</title>
-      <link>https://amanda-regan.com/projects/mininger/</link>
+      <link>https://www.amanda-regan.com/projects/mininger/</link>
       <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/projects/mininger/</guid>
+      <guid>https://www.amanda-regan.com/projects/mininger/</guid>
       <description>Mining My Day is a Shiny app that visualizes the common themes, or &amp;rsquo;topics&amp;rsquo;, in Eleanor Roosevelt&amp;rsquo;s My Day columns. You can read the blog post about the visualization or jump straight into exploring the app.
 From December 1935 until September 1962, Roosevelt authored a nationally syndicated newspaper column entitled My Day and because Roosevelt did not keep any sort of diary and her appointment books were often incomplete, the My Day columns have become a valuable source for historians.</description>
     </item>
     
     <item>
       <title>PressForward</title>
-      <link>https://amanda-regan.com/projects/pressforward/</link>
+      <link>https://www.amanda-regan.com/projects/pressforward/</link>
       <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/projects/pressforward/</guid>
+      <guid>https://www.amanda-regan.com/projects/pressforward/</guid>
       <description>PressForward is a free and open-source software project that enables teams of researchers to aggregate, filter, and disseminate relevant scholarship using the popular WordPress web publishing platform. First, as the Graduate Research Assistant, and later the Software Development Manager, I collaborated with team members to outline development priorities and milestone goals while also overseeing the testing and release processes. I also built the PressForward TurnKey Theme which allows publications to make PressForward statistics easily viewable by readers.</description>
     </item>
     
     <item>
       <title>RRCHNM20 Digital Archive &amp; Network Visualization</title>
-      <link>https://amanda-regan.com/projects/rrchnm20/</link>
+      <link>https://www.amanda-regan.com/projects/rrchnm20/</link>
       <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/projects/rrchnm20/</guid>
+      <guid>https://www.amanda-regan.com/projects/rrchnm20/</guid>
       <description>As a Digital History Fellow at the Roy Rosenzweig Center for History and New Media, I collaborated with Jannelle Legg to create an Omeka archive that contains grants and supporting documents from the first twenty years of RRCHNM. We designed an information architecture that would capture the data contained on the coversheet of grant applications and we each input documents related to one of the center&amp;rsquo;s major projects. The item metadata is designed in a way that is meant to be flexible and allow researchers to use the API to ask and answer questions about the history of RRCHNM.</description>
     </item>
     

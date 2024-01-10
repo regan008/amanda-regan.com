@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Resources on Amanda Regan</title>
-    <link>https://amanda-regan.com/resources/</link>
+    <link>https://www.amanda-regan.com/resources/</link>
     <description>Recent content in Resources on Amanda Regan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://amanda-regan.com/resources/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.amanda-regan.com/resources/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Annotated Syllabi Guidelines for Ph.D. Students</title>
-      <link>https://amanda-regan.com/resources/annotated-syllabi-guidelines/</link>
-      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <title>Template for taking Notes on Historical Scholarship</title>
+      <link>https://www.amanda-regan.com/resources/notes-template/</link>
+      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/resources/annotated-syllabi-guidelines/</guid>
-      <description>Students in the Digital History Ph.D. program at Clemson University prepare comprehensive portfolios in lieu of a traditional comprehensive exam. A component of that portfolio includes annotated syllabi for each of the three fields. The exact topics and breakdown of those 3 syllabi should be discussed with your advisory committee during your Portfolio Plan meeting which typically is filled out the semester before you prepare and defend your portfolio.
-Please note that these are Dr.</description>
+      <guid>https://www.amanda-regan.com/resources/notes-template/</guid>
+      <description>If you are in a Ph.D. program, you are training to be a professional historian. As part of that training you will build a base of knowledge and familiarity with key works of historical scholarship in your field. Its a good idea to develop a system early in your career for taking notes and keeping track of everything you&amp;rsquo;ve read. You never know when you&amp;rsquo;ll need to come back to a book.</description>
     </item>
     
     <item>
-      <title>Template for taking Notes on Historical Scholarship</title>
-      <link>https://amanda-regan.com/resources/notes-template/</link>
+      <title>Annotated Syllabi Guidelines for Ph.D. Students</title>
+      <link>https://www.amanda-regan.com/resources/annotated-syllabi-guidelines/</link>
       <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/resources/notes-template/</guid>
-      <description>If you are in a Ph.D. program, you are training to be a professional historian. As part of that training you will build a base of knowledge and familiarity with key works of historical scholarship in your field. Its a good idea to develop a system early in your career for taking notes and keeping track of everything you&amp;rsquo;ve read. You never know when you&amp;rsquo;ll need to come back to a book.</description>
+      <guid>https://www.amanda-regan.com/resources/annotated-syllabi-guidelines/</guid>
+      <description>Students in the Digital History Ph.D. program at Clemson University prepare comprehensive portfolios in lieu of a traditional comprehensive exam. A component of that portfolio includes annotated syllabi for each of the three fields. The exact topics and breakdown of those 3 syllabi should be discussed with your advisory committee during your Portfolio Plan meeting which typically is filled out the semester before you prepare and defend your portfolio.
+Please note that these are Dr.</description>
     </item>
     
   </channel>

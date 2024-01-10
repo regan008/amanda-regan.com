@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Digital History Fellowship on Amanda Regan</title>
-    <link>https://amanda-regan.com/categories/digital-history-fellowship/</link>
+    <link>https://www.amanda-regan.com/categories/digital-history-fellowship/</link>
     <description>Recent content in Digital History Fellowship on Amanda Regan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Aug 2014 16:41:49 +0000</lastBuildDate><atom:link href="https://amanda-regan.com/categories/digital-history-fellowship/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Aug 2014 16:41:49 +0000</lastBuildDate><atom:link href="https://www.amanda-regan.com/categories/digital-history-fellowship/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reflections on the Spring Semester and Year 1 as a Digital History Fellow</title>
-      <link>https://amanda-regan.com/posts/reflections-on-spring-semester-and-year-1-as-digital-history-fellows/</link>
+      <link>https://www.amanda-regan.com/posts/reflections-on-spring-semester-and-year-1-as-digital-history-fellows/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:49 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/posts/reflections-on-spring-semester-and-year-1-as-digital-history-fellows/</guid>
+      <guid>https://www.amanda-regan.com/posts/reflections-on-spring-semester-and-year-1-as-digital-history-fellows/</guid>
       <description>It seems like just yesterday we walked into the Center for History and New Media a bit unsure about what our first year as DH fellows would entail. Looking back it has been an extremely rewarding and valuable experience. Last fall we blogged about our rotations in both the Education and Public Projects divisions. In the Spring we moved to Research for seven weeks where we worked on a programming project for THATCamp and on the PressForward project before moving onto a seminar about the history of CHNM.</description>
     </item>
     
     <item>
       <title>THATCamp Topic Modeling Results</title>
-      <link>https://amanda-regan.com/posts/thatcamp-topic-modeling-results/</link>
+      <link>https://www.amanda-regan.com/posts/thatcamp-topic-modeling-results/</link>
       <pubDate>Wed, 26 Feb 2014 14:30:57 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/posts/thatcamp-topic-modeling-results/</guid>
+      <guid>https://www.amanda-regan.com/posts/thatcamp-topic-modeling-results/</guid>
       <description>This post is the last in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post, which was collectively written by the DH Fellows, can be found on our Digital History Fellowship Blog.
 We have spent the last few weeks working to build a python script that would allow us to download and prep all of the THATCamp blog posts for topic modeling in MALLET (for those catching up, we detailed this process in a series of previous posts).</description>
     </item>
     
     <item>
       <title>Unexpected Challenges Result in Important and Informative Discussions: a transparent discussion about stripping content and stopwords</title>
-      <link>https://amanda-regan.com/posts/unexpected-challenges-result-important-informative-discussions-transparent-discussion-stripping-content-stopwords/</link>
+      <link>https://www.amanda-regan.com/posts/unexpected-challenges-result-important-informative-discussions-transparent-discussion-stripping-content-stopwords/</link>
       <pubDate>Wed, 19 Feb 2014 14:00:07 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/posts/unexpected-challenges-result-important-informative-discussions-transparent-discussion-stripping-content-stopwords/</guid>
+      <guid>https://www.amanda-regan.com/posts/unexpected-challenges-result-important-informative-discussions-transparent-discussion-stripping-content-stopwords/</guid>
       <description>This post is the fourth in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post by Jannelle Legg can be found on the Digital History Fellowship Blog.
 As described in previous posts, the first year Digital Fellows at CHNM have been working on a project under the Research division that involves collecting, cleaning, and analyzing data from a corpus of THATCamp content.</description>
     </item>
     
     <item>
       <title>Pre-Processing Text for MALLET</title>
-      <link>https://amanda-regan.com/posts/pre-processing-text-mallet/</link>
+      <link>https://www.amanda-regan.com/posts/pre-processing-text-mallet/</link>
       <pubDate>Tue, 18 Feb 2014 14:00:29 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/posts/pre-processing-text-mallet/</guid>
+      <guid>https://www.amanda-regan.com/posts/pre-processing-text-mallet/</guid>
       <description>This post is the third in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post can be found on the Digital History Fellowship Blog.
 In our previous post, we described the process of writing a python script that pulled from the THATCamp MySQL Database. In this post, we will continue with this project and work to clean up the data we&amp;rsquo;ve collected and prepare it for some analysis.</description>
     </item>
     
     <item>
       <title>Extracting Data from the THATCamp Database Using Python and MySQL</title>
-      <link>https://amanda-regan.com/posts/extracting-data-python-mysql/</link>
+      <link>https://www.amanda-regan.com/posts/extracting-data-python-mysql/</link>
       <pubDate>Sun, 09 Feb 2014 20:54:45 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/posts/extracting-data-python-mysql/</guid>
+      <guid>https://www.amanda-regan.com/posts/extracting-data-python-mysql/</guid>
       <description>This post is the second in a set of 4 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post can be found on the Digital History Fellowship Blog.
 This week we&amp;rsquo;ve continued to work on building a python script that will extract all of the blog posts from the various THATCamp websites. As Jannelle described last week, our goal was to write a script that downloads the blog posts in plain text form and strips all of the html tags, stopwords, and punctuation so that we can feed it into MALLET for topic modeling and text analysis.</description>
     </item>
     
     <item>
       <title>Spring Semester in Research and a THATCamp Challenge</title>
-      <link>https://amanda-regan.com/posts/spring-semester-research-thatcamp-challenge/</link>
+      <link>https://www.amanda-regan.com/posts/spring-semester-research-thatcamp-challenge/</link>
       <pubDate>Sun, 09 Feb 2014 19:39:04 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/posts/spring-semester-research-thatcamp-challenge/</guid>
+      <guid>https://www.amanda-regan.com/posts/spring-semester-research-thatcamp-challenge/</guid>
       <description>This post is the first in a set of 4 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post by Jannelle Legg can be found on the Digital History Fellowship Blog.
 The spring semester is here and the first year DH fellows have begun our rotation into the Research division of CHNM.
 To get the ball rolling, we spent a week working through the helpful tutorials at theProgramming Historian.</description>
@@ -69,19 +69,19 @@ To get the ball rolling, we spent a week working through the helpful tutorials a
     
     <item>
       <title>Reflections on the Public Projects Division </title>
-      <link>https://amanda-regan.com/posts/reflections-public-projects-division/</link>
+      <link>https://www.amanda-regan.com/posts/reflections-public-projects-division/</link>
       <pubDate>Thu, 19 Dec 2013 02:55:58 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/posts/reflections-public-projects-division/</guid>
+      <guid>https://www.amanda-regan.com/posts/reflections-public-projects-division/</guid>
       <description>I&amp;rsquo;m all finished with my first semester in the PhD program at George Mason University. Below is a reflection on the time the Digital History Fellows have spent in the Public Projects Division at the Roy Rosenzweig Center for History and New Media. My first semester here has been deeply rewarding and I think the Digital History Fellowship has allowed me to really develop a deeper understanding of Digital History and the goals for both public history, education, and particularly the potential of digital tools for historical research.</description>
     </item>
     
     <item>
       <title>How can technology help teachers to teach historical and critical thinking?</title>
-      <link>https://amanda-regan.com/posts/can-technology-help-teachers-teach-historical-critical-thinking/</link>
+      <link>https://www.amanda-regan.com/posts/can-technology-help-teachers-teach-historical-critical-thinking/</link>
       <pubDate>Mon, 07 Oct 2013 16:48:34 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/posts/can-technology-help-teachers-teach-historical-critical-thinking/</guid>
+      <guid>https://www.amanda-regan.com/posts/can-technology-help-teachers-teach-historical-critical-thinking/</guid>
       <description>*This was blog post was originally posted on the Center for History and New Media&amp;rsquo;s blog as part of my Digital History Fellowship at George Mason University.
 How can technology help teachers to teach historical and critical thinking? Getting students to think critically about historical events rather than just memorizing the facts is challenging, but digital technology can help. With so many new digital tools being developed each year, teachers are eager for resources to help locate free, quality tools that can help students become better critical thinkers and historians.</description>
     </item>

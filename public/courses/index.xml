@@ -2,132 +2,150 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Courses on Amanda Regan</title>
-    <link>https://amanda-regan.com/courses/</link>
+    <link>https://www.amanda-regan.com/courses/</link>
     <description>Recent content in Courses on Amanda Regan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://amanda-regan.com/courses/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.amanda-regan.com/courses/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>History 8510: Methods in Digital History II</title>
-      <link>https://amanda-regan.com/courses/8510spring24/</link>
+      <title>History 1020: United States History, 1877-Present</title>
+      <link>https://www.amanda-regan.com/courses/1020spring24/</link>
       <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/courses/8510spring24/</guid>
+      <guid>https://www.amanda-regan.com/courses/1020spring24/</guid>
+      <description>This course surveys the history of the United States, beginning with the end of the Civil War and ending in the modern day. By the end of this course, students will have obtained a solid understanding of the major events and forces in American history. Throughout the course we will pay close attention to the major political, social, and economic movements of the late 19th and early 20th centuries. Additionally we will disrupt the traditional narrative of American history by focusing on the many histories of the United States.</description>
+    </item>
+    
+    <item>
+      <title>History 3890: Mapping the Gay Guides</title>
+      <link>https://www.amanda-regan.com/courses/3890spring24/</link>
+      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.amanda-regan.com/courses/3890spring24/</guid>
+      <description>Course Overview In this creative inquiry course students will work on Mapping the Gay Guides, a digital history project that seeks to digitize LGBTQ guidebooks from the 1960s through the 1990s. While on his frequent business trips around the United States in the late 1950s and early 1960s, Bob Damron wanted to find bars and other locales to meet other men like him. A gay man, Damron sought friends, companions, and safety at friendly businesses in the various cities he visited.</description>
+    </item>
+    
+    <item>
+      <title>History 8510: Methods in Digital History II</title>
+      <link>https://www.amanda-regan.com/courses/8510spring24/</link>
+      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.amanda-regan.com/courses/8510spring24/</guid>
       <description>Course Description Welcome to History 8510, Methods in Digital History II. This course in computational history will teach you to create, manipulate, explore, and visualize historical data with the goal of advancing historical arguments.
 This class is the second in a series of digital history courses at Clemson University. It is designed to build on History 8500: Digital Methods I. In that course you reviewed digital history projects and methods, experimented with out of the box tools, and developed your own digital research collections.</description>
     </item>
     
     <item>
       <title>History 3180: History of American Women</title>
-      <link>https://amanda-regan.com/courses/3180fall23/</link>
+      <link>https://www.amanda-regan.com/courses/3180fall23/</link>
       <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/courses/3180fall23/</guid>
+      <guid>https://www.amanda-regan.com/courses/3180fall23/</guid>
       <description>Today, it may seem that women are more publicly visible than they have ever been. We have a female vice president, several women sitting on the Supreme Court, and women holding executive positions in major corporations. They are also represented as superheroes and scientists. This course will explore the journey that led us here and examine the changes that have occurred for women, as well as the challenges that still persist in our society and culture.</description>
     </item>
     
     <item>
       <title>History 3890: Mapping the Gay Guides</title>
-      <link>https://amanda-regan.com/courses/3890fall23/</link>
+      <link>https://www.amanda-regan.com/courses/3890fall23/</link>
       <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/courses/3890fall23/</guid>
+      <guid>https://www.amanda-regan.com/courses/3890fall23/</guid>
       <description>Course Overview In this creative inquiry course students will work on Mapping the Gay Guides, a digital history project that seeks to digitize LGBTQ guidebooks from the 1960s through the 1990s. While on his frequent business trips around the United States in the late 1950s and early 1960s, Bob Damron wanted to find bars and other locales to meet other men like him. A gay man, Damron sought friends, companions, and safety at friendly businesses in the various cities he visited.</description>
     </item>
     
     <item>
       <title>History 8550: Seminar in Digital History</title>
-      <link>https://amanda-regan.com/courses/8550fall23/</link>
+      <link>https://www.amanda-regan.com/courses/8550fall23/</link>
       <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/courses/8550fall23/</guid>
+      <guid>https://www.amanda-regan.com/courses/8550fall23/</guid>
       <description>Course Overview History 8550 is a seminar in digital history where students will create a piece of digital scholarship that uses digital history methods to advance a historical argument. Students will work in collaboration with the course instructor and their primary advisor to come up with a project that uses digital methods to advance a historiographical interpretation. Unlike a traditional seminar paper, this paper will likely have multiple components (a dataset, narrative writing piece, and code).</description>
     </item>
     
     <item>
       <title>History 8850: Independent Study</title>
-      <link>https://amanda-regan.com/courses/8850fall23/</link>
+      <link>https://www.amanda-regan.com/courses/8850fall23/</link>
       <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/courses/8850fall23/</guid>
+      <guid>https://www.amanda-regan.com/courses/8850fall23/</guid>
       <description>Course Overview This independent study is meant to provide an overview of the major historical and historiographical developments in the study of women’s history. Each week you will attend History 3180 and participate in class lectures and activities. This is designed to give you an overview of some of the major events, themes, and idea in women’s history. You will also read a selection of important works in the field of US History and attend the Berkshire Women’s History Conference.</description>
     </item>
     
     <item>
       <title>History 8510: Methods in Digital History II</title>
-      <link>https://amanda-regan.com/courses/8510spring23/</link>
+      <link>https://www.amanda-regan.com/courses/8510spring23/</link>
       <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/courses/8510spring23/</guid>
+      <guid>https://www.amanda-regan.com/courses/8510spring23/</guid>
       <description>Course Description Welcome to History 8510, Methods in Digital History II. This course in computational history will teach you to create, manipulate, explore, and visualize historical data with the goal of advancing historical arguments.
 This class is the second in a series of digital history courses at Clemson University. It is designed to build on History 8500: Digital Methods I. In that course you reviewed digital history projects and methods, experimented with out of the box tools, and developed your own digital research collections.</description>
     </item>
     
     <item>
       <title>History 3050: The United States, 1918-1945</title>
-      <link>https://amanda-regan.com/courses/3050spring23/</link>
+      <link>https://www.amanda-regan.com/courses/3050spring23/</link>
       <pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/courses/3050spring23/</guid>
+      <guid>https://www.amanda-regan.com/courses/3050spring23/</guid>
       <description>Course Overview Welcome! This course will explore American History between the years of 1918 and 1945. Bookended by World War I and World War II, we&amp;rsquo;ll examine the profound social, cultural, and political changes that occurred in American life.
 The course begins in the midst of a world war and a crushing pandemic before moving into what has been described as the &amp;ldquo;Roaring Twenties.&amp;rdquo; We&amp;rsquo;ll interrogate this period and ask how the pandemic, war, and expansion of the American state under Prohibition changed America.</description>
     </item>
     
     <item>
       <title>History 3050: The United States, 1918-1945</title>
-      <link>https://amanda-regan.com/courses/3050fall22/</link>
+      <link>https://www.amanda-regan.com/courses/3050fall22/</link>
       <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/courses/3050fall22/</guid>
+      <guid>https://www.amanda-regan.com/courses/3050fall22/</guid>
       <description>Course Overview Welcome! This course will explore American History between the years of 1918 and 1945. Bookended by World War I and World War II, we&amp;rsquo;ll examine the profound social, cultural, and political changes that occurred in American life.
 The course begins in the midst of a world war and a crushing pandemic before moving into what has been described as the &amp;ldquo;Roaring Twenties.&amp;rdquo; We&amp;rsquo;ll interrogate this period and ask how the pandemic, war, and expansion of the American state under Prohibition changed America.</description>
     </item>
     
     <item>
       <title>History 3180: History of American Women</title>
-      <link>https://amanda-regan.com/courses/3180fall22/</link>
+      <link>https://www.amanda-regan.com/courses/3180fall22/</link>
       <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/courses/3180fall22/</guid>
+      <guid>https://www.amanda-regan.com/courses/3180fall22/</guid>
       <description>Course Overview Today, it may seem, women are more publicly visible than they have ever been. We have a female vice president, several women sit on the Supreme Court, and women are the executives of major corporations, superheroes, scientists. This course will chart how we got here and what has changed for women as well as the challenges that continue to face women in our society and culture.
 Beginning in early America and ending in the modern day, we will endeavor to understand the social, political, economic, and cultural histories of women in the United States.</description>
     </item>
     
     <item>
       <title>History 1010: US History to 1877</title>
-      <link>https://amanda-regan.com/courses/1010spring22/</link>
+      <link>https://www.amanda-regan.com/courses/1010spring22/</link>
       <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/courses/1010spring22/</guid>
+      <guid>https://www.amanda-regan.com/courses/1010spring22/</guid>
       <description>Course Overview History 1010 covers the political, economic, and social development of the American people from the period of discovery to the end of Reconstruction. Includes Honors sections.
 In this course we will explore American history beginning with the initial settlement of the continent and ending with the Civil War. Rather than covering every detail and event within this period, the course will focus on providing a broad overview of how the United States came to be, the major forces shaping its development, and the significance of Colonial America.</description>
     </item>
     
     <item>
       <title>History 3890: Mapping the Gay Guides</title>
-      <link>https://amanda-regan.com/courses/3890spring22/</link>
+      <link>https://www.amanda-regan.com/courses/3890spring22/</link>
       <pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/courses/3890spring22/</guid>
+      <guid>https://www.amanda-regan.com/courses/3890spring22/</guid>
       <description>Course Overview In this creative inquiry course students will work on Mapping the Gay Guides, a digital history project that seeks to digitize LGBTQ guidebooks from the 1960s through the 1990s. While on his frequent business trips around the United States in the late 1950s and early 1960s, Bob Damron wanted to find bars and other locales to meet other men like him. A gay man, Damron sought friends, companions, and safety at friendly businesses in the various cities he visited.</description>
     </item>
     
     <item>
       <title>History 8510: Methods in Digital History II</title>
-      <link>https://amanda-regan.com/courses/computationalhistory/</link>
+      <link>https://www.amanda-regan.com/courses/computationalhistory/</link>
       <pubDate>Fri, 07 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/courses/computationalhistory/</guid>
+      <guid>https://www.amanda-regan.com/courses/computationalhistory/</guid>
       <description>This is a sample syllabus for History 8510: Methods in Digital History II at Clemson University. If you would like to view the online version of this syllabus you can do so at www.amanda-regan.com/courses/computationalhistory. Course Description Welcome to History 8510, Methods in Digital History II. This course in computational history will teach you to create, manipulate, explore, and visualize historical data with the goal of advancing historical arguments.
 This class is the second in a series of digital history courses at Clemson University.</description>
     </item>
     
     <item>
       <title>History 1010: US History to 1877</title>
-      <link>https://amanda-regan.com/courses/1010fall21/</link>
+      <link>https://www.amanda-regan.com/courses/1010fall21/</link>
       <pubDate>Thu, 16 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://amanda-regan.com/courses/1010fall21/</guid>
+      <guid>https://www.amanda-regan.com/courses/1010fall21/</guid>
       <description>Course Description History 1010 covers the political, economic, and social development of the American people from the period of discovery to the end of Reconstruction. Includes Honors sections.
 Course Overview In this course we will explore American history beginning with the initial settlement of the continent and ending with the Civil War. Rather than covering every detail and event within this period, the course will focus on providing a broad overview of how the United States came to be, the major forces shaping its development, and the significance of Colonial America.</description>
     </item>
