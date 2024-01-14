@@ -1,0 +1,193 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&family=Prata&display=swap');
+.blog-header, .blog-post, .blog-pagination {
+  margin-bottom: 2rem;
+}
+
+/* Make sure the image size is reasonable. */
+.blog-post img {
+  max-width: 100%;
+}
+body{
+  font-family: 'Lato', sans-seif;
+  font-weight: 300;
+  color: #4A545B;
+  background-color: #fff;
+  font-size: 1.17rem !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Prata', serif;
+  color: black;
+}
+.image-right {
+  float: right;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+.navbar-brand {
+  font-family: 'Prata', serif;
+  font-size: 2.2rem;
+}
+.nav-item {
+  padding: 20px 25px;
+  letter-spacing: 2.5px;
+}
+.nav-link {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.nav-item:hover {
+  background-color: #5b1ee1;
+
+}
+.nav-item:hover > a {
+    color: #fff !important;
+}
+.nav-item.active  {
+  background-color: #5b1ee1;
+}
+.nav-link.active {
+  color: #fff !important;
+}
+nav {
+  padding-top:0px !important;
+  padding-bottom:0px !important;
+}
+.btn-outline-primary {
+color: #5b1ee1;
+border-color: #5b1ee1;
+}
+.btn-outline-primary:hover {
+  background-color: #5b1ee1;
+  border-color: #5b1ee1;
+}
+
+a {
+  color: #5b1ee1;
+}
+a:hover {
+  color: #1B0943;
+}
+.lead {
+  font-size: 150%;
+}
+.course-banner {
+  margin-bottom: 15px 0px 25px 0px;
+}
+.course-title{
+  font-size: 2.75rem;
+}
+.course-subtitle {
+  font-size: 2rem;
+}
+
+/* ==========================================================================
+Print styles
+========================================================================== */
+/* Print only styles */
+.print-only {
+  display: none;
+}
+
+@media print {
+
+  .no-print {
+    display: none;
+  }
+
+  .print-only{
+    display: block;
+  }
+
+  @page {
+    margin: .5in .5in .5in .5in;
+  }
+  .col-9 {
+    width: 100%;
+  }
+.course-banner{
+  width: auto;
+  height: auto;
+  margin: 15px 0px 25px 0px;
+}
+  html {
+    font-size: 10pt;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .container{
+    margin:0;
+    padding:0;
+  }
+
+  h1.syllabus-title {
+    margin-top: 0;
+  }
+
+  *,
+  *:before,
+  *:after {
+    /* background: transparent !important;
+    /* color: #000 !important; */
+    /* box-shadow: none !important;
+    text-shadow: none !important; */
+  }
+
+  a, a:visited {
+    text-decoration: underline;
+    color: #5b1ee1;
+    }
+
+ /* a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+   a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  } */
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3, h4 {
+    page-break-after: avoid;
+  }
+
+  article.syllabus header {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}
