@@ -2,82 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Amanda Regan</title>
-    <link>https://www.amanda-regan.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Amanda Regan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 19 Apr 2017 15:41:40 +0000</lastBuildDate><atom:link href="https://www.amanda-regan.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Wed, 19 Apr 2017 15:41:40 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Digital Humanities Now</title>
-      <link>https://www.amanda-regan.com/tags/digital-humanities-now/</link>
+      <link>http://localhost:1313/tags/digital-humanities-now/</link>
       <pubDate>Wed, 19 Apr 2017 15:41:40 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/tags/digital-humanities-now/</guid>
+      <guid>http://localhost:1313/tags/digital-humanities-now/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>PressForward</title>
-      <link>https://www.amanda-regan.com/tags/pressforward/</link>
+      <link>http://localhost:1313/tags/pressforward/</link>
       <pubDate>Wed, 19 Apr 2017 15:41:40 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/tags/pressforward/</guid>
+      <guid>http://localhost:1313/tags/pressforward/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>CHNM</title>
-      <link>https://www.amanda-regan.com/tags/chnm/</link>
+      <link>http://localhost:1313/tags/chnm/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:49 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/tags/chnm/</guid>
+      <guid>http://localhost:1313/tags/chnm/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>DH Fellowship</title>
-      <link>https://www.amanda-regan.com/tags/dh-fellowship/</link>
+      <link>http://localhost:1313/tags/dh-fellowship/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:49 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/tags/dh-fellowship/</guid>
+      <guid>http://localhost:1313/tags/dh-fellowship/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>DH Support</title>
-      <link>https://www.amanda-regan.com/tags/dh-support/</link>
+      <link>http://localhost:1313/tags/dh-support/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:49 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/tags/dh-support/</guid>
+      <guid>http://localhost:1313/tags/dh-support/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>reflections</title>
-      <link>https://www.amanda-regan.com/tags/reflections/</link>
+      <title>Reflections</title>
+      <link>http://localhost:1313/tags/reflections/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:49 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/tags/reflections/</guid>
+      <guid>http://localhost:1313/tags/reflections/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Research Division</title>
-      <link>https://www.amanda-regan.com/tags/research-division/</link>
+      <link>http://localhost:1313/tags/research-division/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:49 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/tags/research-division/</guid>
+      <guid>http://localhost:1313/tags/research-division/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>hacking-that-camps-yack</title>
-      <link>https://www.amanda-regan.com/tags/hacking-that-camps-yack/</link>
+      <title>Hacking-That-Camps-Yack</title>
+      <link>http://localhost:1313/tags/hacking-that-camps-yack/</link>
       <pubDate>Wed, 26 Feb 2014 14:30:57 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/tags/hacking-that-camps-yack/</guid>
+      <guid>http://localhost:1313/tags/hacking-that-camps-yack/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

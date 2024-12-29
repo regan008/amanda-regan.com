@@ -1,94 +1,89 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <meta property="og:title" content="Using Custom Fields with PressForward and Wordpress" />
 <meta property="og:description" content="One of the questions that the PressForward team gets repeatedly is how publications can use custom fields to automatically print data about a post once it is published. Publications often wish to display a generic name, such as “The Editors,” on a post rather than the name of the user who published the post. On Digital Humanities Now we use custom fields to store the names of our Editors-at-Large for the week a piece is featured as well as the name of the Editor-in-Chief for that week." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.amanda-regan.com/posts/custom-fields-and-pressforward/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://localhost:1313/posts/custom-fields-and-pressforward/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2017-04-19T15:41:40+00:00" />
 <meta property="article:modified_time" content="2017-04-19T15:41:40+00:00" />
 
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Using Custom Fields with PressForward and Wordpress"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Using Custom Fields with PressForward and Wordpress"/>
 <meta name="twitter:description" content="One of the questions that the PressForward team gets repeatedly is how publications can use custom fields to automatically print data about a post once it is published. Publications often wish to display a generic name, such as “The Editors,” on a post rather than the name of the user who published the post. On Digital Humanities Now we use custom fields to store the names of our Editors-at-Large for the week a piece is featured as well as the name of the Editor-in-Chief for that week."/>
 
 
 
-    <link rel="canonical" href="https://www.amanda-regan.com/posts/custom-fields-and-pressforward/">
+  <link rel="canonical" href="http://localhost:1313/posts/custom-fields-and-pressforward/">
 
-    <title>
-      
-        Using Custom Fields with PressForward and Wordpress | Amanda Regan
-      
-    </title>
-
+  <title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href='/css/style.css' rel="stylesheet">
-
+    Using Custom Fields with PressForward and Wordpress | Amanda Regan
     
-    <script defer data-domain="amanda-regan.com" src="https://plausible.io/js/script.js"></script>
-    
-  </head>
-  <body>
-    
-      
+  </title>
 
-<header class="blog-header no-print">
-    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
-        <div class="container">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href='/css/style.css' rel="stylesheet">
 
+  
+  <script defer data-domain="amanda-regan.com" src="https://plausible.io/js/script.js"></script>
+  
+</head>
+
+<body>
+  
+  
+
+<header class="blog-header">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
             <a class="navbar-brand" href="/">
                 Amanda Regan
-            </a><br>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse justify-content-between flex-row-reverse" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                 <ul class="navbar-nav">
                     
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="/">ABOUT</a>
                         
                     </li>
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="https://raw.githubusercontent.com/regan008/C-V/master/ARegan-cv.pdf">CV</a>
                         
                     </li>
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="/projects">RESEARCH &amp; PROJECTS</a>
                         
                     </li>
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="/courses">TEACHING</a>
                         
                     </li>
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="/office-hours">OFFICE HOURS</a>
@@ -96,20 +91,20 @@
                     </li>
                     
                 </ul>
-
+                
             </div>
         </div>
     </nav>
 </header>
 
-    
+  
 
-    
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-9  blog-main">
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-10  blog-main">
 
-          
+        
 
 <header>
     <h2 class="blog-post-title">
@@ -120,7 +115,7 @@
 </header>
 <article class="blog-post">
     <p>One of the questions that the PressForward team gets repeatedly is how publications can use custom fields to automatically print data about a post once it is published. Publications often wish to display a generic name, such as “The Editors,” on a post rather than the name of the user who published the post. On Digital Humanities Now we use custom fields to store the names of our Editors-at-Large for the week a piece is featured as well as the name of the Editor-in-Chief for that week.</p>
-<p><img src="/images/wpcf-edchief-output.png" alt="Editor statement located at the bottom of every Editors&amp;rsquo; Choice Post on DHNow"></p>
+<p><img alt="Editor statement located at the bottom of every Editors&rsquo; Choice Post on DHNow" src="/images/wpcf-edchief-output.png"></p>
 <p>Storing this data in custom fields means it is stored in the database and always associated with that post for archiving purposes. The post will always include the name of the Editor-in-Chief and the Editor-at-Large for that week even if the user were to delete their account. A second post will detail the process used on DHNow to display a generic name as the author on some posts while displaying the PressForward author on others.</p>
 <p>In addition to a publication specific field, such as Editor-in-Chief, PressForward uses custom fields to store several pieces of data about each post, such as the original url, the author’s name, the number of nominations a post has received, and the date of the original post. WordPress, by default, doesn’t display any of these fields. However with a few simple changes to a site’s theme it is possible to display some or all of the information stored in the custom fields for your site’s readers.</p>
 <h2 id="understanding-custom-fields">Understanding Custom Fields</h2>
@@ -128,10 +123,10 @@
 <h2 id="setting-up-custom-fields">Setting Up Custom Fields</h2>
 <p>Creating and displaying custom fields in WordPress is a two step process. First, a custom field needs to be created in the “Edit Post” page. Second, a code snippet that queries for the value associated with custom field, if a value exists, and displays that value on the post needs to be added to your post template.</p>
 <p>Custom fields are displayed in a panel below the text field in the edit page of a new or existing WordPress post. This panel is turned off by default. To ensure that custom fields are turned on select “Display Options” at the top of the screen and then select “Custom Fields” from the list of options.</p>
-<p><img src="/images/wpcf-turncustomfieldson.png" alt="Image showing how to turn custom fields on using screen options at the top of the edit post page."></p>
+<p><img alt="Image showing how to turn custom fields on using screen options at the top of the edit post page." src="/images/wpcf-turncustomfieldson.png"></p>
 <h3 id="creating-a-custom-field">Creating a Custom Field</h3>
 <p>To create a new custom field scroll down in the “Edit Post” page and find the Custom Fields section. Under the “Add New Custom Field” heading select “Enter New” and a text field will appear above. Enter the “key” or the “name” of the custom field here. For this example, we’ll use “academic_discipline.” Hit the tab button or click over to the “Value” field and enter the value that you would like displayed. Once you’ve added both values click the “Add Custom Field Button.” This field has now been added to your database and will show up in the Custom Field dropdown menu on any post in your site. Each time you want to associate an academic discipline with a post simply use the “Add a New Custom Field” name drop down to select “academic_discipline” and enter a value.</p>
-<p><img src="/images/wpcf-addcustomfield.png" alt="Image showing the add new custom field box."></p>
+<p><img alt="Image showing the add new custom field box." src="/images/wpcf-addcustomfield.png"></p>
 <h2 id="displaying-a-custom-field-in-your-theme">Displaying a Custom Field in your Theme</h2>
 <p>The custom field we created is now associated with the post within the WordPress database but it won’t appear on the public end of the site unless we tell WordPress to display it in the post template. Luckily, WordPress provides <a href="https://codex.wordpress.org/Custom_Fields">several easy to use functions</a> that facilitate printing custom field data out onto a post. Two strategies are detailed here. The first, discusses how to print out all metadata associated with a post. However, PressForward associates a number of fields with each post that users may not want displayed by default which makes the code to display a single or a few custom fields useful.  The second strategy illustrates how to print out one custom field and wrap it in some html in the footer of a post. However, the first step for either strategy involves finding the proper location to add code in your theme.</p>
 <h3 id="the-loop">“The Loop”</h3>
@@ -142,7 +137,7 @@
 <p>To print out all of the metadata stored in the Custom Fields for a post, WordPress provides a function called <a href="https://codex.wordpress.org/Function_Reference/the_meta">“the_meta().”</a> This function will print out a list of all the keys and associated values in a bulleted list and should be included within the loop.  For example, below is a typical loop that might be included in a theme. To print out the custom fields in the footer of the post, “the_meta()” needs to be added just after the content but before the comments.</p>
 <p><code>&lt;?php // Start the loop. while ( have_posts() ) : the_post(); /* * Include the post format-specific template for the content. If you want to * use this in a child theme, then include a file called called content-___.php * (where ___ is the post format) and that will be used instead. */ get_template_part( 'content', get_post_format() ); the_meta(); // If comments are open or we have at least one comment, load up the comment template. if ( comments_open() || get_comments_number() ) : comments_template(); endif; // Previous/next post navigation. the_post_navigation( array( 'next_text' =&gt; '&lt;span class=&quot;meta-nav&quot; aria-hidden=&quot;true&quot;&gt;' . __( 'Next', 'twentyfifteen' ) . '&lt;/span&gt; ' . '&lt;span class=&quot;screen-reader-text&quot;&gt;' . __( 'Next post:', 'twentyfifteen' ) . '&lt;/span&gt; ' . '&lt;span class=&quot;post-title&quot;&gt;%title&lt;/span&gt;', 'prev_text' =&gt; '&lt;span class=&quot;meta-nav&quot; aria-hidden=&quot;true&quot;&gt;' . __( 'Previous', 'twentyfifteen' ) . '&lt;/span&gt; ' . '&lt;span class=&quot;screen-reader-text&quot;&gt;' . __( 'Previous post:', 'twentyfifteen' ) . '&lt;/span&gt; ' . '&lt;span class=&quot;post-title&quot;&gt;%title&lt;/span&gt;', ) ); // End the loop. endwhile; ?&gt;</code><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
 <p>That resulting page, without styling the custom field output, would look something like this:</p>
-<p><img src="/images/wpcf-the_meta-output.png" alt="Image of the output of the_meta function."></p>
+<p><img alt="Image of the output of the_meta function." src="/images/wpcf-the_meta-output.png"></p>
 <p>The function did what it is intended to do, print out a list of every key value pair saved in the custom fields even if that custom field’s value is empty. However, PressForward includes a lot of custom fields with every post which leads to a long output that is full of data. Users may not necessarily want to display every field publicly.</p>
 <h3 id="printing-select-fields-associated-with-a-post">Printing Select Fields Associated with a Post</h3>
 <p>Rather than calling all custom fields it is often more useful to call the individual fields that should be displayed and wrap them in a conditional statement that prevents them from being displayed if the value has been left blank. This is useful if the field is meant to only be displayed on a featured post or on a post in an individual category.  To do this, WordPress provides a template that takes the post id (acquired from the loop) and queries for a custom field by name. This template can be wrapped in a conditional statement so that it only prints information out if the custom field exists on the post. For example, adding the code below into the loop below the content but above the comments would print the information stored in a field titled “Editor-in-Chief.”</p>
@@ -152,7 +147,7 @@
 		}`
 </code></pre>
 <p>This snippet queries for a custom field with a key of ‘editor-in-chief’ and then stores the value in the variable $chief. The variable, which I’ve called <code>$chief</code> but can be called anything, stores the data temporarily. Next, a conditional statement, in this case an IF statement, is used to check that the variable we just created is not empty. If the variable isn’t empty &ndash; meaning the field did exist and did have a value &ndash; the snippet echoes (or prints) out some explanatory text as well the value stored in $chief. The third line <code>echo &quot;&lt;p&gt;The Editor-in-Chief this week is: &quot; . $chief . &quot;. &lt;/p&gt;&quot;;</code> uses a PHP string operator, in this case the period or the concatenation operator (‘.’), to construct a line of html and insert the value of our variable <code>$chief</code>. The resulting html gets inserted into our post like this:</p>
-<p><img src="/images/wpcf-printselectedfield.png" alt=""></p>
+<p><img src="/images/wpcf-printselectedfield.png"></p>
 <p>Custom Fields can be used to display information such as this on any post or page within WordPress. With a little knowledge of php they can become a powerful tool for managing data about a post (or page) in WordPress. In combination with PressForward, they allow publications automate the display of backend statistics about the original post and their community’s usage of PressForward.</p>
 <p>Custom fields are powerful tools and questions about how to use them are among the most frequent questions we get. Oh Digital Humanities Now, the team long ago made the decision to obscure author information on news items since they were frequently job ads, announcements, or Calls for Proposals which typically don’t have a formal author.</p>
 <div class="footnotes" role="doc-endnotes">
@@ -182,30 +177,33 @@
 
 
 
-        </div>
-
-        
-
       </div>
-    </div>
-    
 
-    
       
+
+    </div>
+  </div>
+  
+
+  
+  
 
 
 
 
 <footer class="blog-footer w-100 no-print">
     <nav class="navbar navbar-light bg-light">
-        <p class="w-100 text-center"><a href="#">Back to top</a></p>
+        <p class="w-100 text-center"><a href="#"></a></p>
     </nav>
 </footer>
 
-    
+  
 
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-  </body>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

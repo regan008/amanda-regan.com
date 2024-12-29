@@ -1,94 +1,89 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <meta property="og:title" content="Dat Tutorial" />
 <meta property="og:description" content="What is Dat? Dat is a set of tools used to “build and share data pipelines.” Dat was created with the goal of bringing “to data a style of collaboration similar to what git brings to source code.” The project, developed by Max Ogden, is designed to allow not only easy data sharing but also row by row version tracking. The five key features of Dat’s tools [(as described by Dat’s GitHub page)](make%20data syncable." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.amanda-regan.com/posts/dat-tutorial/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://localhost:1313/posts/dat-tutorial/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2014-09-30T02:54:05+00:00" />
 <meta property="article:modified_time" content="2014-09-30T02:54:05+00:00" />
 
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Dat Tutorial"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Dat Tutorial"/>
 <meta name="twitter:description" content="What is Dat? Dat is a set of tools used to “build and share data pipelines.” Dat was created with the goal of bringing “to data a style of collaboration similar to what git brings to source code.” The project, developed by Max Ogden, is designed to allow not only easy data sharing but also row by row version tracking. The five key features of Dat’s tools [(as described by Dat’s GitHub page)](make%20data syncable."/>
 
 
 
-    <link rel="canonical" href="https://www.amanda-regan.com/posts/dat-tutorial/">
+  <link rel="canonical" href="http://localhost:1313/posts/dat-tutorial/">
 
-    <title>
-      
-        Dat Tutorial | Amanda Regan
-      
-    </title>
-
+  <title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href='/css/style.css' rel="stylesheet">
-
+    Dat Tutorial | Amanda Regan
     
-    <script defer data-domain="amanda-regan.com" src="https://plausible.io/js/script.js"></script>
-    
-  </head>
-  <body>
-    
-      
+  </title>
 
-<header class="blog-header no-print">
-    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
-        <div class="container">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href='/css/style.css' rel="stylesheet">
 
+  
+  <script defer data-domain="amanda-regan.com" src="https://plausible.io/js/script.js"></script>
+  
+</head>
+
+<body>
+  
+  
+
+<header class="blog-header">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
             <a class="navbar-brand" href="/">
                 Amanda Regan
-            </a><br>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse justify-content-between flex-row-reverse" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                 <ul class="navbar-nav">
                     
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="/">ABOUT</a>
                         
                     </li>
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="https://raw.githubusercontent.com/regan008/C-V/master/ARegan-cv.pdf">CV</a>
                         
                     </li>
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="/projects">RESEARCH &amp; PROJECTS</a>
                         
                     </li>
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="/courses">TEACHING</a>
                         
                     </li>
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="/office-hours">OFFICE HOURS</a>
@@ -96,20 +91,20 @@
                     </li>
                     
                 </ul>
-
+                
             </div>
         </div>
     </nav>
 </header>
 
-    
+  
 
-    
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-9  blog-main">
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-10  blog-main">
 
-          
+        
 
 <header>
     <h2 class="blog-post-title">
@@ -140,7 +135,7 @@
 </ul>
 <p>This tutorial will walk through the basics of using dat for creating and managing a data set. We’ll begin with a simple dataset, then we’ll import the data into a new dat store, view the data, make changes, add new data, and view version history.  We’ll be working with dat on our local machine but keep in mind that Dat can also be deployed on a server to facilitate data sharing. Starting with just the basics of Dat showcases the tools potential and hopefully will be helpful for anybody creating large datasets by hand for class.</p>
 <h2 id="dat-for-digital-historians">Dat for Digital Historians</h2>
-<p><img src="http://www.amanda-regan.com/wp-content/uploads/2014/09/dat-hex-2.png" alt="dat-hex-2"></p>
+<p><img alt="dat-hex-2" src="http://www.amanda-regan.com/wp-content/uploads/2014/09/dat-hex-2.png"></p>
 <p>I think Dat has the potential to be useful and for historians in several ways.  First, I think it’s useful to verify and keep track of the history of historical data sets. Because Dat allows you to track the version history, its easy to go through and verify the data.  Secondly, Dat is designed to allow data syncing.  So in theory, if you were collaborating with someone on creating a data set it would be possible to only sync the data that has changed since the last time you synced.  I think this has the potential to make collaborating and creating large datasets an easier and verifiable practice.  Max Ogden originally designed dat to be useful for Governments or large organizations who often make data available on their website in one massive csv file.  When it changes, you then have to go back in and redownload the csv, figure out whats new, and redo any formatting, reshaping, or calculations.  The goal of dat is to make that process easier by allowing the syncing of only the data that has changed.  Historical data doesn’t change very often but if you’re collecting data from various locations or sources I think Dat could be very useful.  If you’re interested you can read more about the history of dat and Ogden’s vision <a href="http://www.wired.com/2014/08/dat/">here</a>.</p>
 <h2 id="get-the-data">Get the Data</h2>
 <p>I’ve uploaded a GitHub repository that has some data for this tutorial. You can clone this repository so you can follow along with the data I’ve provided or you can use your own data. To clone the data run this in the terminal:</p>
@@ -252,30 +247,33 @@ dat init`
 
 
 
-        </div>
-
-        
-
       </div>
-    </div>
-    
 
-    
       
+
+    </div>
+  </div>
+  
+
+  
+  
 
 
 
 
 <footer class="blog-footer w-100 no-print">
     <nav class="navbar navbar-light bg-light">
-        <p class="w-100 text-center"><a href="#">Back to top</a></p>
+        <p class="w-100 text-center"><a href="#"></a></p>
     </nav>
 </footer>
 
-    
+  
 
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-  </body>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

@@ -2,92 +2,74 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Clio Wired II on Amanda Regan</title>
-    <link>https://www.amanda-regan.com/categories/clio-wired-ii/</link>
+    <link>http://localhost:1313/categories/clio-wired-ii/</link>
     <description>Recent content in Clio Wired II on Amanda Regan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 03 May 2014 20:27:21 +0000</lastBuildDate><atom:link href="https://www.amanda-regan.com/categories/clio-wired-ii/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sat, 03 May 2014 20:27:21 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/clio-wired-ii/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Final Clio Wired II Project</title>
-      <link>https://www.amanda-regan.com/posts/final-clio-wired-ii-project/</link>
+      <link>http://localhost:1313/posts/final-clio-wired-ii-project/</link>
       <pubDate>Sat, 03 May 2014 20:27:21 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/final-clio-wired-ii-project/</guid>
+      <guid>http://localhost:1313/posts/final-clio-wired-ii-project/</guid>
       <description>I still have a few small changes to make but for the most part my final project for Clio II is finished. I&amp;rsquo;d like to go back and add a few more primary sources and I still need to fix the gallery of reducing advertisements. Also, the footnotes have mysteriously gone missing on one of my pages so I need to fix that too. I&amp;rsquo;ll get to those things over the next day or so, but in the meantime you can view it here.</description>
     </item>
-    
     <item>
       <title>Final Project Design</title>
-      <link>https://www.amanda-regan.com/posts/final-project-design/</link>
+      <link>http://localhost:1313/posts/final-project-design/</link>
       <pubDate>Sun, 20 Apr 2014 20:00:39 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/final-project-design/</guid>
-      <description>I&amp;rsquo;ve been thinking about the final project and trying to make some decisions about design so that I can finish coding the basics of the site over the next week or so. I&amp;rsquo;ve decided to do the website on the &amp;ldquo;Reducing Craze&amp;rdquo; of 1920. It&amp;rsquo;ll look at the American Medical Association&amp;rsquo;s condemnation of quackery in 1927 and the rejection of what was deemed &amp;ldquo;Reduceosanity&amp;rdquo;.
-For fonts I&amp;rsquo;ve decided on several google fonts that I&amp;rsquo;ll layer to create a 1920s feel.</description>
+      <guid>http://localhost:1313/posts/final-project-design/</guid>
+      <description>I&amp;rsquo;ve been thinking about the final project and trying to make some decisions about design so that I can finish coding the basics of the site over the next week or so. I&amp;rsquo;ve decided to do the website on the &amp;ldquo;Reducing Craze&amp;rdquo; of 1920. It&amp;rsquo;ll look at the American Medical Association&amp;rsquo;s condemnation of quackery in 1927 and the rejection of what was deemed &amp;ldquo;Reduceosanity&amp;rdquo;.&#xA;For fonts I&amp;rsquo;ve decided on several google fonts that I&amp;rsquo;ll layer to create a 1920s feel.</description>
     </item>
-    
     <item>
       <title>Image Assignment </title>
-      <link>https://www.amanda-regan.com/posts/image-assignment/</link>
+      <link>http://localhost:1313/posts/image-assignment/</link>
       <pubDate>Fri, 11 Apr 2014 15:51:18 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/image-assignment/</guid>
+      <guid>http://localhost:1313/posts/image-assignment/</guid>
       <description>I&amp;rsquo;m all finished with my image assignment. As I&amp;rsquo;ve been talking about for the last few weeks I used some images from a scrapbook I scanned a few years ago. The images were pretty damaged since they were glued into the scrapbook and were often yellowed and wrinkled. This created quite the challenge for restoration but I think they turned out pretty good or at least far better than they were.</description>
     </item>
-    
     <item>
       <title>Attempts at Restoration</title>
-      <link>https://www.amanda-regan.com/posts/attempts-restoration/</link>
+      <link>http://localhost:1313/posts/attempts-restoration/</link>
       <pubDate>Sun, 06 Apr 2014 15:17:56 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/attempts-restoration/</guid>
+      <guid>http://localhost:1313/posts/attempts-restoration/</guid>
       <description>I&amp;rsquo;ve been slowly making progress on my image assignment. One of the things I&amp;rsquo;ve been attempting to do is to restore some images that were part of a scrapbook I scanned while I was working on my masters. The scrapbook contained magazine and newspaper clippings that were glued onto pages and tied together with some twine. Unfortunately, after being stored in a closet for seventy plus years the pages are crumbling, the photos are yellowed, and most of the photos have some odd crease in them likely from the glue that was used.</description>
     </item>
-    
     <item>
       <title>Restoring an Image from a Microfilm Copy</title>
-      <link>https://www.amanda-regan.com/posts/restoring-comic-microfilm/</link>
+      <link>http://localhost:1313/posts/restoring-comic-microfilm/</link>
       <pubDate>Fri, 28 Mar 2014 20:14:14 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/restoring-comic-microfilm/</guid>
+      <guid>http://localhost:1313/posts/restoring-comic-microfilm/</guid>
       <description>I&amp;rsquo;ve been working on making some of the small changes to my typography project that we discussed in class last week. Most of the spacing fixes and the changes to the lines were super easy to fix but restoring the comic has taken a bit of time. I played with doing different things to it, but the challenge with this particular image was that because it was printed from a microfilm reader (and then scanned) the image&amp;rsquo;s quality is pretty poor even though the resolution is high.</description>
     </item>
-    
     <item>
       <title>Typography Assignment</title>
-      <link>https://www.amanda-regan.com/posts/typography-assignment/</link>
+      <link>http://localhost:1313/posts/typography-assignment/</link>
       <pubDate>Sun, 23 Feb 2014 01:39:32 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/typography-assignment/</guid>
+      <guid>http://localhost:1313/posts/typography-assignment/</guid>
       <description>For the typography assignment I decided to make a page using some of the content from my masters thesis. I said last week I wasn&amp;rsquo;t going to use my thesis for this class, but then I decided that for this assignment it might be kind of fun. I&amp;rsquo;ll get back to physical culture in the progressive era for the design and final assignments. I pieced together some text from my thesis that introduces a woman named Sylvia Ullback who was a beauty expert to the Hollywood stars in the 1920s.</description>
     </item>
-    
     <item>
       <title>Design Using a Grid</title>
-      <link>https://www.amanda-regan.com/posts/design-using-grid/</link>
+      <link>http://localhost:1313/posts/design-using-grid/</link>
       <pubDate>Sun, 16 Feb 2014 15:38:31 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/design-using-grid/</guid>
+      <guid>http://localhost:1313/posts/design-using-grid/</guid>
       <description>The reading for this week in _Thinking with Type _about grids was extremely interesting to me. The section about tables and grids in html particularly peaked my interest. I think the hardest part of html and css is learning layout but I think a grid makes the whole idea of layout easier to understand. I&amp;rsquo;ve always used grids when I code, particularly I like the 960 grid system which makes layout very easy and allows you to work of a variety of grid layouts.</description>
     </item>
-    
     <item>
       <title>Typographical Design and Communication</title>
-      <link>https://www.amanda-regan.com/posts/typographical-design-communication-via-web/</link>
+      <link>http://localhost:1313/posts/typographical-design-communication-via-web/</link>
       <pubDate>Sun, 09 Feb 2014 18:25:16 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/typographical-design-communication-via-web/</guid>
+      <guid>http://localhost:1313/posts/typographical-design-communication-via-web/</guid>
       <description>This week&amp;rsquo;s materials on Typography were really interesting. I especially enjoyed Morris&amp;rsquo;s article &amp;ldquo;Hear, All Ye People; Hearken, O Earth.&amp;rdquo; I&amp;rsquo;ve always been interested in Typography but I had never realized the extent to which a typeface can affect the credibility of a site. Typography is one of the most important, if not the most important, element in the design of a website yet it&amp;rsquo;s something that we rarely consciously think about.</description>
     </item>
-    
     <item>
       <title>&#34;Building&#34; in the Digital Humanities </title>
-      <link>https://www.amanda-regan.com/posts/building-digital-humanities/</link>
+      <link>http://localhost:1313/posts/building-digital-humanities/</link>
       <pubDate>Mon, 03 Feb 2014 01:43:29 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/building-digital-humanities/</guid>
+      <guid>http://localhost:1313/posts/building-digital-humanities/</guid>
       <description>This week&amp;rsquo;s readings, specifically Stephen Ramsey&amp;rsquo;s article &amp;ldquo;Who&amp;rsquo;s In? Who&amp;rsquo;s Out?,&amp;rdquo; really got me thinking about (again) about how Digital History is defined and why (or if) coding is an important skill for any digital historian. There are a large number of tools available to allow historians to analyze sources and make arguments using technology, many that don&amp;rsquo;t require a significant amount of coding knowledge. Specifically, I&amp;rsquo;m thinking of something such as MALLET, which a number of us used for our final Clio I projects.</description>
     </item>
-    
   </channel>
 </rss>

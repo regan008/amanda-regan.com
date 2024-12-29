@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -9,88 +10,82 @@
 <meta property="og:description" content="This post is the last in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post, which was collectively written by the DH Fellows, can be found on our Digital History Fellowship Blog.
 We have spent the last few weeks working to build a python script that would allow us to download and prep all of the THATCamp blog posts for topic modeling in MALLET (for those catching up, we detailed this process in a series of previous posts)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.amanda-regan.com/posts/thatcamp-topic-modeling-results/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://localhost:1313/posts/thatcamp-topic-modeling-results/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2014-02-26T14:30:57+00:00" />
 <meta property="article:modified_time" content="2014-02-26T14:30:57+00:00" />
 
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="THATCamp Topic Modeling Results"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="THATCamp Topic Modeling Results"/>
 <meta name="twitter:description" content="This post is the last in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post, which was collectively written by the DH Fellows, can be found on our Digital History Fellowship Blog.
 We have spent the last few weeks working to build a python script that would allow us to download and prep all of the THATCamp blog posts for topic modeling in MALLET (for those catching up, we detailed this process in a series of previous posts)."/>
 
 
 
-    <link rel="canonical" href="https://www.amanda-regan.com/posts/thatcamp-topic-modeling-results/">
+  <link rel="canonical" href="http://localhost:1313/posts/thatcamp-topic-modeling-results/">
 
-    <title>
-      
-        THATCamp Topic Modeling Results | Amanda Regan
-      
-    </title>
-
+  <title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href='/css/style.css' rel="stylesheet">
-
+    THATCamp Topic Modeling Results | Amanda Regan
     
-    <script defer data-domain="amanda-regan.com" src="https://plausible.io/js/script.js"></script>
-    
-  </head>
-  <body>
-    
-      
+  </title>
 
-<header class="blog-header no-print">
-    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
-        <div class="container">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href='/css/style.css' rel="stylesheet">
 
+  
+  <script defer data-domain="amanda-regan.com" src="https://plausible.io/js/script.js"></script>
+  
+</head>
+
+<body>
+  
+  
+
+<header class="blog-header">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
             <a class="navbar-brand" href="/">
                 Amanda Regan
-            </a><br>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse justify-content-between flex-row-reverse" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                 <ul class="navbar-nav">
                     
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="/">ABOUT</a>
                         
                     </li>
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="https://raw.githubusercontent.com/regan008/C-V/master/ARegan-cv.pdf">CV</a>
                         
                     </li>
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="/projects">RESEARCH &amp; PROJECTS</a>
                         
                     </li>
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="/courses">TEACHING</a>
                         
                     </li>
                     
-                    
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         
                             
                             <a class="nav-link " href="/office-hours">OFFICE HOURS</a>
@@ -98,20 +93,20 @@ We have spent the last few weeks working to build a python script that would all
                     </li>
                     
                 </ul>
-
+                
             </div>
         </div>
     </nav>
 </header>
 
-    
+  
 
-    
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-9  blog-main">
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-10  blog-main">
 
-          
+        
 
 <header>
     <h2 class="blog-post-title">
@@ -213,28 +208,28 @@ We have spent the last few weeks working to build a python script that would all
 </li>
 </ol>
 <p>Utilizing these larger categories, we were able to create several charts that demonstrate the changes over time with the THATCamps. The charts are available below; you’ll note that we have graphed them using percentages. The percentages that appear represent the number of times that topic occurred within the posts at that camp.</p>
-<p>[caption id=&ldquo;attachment_489&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;584&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.27.42-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.27.42-PM-1024x780.png" alt="Chart of Topics Overall"></a> Topics Overall[/caption]</p>
+<p>[caption id=&ldquo;attachment_489&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;584&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.27.42-PM.png"><img alt="Chart of Topics Overall" src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.27.42-PM-1024x780.png"></a> Topics Overall[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>[caption id=&ldquo;attachment_504&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.16-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.16-PM-150x150.png" alt="Chart of the topic Accessibility."></a> Topics relating to Accessibility[/caption]</p>
+<p>[caption id=&ldquo;attachment_504&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.16-PM.png"><img alt="Chart of the topic Accessibility." src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.16-PM-150x150.png"></a> Topics relating to Accessibility[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>[caption id=&ldquo;attachment_503&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.27-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.27-PM-150x150.png" alt="Graph of the Community Topic"></a> Topics relating to Community[/caption]</p>
+<p>[caption id=&ldquo;attachment_503&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.27-PM.png"><img alt="Graph of the Community Topic" src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.27-PM-150x150.png"></a> Topics relating to Community[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>[caption id=&ldquo;attachment_502&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.35-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.35-PM-150x150.png" alt="Graph of the THATCamp Structure Topics"></a> Topics relating to THATCamp Structure[/caption]</p>
+<p>[caption id=&ldquo;attachment_502&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.35-PM.png"><img alt="Graph of the THATCamp Structure Topics" src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.35-PM-150x150.png"></a> Topics relating to THATCamp Structure[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>[caption id=&ldquo;attachment_501&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.47-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.47-PM-150x150.png" alt="Graph of topics relating to Pedagogy"></a> Topics relating to Pedagogy[/caption]</p>
+<p>[caption id=&ldquo;attachment_501&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.47-PM.png"><img alt="Graph of topics relating to Pedagogy" src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.47-PM-150x150.png"></a> Topics relating to Pedagogy[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>[caption id=&ldquo;attachment_500&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.56-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.56-PM-150x150.png" alt="Graph of topics relating to Public Digital Humanities"></a> Topics relating to Public Digital Humanities[/caption]</p>
+<p>[caption id=&ldquo;attachment_500&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.56-PM.png"><img alt="Graph of topics relating to Public Digital Humanities" src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.56-PM-150x150.png"></a> Topics relating to Public Digital Humanities[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>[caption id=&ldquo;attachment_499&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.04-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.04-PM-150x150.png" alt="Graph of topics relating to building in the humanities."></a> Topics relating to Building[/caption]</p>
+<p>[caption id=&ldquo;attachment_499&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.04-PM.png"><img alt="Graph of topics relating to building in the humanities." src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.04-PM-150x150.png"></a> Topics relating to Building[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>[caption id=&ldquo;attachment_498&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.13-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.13-PM-150x150.png" alt="Topics relating to the international influence of THATCamp."></a> International Digital Humanities[/caption]</p>
+<p>[caption id=&ldquo;attachment_498&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.13-PM.png"><img alt="Topics relating to the international influence of THATCamp." src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.13-PM-150x150.png"></a> International Digital Humanities[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
@@ -242,7 +237,7 @@ We have spent the last few weeks working to build a python script that would all
 <p>If you’re interested in the data, you can view the various files here:</p>
 <ul>
 <li>
-<p><a href="https://docs.google.com/spreadsheet/ccc?key=0AsGU0Xg7inL5dEQ2M2FjRXdNSGhJdG9xb0dJb3hOZ2c&amp;usp=sharing">Averages for each year and the overall chart </a>(Google Spreadsheet)</p>
+<p><a href="https://docs.google.com/spreadsheet/ccc?key=0AsGU0Xg7inL5dEQ2M2FjRXdNSGhJdG9xb0dJb3hOZ2c&usp=sharing">Averages for each year and the overall chart </a>(Google Spreadsheet)</p>
 </li>
 <li>
 <p>[Data for each individual camp and charts by grouping](Screen Shot 2014-02-20 at 5.53.13 PM Screen Shot 2014-02-20 at 5.53.04 PM Screen Shot 2014-02-20 at 5.52.56 PM Screen Shot 2014-02-20 at 5.52.47 PM Screen Shot 2014-02-20 at 5.52.35 PM Screen Shot 2014-02-20 at 5.52.27 PM Screen Shot 2014-02-20 at 5.52.16 PM) (Google Spreadsheet)</p>
@@ -261,7 +256,7 @@ We have spent the last few weeks working to build a python script that would all
     <footer>
 
 
-    <h4>See also</h4>
+    <h4></h4>
     <ul>
         
             <li><a href="/posts/unexpected-challenges-result-important-informative-discussions-transparent-discussion-stripping-content-stopwords/">Unexpected Challenges Result in Important and Informative Discussions: a transparent discussion about stripping content and stopwords</a></li>
@@ -280,30 +275,33 @@ We have spent the last few weeks working to build a python script that would all
 
 
 
-        </div>
-
-        
-
       </div>
-    </div>
-    
 
-    
       
+
+    </div>
+  </div>
+  
+
+  
+  
 
 
 
 
 <footer class="blog-footer w-100 no-print">
     <nav class="navbar navbar-light bg-light">
-        <p class="w-100 text-center"><a href="#">Back to top</a></p>
+        <p class="w-100 text-center"><a href="#"></a></p>
     </nav>
 </footer>
 
-    
+  
 
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-  </body>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

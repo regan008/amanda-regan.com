@@ -2,68 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Digital History Readings Course on Amanda Regan</title>
-    <link>https://www.amanda-regan.com/categories/digital-history-readings-course/</link>
+    <link>http://localhost:1313/categories/digital-history-readings-course/</link>
     <description>Recent content in Digital History Readings Course on Amanda Regan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 05 Aug 2014 03:25:56 +0000</lastBuildDate><atom:link href="https://www.amanda-regan.com/categories/digital-history-readings-course/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Tue, 05 Aug 2014 03:25:56 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/digital-history-readings-course/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Digital History Minor Field, Part 5: Topic Modeling</title>
-      <link>https://www.amanda-regan.com/posts/digital-history-minor-field-part-5-topic-modeling/</link>
+      <link>http://localhost:1313/posts/digital-history-minor-field-part-5-topic-modeling/</link>
       <pubDate>Tue, 05 Aug 2014 03:25:56 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/digital-history-minor-field-part-5-topic-modeling/</guid>
-      <description>This week our readings focused on Topic Modeling. I’ve been looking forward to this week for some time partly because I plan to use Topic Modeling for my dissertation but also because I was eager to understand some of the theoretical underpinnings of the methodology.
-During the Digital History Fellows in the Research Division last spring, we were asked to do a topic modeling project on all of the blog posts from the the various THATCamps.</description>
+      <guid>http://localhost:1313/posts/digital-history-minor-field-part-5-topic-modeling/</guid>
+      <description>This week our readings focused on Topic Modeling. I’ve been looking forward to this week for some time partly because I plan to use Topic Modeling for my dissertation but also because I was eager to understand some of the theoretical underpinnings of the methodology.&#xA;During the Digital History Fellows in the Research Division last spring, we were asked to do a topic modeling project on all of the blog posts from the the various THATCamps.</description>
     </item>
-    
     <item>
       <title>Minor Field Readings, Part 4: Space</title>
-      <link>https://www.amanda-regan.com/posts/minor-field-readings-part-4-space/</link>
+      <link>http://localhost:1313/posts/minor-field-readings-part-4-space/</link>
       <pubDate>Thu, 31 Jul 2014 19:23:37 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/minor-field-readings-part-4-space/</guid>
-      <description>I’m a few weeks behind with this blog post about our minor field readings meeting on Space in Digital History. For this meeting we read a variety of works that discussed Geographic Information Systems (GIS), spatial history, the possibilities and and the complexities of presenting historical material geographically using digital technology and methodologies.
-GIS has been around for years now, yet historians have never embraced it like geographers have. Partly, as many of the authors point out, this is because of the software’s need for exact data rather than fuzzy or general information.</description>
+      <guid>http://localhost:1313/posts/minor-field-readings-part-4-space/</guid>
+      <description>I’m a few weeks behind with this blog post about our minor field readings meeting on Space in Digital History. For this meeting we read a variety of works that discussed Geographic Information Systems (GIS), spatial history, the possibilities and and the complexities of presenting historical material geographically using digital technology and methodologies.&#xA;GIS has been around for years now, yet historians have never embraced it like geographers have. Partly, as many of the authors point out, this is because of the software’s need for exact data rather than fuzzy or general information.</description>
     </item>
-    
     <item>
       <title>Minor Field Readings, Part 3: Changing Theories of History</title>
-      <link>https://www.amanda-regan.com/posts/changing-theories-history/</link>
+      <link>http://localhost:1313/posts/changing-theories-history/</link>
       <pubDate>Sat, 05 Jul 2014 22:25:41 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/changing-theories-history/</guid>
-      <description>This weeks readings on “Changing Theories of History” discussed the ways digital methods are changing how historians practice or “do” history. Several authors discussed how digital research methods change the scale of materials that we can draw upon while researching a topic. Others discussed the possibility of using visualizations to communicate historical arguments rather than narrative.
-Armitage and Guildi discuss in their article “The Return of the Longue Duree: An Anglo-American Perspective” the origins of the Longue Duree and the shift away from histories that seek to tell the grand macro-narrative to the small focused micro-histories of the 1980s.</description>
+      <guid>http://localhost:1313/posts/changing-theories-history/</guid>
+      <description>This weeks readings on “Changing Theories of History” discussed the ways digital methods are changing how historians practice or “do” history. Several authors discussed how digital research methods change the scale of materials that we can draw upon while researching a topic. Others discussed the possibility of using visualizations to communicate historical arguments rather than narrative.&#xA;Armitage and Guildi discuss in their article “The Return of the Longue Duree: An Anglo-American Perspective” the origins of the Longue Duree and the shift away from histories that seek to tell the grand macro-narrative to the small focused micro-histories of the 1980s.</description>
     </item>
-    
     <item>
       <title>Minor Field Readings, Part 2: Perspectives on New Media</title>
-      <link>https://www.amanda-regan.com/posts/perspectives-new-media/</link>
+      <link>http://localhost:1313/posts/perspectives-new-media/</link>
       <pubDate>Sun, 22 Jun 2014 22:20:52 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/perspectives-new-media/</guid>
+      <guid>http://localhost:1313/posts/perspectives-new-media/</guid>
       <description>This weeks readings on “Perspectives of New Media” discussed from varying viewpoints how new media is and has changed the ways scholarship is produced and conceptualized. The readings contemplate what new media tools and technologies change for how we think about, produce, and evaluate information. Out of these readings came a consistent concern with scale, linearity, and how digital technologies and tools will affect narrative, or for my purposes, a historical argument.</description>
     </item>
-    
     <item>
       <title>Minor Field Readings, Part 1: Digital Humanities</title>
-      <link>https://www.amanda-regan.com/posts/dhs-histories-debates-promises/</link>
+      <link>http://localhost:1313/posts/dhs-histories-debates-promises/</link>
       <pubDate>Fri, 06 Jun 2014 11:59:46 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/dhs-histories-debates-promises/</guid>
+      <guid>http://localhost:1313/posts/dhs-histories-debates-promises/</guid>
       <description>This summer I am completing a readings course for my minor field in Digital History. This weeks readings have discussed the digital humanities, the history of the field, and have offered critiques as well as predictions about where the field is going. Most volumes about Digital Humanities discuss the history of the field and place its origins in the history of humanities computing. While there is certainly truth in these accounts, they often overlook the histories of disciplines such as history and how these fields merged together to form the “Digital Humanities” around 2004.</description>
     </item>
-    
     <item>
       <title>Readings Course on Digital History in Theory and Practice</title>
-      <link>https://www.amanda-regan.com/posts/readings-series-digital-history-theory-practice/</link>
+      <link>http://localhost:1313/posts/readings-series-digital-history-theory-practice/</link>
       <pubDate>Mon, 26 May 2014 20:07:56 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/readings-series-digital-history-theory-practice/</guid>
-      <description>This summer I&amp;rsquo;ll be completing a readings course for my Digital History minor field with Stephen Robertson. The course will cover Digital History in both Theory and Practice.
-You can view the proposed abstract and bibliography for this course here. In addition to a traditional readings course, I felt it was important to not only understand the major debates in the field but also to learn practical skills that will aid me as I move toward the dissertation stage.</description>
+      <guid>http://localhost:1313/posts/readings-series-digital-history-theory-practice/</guid>
+      <description>This summer I&amp;rsquo;ll be completing a readings course for my Digital History minor field with Stephen Robertson. The course will cover Digital History in both Theory and Practice.&#xA;You can view the proposed abstract and bibliography for this course here. In addition to a traditional readings course, I felt it was important to not only understand the major debates in the field but also to learn practical skills that will aid me as I move toward the dissertation stage.</description>
     </item>
-    
   </channel>
 </rss>

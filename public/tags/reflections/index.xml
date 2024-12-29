@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>reflections on Amanda Regan</title>
-    <link>https://www.amanda-regan.com/tags/reflections/</link>
-    <description>Recent content in reflections on Amanda Regan</description>
+    <title>Reflections on Amanda Regan</title>
+    <link>http://localhost:1313/tags/reflections/</link>
+    <description>Recent content in Reflections on Amanda Regan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 24 Aug 2014 16:41:49 +0000</lastBuildDate><atom:link href="https://www.amanda-regan.com/tags/reflections/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 24 Aug 2014 16:41:49 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/reflections/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reflections on the Spring Semester and Year 1 as a Digital History Fellow</title>
-      <link>https://www.amanda-regan.com/posts/reflections-on-spring-semester-and-year-1-as-digital-history-fellows/</link>
+      <link>http://localhost:1313/posts/reflections-on-spring-semester-and-year-1-as-digital-history-fellows/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:49 +0000</pubDate>
-      
-      <guid>https://www.amanda-regan.com/posts/reflections-on-spring-semester-and-year-1-as-digital-history-fellows/</guid>
+      <guid>http://localhost:1313/posts/reflections-on-spring-semester-and-year-1-as-digital-history-fellows/</guid>
       <description>It seems like just yesterday we walked into the Center for History and New Media a bit unsure about what our first year as DH fellows would entail. Looking back it has been an extremely rewarding and valuable experience. Last fall we blogged about our rotations in both the Education and Public Projects divisions. In the Spring we moved to Research for seven weeks where we worked on a programming project for THATCamp and on the PressForward project before moving onto a seminar about the history of CHNM.</description>
     </item>
-    
   </channel>
 </rss>
