@@ -4,7 +4,7 @@
     <title>Programming for Historians on Amanda Regan</title>
     <link>http://localhost:1313/categories/programming-for-historians/</link>
     <description>Recent content in Programming for Historians on Amanda Regan</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 09 Dec 2014 22:13:24 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/programming-for-historians/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>http://localhost:1313/posts/mapping-gymnasiums-boston/</link>
       <pubDate>Tue, 09 Dec 2014 22:13:24 +0000</pubDate>
       <guid>http://localhost:1313/posts/mapping-gymnasiums-boston/</guid>
-      <description>Mapping Gymnasiums in Boston In 1889 Josiah Quincey was elected Mayor of Boston. Throughout his term as mayor he implemented a new system of municipal baths and gymnasiums in the city designed to encourage moral behavior, hygiene, foster community, and encourage exercise for the cities residents. These gymnasiums, although open to all residents, were placed largely in immigrant heavy neighborhoods and reflected a focus on physical culture that was reminiscent of life in Eastern Europe.</description>
+      <description>&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/images/Screenshot-2014-12-09-17.06.27.png&#34; height=&#34;400&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Mapping Gymnasiums in Boston&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;In 1889 Josiah Quincey was elected Mayor of Boston.  Throughout his term as mayor he implemented a new system of municipal baths and gymnasiums in the city designed to encourage moral behavior, hygiene, foster community, and encourage exercise for the cities residents.  These gymnasiums, although open to all residents, were placed largely in immigrant heavy neighborhoods and reflected a focus on physical culture that was reminiscent of life in Eastern Europe.  &lt;a href=&#34;http://www.amanda-regan.com/Clio3-Final/&#34;&gt;This visualization&lt;/a&gt; shows the location of each municipal and private gymnasium in Boston between 1914 and 1925 and provides some information about the ward that these gymnasiums existed in.  Clicking on the public gymnasiums (teal circles) or the private gymnasiums (dark blue circles) pulls up relevant information about the ward the gymnasium was located in.  The size of the public gymnasiums corresponds to the total attendance in each year and clicking on a public gymnasium populates a pie chart with the breakdown of class attendance at that gym.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dat Tutorial</title>
       <link>http://localhost:1313/posts/dat-tutorial/</link>
       <pubDate>Tue, 30 Sep 2014 02:54:05 +0000</pubDate>
       <guid>http://localhost:1313/posts/dat-tutorial/</guid>
-      <description>What is Dat? Dat is a set of tools used to “build and share data pipelines.” Dat was created with the goal of bringing “to data a style of collaboration similar to what git brings to source code.” The project, developed by Max Ogden, is designed to allow not only easy data sharing but also row by row version tracking. The five key features of Dat’s tools [(as described by Dat’s GitHub page)](make%20data syncable.</description>
+      <description>&lt;h2 id=&#34;what-is-dat&#34;&gt;What is Dat?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;www.data-dat.com&#34;&gt;Dat&lt;/a&gt; is a set of tools used to “build and share data pipelines.”  Dat was created with the goal of bringing “to data a style of collaboration similar to what git brings to source code.”  The project, developed by &lt;a href=&#34;http://maxogden.com/&#34;&gt;Max Ogden&lt;/a&gt;, is designed to allow not only easy data sharing but also row by row version tracking. The five key features of Dat’s tools [(as described by Dat’s GitHub page)](make%20data syncable. automatic sync and updates of data sets data sets can be very large (billions of rows or terabytes in size) and/or updated frequently (real time data) data can be either tabular (rows &amp;amp; cells) or blobs (large files and/or unstructured) plugin APIs to connect dat to any existing database/format/language/storage backends built with automated workflows in mind) are:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

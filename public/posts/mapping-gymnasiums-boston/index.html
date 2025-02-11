@@ -6,16 +6,20 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Mapping Gymnasiums in Boston, 1914-1924 (A Visualization for Clio 3)" />
-<meta property="og:description" content="Mapping Gymnasiums in Boston In 1889 Josiah Quincey was elected Mayor of Boston. Throughout his term as mayor he implemented a new system of municipal baths and gymnasiums in the city designed to encourage moral behavior, hygiene, foster community, and encourage exercise for the cities residents. These gymnasiums, although open to all residents, were placed largely in immigrant heavy neighborhoods and reflected a focus on physical culture that was reminiscent of life in Eastern Europe." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/mapping-gymnasiums-boston/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2014-12-09T22:13:24+00:00" />
-<meta property="article:modified_time" content="2014-12-09T22:13:24+00:00" />
+<meta property="og:url" content="http://localhost:1313/posts/mapping-gymnasiums-boston/">
+  <meta property="og:site_name" content="Amanda Regan">
+  <meta property="og:title" content="Mapping Gymnasiums in Boston, 1914-1924 (A Visualization for Clio 3)">
+  <meta property="og:description" content="Mapping Gymnasiums in Boston In 1889 Josiah Quincey was elected Mayor of Boston. Throughout his term as mayor he implemented a new system of municipal baths and gymnasiums in the city designed to encourage moral behavior, hygiene, foster community, and encourage exercise for the cities residents. These gymnasiums, although open to all residents, were placed largely in immigrant heavy neighborhoods and reflected a focus on physical culture that was reminiscent of life in Eastern Europe. This visualization shows the location of each municipal and private gymnasium in Boston between 1914 and 1925 and provides some information about the ward that these gymnasiums existed in. Clicking on the public gymnasiums (teal circles) or the private gymnasiums (dark blue circles) pulls up relevant information about the ward the gymnasium was located in. The size of the public gymnasiums corresponds to the total attendance in each year and clicking on a public gymnasium populates a pie chart with the breakdown of class attendance at that gym.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2014-12-09T22:13:24+00:00">
+    <meta property="article:modified_time" content="2014-12-09T22:13:24+00:00">
 
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Mapping Gymnasiums in Boston, 1914-1924 (A Visualization for Clio 3)"/>
-<meta name="twitter:description" content="Mapping Gymnasiums in Boston In 1889 Josiah Quincey was elected Mayor of Boston. Throughout his term as mayor he implemented a new system of municipal baths and gymnasiums in the city designed to encourage moral behavior, hygiene, foster community, and encourage exercise for the cities residents. These gymnasiums, although open to all residents, were placed largely in immigrant heavy neighborhoods and reflected a focus on physical culture that was reminiscent of life in Eastern Europe."/>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mapping Gymnasiums in Boston, 1914-1924 (A Visualization for Clio 3)">
+  <meta name="twitter:description" content="Mapping Gymnasiums in Boston In 1889 Josiah Quincey was elected Mayor of Boston. Throughout his term as mayor he implemented a new system of municipal baths and gymnasiums in the city designed to encourage moral behavior, hygiene, foster community, and encourage exercise for the cities residents. These gymnasiums, although open to all residents, were placed largely in immigrant heavy neighborhoods and reflected a focus on physical culture that was reminiscent of life in Eastern Europe. This visualization shows the location of each municipal and private gymnasium in Boston between 1914 and 1925 and provides some information about the ward that these gymnasiums existed in. Clicking on the public gymnasiums (teal circles) or the private gymnasiums (dark blue circles) pulls up relevant information about the ward the gymnasium was located in. The size of the public gymnasiums corresponds to the total attendance in each year and clicking on a public gymnasium populates a pie chart with the breakdown of class attendance at that gym.">
 
 
 
@@ -32,7 +36,6 @@
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link href='/css/style.css' rel="stylesheet">
 
-  
   <script defer data-domain="amanda-regan.com" src="https://plausible.io/js/script.js"></script>
   
 </head>
@@ -114,15 +117,15 @@
     <hr>
 </header>
 <article class="blog-post">
-    <figure><img src="/images/Screenshot-2014-12-09-17.06.27.png" height="400"/><figcaption>
-            <h4>Mapping Gymnasiums in Boston</h4>
-        </figcaption>
+    <figure><img src="/images/Screenshot-2014-12-09-17.06.27.png" height="400"><figcaption>
+      <h4>Mapping Gymnasiums in Boston</h4>
+    </figcaption>
 </figure>
 
 <p>In 1889 Josiah Quincey was elected Mayor of Boston.  Throughout his term as mayor he implemented a new system of municipal baths and gymnasiums in the city designed to encourage moral behavior, hygiene, foster community, and encourage exercise for the cities residents.  These gymnasiums, although open to all residents, were placed largely in immigrant heavy neighborhoods and reflected a focus on physical culture that was reminiscent of life in Eastern Europe.  <a href="http://www.amanda-regan.com/Clio3-Final/">This visualization</a> shows the location of each municipal and private gymnasium in Boston between 1914 and 1925 and provides some information about the ward that these gymnasiums existed in.  Clicking on the public gymnasiums (teal circles) or the private gymnasiums (dark blue circles) pulls up relevant information about the ward the gymnasium was located in.  The size of the public gymnasiums corresponds to the total attendance in each year and clicking on a public gymnasium populates a pie chart with the breakdown of class attendance at that gym.</p>
-<figure><img src="/images/Screen-Shot-2014-12-08-at-6.34.45-AM.png"/><figcaption>
-            <h4>An image of the shapefile overlayed on top of the historical map in QGIS.</h4>
-        </figcaption>
+<figure><img src="/images/Screen-Shot-2014-12-08-at-6.34.45-AM.png"><figcaption>
+      <h4>An image of the shapefile overlayed on top of the historical map in QGIS.</h4>
+    </figcaption>
 </figure>
 
 <p>The data for this visualization came from three sources.  First, the map itself was created using the Javascript visualization library D3.  The shape file used to generate the map was created from a historic map digitized and available through the Boston Public Library.  Using QGIS the map was geo-referenced and then traced to create a shape containing all the wards in Boston. For more information on the process of creating this shape see my blog post. Second, the locations of the public gymnasiums as well as the attendance data came from the <a href="http://catalog.hathitrust.org/Record/001506575">Report of the Boston Parks Department</a>. The private gymnasium locations were pull from Boston city directories.  Lastly, the demographic data about each ward draws from sampled 1910 census data that is available through the <a href="https://www.ipums.org/">Integrated Public Use Microdata Set</a> (IPUMS). The correlation between the location of gymnasiums and demographics about the ward is, admittedly, a jump.  The demographics of the ward where a gymnasium is located is not necessarily indicative of who may have attended this gym.  This visualization is, however, a starting point for a future research project.</p>

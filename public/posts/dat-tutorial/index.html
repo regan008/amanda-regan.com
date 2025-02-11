@@ -6,16 +6,20 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Dat Tutorial" />
-<meta property="og:description" content="What is Dat? Dat is a set of tools used to “build and share data pipelines.” Dat was created with the goal of bringing “to data a style of collaboration similar to what git brings to source code.” The project, developed by Max Ogden, is designed to allow not only easy data sharing but also row by row version tracking. The five key features of Dat’s tools [(as described by Dat’s GitHub page)](make%20data syncable." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/dat-tutorial/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2014-09-30T02:54:05+00:00" />
-<meta property="article:modified_time" content="2014-09-30T02:54:05+00:00" />
+<meta property="og:url" content="http://localhost:1313/posts/dat-tutorial/">
+  <meta property="og:site_name" content="Amanda Regan">
+  <meta property="og:title" content="Dat Tutorial">
+  <meta property="og:description" content="What is Dat? Dat is a set of tools used to “build and share data pipelines.” Dat was created with the goal of bringing “to data a style of collaboration similar to what git brings to source code.” The project, developed by Max Ogden, is designed to allow not only easy data sharing but also row by row version tracking. The five key features of Dat’s tools [(as described by Dat’s GitHub page)](make%20data syncable. automatic sync and updates of data sets data sets can be very large (billions of rows or terabytes in size) and/or updated frequently (real time data) data can be either tabular (rows &amp; cells) or blobs (large files and/or unstructured) plugin APIs to connect dat to any existing database/format/language/storage backends built with automated workflows in mind) are:">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2014-09-30T02:54:05+00:00">
+    <meta property="article:modified_time" content="2014-09-30T02:54:05+00:00">
 
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Dat Tutorial"/>
-<meta name="twitter:description" content="What is Dat? Dat is a set of tools used to “build and share data pipelines.” Dat was created with the goal of bringing “to data a style of collaboration similar to what git brings to source code.” The project, developed by Max Ogden, is designed to allow not only easy data sharing but also row by row version tracking. The five key features of Dat’s tools [(as described by Dat’s GitHub page)](make%20data syncable."/>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Dat Tutorial">
+  <meta name="twitter:description" content="What is Dat? Dat is a set of tools used to “build and share data pipelines.” Dat was created with the goal of bringing “to data a style of collaboration similar to what git brings to source code.” The project, developed by Max Ogden, is designed to allow not only easy data sharing but also row by row version tracking. The five key features of Dat’s tools [(as described by Dat’s GitHub page)](make%20data syncable. automatic sync and updates of data sets data sets can be very large (billions of rows or terabytes in size) and/or updated frequently (real time data) data can be either tabular (rows &amp; cells) or blobs (large files and/or unstructured) plugin APIs to connect dat to any existing database/format/language/storage backends built with automated workflows in mind) are:">
 
 
 
@@ -32,7 +36,6 @@
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link href='/css/style.css' rel="stylesheet">
 
-  
   <script defer data-domain="amanda-regan.com" src="https://plausible.io/js/script.js"></script>
   
 </head>
@@ -135,7 +138,7 @@
 </ul>
 <p>This tutorial will walk through the basics of using dat for creating and managing a data set. We’ll begin with a simple dataset, then we’ll import the data into a new dat store, view the data, make changes, add new data, and view version history.  We’ll be working with dat on our local machine but keep in mind that Dat can also be deployed on a server to facilitate data sharing. Starting with just the basics of Dat showcases the tools potential and hopefully will be helpful for anybody creating large datasets by hand for class.</p>
 <h2 id="dat-for-digital-historians">Dat for Digital Historians</h2>
-<p><img alt="dat-hex-2" src="http://www.amanda-regan.com/wp-content/uploads/2014/09/dat-hex-2.png"></p>
+<p><img src="http://www.amanda-regan.com/wp-content/uploads/2014/09/dat-hex-2.png" alt="dat-hex-2"></p>
 <p>I think Dat has the potential to be useful and for historians in several ways.  First, I think it’s useful to verify and keep track of the history of historical data sets. Because Dat allows you to track the version history, its easy to go through and verify the data.  Secondly, Dat is designed to allow data syncing.  So in theory, if you were collaborating with someone on creating a data set it would be possible to only sync the data that has changed since the last time you synced.  I think this has the potential to make collaborating and creating large datasets an easier and verifiable practice.  Max Ogden originally designed dat to be useful for Governments or large organizations who often make data available on their website in one massive csv file.  When it changes, you then have to go back in and redownload the csv, figure out whats new, and redo any formatting, reshaping, or calculations.  The goal of dat is to make that process easier by allowing the syncing of only the data that has changed.  Historical data doesn’t change very often but if you’re collecting data from various locations or sources I think Dat could be very useful.  If you’re interested you can read more about the history of dat and Ogden’s vision <a href="http://www.wired.com/2014/08/dat/">here</a>.</p>
 <h2 id="get-the-data">Get the Data</h2>
 <p>I’ve uploaded a GitHub repository that has some data for this tutorial. You can clone this repository so you can follow along with the data I’ve provided or you can use your own data. To clone the data run this in the terminal:</p>
@@ -177,21 +180,21 @@ dat init`
 <p>Both commands do the same thing just in a slightly different way. The second command uses a pipe to direct the output of <code>cat BostonGyms.csv</code> into dat. When data is added Dat assigns each row of the csv a key and a version number. The key is a unique identifier that we can use to reference the row later. The version number is automatically updated every time a change is made to that row.</p>
 <h3 id="viewing-data-in-the-dat-gui">Viewing Data in the Dat GUI</h3>
 <p>Now that our data is stored in dat it would be useful to be able to view it. To view the data we can launch the Dat GUI by running <code>dat listen</code> in the terminal. This command returns a message that says “Listening on port xxxx. (In my case port 6461 but change it to whatever is printed in your terminal.) What this means is that Dat has started a new local webserver on our computer and if we navigate to localhost:6461 in a web browser we’ll see the Dat GUI. This interface, built on the LevelUp Database, allows us to interact with the data like we would a database.</p>
-<figure><img src="/images/Screen-Shot-2014-09-28-at-4.58.01-PM.png"/><figcaption>
-            <h4>Dat’s Graphical User Interface (GUI)</h4>
-        </figcaption>
+<figure><img src="/images/Screen-Shot-2014-09-28-at-4.58.01-PM.png"><figcaption>
+      <h4>Dat’s Graphical User Interface (GUI)</h4>
+    </figcaption>
 </figure>
 
 <p>In this interface we can update any cell by clicking on the green edit button that appears when hovering over it. If we make a change to any cell and click update, Dat will store a new version of that row and change the version number to 2. Notice that the row’s version number changes but the key doesn’t.</p>
-<figure><img src="/images/Screen-Shot-2014-09-28-at-4.58.12-PM.png"/><figcaption>
-            <h4>Editing an individual cell</h4>
-        </figcaption>
+<figure><img src="/images/Screen-Shot-2014-09-28-at-4.58.12-PM.png"><figcaption>
+      <h4>Editing an individual cell</h4>
+    </figcaption>
 </figure>
 
 <p>Clicking on the icon in the far left cell brings up a Row summary with each column name, corresponding value, and an option to upload a Blob. A “Blob” is simply an attached file. Here we could upload a file that relates to the data in a particular row. Dat will store the metadata for the file and any changes to to it in the database but will not store changes to the contents of the file.</p>
-<figure><img src="/images/Screen-Shot-2014-09-28-at-5.43.11-PM.png"/><figcaption>
-            <h4>The ‘Inspect Row’ dialog box. Here you can view a summary of the data in the row and attach a Blob (a file).</h4>
-        </figcaption>
+<figure><img src="/images/Screen-Shot-2014-09-28-at-5.43.11-PM.png"><figcaption>
+      <h4>The ‘Inspect Row’ dialog box. Here you can view a summary of the data in the row and attach a Blob (a file).</h4>
+    </figcaption>
 </figure>
 
 <h3 id="viewing-data-via-the-rest-api">Viewing Data via the REST API</h3>
@@ -223,9 +226,9 @@ dat init`
 <pre><code>`echo '{“name”: “Dover-street Bath-house”, “month”: “March”, “Year”: 1913, “males”:10150, “females”: 2591}' | dat import --json`
 </code></pre>
 <p>That’s useful but it might be better to import more than one line at once. We can do this by streaming in a file of line separated JSON. The file BostonGyms.json contains some data we haven’t added. The json looks like this:</p>
-<figure><img src="/images/Screen-Shot-2014-09-28-at-5.11.21-PM.png"/><figcaption>
-            <h4>Data formatted as Line Separated JSON</h4>
-        </figcaption>
+<figure><img src="/images/Screen-Shot-2014-09-28-at-5.11.21-PM.png"><figcaption>
+      <h4>Data formatted as Line Separated JSON</h4>
+    </figcaption>
 </figure>
 
 <p>To pipe it into our dat database we can run: <code>cat BostonGyms.json | dat import --json</code></p>

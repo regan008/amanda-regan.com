@@ -21,7 +21,6 @@
   <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
   {{ end -}}
 
-  {{ template "_internal/google_analytics_async.html" . }}
   <script defer data-domain="amanda-regan.com" src="https://plausible.io/js/script.js"></script>
   {{ partial "head-custom.html" . }}
 </head>

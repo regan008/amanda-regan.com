@@ -3,15 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/courses/</loc>
-    <lastmod>2024-09-24T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/courses/8500spring25/</loc>
-    <lastmod>2024-09-24T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/courses/1020spring24/</loc>
-    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/courses/3890spring24/</loc>
     <lastmod>2024-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/courses/8510spring24/</loc>
@@ -25,12 +22,6 @@
   </url><url>
     <loc>http://localhost:1313/office-hours/</loc>
     <lastmod>2023-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/courses/3180fall23/</loc>
-    <lastmod>2023-07-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/courses/3890fall23/</loc>
-    <lastmod>2023-07-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/courses/8550fall23/</loc>
     <lastmod>2023-07-20T00:00:00+00:00</lastmod>
@@ -62,14 +53,8 @@
     <loc>http://localhost:1313/courses/3050fall22/</loc>
     <lastmod>2022-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/courses/3180fall22/</loc>
-    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/courses/1010spring22/</loc>
     <lastmod>2022-01-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/courses/3890spring22/</loc>
-    <lastmod>2022-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/courses/computationalhistory/</loc>
     <lastmod>2022-01-07T00:00:00+00:00</lastmod>
@@ -100,9 +85,6 @@
   </url><url>
     <loc>http://localhost:1313/projects/rrchnm20/</loc>
     <lastmod>2021-10-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/usmdemo/</loc>
-    <lastmod>2021-02-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfoliooooo/</loc>
     <lastmod>2019-10-30T00:00:00+00:00</lastmod>

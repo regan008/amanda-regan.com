@@ -4,7 +4,7 @@
     <title>Resources on Amanda Regan</title>
     <link>http://localhost:1313/resources/</link>
     <description>Recent content in Resources on Amanda Regan</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/resources/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>http://localhost:1313/resources/notes-template/</link>
       <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/resources/notes-template/</guid>
-      <description>If you are in a Ph.D. program, you are training to be a professional historian. As part of that training you will build a base of knowledge and familiarity with key works of historical scholarship in your field. Its a good idea to develop a system early in your career for taking notes and keeping track of everything you&amp;rsquo;ve read. You never know when you&amp;rsquo;ll need to come back to a book.</description>
+      <description>&lt;p&gt;If you are in a Ph.D. program, you are training to be a professional historian. As part of that training you will build a base of knowledge and familiarity with key works of historical scholarship in your field. Its a good idea to develop a system early in your career for taking notes and keeping track of everything you&amp;rsquo;ve read. You never know when you&amp;rsquo;ll need to come back to a book.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Annotated Syllabi Guidelines for Ph.D. Students</title>
       <link>http://localhost:1313/resources/annotated-syllabi-guidelines/</link>
       <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/resources/annotated-syllabi-guidelines/</guid>
-      <description>Students in the Digital History Ph.D. program at Clemson University prepare comprehensive portfolios in lieu of a traditional comprehensive exam. A component of that portfolio includes annotated syllabi for each of the three fields. The exact topics and breakdown of those 3 syllabi should be discussed with your advisory committee during your Portfolio Plan meeting which typically is filled out the semester before you prepare and defend your portfolio.&#xA;Please note that these are Dr.</description>
+      <description>&lt;p&gt;Students in the Digital History Ph.D. program at Clemson University prepare comprehensive portfolios in lieu of a traditional comprehensive exam. A component of that portfolio includes annotated syllabi for each of the three fields. The exact topics and breakdown of those 3 syllabi should be discussed with your advisory committee during your Portfolio Plan meeting which typically is filled out the semester before you prepare and defend your portfolio.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Please note that these are Dr. Regan’s guidelines for annotated syllabi. If you are not preparing a portfolio for Dr. Regan you should check with your advisory committee about standards and guidelines for the annotated syllabi.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -6,14 +6,15 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/posts/" />
+<meta property="og:url" content="http://localhost:1313/posts/">
+  <meta property="og:site_name" content="Amanda Regan">
+  <meta property="og:title" content="Posts">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
 
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content=""/>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Posts">
 
 
 
@@ -31,7 +32,6 @@
   <link href='/css/style.css' rel="stylesheet">
 
   <link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/posts/index.xml">
-  
   <script defer data-domain="amanda-regan.com" src="https://plausible.io/js/script.js"></script>
   
 </head>
@@ -151,8 +151,8 @@
 
 
     </header>
-    This post is the third in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post can be found on the Digital History Fellowship Blog.
-In our previous post, we described the process of writing a python script that pulled from the THATCamp MySQL Database. In this post, we will continue with this project and work to clean up the data we&rsquo;ve collected and prepare it for some analysis.
+    <p><strong>This post is the third in a set of 5 written by the <a href="http://chnm.gmu.edu/courses/fellowship/?page_id=11">Digital History Fellows</a> at the <a href="http://chnm.gmu.edu/">Roy Rosenzweig Center for History and New Media</a>. The original post can be found on the <a href="http://chnm.gmu.edu/courses/fellowship/">Digital History Fellowship Blog</a>.</strong></p>
+<p>In our previous <a href="http://chnm.gmu.edu/courses/fellowship/?p=439">post</a>, we described the process of writing a python script that pulled from the THATCamp MySQL Database. In this post, we will continue with this project and work to clean up the data we&rsquo;ve collected and prepare it for some analysis. This process is known as &ldquo;pre-processing&rdquo;. After running our script in the THATCamp database all of the posts were collected and saved as text files. At this stage, the files are filled with extraneous information relating to the structure of the posts. Most of these are tags and metadata that would disrupt any attempts to look across the dataset. Our task here was to clean them up so they could be fed into MALLET. In order to do this, we needed to strip the html tags, remove punctuation, and remove common stopwords. To do this, we used chunks of code from the <a href="http://programminghistorian.org/lessons/from-html-to-list-of-words-1">Programming Historian&rsquo;s lesson on text analysis</a> with python and modified the code to work with the files we had already downloaded.</p>
     
     <p></p>
     <a href="/posts/pre-processing-text-mallet/"></a>
@@ -194,7 +194,7 @@ In our previous post, we described the process of writing a python script that p
 
 
     </header>
-    The reading for this week in _Thinking with Type _about grids was extremely interesting to me. The section about tables and grids in html particularly peaked my interest. I think the hardest part of html and css is learning layout but I think a grid makes the whole idea of layout easier to understand. I&rsquo;ve always used grids when I code, particularly I like the 960 grid system which makes layout very easy and allows you to work of a variety of grid layouts.
+    <p>The reading for this week in _Thinking with Type _about grids was extremely interesting to me.  The section about tables and grids in html particularly peaked my interest.  I think the hardest part of html and css is learning layout but I think a grid makes the whole idea of layout easier to understand.  I&rsquo;ve always used grids when I code, particularly I like the <a href="http://960.gs">960 grid system</a> which makes layout very easy and allows you to work of a variety of grid layouts.</p>
     
     <p></p>
     <a href="/posts/design-using-grid/"></a>
@@ -247,8 +247,8 @@ In our previous post, we described the process of writing a python script that p
 
 
     </header>
-    This post is the second in a set of 4 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post can be found on the Digital History Fellowship Blog.
-This week we&rsquo;ve continued to work on building a python script that will extract all of the blog posts from the various THATCamp websites. As Jannelle described last week, our goal was to write a script that downloads the blog posts in plain text form and strips all of the html tags, stopwords, and punctuation so that we can feed it into MALLET for topic modeling and text analysis.
+    <p><strong>This post is the second in a set of 4 written by the <a href="http://chnm.gmu.edu/courses/fellowship/?page_id=11">Digital History Fellows</a> at the <a href="http://chnm.gmu.edu/">Roy Rosenzweig Center for History and New Media</a>. The original post can be found on the <a href="http://chnm.gmu.edu/courses/fellowship/">Digital History Fellowship Blog</a>.</strong></p>
+<p>This week we&rsquo;ve continued to work on building a python script that will extract all of the blog posts from the various THATCamp websites. As <a href="http://chnm.gmu.edu/courses/fellowship/?p=421">Jannelle described last week</a>, our goal was to write a script that downloads the blog posts in plain text form and strips all of the html tags, stopwords, and punctuation so that we can feed it into MALLET for topic modeling and text analysis. After several long days and a lot of help from second year fellow Spencer Roberts, we&rsquo;ve successfully gotten the code to work.</p>
     
     <p></p>
     <a href="/posts/extracting-data-python-mysql/"></a>

@@ -6,18 +6,23 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="THATCamp Topic Modeling Results" />
-<meta property="og:description" content="This post is the last in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post, which was collectively written by the DH Fellows, can be found on our Digital History Fellowship Blog.
-We have spent the last few weeks working to build a python script that would allow us to download and prep all of the THATCamp blog posts for topic modeling in MALLET (for those catching up, we detailed this process in a series of previous posts)." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/thatcamp-topic-modeling-results/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2014-02-26T14:30:57+00:00" />
-<meta property="article:modified_time" content="2014-02-26T14:30:57+00:00" />
+<meta property="og:url" content="http://localhost:1313/posts/thatcamp-topic-modeling-results/">
+  <meta property="og:site_name" content="Amanda Regan">
+  <meta property="og:title" content="THATCamp Topic Modeling Results">
+  <meta property="og:description" content="This post is the last in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post, which was collectively written by the DH Fellows, can be found on our Digital History Fellowship Blog.
+We have spent the last few weeks working to build a python script that would allow us to download and prep all of the THATCamp blog posts for topic modeling in MALLET (for those catching up, we detailed this process in a series of previous posts). As our last post detailed, we encountered a few more complications than expected due to foreign languages in the corpus of the text. After some discussion, we worked through these issues and were able to add stoplists to the script for German, French, and Spanish. Although this didn’t solve all of our issues and some terms do still show up (we didn’t realize there was Dutch too), it led to some interesting discussion about the methodology behind topic modeling. Finally we were able to rerun the python script with the new stopwords and then feed this new data into MALLET.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2014-02-26T14:30:57+00:00">
+    <meta property="article:modified_time" content="2014-02-26T14:30:57+00:00">
+    <meta property="article:tag" content="Hacking-That-Camps-Yack">
 
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="THATCamp Topic Modeling Results"/>
-<meta name="twitter:description" content="This post is the last in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post, which was collectively written by the DH Fellows, can be found on our Digital History Fellowship Blog.
-We have spent the last few weeks working to build a python script that would allow us to download and prep all of the THATCamp blog posts for topic modeling in MALLET (for those catching up, we detailed this process in a series of previous posts)."/>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="THATCamp Topic Modeling Results">
+  <meta name="twitter:description" content="This post is the last in a set of 5 written by the Digital History Fellows at the Roy Rosenzweig Center for History and New Media. The original post, which was collectively written by the DH Fellows, can be found on our Digital History Fellowship Blog.
+We have spent the last few weeks working to build a python script that would allow us to download and prep all of the THATCamp blog posts for topic modeling in MALLET (for those catching up, we detailed this process in a series of previous posts). As our last post detailed, we encountered a few more complications than expected due to foreign languages in the corpus of the text. After some discussion, we worked through these issues and were able to add stoplists to the script for German, French, and Spanish. Although this didn’t solve all of our issues and some terms do still show up (we didn’t realize there was Dutch too), it led to some interesting discussion about the methodology behind topic modeling. Finally we were able to rerun the python script with the new stopwords and then feed this new data into MALLET.">
 
 
 
@@ -34,7 +39,6 @@ We have spent the last few weeks working to build a python script that would all
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link href='/css/style.css' rel="stylesheet">
 
-  
   <script defer data-domain="amanda-regan.com" src="https://plausible.io/js/script.js"></script>
   
 </head>
@@ -208,28 +212,28 @@ We have spent the last few weeks working to build a python script that would all
 </li>
 </ol>
 <p>Utilizing these larger categories, we were able to create several charts that demonstrate the changes over time with the THATCamps. The charts are available below; you’ll note that we have graphed them using percentages. The percentages that appear represent the number of times that topic occurred within the posts at that camp.</p>
-<p>[caption id=&ldquo;attachment_489&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;584&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.27.42-PM.png"><img alt="Chart of Topics Overall" src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.27.42-PM-1024x780.png"></a> Topics Overall[/caption]</p>
+<p>[caption id=&ldquo;attachment_489&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;584&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.27.42-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.27.42-PM-1024x780.png" alt="Chart of Topics Overall"></a> Topics Overall[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>[caption id=&ldquo;attachment_504&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.16-PM.png"><img alt="Chart of the topic Accessibility." src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.16-PM-150x150.png"></a> Topics relating to Accessibility[/caption]</p>
+<p>[caption id=&ldquo;attachment_504&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.16-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.16-PM-150x150.png" alt="Chart of the topic Accessibility."></a> Topics relating to Accessibility[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>[caption id=&ldquo;attachment_503&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.27-PM.png"><img alt="Graph of the Community Topic" src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.27-PM-150x150.png"></a> Topics relating to Community[/caption]</p>
+<p>[caption id=&ldquo;attachment_503&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.27-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.27-PM-150x150.png" alt="Graph of the Community Topic"></a> Topics relating to Community[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>[caption id=&ldquo;attachment_502&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.35-PM.png"><img alt="Graph of the THATCamp Structure Topics" src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.35-PM-150x150.png"></a> Topics relating to THATCamp Structure[/caption]</p>
+<p>[caption id=&ldquo;attachment_502&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.35-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.35-PM-150x150.png" alt="Graph of the THATCamp Structure Topics"></a> Topics relating to THATCamp Structure[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>[caption id=&ldquo;attachment_501&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.47-PM.png"><img alt="Graph of topics relating to Pedagogy" src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.47-PM-150x150.png"></a> Topics relating to Pedagogy[/caption]</p>
+<p>[caption id=&ldquo;attachment_501&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.47-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.47-PM-150x150.png" alt="Graph of topics relating to Pedagogy"></a> Topics relating to Pedagogy[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>[caption id=&ldquo;attachment_500&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.56-PM.png"><img alt="Graph of topics relating to Public Digital Humanities" src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.56-PM-150x150.png"></a> Topics relating to Public Digital Humanities[/caption]</p>
+<p>[caption id=&ldquo;attachment_500&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.56-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.52.56-PM-150x150.png" alt="Graph of topics relating to Public Digital Humanities"></a> Topics relating to Public Digital Humanities[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>[caption id=&ldquo;attachment_499&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.04-PM.png"><img alt="Graph of topics relating to building in the humanities." src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.04-PM-150x150.png"></a> Topics relating to Building[/caption]</p>
+<p>[caption id=&ldquo;attachment_499&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.04-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.04-PM-150x150.png" alt="Graph of topics relating to building in the humanities."></a> Topics relating to Building[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>[caption id=&ldquo;attachment_498&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.13-PM.png"><img alt="Topics relating to the international influence of THATCamp." src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.13-PM-150x150.png"></a> International Digital Humanities[/caption]</p>
+<p>[caption id=&ldquo;attachment_498&rdquo; align=&ldquo;alignleft&rdquo; width=&ldquo;150&rdquo;]<a href="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.13-PM.png"><img src="http://chnm.gmu.edu/courses/fellowship/wp-content/uploads/2014/02/Screen-Shot-2014-02-20-at-5.53.13-PM-150x150.png" alt="Topics relating to the international influence of THATCamp."></a> International Digital Humanities[/caption]</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
@@ -237,7 +241,7 @@ We have spent the last few weeks working to build a python script that would all
 <p>If you’re interested in the data, you can view the various files here:</p>
 <ul>
 <li>
-<p><a href="https://docs.google.com/spreadsheet/ccc?key=0AsGU0Xg7inL5dEQ2M2FjRXdNSGhJdG9xb0dJb3hOZ2c&usp=sharing">Averages for each year and the overall chart </a>(Google Spreadsheet)</p>
+<p><a href="https://docs.google.com/spreadsheet/ccc?key=0AsGU0Xg7inL5dEQ2M2FjRXdNSGhJdG9xb0dJb3hOZ2c&amp;usp=sharing">Averages for each year and the overall chart </a>(Google Spreadsheet)</p>
 </li>
 <li>
 <p>[Data for each individual camp and charts by grouping](Screen Shot 2014-02-20 at 5.53.13 PM Screen Shot 2014-02-20 at 5.53.04 PM Screen Shot 2014-02-20 at 5.52.56 PM Screen Shot 2014-02-20 at 5.52.47 PM Screen Shot 2014-02-20 at 5.52.35 PM Screen Shot 2014-02-20 at 5.52.27 PM Screen Shot 2014-02-20 at 5.52.16 PM) (Google Spreadsheet)</p>
