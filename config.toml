@@ -4,8 +4,8 @@ languageCode = "en-us"
 defaultContentLanguage = "en"
 
 # Pagination
-paginate = 3
-paginatePath = "page"
+pagination.pagerSize = 3
+pagination.path = "page"
 
 # Theme to use
 theme = "hugo-bootstrap-5"
@@ -13,6 +13,8 @@ theme = "hugo-bootstrap-5"
 [taxonomies]
   tag = "tags"
   category = "categories"
+
+summaryLength = 10
 
 # Google analytics
 # googleAnalytics = ""

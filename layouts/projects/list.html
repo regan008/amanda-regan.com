@@ -32,7 +32,7 @@
     {{ if isset .Params "role" }}
     <p class="project-role"><i>{{.Params.role}}</i></p>
     {{ end }}
-    <p>{{ .Render "summary" }}</p>
+    <p>{{ .Summary | plainify }}</p>
     <a type="button" href="{{ .Permalink }}" class="btn btn-sm btn-outline-primary">Read More</a>
     {{ if isset .Params "projectlink" }}
     <a type="button" class="btn btn-sm btn-outline-primary" href="{{.Params.projectlink}}" target="_blank">View Project</a>
@@ -45,16 +45,7 @@
 </div>
 </div>
 </div>
-                 <!-- <div class="panel-body">
-                   <p class="card-text">{{ .Description | plainify | truncate 250 }}</p>
-                   <div class="read-more-button">
-                  {{ if isset .Params "affiliate" }}
-                   <a href="{{ .Params.affiliatelink }}" target="_blank" class="btn btn-primary" type="button">Read More</a>
-                  {{else}}
-                   <a href="{{ .Permalink }}" class="btn btn-primary" type="button">Read More</a>
-                  {{end}}
-                   </div>
-                 </div> -->
+
                </div>
 
 
