@@ -15,6 +15,4 @@ Previously, I was a Digital Humanities Postdoctoral Fellow at Southern Methodist
 
 I am currently working on a book manuscript entitled, _Shaping Up: Physical Fitness for Women 1880-1965_, which examines why the fitness of female bodies was a matter of national concern and interest throughout the twentieth century. It is under contract with the University of Virginia Press.
 
-I am also the co-director of [Mapping the Gay Guides](http://www.mappingthegayguides.org), an NEH funded digital mapping project that draws on Bob Damron’s Address Books, a prolific set of travel guides that became almost survival guides to gay and queer travelers across the United States in the last three decades of the twentieth century. Much like the Green Books of the 1950s and 1960s, which African Americans used to find friendly businesses that would cater to black citizens in the era of Jim Crow apartheid, Damron’s guidebooks aided a generation of queer people in identifying sites of community. Our research team has begun turning the thousands of listings within the guides into usable, functioning data to allow researchers to make connections between historical queer communities.
-
 You can view my [digital projects here](/projects) or view my code on [GitHub](http://www.github.com/regan008). I can be reached by email at aeregan (at) clemson.edu.
