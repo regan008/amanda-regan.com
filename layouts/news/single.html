@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="grid grid-cols-12">
+    <div class="col-span-10 col-start-2">
+        <article class="prose prose-base prose-p:leading-relaxed prose-li:leading-relaxed prose-headings:font-heading prose-headings:text-primary prose-h1:text-4xl prose-h2:text-2xl prose-h2:text-secondary prose-p:text-secondary prose-a:text-accent hover:prose-a:text-accent/80 lg:prose-xl prose-img:my-0 max-w-none">
+            <div class="text-sm text-secondary mb-4">{{ .Date.Format "January 2, 2006" }}</div>
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </article>
+        <div class="mt-8">
+            <a href="/news" class="text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 rotate-180" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                </svg>
+                Back to news
+            </a>
+        </div>
+    </div>
+</div>
+{{ end }} 

@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div class="grid grid-cols-12">
+    <div class="col-span-10 col-start-2">
+        <article class="prose prose-base prose-p:leading-relaxed prose-li:leading-relaxed prose-headings:font-heading prose-headings:text-primary prose-h1:text-4xl prose-h2:text-2xl prose-h2:text-secondary prose-p:text-secondary prose-a:text-accent hover:prose-a:text-accent/80 lg:prose-xl prose-img:my-0 max-w-none">
+            {{ .Content }}
+        </article>
+    </div>
+</div>
+
+<div class="w-full bg-base-200 mt-12">
+    <div class="grid grid-cols-12">
+        <div class="col-span-10 col-start-2 py-8">
+            <h2 class="text-2xl font-heading font-semibold text-white mb-6">News</h2>
+            <div class="space-y-4">
+                {{ range first 3 (where .Site.RegularPages "Section" "news") }}
+                <div class="flex gap-4 w-full p-4 rounded-lg bg-base-300 hover:bg-base-300/80 transition-colors duration-200">
+                    <div class="text-sm text-white min-w-[120px]">{{ .Date.Format "January 2, 2006" }}</div>
+                    <div class="flex flex-col flex-grow min-w-0">
+                        <div class="text-xl font-heading font-medium text-white">{{ .Title }}</div>
+                        <div class="text-base text-white/80 [&_a]:text-white [&_a:hover]:text-white/80 [&_a]:underline">
+                            {{ .Content }}
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+            {{ if gt (len (where .Site.RegularPages "Section" "news")) 3 }}
+            <div class="mt-6 text-right">
+                <a href="/news" class="text-white hover:text-white/80 transition-colors inline-flex items-center gap-2">
+                    View all news
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }} 

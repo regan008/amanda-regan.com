@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="grid grid-cols-12">
+    <div class="col-span-10 col-start-2">
+        <h1 class="text-4xl font-heading font-semibold text-primary mb-12">News</h1>
+        <div class="space-y-4">
+            {{ range .Pages.ByDate.Reverse }}
+            <div class="flex gap-4 w-full p-4 rounded-lg bg-base-100/50 hover:bg-base-100 transition-colors duration-200 border border-base-200">
+                <div class="text-sm text-secondary min-w-[120px]">{{ .Date.Format "January 2, 2006" }}</div>
+                <div class="flex flex-col flex-grow min-w-0">
+                    <a href="{{ .RelPermalink }}" class="text-xl font-heading font-medium text-primary hover:text-accent transition-colors">{{ .Title }}</a>
+                    <div class="text-base text-secondary/80 [&_a]:text-accent [&_a:hover]:text-accent/80 [&_a]:underline">
+                        {{ .Content }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }} 

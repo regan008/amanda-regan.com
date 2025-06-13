@@ -1,0 +1,86 @@
+{{ define "main" }}
+<div class="grid grid-cols-12">
+    <div class="col-span-10 col-start-2">
+        <header class="mb-8">
+            <h2 class="text-3xl font-bold mb-2">
+                <a href="{{ .RelPermalink }}" class="text-base-content hover:text-primary">{{ .Title | markdownify }}</a>
+            </h2>
+            <h3 class="text-xl text-base-content/80">{{ .Params.subtitle }}</h3>
+        </header>
+
+        <article>
+            <div class="grid grid-cols-1 mb-8">
+                <img src="{{ .Params.coursebanner }}" alt="Course Banner" class="h-[250px] object-cover rounded-lg">
+            </div>
+
+            <div class="grid grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Course Details</h3>
+                    <p class="font-bold">
+                        {{ .Params.semester }}<br>
+                        {{ .Params.university }}<br>
+                        {{ .Params.meetingdays }}
+                    </p>
+
+                    <p>{{ .Params.extras }}</p>
+                    <p>
+                        {{ .Params.credithours }} credit hours.<br>
+                        {{ if .Params.section1num }}
+                        <span class="font-bold">Section {{ .Params.section1num }}:</span>
+                        {{ .Params.section1time }}<br>
+                        {{ else }}
+                        <span class="font-bold">Meets:</span>
+                        {{ .Params.section1time }}<br>
+                        {{ end }}
+                        {{ if .Params.section2num }}
+                        <span class="font-bold">Section {{ .Params.section2num }}:</span>
+                        {{ .Params.section2time }}<br>
+                        {{ end }}
+                        <span class="font-bold">Location:</span> {{ .Params.location }}
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Instructor Info</h3>
+                    <p>
+                        <span class="font-bold">Instructor:</span><br>
+                        Dr. Amanda Regan<br>
+                        aeregan (at) clemson.edu
+                    </p>
+
+                    <p>
+                        <span class="font-bold">Pronouns:</span> 
+                        <a href="https://www.mypronouns.org/she-her" class="text-accent hover:text-accent/80 underline">She/Her</a>
+                    </p>
+
+                    <p>
+                        <span class="font-bold">Office Location:</span><br>
+                        {{ .Params.officelocation }}
+                    </p>
+
+                    <p>
+                        <span class="font-bold">Office Hours:</span><br>
+                        {{ .Params.officehours }}
+                        <a href="{{ .Params.officehourslink }}" class="text-accent hover:text-accent/80 underline block">
+                            Make an appointment for Office Hours here.
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex justify-center mb-8 print:hidden">
+                <ul class="menu menu-horizontal bg-base-200 rounded-box">
+                    <li><a href="#course-overview" class="text-white hover:text-accent">Course Overview</a></li>
+                    <li><a href="#assignments--grades" class="text-white hover:text-accent">Assignments & Grading</a></li>
+                    <li><a href="#policies--procedures" class="text-white hover:text-accent">Course Policies</a></li>
+                    <li><a href="#schedule" class="text-white hover:text-accent">Schedule</a></li>
+                </ul>
+            </div>
+
+            <div class="prose prose-base max-w-none prose-headings:font-bold prose-h3:text-2xl prose-h4:text-xl prose-h5:text-lg prose-a:text-accent prose-a:underline hover:prose-a:text-accent/80 prose-p:leading-snug prose-li:leading-snug prose-ul:my-1 prose-ol:my-1 prose-li:my-0 prose-p:my-1">
+                {{ .Content }}
+            </div>
+        </article>
+    </div>
+</div>
+{{ end }} 

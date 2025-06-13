@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="grid grid-cols-12">
+    <div class="col-span-10 col-start-2">
+        <article class="prose prose-base prose-p:leading-relaxed prose-li:leading-relaxed prose-headings:text-custom-gray-900 prose-h1:text-4xl prose-h2:text-2xl prose-h2:text-custom-gray-800 prose-p:text-custom-gray-600 prose-a:text-accent prose-a:underline hover:prose-a:text-accent/80 lg:prose-xl prose-img:my-0 max-w-none">
+            <h1 class="text-4xl font-semibold mb-8">{{ .Title }}</h1>
+            {{ .Content }}
+        </article>
+    </div>
+</div>
+{{ end }} 

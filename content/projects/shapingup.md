@@ -1,0 +1,16 @@
+---
+title: "Shaping Up: Physical Fitness Initatives for Women, 1880-1965"
+author: "Amanda Regan"
+description: "Beginning in 1880 and ending during the Cold War, Shaping Up examines why the fitness of female bodies was a matter of national concern and interest. Under contract with the University of Virginia Press."
+projectType: "Book Manuscript"
+draft: FALSE
+lastmod: "2021-10-31"
+category: "projects"
+images: ["portfolio-shapingup.png"]
+img: "portfolio-shapingup.png"
+role: Book manuscript
+---
+
+Beginning in 1880 and ending during the Cold War, _Shaping Up_ examines why the fitness of female bodies was a matter of national concern and interest. It argues that the shape of the female body and the discourses surrounding it were frequently correlated with larger social, political and economic issues. While the definition of being “in shape” or acquiring “shapeliness” changed numerous times between 1880 and 1965, the patriarchal focus on developing fit female bodies remained a constant and served various economic, social, and political purposes. Whether spurred by fears about the increasing levels of  undesirable or “unfit” immigrants and their potential effect on the Anglo-Saxon race; a concern about mixed sex amusements in the modern city and the “excess energy” that drove working women to seek out such amusements; or the economic necessity of women’s participation in war work, which required fitness, but threatened gender hierarchies and the appeal of the female body for the male gaze, fitness was a tool in the repertoire of physical educators, reformers, and state actors who sought to shape behavior and inscribe their values onto the female body in reaction to social anxieties. Each chapter explores a moment when the fitness of the female body became an issue of national concern.
+
+_Shaping Up_ makes two important historiographical interventions. The first, seeks to challenge existing accounts of fitness culture which suggest that it began in earnest in the post-World War II period. Most fitness scholars position the rise of modern fitness culture as a result of post-war consumer culture and advances in medical science that linked exercise to cardiovascular benefits. However, Shaping Up illustrates that although fitness experts did not understand exercise in terms of cardiovascular health, they sought to use fitness as both a literal and discursive tool for shaping citizens. Thus, this book recovers instances when fitness was central to notions of citizenship and femininity and complicates the origin stories about physical fitness as a concern stemming from the post-war era. Second, this book is part of new wave of scholarship that seeks to recover the “hidden” and voluntary functions of the state in encouraging behavior that could not be legislated or made compulsory in the United States. Shaping Up argues that the federal government’s desire to become formally involved in encouraging female fitness during the World War II and Cold War eras was influenced by the work of physical educators and reformers earlier in the century who sought to develop mechanisms for shaping both the bodies and behavior of women, thus revealing the centrality of discussions about the body and fitness to key political debates about the life of the nation.

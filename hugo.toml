@@ -1,0 +1,44 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+[params]
+  theme = "winter"
+  [params.social]
+    email = "aeregan@clemson.edu"
+    department = "https://www.clemson.edu/cah/academics/history-and-geography/people/facultybio.html?id=5006"
+    github = "regan008"
+    linkedin = "amanda-regan-67006a2b"
+    bluesky = "regan008.bsky.social"
+    orcid = "0000-0002-4260-5839"
+
+
+[menu]
+  [[menu.main]]
+    name = "ABOUT"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "CV"
+    url = "/cv/"
+    weight = 2
+  [[menu.main]]
+    name = "RESEARCH"
+    url = "/projects/"
+    weight = 3
+  [[menu.main]]
+    name = "OFFICE HOURS"
+    url = "/office-hours/"
+    weight = 5
+ 
+
+[build]
+  writeStats = true
+
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static"
+    target = "static"

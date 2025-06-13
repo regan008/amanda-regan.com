@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="grid grid-cols-12">
+    <div class="col-span-10 col-start-2">
+        <h1 class="text-4xl font-heading font-medium text-primary mb-12">Projects</h1>
+        <ul class="menu bg-base-100 rounded-box">
+            {{ range .Pages.ByDate.Reverse }}
+            <li class="hover:bg-base-200/5 transition-colors">
+                <div class="flex flex-col md:flex-row gap-4 p-4">
+                    <div class="w-full md:w-48 h-48 flex-shrink-0">
+                        <img src="/images/{{ .Params.img }}" alt="{{ .Title }}" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div class="flex-grow flex flex-col">
+                        <div>
+                            <h2 class="text-lg font-heading font-medium text-primary mb-1">{{ .Title }}</h2>
+                            <p class="text-sm text-accent mb-2">{{ .Params.role }}</p>
+                            <p class="text-sm text-secondary mb-3">{{ .Description }}</p>
+                            <span class="inline-block px-2 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">{{ .Params.projectType }}</span>
+                        </div>
+                        {{ if .Params.projectlink }}
+                        <div class="mt-4">
+                            <a href="{{ .Params.projectlink }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors">
+                                Visit project
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }} 

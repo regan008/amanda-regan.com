@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div class="grid grid-cols-12">
+    <div class="col-span-8 col-start-2">
+        <h1 class="text-4xl font-semibold mb-8">{{ .Title }}</h1>
+        <div class="space-y-8">
+            {{ $paginator := .Paginate (.Pages) 5 }}
+            {{ range $paginator.Pages }}
+            <div class="flex flex-col gap-2">
+                <a href="{{ .RelPermalink }}" class="text-2xl font-bold hover:text-accent transition-colors">{{ .Title }}</a>
+                <div class="text-custom-gray-600">
+                    {{ .Summary | plainify | truncate 200 }}
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="text-sm text-custom-gray-600">
+                        {{ .Date.Format "January 2, 2006" }}
+                    </div>
+                    <a href="{{ .RelPermalink }}" class="text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-2">
+                        Read more
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        <!-- Pagination Controls -->
+        <div class="flex justify-between items-center mt-12">
+            {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}" class="btn btn-outline">Previous</a>
+            {{ else }}
+            <span></span>
+            {{ end }}
+            {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}" class="btn btn-outline">Next</a>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }} 

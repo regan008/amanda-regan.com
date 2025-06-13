@@ -1,0 +1,22 @@
+---
+author: admin
+comments: true
+date: 2014-03-16 15:45:25+00:00
+type: post
+link: http://www.amanda-regan.com/2014/03/16/color/
+slug: color
+title: Color
+wordpress_id: 610
+categories:
+- Clio Wired I
+---
+
+The last couple weeks we've been reading about color and the do's and don'ts of picking a color scheme. I think the reading in _White Space is Not Your Enemy_ was very helpful and got me thinking about the color scheme for the design project.
+
+Something that was extremely useful for me was the explanation of the differences between CMYK, PANTONE, and RGB. Prior to reading this I sort of understood the difference just from experience but the reading really pinpointed what each system is for, when to use it, and how it works. I think understanding how color is generated on a screen will factor into how I choose color schemes and design my final project.
+
+I've also been playing with all the different color tools on the web and looking at some examples of different color schemes on websites. I think my favorite color tool is [Adobe's Kruler](https://kuler.adobe.com/), which lets you use the color wheel and select what kind of color composition you want. You can toggle between different color relations such as complimentary, triad, compound, shades, and analogous. I tend to have a hard time picking colors and knowing what goes together and I get most of my ideas from looking at examples around the web. Kruler is really helpful because you can input one color and then ask the website to give you colors that go with it. [Colour Lovers](http://www.colourlovers.com/web/) has a [section of their site](http://www.colourlovers.com/web/trends) that showcases color pallets from around the web (although it is pretty outdated). I find it super useful to see how other designers are combining colors, what types of colors they are using for different types of sites, as well as looking at what works and what doesn't.
+
+The tutorial on engraving was also really useful. Most of the images I have are from scanned newspaper or from microfilm copies of newspapers. The images, although they are great, are not the best quality. The tutorial on removing the background and enhancing the quality was useful, especially as I think about how I might incorporate some of these images into the design for both the design project and the final project. I'm looking forward to learning more about restoring photos.
+
+This week I commented on [Jannelle](http://jannellelegg.com/?p=444#comments) and [Beth's](http://clio2garcia.wordpress.com/2014/03/03/poke-around-see-what-happens/comment-page-1/#comment-14) blogs.
