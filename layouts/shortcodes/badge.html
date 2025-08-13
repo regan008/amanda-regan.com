@@ -1,0 +1,53 @@
+{{- $text := .Get "text" | default (.Inner | markdownify) -}}
+{{- $style := .Get "style" | default "regular" -}}
+{{- $color := .Get "color" | default "neutral" -}}
+{{- $size := .Get "size" | default "md" -}}
+
+{{- $badgeClass := "badge" -}}
+
+{{- /* Add color class */ -}}
+{{- if eq $color "primary" -}}
+  {{- $badgeClass = printf "%s badge-primary" $badgeClass -}}
+{{- else if eq $color "secondary" -}}
+  {{- $badgeClass = printf "%s badge-secondary" $badgeClass -}}
+{{- else if eq $color "accent" -}}
+  {{- $badgeClass = printf "%s badge-accent" $badgeClass -}}
+{{- else if eq $color "info" -}}
+  {{- $badgeClass = printf "%s badge-info" $badgeClass -}}
+{{- else if eq $color "success" -}}
+  {{- $badgeClass = printf "%s badge-success" $badgeClass -}}
+{{- else if eq $color "warning" -}}
+  {{- $badgeClass = printf "%s badge-warning" $badgeClass -}}
+{{- else if eq $color "error" -}}
+  {{- $badgeClass = printf "%s badge-error" $badgeClass -}}
+{{- else if eq $color "terracotta" -}}
+  {{- $badgeClass = printf "%s badge-terracotta" $badgeClass -}}
+{{- else if eq $color "teal" -}}
+  {{- $badgeClass = printf "%s badge-teal" $badgeClass -}}
+{{- else if eq $color "burgundy" -}}
+  {{- $badgeClass = printf "%s badge-burgundy" $badgeClass -}}
+{{- else -}}
+  {{- $badgeClass = printf "%s badge-neutral" $badgeClass -}}
+{{- end -}}
+
+{{- /* Add style class */ -}}
+{{- if eq $style "soft" -}}
+  {{- $badgeClass = printf "%s badge-soft" $badgeClass -}}
+{{- else if eq $style "outline" -}}
+  {{- $badgeClass = printf "%s badge-outline" $badgeClass -}}
+{{- else if eq $style "dash" -}}
+  {{- $badgeClass = printf "%s badge-dash" $badgeClass -}}
+{{- end -}}
+
+{{- /* Add size class */ -}}
+{{- if eq $size "xs" -}}
+  {{- $badgeClass = printf "%s badge-xs" $badgeClass -}}
+{{- else if eq $size "sm" -}}
+  {{- $badgeClass = printf "%s badge-sm" $badgeClass -}}
+{{- else if eq $size "lg" -}}
+  {{- $badgeClass = printf "%s badge-lg" $badgeClass -}}
+{{- else if eq $size "xl" -}}
+  {{- $badgeClass = printf "%s badge-xl" $badgeClass -}}
+{{- end -}}
+
+<span class="{{ $badgeClass }}">{{ $text }}</span> 

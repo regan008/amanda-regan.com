@@ -20,12 +20,16 @@ title = 'My New Hugo Site'
     weight = 1
   [[menu.main]]
     name = "CV"
-    url = "/cv/"
+    url = "https://raw.githubusercontent.com/regan008/CV/master/ARegan-cv.pdf"
     weight = 2
   [[menu.main]]
     name = "RESEARCH"
     url = "/projects/"
     weight = 3
+  [[menu.main]]
+    name = "COURSES"
+    url = "/courses/"
+    weight = 4 
   [[menu.main]]
     name = "OFFICE HOURS"
     url = "/office-hours/"

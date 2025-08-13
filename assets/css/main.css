@@ -1,3 +1,159 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
+
+/* Custom semantic colors for DaisyUI components */
+:root {
+  --color-terracotta: #E85D75;
+  --color-teal: #0F766E;
+  --color-burgundy: #9F1239;
+}
+
+/* Ensure DaisyUI alert styles work properly in all contexts */
+.alert-shortcode {
+  /* Additional specificity to ensure alerts work */
+}
+
+/* Override any prose interference with alerts */
+.prose .alert-shortcode {
+  margin: 1.5rem 0 !important;
+  /* Ensure DaisyUI styles take precedence */
+}
+
+/* Force DaisyUI alert styles to work */
+.prose .alert {
+  /* Reset any prose text color interference */
+  color: inherit !important;
+}
+
+.prose .alert-info {
+  background-color: hsl(var(--a)) !important;
+  color: hsl(var(--ac)) !important;
+  border-color: hsl(var(--a) / 0.2) !important;
+}
+
+.prose .alert-warning {
+  background-color: hsl(var(--wa)) !important;
+  color: hsl(var(--wac)) !important;
+  border-color: hsl(var(--wa) / 0.2) !important;
+}
+
+.prose .alert-error {
+  background-color: hsl(var(--er)) !important;
+  color: hsl(var(--erc)) !important;
+  border-color: hsl(var(--er) / 0.2) !important;
+}
+
+.prose .alert-success {
+  background-color: hsl(var(--su)) !important;
+  color: hsl(var(--suc)) !important;
+  border-color: hsl(var(--su) / 0.2) !important;
+}
+
+/* Ensure outline variants work properly */
+.prose .alert-outline {
+  background-color: transparent !important;
+}
+
+/* Ensure soft variants work properly */
+.prose .alert-soft {
+  background-color: hsl(var(--a) / 0.1) !important;
+}
+
+/* Ensure dash variants work properly */
+.prose .alert-dash {
+  background-color: transparent !important;
+  border-style: dashed !important;
+}
+
+/* Make alert text smaller on course pages */
+.course-content .alert-shortcode span {
+  font-size: 0.75rem !important; /* text-xs equivalent */
+  line-height: 0.875rem !important; /* Reduced line spacing */
+}
+
+/* Alternative: target by course layout if the above doesn't work */
+.layout-courses .alert-shortcode span,
+.layout-courses-single .alert-shortcode span {
+  font-size: 0.75rem !important;
+  line-height: 0.875rem !important; /* Reduced line spacing */
+}
+
+/* Custom badge colors for DaisyUI */
+.badge-terracotta {
+  background-color: var(--color-terracotta) !important;
+  color: white !important;
+  border-color: var(--color-terracotta) !important;
+}
+
+.badge-teal {
+  background-color: var(--color-teal) !important;
+  color: white !important;
+  border-color: var(--color-teal) !important;
+}
+
+.badge-burgundy {
+  background-color: var(--color-burgundy) !important;
+  color: white !important;
+  border-color: var(--color-burgundy) !important;
+}
+
+/* Outline variants for custom colors */
+.badge-outline.badge-terracotta {
+  background-color: transparent !important;
+  color: var(--color-terracotta) !important;
+  border-color: var(--color-terracotta) !important;
+}
+
+.badge-outline.badge-teal {
+  background-color: transparent !important;
+  color: var(--color-teal) !important;
+  border-color: var(--color-teal) !important;
+}
+
+.badge-outline.badge-burgundy {
+  background-color: transparent !important;
+  color: var(--color-burgundy) !important;
+  border-color: var(--color-burgundy) !important;
+}
+
+/* Soft variants for custom colors */
+.badge-soft.badge-terracotta {
+  background-color: color-mix(in srgb, var(--color-terracotta) 20%, transparent) !important;
+  color: var(--color-terracotta) !important;
+  border-color: transparent !important;
+}
+
+.badge-soft.badge-teal {
+  background-color: color-mix(in srgb, var(--color-teal) 20%, transparent) !important;
+  color: var(--color-teal) !important;
+  border-color: transparent !important;
+}
+
+.badge-soft.badge-burgundy {
+  background-color: color-mix(in srgb, var(--color-burgundy) 20%, transparent) !important;
+  color: var(--color-burgundy) !important;
+  border-color: transparent !important;
+}
+
+/* Dash variants for custom colors */
+.badge-dash.badge-terracotta {
+  background-color: transparent !important;
+  color: var(--color-terracotta) !important;
+  border-color: var(--color-terracotta) !important;
+  border-style: dashed !important;
+}
+
+.badge-dash.badge-teal {
+  background-color: transparent !important;
+  color: var(--color-teal) !important;
+  border-color: var(--color-teal) !important;
+  border-style: dashed !important;
+}
+
+.badge-dash.badge-burgundy {
+  background-color: transparent !important;
+  color: var(--color-burgundy) !important;
+  border-color: var(--color-burgundy) !important;
+  border-style: dashed !important;
+} 
