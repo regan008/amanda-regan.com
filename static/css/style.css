@@ -4514,9 +4514,9 @@ input.tab:checked + .tab-content,
 /* Make alert text smaller on course pages */
 
 .course-content .alert-shortcode span {
-  font-size: 0.75rem !important;
+  font-size: 1rem !important;
   /* text-xs equivalent */
-  line-height: 0.875rem !important;
+  line-height: 1.25rem !important;
   /* Reduced line spacing */
 }
 
@@ -4524,8 +4524,8 @@ input.tab:checked + .tab-content,
 
 .layout-courses .alert-shortcode span,
 .layout-courses-single .alert-shortcode span {
-  font-size: 0.75rem !important;
-  line-height: 0.875rem !important;
+  font-size: 1rem !important;
+  line-height: 1.25rem !important;
   /* Reduced line spacing */
 }
 
@@ -4547,6 +4547,15 @@ input.tab:checked + .tab-content,
   background-color: var(--color-burgundy) !important;
   color: white !important;
   border-color: var(--color-burgundy) !important;
+}
+
+/* Add spacing after h5 elements (##### headers) in course pages */
+
+/* Target h5 elements specifically within course pages */
+
+.course-page .prose h5 {
+  margin-top: 1.2rem !important;
+  /* Add space below h5 headers */
 }
 
 /* Outline variants for custom colors */
