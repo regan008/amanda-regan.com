@@ -3,7 +3,7 @@ title: "About"
 ---
 # Amanda E. Regan
 
-{{< img src="images/IMG_8007.jpg" alt="Profile Image" class="w-72 h-72 object-cover rounded-full" >}}
+{{< img src="images/headshot-oct25-1.JPG" alt="Profile Image" class="w-72 h-72 object-cover rounded-full" >}}
 
 I am an Assistant Professor in the [Department of History and Geography](https://www.clemson.edu/caah/departments/history/) at Clemson University and serve as the Interim Associate Director of the [Digital History Ph.D. Program](https://digitalhistory.clemson.edu/). I specialize in digital history, with a focus on late-nineteenth and twentieth-century U.S. history and women's history.
 

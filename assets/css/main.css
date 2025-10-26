@@ -163,4 +163,219 @@
   color: var(--color-burgundy) !important;
   border-color: var(--color-burgundy) !important;
   border-style: dashed !important;
+}
+
+/* Print Styles for Course Syllabi */
+@media print {
+  /* Hide navigation and footer elements */
+  nav,
+  footer,
+  .menu-horizontal {
+    display: none !important;
+  }
+  
+  /* Keep course banner image but optimize for print */
+  img[alt="Course Banner"] {
+    max-width: 100% !important;
+    height: auto !important;
+    margin-bottom: 1rem !important;
+    border: 1px solid #ccc !important;
+  }
+  
+  /* Reset page margins and layout for print */
+  body {
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    color: #000 !important;
+    background: white !important;
+  }
+  
+  /* Adjust main content area for print */
+  .grid.grid-cols-12 {
+    display: block !important;
+  }
+  
+  .col-span-10.col-start-2 {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Optimize course page header for print */
+  .course-page header {
+    margin-bottom: 1rem !important;
+    page-break-after: avoid;
+  }
+  
+  .course-page header h2 {
+    font-size: 18pt !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .course-page header h3 {
+    font-size: 14pt !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Maintain 2-column course details layout for print */
+  .grid.grid-cols-2.gap-8 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+    margin-bottom: 1rem !important;
+    page-break-inside: avoid;
+  }
+  
+  .grid.grid-cols-2.gap-8 > div {
+    margin-bottom: 0.5rem !important;
+    page-break-inside: avoid;
+  }
+  
+  .grid.grid-cols-2.gap-8 h3 {
+    font-size: 14pt !important;
+    margin-bottom: 0.5rem !important;
+    page-break-after: avoid;
+  }
+  
+  /* Optimize prose content for print */
+  .prose {
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    max-width: none !important;
+  }
+  
+  .prose h3 {
+    font-size: 14pt !important;
+    margin-top: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    page-break-after: avoid;
+  }
+  
+  .prose h4 {
+    font-size: 12pt !important;
+    margin-top: 0.8rem !important;
+    margin-bottom: 0.4rem !important;
+    page-break-after: avoid;
+  }
+  
+  .prose h5 {
+    font-size: 11pt !important;
+    font-weight: bold !important;
+    margin-top: 0.6rem !important;
+    margin-bottom: 0.3rem !important;
+    page-break-after: avoid;
+  }
+  
+  .prose p {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    orphans: 3;
+    widows: 3;
+  }
+  
+  .prose ul, .prose ol {
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .prose li {
+    margin-top: 0.1rem !important;
+    margin-bottom: 0.1rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Optimize tables for print */
+  .prose table {
+    font-size: 10pt !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    page-break-inside: avoid;
+  }
+  
+  .prose th, .prose td {
+    padding: 0.25rem !important;
+    border: 1px solid #000 !important;
+  }
+  
+  .prose th {
+    background-color: #f0f0f0 !important;
+    font-weight: bold !important;
+  }
+  
+  /* Handle badges and alerts for print */
+  .badge {
+    font-size: 9pt !important;
+    padding: 0.1rem 0.3rem !important;
+    border: 1px solid #000 !important;
+    background-color: transparent !important;
+    color: #000 !important;
+  }
+  
+  .alert {
+    font-size: 10pt !important;
+    border: 1px solid #000 !important;
+    background-color: transparent !important;
+    color: #000 !important;
+    padding: 0.5rem !important;
+    margin: 0.5rem 0 !important;
+    page-break-inside: avoid;
+  }
+  
+  /* Optimize links for print */
+  .prose a {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+  
+  /* Show URLs for important links in print */
+  .prose a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+  }
+  
+  /* Don't show URLs for internal links */
+  .prose a[href^="/"]:after,
+  .prose a[href^="#"]:after {
+    content: "";
+  }
+  
+  /* Page break management */
+  .course-page article {
+    page-break-inside: auto;
+  }
+  
+  /* Ensure proper page breaks around major sections */
+  .prose h3:not(:first-child) {
+    page-break-before: auto;
+  }
+  
+  /* Force page margins for better printing */
+  @page {
+    margin: 0.75in;
+    size: letter;
+  }
+  
+  /* Add print-specific spacing */
+  .course-page {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Optimize course details text for print */
+  .course-page .grid.grid-cols-2.gap-8 p {
+    font-size: 10pt !important;
+    line-height: 1.3 !important;
+    margin: 0.2rem 0 !important;
+  }
+  
+  .course-page .grid.grid-cols-2.gap-8 .font-bold {
+    font-weight: bold !important;
+  }
+  
+  /* Ensure course banner doesn't break across pages */
+  .course-page .grid.grid-cols-1.mb-8 {
+    page-break-inside: avoid;
+    margin-bottom: 1rem !important;
+  }
 } 
