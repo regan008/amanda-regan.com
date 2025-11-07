@@ -36,11 +36,17 @@ jobs:
 
       - name: Build Hugo site
         run: hugo --gc --minify
+        continue-on-error: false
 
       - name: Fix file permissions
         run: |
-          find public/ -type d -exec chmod 755 {} \;
-          find public/ -type f -exec chmod 644 {} \;
+          if [ -d "public" ]; then
+            find public/ -type d -exec chmod 755 {} \;
+            find public/ -type f -exec chmod 644 {} \;
+          else
+            echo "Warning: public/ directory not found"
+            exit 1
+          fi
 
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.9.0
@@ -57,6 +63,7 @@ jobs:
           rsync -avz --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r \
             public/ \
             ${{ secrets.SSH_USER }}@amanda-regan.com:~/public_html/
+        continue-on-error: false
 
       - name: Deployment complete
         run: echo "🎉 Site deployed successfully!"
