@@ -1,43 +1,63 @@
-name: Deploy Hugo site
+name: Deploy Site
 
 on:
   push:
     branches:
-      - main  # or your default branch name
+      - main
+      - hugo-main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: recursive
+          fetch-depth: 0
 
-      - name: Setup Hugo
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Build CSS
+        run: npm run css:build
+
+      - name: Set up Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           extended: true
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Build Hugo site
+        run: hugo --gc --minify
+
+      - name: Fix file permissions
+        run: |
+          find public/ -type d -exec chmod 755 {} \;
+          find public/ -type f -exec chmod 644 {} \;
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.9.0
         with:
-          node-version: '20'
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build with Hugo
-        run: hugo --minify
+      - name: Add server to known hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H amanda-regan.com >> ~/.ssh/known_hosts
 
       - name: Deploy to server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "public/*"
-          target: ${{ secrets.SERVER_DEPLOY_PATH }}
-          strip_components: 1 
+        run: |
+          rsync -avz --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r \
+            public/ \
+            ${{ secrets.SSH_USER }}@amanda-regan.com:~/public_html/
+
+      - name: Deployment complete
+        run: echo "🎉 Site deployed successfully!"
