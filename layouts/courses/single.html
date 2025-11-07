@@ -83,6 +83,19 @@
             <div class="prose prose-base max-w-none prose-headings:font-bold prose-h3:text-2xl prose-h4:text-xl prose-h5:text-lg prose-a:text-accent prose-a:underline hover:prose-a:text-accent/80 prose-p:leading-snug prose-li:leading-snug prose-ul:my-1 prose-ol:my-1 prose-li:my-0 prose-p:my-4 course-content">
                 {{ .Content }}
             </div>
+
+            <div class="mt-8 pt-4">
+                <p class="text-sm text-base-content/60">
+                    <span class="font-semibold">Last updated:</span>
+                    {{ if .Params.lastmod }}
+                        {{ .Params.lastmod | time.Format "January 2, 2006" }}
+                    {{ else if .Lastmod }}
+                        {{ .Lastmod | time.Format "January 2, 2006" }}
+                    {{ else }}
+                        {{ .Date | time.Format "January 2, 2006" }}
+                    {{ end }}
+                </p>
+            </div>
         </article>
     </div>
 </div>
