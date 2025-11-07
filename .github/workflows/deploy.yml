@@ -48,30 +48,34 @@ jobs:
             exit 1
           fi
 
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Configure SSH
+      - name: Set up SSH key
         run: |
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H amanda-regan.com >> ~/.ssh/known_hosts
           chmod 600 ~/.ssh/known_hosts
-          # Configure SSH to only use the key from the agent
+          # Configure SSH to only use our specific key
           cat >> ~/.ssh/config << EOF
           Host amanda-regan.com
+            HostName amanda-regan.com
+            User ${{ secrets.SSH_USER }}
+            IdentityFile ~/.ssh/deploy_key
             IdentitiesOnly yes
-            IdentityAgent $SSH_AUTH_SOCK
             StrictHostKeyChecking yes
           EOF
           chmod 600 ~/.ssh/config
 
+      - name: Test SSH connection
+        run: |
+          ssh -v -o IdentitiesOnly=yes amanda-regan.com "echo 'SSH connection successful'"
+        continue-on-error: true
+
       - name: Deploy to server
         run: |
           rsync -avz --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r \
-            -e "ssh -o IdentitiesOnly=yes" \
+            -e "ssh -o IdentitiesOnly=yes -i ~/.ssh/deploy_key" \
             public/ \
             ${{ secrets.SSH_USER }}@amanda-regan.com:~/public_html/
         continue-on-error: false
