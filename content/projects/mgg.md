@@ -1,7 +1,6 @@
 ---
 title: "Mapping the Gay Guides"
 author: "Amanda Regan and Eric Gonzaba"
-description: ""
 role: Co-Project Director and Digital Lead
 description: "Mapping the Gay Guides is an in-progress digital history project that maps entries from the Bob Damron's Address Book, an early but longstanding travel guide aimed at gay men since the early 1960s."
 projectType: "Digital History Project"
