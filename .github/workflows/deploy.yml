@@ -53,14 +53,25 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Add server to known hosts
+      - name: Configure SSH
         run: |
           mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
           ssh-keyscan -H amanda-regan.com >> ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+          # Configure SSH to only use the key from the agent
+          cat >> ~/.ssh/config << EOF
+          Host amanda-regan.com
+            IdentitiesOnly yes
+            IdentityAgent $SSH_AUTH_SOCK
+            StrictHostKeyChecking yes
+          EOF
+          chmod 600 ~/.ssh/config
 
       - name: Deploy to server
         run: |
           rsync -avz --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r \
+            -e "ssh -o IdentitiesOnly=yes" \
             public/ \
             ${{ secrets.SSH_USER }}@amanda-regan.com:~/public_html/
         continue-on-error: false
