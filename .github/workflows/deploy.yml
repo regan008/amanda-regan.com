@@ -50,13 +50,41 @@ jobs:
 
       - name: Set up SSH key
         run: |
+          set -e  # Exit on any error
+          
+          # Create .ssh directory
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
+          
+          # Validate secrets are set
+          if [ -z "${{ secrets.SSH_PRIVATE_KEY }}" ]; then
+            echo "Error: SSH_PRIVATE_KEY secret is not set"
+            exit 1
+          fi
+          
+          if [ -z "${{ secrets.SSH_USER }}" ]; then
+            echo "Error: SSH_USER secret is not set"
+            exit 1
+          fi
+          
+          # Write SSH private key
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -H amanda-regan.com >> ~/.ssh/known_hosts
+          
+          # Verify the key file was created and has content
+          if [ ! -s ~/.ssh/deploy_key ]; then
+            echo "Error: SSH key file is empty or not created"
+            exit 1
+          fi
+          
+          # Scan host keys (with error handling)
+          echo "Scanning SSH host keys for amanda-regan.com..."
+          if ! ssh-keyscan -H amanda-regan.com >> ~/.ssh/known_hosts 2>&1; then
+            echo "Warning: ssh-keyscan failed, but continuing..."
+          fi
           chmod 600 ~/.ssh/known_hosts
-          # Configure SSH to only use our specific key
+          
+          # Configure SSH config
           cat >> ~/.ssh/config << EOF
           Host amanda-regan.com
             HostName amanda-regan.com
@@ -64,13 +92,27 @@ jobs:
             IdentityFile ~/.ssh/deploy_key
             IdentitiesOnly yes
             StrictHostKeyChecking yes
+            UserKnownHostsFile ~/.ssh/known_hosts
           EOF
           chmod 600 ~/.ssh/config
+          
+          echo "SSH setup complete"
 
       - name: Test SSH connection
         run: |
-          ssh -v -o IdentitiesOnly=yes amanda-regan.com "echo 'SSH connection successful'"
-        continue-on-error: true
+          echo "Testing SSH connection to amanda-regan.com..."
+          if ssh -o IdentitiesOnly=yes -o ConnectTimeout=10 amanda-regan.com "echo 'SSH connection successful'" 2>&1; then
+            echo "✅ SSH connection test passed"
+          else
+            echo "❌ SSH connection test failed"
+            echo "Debugging information:"
+            echo "SSH config:"
+            cat ~/.ssh/config
+            echo "Known hosts:"
+            cat ~/.ssh/known_hosts || echo "No known_hosts file"
+            exit 1
+          fi
+        continue-on-error: false
 
       - name: Deploy to server
         run: |
