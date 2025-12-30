@@ -51,52 +51,70 @@ jobs:
       - name: Set up SSH key
         run: |
           set -e  # Exit on any error
+          set -x  # Debug mode - show all commands
+          
+          echo "=== Starting SSH setup ==="
           
           # Create .ssh directory
+          echo "Creating .ssh directory..."
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
           
           # Validate secrets are set
+          echo "Validating secrets..."
           if [ -z "${{ secrets.SSH_PRIVATE_KEY }}" ]; then
-            echo "Error: SSH_PRIVATE_KEY secret is not set"
+            echo "❌ Error: SSH_PRIVATE_KEY secret is not set"
             exit 1
           fi
+          echo "✅ SSH_PRIVATE_KEY secret is set"
           
           if [ -z "${{ secrets.SSH_USER }}" ]; then
-            echo "Error: SSH_USER secret is not set"
+            echo "❌ Error: SSH_USER secret is not set"
             exit 1
           fi
+          echo "✅ SSH_USER secret is set: ${{ secrets.SSH_USER }}"
           
           # Write SSH private key
+          echo "Writing SSH private key..."
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
           
           # Verify the key file was created and has content
           if [ ! -s ~/.ssh/deploy_key ]; then
-            echo "Error: SSH key file is empty or not created"
+            echo "❌ Error: SSH key file is empty or not created"
             exit 1
           fi
+          echo "✅ SSH key file created ($(wc -l < ~/.ssh/deploy_key) lines)"
+          
+          # Initialize known_hosts file if it doesn't exist
+          touch ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
           
           # Scan host keys (with error handling)
           echo "Scanning SSH host keys for amanda-regan.com..."
-          if ! ssh-keyscan -H amanda-regan.com >> ~/.ssh/known_hosts 2>&1; then
-            echo "Warning: ssh-keyscan failed, but continuing..."
+          if ssh-keyscan -H amanda-regan.com >> ~/.ssh/known_hosts 2>&1; then
+            echo "✅ Host keys scanned successfully"
+          else
+            echo "⚠️  Warning: ssh-keyscan failed, but continuing..."
+            echo "This is usually okay if the host is unreachable temporarily"
           fi
-          chmod 600 ~/.ssh/known_hosts
           
           # Configure SSH config
-          cat >> ~/.ssh/config << EOF
-          Host amanda-regan.com
-            HostName amanda-regan.com
-            User ${{ secrets.SSH_USER }}
-            IdentityFile ~/.ssh/deploy_key
-            IdentitiesOnly yes
-            StrictHostKeyChecking yes
-            UserKnownHostsFile ~/.ssh/known_hosts
-          EOF
+          echo "Configuring SSH config..."
+          {
+            echo "Host amanda-regan.com"
+            echo "  HostName amanda-regan.com"
+            echo "  User ${{ secrets.SSH_USER }}"
+            echo "  IdentityFile ~/.ssh/deploy_key"
+            echo "  IdentitiesOnly yes"
+            echo "  StrictHostKeyChecking yes"
+            echo "  UserKnownHostsFile ~/.ssh/known_hosts"
+          } >> ~/.ssh/config
           chmod 600 ~/.ssh/config
           
-          echo "SSH setup complete"
+          echo "✅ SSH setup complete"
+          echo "=== SSH config contents ==="
+          cat ~/.ssh/config
 
       - name: Test SSH connection
         run: |
