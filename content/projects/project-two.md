@@ -1,14 +1,11 @@
 ---
-title: "Project Two Placeholder"
+title: "Mapping the Gay Guides"
 status: ongoing
-dateRange: "2016 – Present"
-category: "Placeholder category"
+dateRange: "2019 – Present"
 roles:
-  - "Placeholder lead role"
-  - "Placeholder secondary role · 2016–2018"
-  - "Placeholder third role · 2016–2018"
-link: "#"
-linktext: "placeholder-link.org →"
+  - "Co-Project Director and Lead Digital Historian"
+link: "https://www.mappingthegayguides.org"
+linktext: "www.mappingthegayguides.org →"
 draft: false
 ---
 

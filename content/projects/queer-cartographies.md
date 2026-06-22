@@ -1,12 +1,8 @@
 ---
-title: "Project One Placeholder"
+title: "Queer Cartographies"
 status: current
 dateRange: "2023 – Present"
-category: "Placeholder category"
-roles:
-  - "Placeholder role"
-link: "#"
-linktext: "View project →"
+category: "Digital Projects"
 draft: false
 ---
 
