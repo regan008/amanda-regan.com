@@ -1,0 +1,43 @@
+{{ define "main" }}
+{{ partial "hero.html" (dict "eyebrow" "Publications" "title" "Publications" "intro" (.Content | plainify)) }}
+
+<section class="border-t border-hairline bg-white">
+  <div class="mx-auto max-w-[1000px] px-14 py-12">
+
+    {{ $pubs := where .Site.RegularPages "Section" "publications" }}
+    {{ $books := (where $pubs "Params.pubtype" "book").ByDate.Reverse }}
+    {{ $editedVolumes := (where $pubs "Params.pubtype" "edited-volume").ByDate.Reverse }}
+    {{ $articlesReviews := (where $pubs "Params.pubtype" "in" (slice "article" "review")).ByDate.Reverse }}
+
+    {{ if $books }}
+      <div class="mb-6 border-b border-cobalt pb-3 font-mono text-[13px] uppercase tracking-widest2 text-cobalt">Book</div>
+      {{ range $books }}
+        {{ $book := . }}
+        <div class="mb-12 grid grid-cols-[96px_1fr] gap-7">
+          <div class="flex h-[140px] w-24 items-end rounded-[3px] bg-gradient-to-br from-cobalt to-[#0f2299] p-2.5 font-mono text-[9px] leading-tight text-white/85">{{ $book.Params.publisher }} {{ $book.Params.year }}</div>
+          <div>
+            <div class="mb-2 font-mono text-[11px] uppercase tracking-wide text-[#9a9a9a]">Monograph{{ with $book.Params.status }} · {{ humanize . }} {{ $book.Params.year }}{{ end }}</div>
+            <h3 class="m-0 mb-2.5 font-heading text-2xl font-bold leading-tight text-ink">{{ $book.Title }}</h3>
+            <p class="m-0 max-w-[64ch] font-sans text-base leading-relaxed text-[#454545]">{{ $book.Params.publisher }}. {{ $book.Plain }}</p>
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+
+    {{ if $editedVolumes }}
+      <div class="mb-[18px] border-b border-cobalt pb-3 font-mono text-[13px] uppercase tracking-widest2 text-cobalt">Edited collections</div>
+      <div class="mb-12">
+        {{ range $editedVolumes }}{{ partial "card-publication-row.html" . }}{{ end }}
+      </div>
+    {{ end }}
+
+    {{ if $articlesReviews }}
+      <div class="mb-1.5 border-b border-cobalt pb-3 font-mono text-[13px] uppercase tracking-widest2 text-cobalt">Articles &amp; reviews</div>
+      <div>
+        {{ range $articlesReviews }}{{ partial "card-publication-row.html" . }}{{ end }}
+      </div>
+    {{ end }}
+
+  </div>
+</section>
+{{ end }}

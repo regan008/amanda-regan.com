@@ -1,0 +1,21 @@
+{{- $page := . -}}
+{{- $pubtype := $page.Params.pubtype -}}
+{{- $label := "Article" -}}
+{{- if eq $pubtype "edited-volume" -}}
+  {{- $label = "Special Issue" -}}
+  {{- with $page.Params.status }}{{ $label = printf "%s · %s" $label (humanize .) }}{{ end -}}
+{{- else if eq $pubtype "review" -}}
+  {{- $label = "Review" -}}
+{{- end -}}
+{{- $labelColor := "text-cobalt" -}}
+{{- if eq $pubtype "review" }}{{ $labelColor = "text-[#9a9a9a]" }}{{ end -}}
+{{- $detail := $page.Params.venue -}}
+{{- if $page.Plain }}{{ $detail = $page.Plain }}{{ end -}}
+<div class="grid grid-cols-[70px_1fr] items-baseline gap-6 border-b border-hairline-soft py-[18px]">
+  <span class="font-mono text-sm text-[#a3a3a3]">{{ $page.Params.year }}</span>
+  <div>
+    <div class="mb-2 font-mono text-[10px] font-medium uppercase tracking-widest2 {{ $labelColor }}">{{ $label }}</div>
+    <div class="font-sans text-[17px] font-semibold leading-snug text-ink">{{ $page.Title }}</div>
+    {{ with $detail }}<div class="font-sans text-sm leading-snug text-[#6B6B6B]">{{ . }}</div>{{ end }}
+  </div>
+</div>
