@@ -1,10 +1,10 @@
 {{ define "main" }}
-<div class="grid grid-cols-12">
-    <div class="col-span-10 col-start-2">
-        <article class="prose prose-base prose-p:leading-relaxed prose-li:leading-relaxed prose-headings:text-custom-gray-900 prose-h1:text-4xl prose-h2:text-2xl prose-h2:text-custom-gray-800 prose-p:text-custom-gray-600 prose-a:text-accent prose-a:underline hover:prose-a:text-accent/80 lg:prose-xl prose-img:my-0 max-w-none">
-            <h1 class="text-4xl font-semibold mb-8">{{ .Title }}</h1>
-            {{ .Content }}
-        </article>
-    </div>
-</div>
-{{ end }} 
+<section class="bg-white">
+  <div class="mx-auto max-w-[760px] px-14 py-16">
+    <h1 class="m-0 mb-8 font-heading text-4xl font-extrabold tracking-tight text-ink">{{ .Title }}</h1>
+    <article class="prose prose-base max-w-none font-sans text-[#3a3a3a] prose-headings:font-heading prose-headings:text-ink prose-a:text-cobalt prose-a:no-underline hover:prose-a:underline prose-img:my-0 prose-p:leading-relaxed prose-li:leading-relaxed">
+      {{ .Content }}
+    </article>
+  </div>
+</section>
+{{ end }}

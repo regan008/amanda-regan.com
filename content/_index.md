@@ -1,20 +1,20 @@
 ---
 title: "Amanda E. Regan"
-description: "Placeholder site description — replace with the real bio summary."
+description: "Amanda E. Regan is a historian of digital and computational history, Assistant Professor at Clemson University, and director of its Digital History Ph.D. program."
 heroEyebrow: "Historian · Digital & Computational"
 heroSummary:
-  - "Placeholder sentence about the kinds of methods and questions this research focuses on goes here."
-  - "Placeholder sentence about the current role, department, and program goes here."
+  - "I develop methods that uncover previously invisible patterns in the historical record — combining large-scale data analysis, geospatial mapping, and algorithmic approaches with traditional archival research."
+  - "Assistant Professor at Clemson, Director of Graduate Studies, and a builder of the first-of-its-kind Digital History Ph.D. Program."
 book:
-  eyebrow: "New book · Forthcoming placeholder date"
-  title: "Book Title Placeholder"
-  subtitle: "Book subtitle placeholder goes here"
-  description: "Placeholder description of the forthcoming book project. Replace with real copy once the design is finalized."
+  eyebrow: "New book · Forthcoming April 2027"
+  title: "Shaping Up"
+  subtitle: "Physical Fitness Initiatives for Women, 1880–1965"
+  description: "Traces how fitness became a mechanism for measuring and regulating women's bodies across nearly a century — never really about health, but an evolving standard for policing who counted as \"fit\" to participate in American life. University of Virginia Press."
   link: "#"
 selectedWork:
-  eyebrow: "Placeholder tag · placeholder stat"
-  title: "Project Name Placeholder"
-  description: "Placeholder description of a selected digital history project, long enough to show how the spotlight card wraps text."
-  link: "#"
+  eyebrow: "NEH-funded · ~200,000 records"
+  title: "Mapping the Gay Guides"
+  description: "An interactive dataset of nearly 200,000 LGBTQ spaces, 1965–2003, mapping queer life far beyond the coastal cities where LGBTQ history is usually located."
+  link: "https://www.mappingthegayguides.org"
 draft: false
 ---

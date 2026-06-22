@@ -10,12 +10,13 @@
       {{ range .Params.heroSummary }}
       <p class="m-0 mb-4 max-w-[56ch] font-sans text-lg leading-[1.65] text-[#454545]">{{ . }}</p>
       {{ end }}
-      <div class="flex gap-3 font-mono text-[12.5px]">
+      <div class="flex items-center gap-5 font-mono text-[12.5px]">
         {{ partial "button.html" (dict "text" "→ email" "href" (printf "mailto:%s" .Site.Params.social.email) "variant" "primary") }}
         {{ partial "button.html" (dict "text" "→ github" "href" (printf "https://github.com/%s" .Site.Params.social.github) "variant" "secondary" "external" true) }}
+        <a href="/about/" class="border-b border-cobalt pb-[3px] text-cobalt no-underline">more about me &rarr;</a>
       </div>
     </div>
-    <div class="flex h-[360px] w-full items-center justify-center rounded-lg bg-hairline-soft font-mono text-xs text-[#9a9a9a] shadow-xl">headshot placeholder</div>
+    <img src="/images/headshot-oct25-1.JPG" alt="Amanda E. Regan" class="h-[360px] w-full rounded-lg object-cover shadow-xl">
   </div>
 </section>
 
