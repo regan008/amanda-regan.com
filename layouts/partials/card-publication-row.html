@@ -1,7 +1,9 @@
 {{- $page := . -}}
 {{- $pubtype := $page.Params.pubtype -}}
 {{- $label := "Article" -}}
-{{- if eq $pubtype "edited-volume" -}}
+{{- if eq $pubtype "book" -}}
+  {{- $label = "Book" -}}
+{{- else if eq $pubtype "edited-volume" -}}
   {{- $label = "Special Issue" -}}
   {{- with $page.Params.status }}{{ $label = printf "%s · %s" $label (humanize .) }}{{ end -}}
 {{- else if eq $pubtype "review" -}}
@@ -10,7 +12,13 @@
 {{- $labelColor := "text-cobalt" -}}
 {{- if eq $pubtype "review" }}{{ $labelColor = "text-[#9a9a9a]" }}{{ end -}}
 {{- $detail := $page.Params.venue -}}
-{{- if $page.Plain }}{{ $detail = $page.Plain }}{{ end -}}
+{{- if eq $pubtype "book" -}}
+  {{- $detail = "" -}}
+  {{- with $page.Params.publisher }}{{ $detail = . }}{{ end -}}
+  {{- with $page.Params.status }}{{ $detail = printf "%s (%s)." $detail . }}{{ end -}}
+{{- else if $page.Plain -}}
+  {{- $detail = $page.Plain -}}
+{{- end -}}
 <div class="grid grid-cols-[70px_1fr] items-baseline gap-6 border-b border-hairline-soft py-[18px]">
   <span class="font-mono text-sm text-[#a3a3a3]">{{ $page.Params.year }}</span>
   <div>

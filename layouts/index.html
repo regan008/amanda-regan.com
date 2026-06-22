@@ -1,40 +1,91 @@
 {{ define "main" }}
-<div class="grid grid-cols-12">
-    <div class="col-span-10 col-start-2">
-        <article class="prose prose-base prose-p:leading-relaxed prose-li:leading-relaxed prose-headings:font-heading prose-headings:text-primary prose-h1:text-4xl prose-h2:text-2xl prose-h2:text-secondary prose-p:text-secondary prose-a:text-accent hover:prose-a:text-accent/80 lg:prose-xl prose-img:my-0 max-w-none">
-            {{ .Content }}
-        </article>
-    </div>
-</div>
 
-<div class="w-full bg-base-200 mt-12">
-    <div class="grid grid-cols-12">
-        <div class="col-span-10 col-start-2 py-8">
-            <h2 class="text-2xl font-heading font-semibold text-white mb-6">News</h2>
-            <div class="space-y-4">
-                {{ range first 3 (where .Site.RegularPages "Section" "news") }}
-                <div class="flex gap-4 w-full p-4 rounded-lg bg-base-300 hover:bg-base-300/80 transition-colors duration-200">
-                    <div class="text-sm text-white min-w-[120px]">{{ .Date.Format "January 2, 2006" }}</div>
-                    <div class="flex flex-col flex-grow min-w-0">
-                        <div class="text-xl font-heading font-medium text-white">{{ .Title }}</div>
-                        <div class="text-base text-white/80 [&_a]:text-white [&_a:hover]:text-white/80 [&_a]:underline">
-                            {{ .Content }}
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-            {{ if gt (len (where .Site.RegularPages "Section" "news")) 3 }}
-            <div class="mt-6 text-right">
-                <a href="/news" class="text-white hover:text-white/80 transition-colors inline-flex items-center gap-2">
-                    View all news
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-            {{ end }}
-        </div>
+<!-- HERO -->
+<section class="relative overflow-hidden bg-porcelain">
+  <div class="relative mx-auto grid max-w-[1180px] grid-cols-[1.4fr_.9fr] items-center gap-[52px] px-14 py-16">
+    <div>
+      {{ partial "eyebrow.html" (dict "text" .Params.heroEyebrow) }}
+      <h1 class="m-0 mb-3.5 font-heading text-[60px] font-extrabold leading-none tracking-tight text-ink">{{ .Site.Title }}</h1>
+      <div class="mb-6 h-0.5 w-11 bg-cobalt"></div>
+      {{ range .Params.heroSummary }}
+      <p class="m-0 mb-4 max-w-[56ch] font-sans text-lg leading-[1.65] text-[#454545]">{{ . }}</p>
+      {{ end }}
+      <div class="flex gap-3 font-mono text-[12.5px]">
+        {{ partial "button.html" (dict "text" "→ email" "href" (printf "mailto:%s" .Site.Params.social.email) "variant" "primary") }}
+        {{ partial "button.html" (dict "text" "→ github" "href" (printf "https://github.com/%s" .Site.Params.social.github) "variant" "secondary" "external" true) }}
+      </div>
     </div>
-</div>
-{{ end }} 
+    <div class="flex h-[360px] w-full items-center justify-center rounded-lg bg-hairline-soft font-mono text-xs text-[#9a9a9a] shadow-xl">headshot placeholder</div>
+  </div>
+</section>
+
+<!-- BOOK HERO -->
+{{ with .Params.book }}
+<section class="bg-ink text-white">
+  <div class="mx-auto grid max-w-[1180px] grid-cols-[220px_1fr] items-center gap-12 px-14 py-14">
+    <div class="flex h-[320px] w-[220px] items-center justify-center rounded bg-white/10 font-mono text-xs text-white/60 shadow-2xl">book cover placeholder</div>
+    <div>
+      {{ partial "eyebrow.html" (dict "text" .eyebrow "dark" true) }}
+      <h2 class="m-0 mb-2.5 font-heading text-[46px] font-extrabold leading-[1.02] tracking-tight text-white">{{ .title }}</h2>
+      <div class="mb-5 font-sans text-[19px] leading-[1.4] text-[#9a9a9a]">{{ .subtitle }}</div>
+      <p class="mb-[26px] max-w-[60ch] font-sans text-[17px] leading-[1.65] text-[#c4c4c4]">{{ .description }}</p>
+      <a href="{{ .link }}" class="border-b border-cobalt pb-1 font-mono text-xs text-white no-underline">read more &rarr;</a>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- PUBLICATIONS -->
+{{ $pubs := (where .Site.RegularPages "Section" "publications") }}
+{{ $pubs = (sort $pubs "Params.year" "desc") | first 4 }}
+{{ if $pubs }}
+<section class="border-t border-hairline bg-white">
+  <div class="mx-auto max-w-[1180px] px-14 py-[54px]">
+    <div class="mb-7 flex items-baseline justify-between">
+      <h2 class="m-0 font-heading text-3xl font-bold text-ink">Publications</h2>
+      <a href="/publications/" class="font-mono text-xs text-cobalt no-underline">all publications &rarr;</a>
+    </div>
+    {{ range $pubs }}{{ partial "card-publication-row.html" . }}{{ end }}
+  </div>
+</section>
+{{ end }}
+
+<!-- SELECTED WORK -->
+{{ with .Params.selectedWork }}
+<section class="border-t border-hairline bg-white">
+  <div class="mx-auto max-w-[1180px] px-14 py-[54px]">
+    <div class="mb-6 flex items-baseline justify-between">
+      <h2 class="m-0 font-heading text-3xl font-bold text-ink">Selected work</h2>
+      <a href="/projects/" class="font-mono text-xs text-cobalt no-underline">all projects &rarr;</a>
+    </div>
+    <div class="grid grid-cols-[1fr_auto] items-center gap-8 rounded-md border border-hairline bg-porcelain p-[30px]">
+      <div>
+        {{ partial "eyebrow.html" (dict "text" .eyebrow) }}
+        <div class="mb-2.5 font-heading text-2xl font-bold leading-[1.15] text-ink">{{ .title }}</div>
+        <div class="mb-4 max-w-[64ch] font-sans text-base leading-[1.6] text-[#454545]">{{ .description }}</div>
+        <a href="{{ .link }}" class="border-b border-cobalt pb-[3px] font-mono text-xs text-cobalt no-underline">visit project &rarr;</a>
+      </div>
+      <div class="flex h-[130px] w-[180px] items-end rounded-md bg-gradient-to-br from-cobalt to-[#0f2299] p-3.5">
+        <span class="font-mono text-[10px] text-white/85">preview</span>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- CONTACT -->
+<section id="contact" class="border-t-2 border-cobalt bg-porcelain">
+  <div class="mx-auto grid max-w-[1180px] grid-cols-[1fr_auto] items-center gap-10 px-14 py-[54px]">
+    <div>
+      {{ partial "eyebrow.html" (dict "text" "Get in touch") }}
+      <h2 class="m-0 mb-3.5 font-heading text-[38px] font-extrabold leading-[1.05] tracking-tight text-ink">Let's talk history &amp; data</h2>
+      <p class="m-0 max-w-[60ch] font-sans text-[17px] leading-[1.65] text-[#454545]">Prospective Digital History Ph.D. students, collaborators, and press are all welcome to reach out. Email a sentence or two about your interests and expect a follow-up.</p>
+    </div>
+    <div class="flex flex-col gap-3 font-mono text-[13px]">
+      {{ partial "button.html" (dict "text" (printf "→ %s" .Site.Params.social.email) "href" (printf "mailto:%s" .Site.Params.social.email) "variant" "primary") }}
+      {{ partial "button.html" (dict "text" (printf "→ github.com/%s" .Site.Params.social.github) "href" (printf "https://github.com/%s" .Site.Params.social.github) "variant" "secondary" "external" true) }}
+    </div>
+  </div>
+</section>
+
+{{ end }}
