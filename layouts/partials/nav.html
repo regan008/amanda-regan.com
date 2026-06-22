@@ -1,0 +1,21 @@
+{{ $current := .RelPermalink }}
+<nav class="sticky top-0 z-20 flex items-center justify-between border-b border-hairline bg-white px-14 py-[22px]">
+  <a href="/" class="flex items-center gap-2.5 font-heading text-lg font-bold tracking-tight text-ink">
+    <span class="inline-block h-2 w-2 bg-cobalt"></span>
+    Amanda E. Regan
+  </a>
+  <div class="flex gap-6 font-mono text-xs lowercase">
+    {{ range .Site.Menus.main }}
+      {{ $isExternal := strings.HasPrefix .URL "http" }}
+      {{ $active := false }}
+      {{ if not $isExternal }}
+        {{ if eq .URL "/" }}
+          {{ $active = eq $current "/" }}
+        {{ else }}
+          {{ $active = strings.HasPrefix $current .URL }}
+        {{ end }}
+      {{ end }}
+      <a href="{{ .URL }}" {{ if $isExternal }}target="_blank" rel="noopener noreferrer"{{ end }} class="{{ if $active }}font-semibold text-cobalt{{ else }}text-[#6B6B6B] hover:text-cobalt{{ end }} transition-colors">{{ .Name | lower | replaceRE " " "_" }}</a>
+    {{ end }}
+  </div>
+</nav>

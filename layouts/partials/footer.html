@@ -1,0 +1,7 @@
+<footer class="flex justify-between bg-ink px-14 py-7 font-mono text-xs text-[#8a8a8a]">
+  <span>&copy; {{ now.Year }} Amanda E. Regan</span>
+  <span>
+    {{ with .Site.Params.social.email }}<a href="mailto:{{ . }}" class="hover:text-white transition-colors">{{ . }}</a>{{ end }}
+    {{ with .Site.Params.social.github }} &middot; <a href="https://github.com/{{ . }}" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">github.com/{{ . }}</a>{{ end }}
+  </span>
+</footer>

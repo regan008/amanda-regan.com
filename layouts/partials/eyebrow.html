@@ -1,0 +1,3 @@
+{{- $text := .text -}}
+{{- $dark := .dark | default false -}}
+<div class="mb-[18px] font-mono text-xs font-medium uppercase tracking-widest3 {{ if $dark }}text-cobalt-soft{{ else }}text-cobalt{{ end }}">{{ $text }}</div>
