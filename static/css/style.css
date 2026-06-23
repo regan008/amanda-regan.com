@@ -1581,6 +1581,11 @@ video {
   inset: 0px;
 }
 
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -1808,6 +1813,10 @@ video {
 
 .h-\[360px\] {
   height: 360px;
+}
+
+.h-\[68px\] {
+  height: 68px;
 }
 
 .h-full {
