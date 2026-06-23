@@ -1,5 +1,7 @@
 ---
 date: 2024-06-30
+type: "news"
+title: "Article Published in Journal of Digital History"
 --- 
 
 My article [Secret Societies and Revolving Doors: Using Mapping the Gay Guides to Study LGBTQ

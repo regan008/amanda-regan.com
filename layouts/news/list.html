@@ -1,20 +1,23 @@
 {{ define "main" }}
-<div class="grid grid-cols-12">
-    <div class="col-span-10 col-start-2">
-        <h1 class="text-4xl font-heading font-semibold text-primary mb-12">News</h1>
-        <div class="space-y-4">
-            {{ range .Pages.ByDate.Reverse }}
-            <div class="flex gap-4 w-full p-4 rounded-lg bg-base-100/50 hover:bg-base-100 transition-colors duration-200 border border-base-200">
-                <div class="text-sm text-secondary min-w-[120px]">{{ .Date.Format "January 2, 2006" }}</div>
-                <div class="flex flex-col flex-grow min-w-0">
-                    <a href="{{ .RelPermalink }}" class="text-xl font-heading font-medium text-primary hover:text-accent transition-colors">{{ .Title }}</a>
-                    <div class="text-base text-secondary/80 [&_a]:text-accent [&_a:hover]:text-accent/80 [&_a]:underline">
-                        {{ .Content }}
-                    </div>
-                </div>
-            </div>
-            {{ end }}
+<section class="border-t border-hairline bg-white">
+  <div class="mx-auto max-w-[1180px] px-14 py-[54px]">
+    <h1 class="m-0 mb-7 font-heading text-3xl font-bold text-ink">News & talks</h1>
+    <div class="space-y-6">
+      {{ range .Pages.ByDate.Reverse }}
+      <div class="rounded-md border border-hairline bg-porcelain p-6">
+        <div class="mb-3 flex items-center justify-between">
+          <div class="font-mono text-sm text-cobalt">{{ .Date.Format "January 2, 2006" }}</div>
+          {{ partial "post-type-badge.html" (dict "type" .Params.type) }}
         </div>
+        <h2 class="m-0 mb-3 font-heading text-xl font-bold text-ink">
+          <a href="{{ .RelPermalink }}" class="text-ink no-underline hover:text-cobalt">{{ .Title }}</a>
+        </h2>
+        <div class="font-sans text-base text-[#454545] [&_a]:text-cobalt [&_a]:underline">
+          {{ .Content }}
+        </div>
+      </div>
+      {{ end }}
     </div>
-</div>
+  </div>
+</section>
 {{ end }} 

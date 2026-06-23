@@ -52,23 +52,26 @@
 </section>
 {{ end }}
 
-<!-- TALKS -->
-{{ with .Params.presentations }}
+<!-- NEWS & TALKS -->
+{{ $news := (where .Site.RegularPages "Section" "news") }}
+{{ $news = (sort $news "Date" "desc") | first 5 }}
+{{ if $news }}
 <section class="border-t border-hairline bg-hairline-soft">
   <div class="mx-auto max-w-[1180px] px-14 py-[54px]">
     <div class="mb-7 flex items-baseline justify-between">
-      <h2 class="m-0 font-heading text-3xl font-bold text-ink">Upcoming & recent talks</h2>
+      <h2 class="m-0 font-heading text-3xl font-bold text-ink">News & talks</h2>
+      <a href="/news/" class="font-mono text-xs text-cobalt no-underline">all updates &rarr;</a>
     </div>
     <div class="space-y-6">
-      {{ range . }}
+      {{ range $news }}
       <div class="grid grid-cols-[120px_1fr] gap-6 rounded-md border border-hairline bg-white p-5">
         <div class="flex flex-col justify-between">
-          <div class="font-mono text-sm font-semibold text-cobalt">{{ .date }}</div>
-          {{ with .link }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="border-b border-cobalt pb-[3px] font-mono text-xs text-cobalt no-underline">visit &rarr;</a>{{ end }}
+          <div class="font-mono text-sm font-semibold text-cobalt">{{ .Date.Format "Jan 2, 2006" }}</div>
+          <a href="{{ .Permalink }}" class="border-b border-cobalt pb-[3px] font-mono text-xs text-cobalt no-underline">read &rarr;</a>
         </div>
         <div>
-          <h3 class="m-0 mb-1 font-heading text-lg font-bold leading-tight text-ink">{{ .title }}</h3>
-          <p class="m-0 font-sans text-sm text-[#6B6B6B]">{{ .venue }}</p>
+          {{ partial "post-type-badge.html" (dict "type" .Params.type) }}
+          <h3 class="m-0 mb-1 mt-2 font-heading text-lg font-bold leading-tight text-ink">{{ .Title }}</h3>
         </div>
       </div>
       {{ end }}

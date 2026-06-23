@@ -9,15 +9,6 @@ book:
   subtitle: "Physical Fitness Initiatives for Women, 1880–1965"
   description: "Traces how fitness became a mechanism for measuring and regulating women's bodies across nearly a century — never really about health, but an evolving standard for policing who counted as \"fit\" to participate in American life. University of Virginia Press."
   link: "#"
-presentations:
-  - title: "Digital Methods for Historical Research"
-    venue: "Conference on Digital History"
-    date: "2026"
-    link: "#"
-  - title: "Mapping Queer Life: Computational Approaches to LGBTQ History"
-    venue: "American Historical Association Annual Meeting"
-    date: "2025"
-    link: "#"
 contact:
   heading: "Let's talk history & data"
   text: "Prospective Digital History Ph.D. students, collaborators, and press are all welcome to reach out. Email a sentence or two about your interests and expect a follow-up."
