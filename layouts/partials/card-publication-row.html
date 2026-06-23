@@ -5,6 +5,9 @@
   {{- $label = "Book" -}}
 {{- else if eq $pubtype "edited-volume" -}}
   {{- $label = "Chapter" -}}
+  {{- if or (eq $page.Params.role "Co-editor") (eq $page.Params.role "Editor") -}}
+    {{- $label = "Special Issue" -}}
+  {{- end -}}
   {{- with $page.Params.status }}{{ $label = printf "%s · %s" $label (humanize .) }}{{ end -}}
 {{- else if eq $pubtype "review" -}}
   {{- $label = "Review" -}}
