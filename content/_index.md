@@ -3,7 +3,7 @@ title: "Amanda E. Regan"
 description: "Amanda E. Regan is a historian of digital and computational history, Assistant Professor at Clemson University, and director of its Digital History Ph.D. program."
 heroEyebrow: ""
 book:
-  enabled: true
+  enabled: false
   eyebrow: "New book · Forthcoming April 2027"
   title: "Shaping Up"
   subtitle: "Physical Fitness Initiatives for Women, 1880–1965"
@@ -15,7 +15,7 @@ contact:
 draft: false
 ---
 
-I am a historian of the late-nineteenth and twentieth-century United States and a specialist in digital and computational history. I am an Assistant Professor in the Department of History and Geography at Clemson University and Director of Graduate Studies overseeing the History MA degree and the first of its kind Digital History Ph.D. Program.
+I am a historian of the late-nineteenth and twentieth-century United States and a specialist in digital and computational history. I am an Assistant Professor in the Department of History and Geography at Clemson University and Director of Graduate Studies overseeing the History MA degree and the first of its kind [Digital History Ph.D. Program.](#)
 
 As a digital historian, I develop methods that uncover previously invisible patterns in the historical record, combining large-scale data analysis, geospatial mapping, and algorithmic approaches with traditional archival research. I am also increasingly interested in the impact of AI on historical research and teaching, both what it makes possible and where it falls short.
 

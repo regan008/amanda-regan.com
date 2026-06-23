@@ -5,6 +5,6 @@ date_event: "Jan 7-10th"
 venue: "American Historical Association Annual Meeting"
 location: "New Orleans, LA"
 talk_title: "Comprehensive Exams In the Age of Artificial Intelligence"
-role: "speaker"
+role: "panelist"
 draft: false
 ---
