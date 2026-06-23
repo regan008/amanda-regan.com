@@ -79,6 +79,9 @@
           {{ if .Params.venue }}
           <div class="font-sans text-lg font-semibold leading-snug text-ink">{{ .Params.venue }}</div>
           {{ end }}
+          {{ if .Params.talk_title }}
+          <div class="font-sans text-sm text-[#6B6B6B]">{{ .Params.talk_title }}</div>
+          {{ end }}
           {{ if .Params.location }}
           <div class="font-sans text-sm text-[#6B6B6B]">{{ .Params.location }}</div>
           {{ end }}
