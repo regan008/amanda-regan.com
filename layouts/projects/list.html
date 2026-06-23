@@ -12,11 +12,11 @@
       </div>
     {{ end }}
 
-    {{ $ongoing := where .Pages "Params.status" "ongoing" }}
-    {{ if $ongoing }}
-      {{ partial "section-divider.html" (dict "text" "Ongoing & maintained") }}
+    {{ $past := where .Pages "Params.status" "past" }}
+    {{ if $past }}
+      {{ partial "section-divider.html" (dict "text" "Past projects") }}
       <div class="grid grid-cols-3 gap-x-7 gap-y-9">
-        {{ range $ongoing }}{{ partial "card-project.html" . }}{{ end }}
+        {{ range $past }}{{ partial "card-project.html" . }}{{ end }}
       </div>
     {{ end }}
 
