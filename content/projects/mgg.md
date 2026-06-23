@@ -2,7 +2,7 @@
 title: "Mapping the Gay Guides"
 status: current
 dateRange: "2019 – Present"
-image: "/portfolio-mgg.png"
+image: "/images/portfolio-mgg.png"
 roles:
   - "Co-Project Director and Lead Digital Historian"
 link: "https://www.mappingthegayguides.org"

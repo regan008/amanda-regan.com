@@ -2,7 +2,7 @@
 title: "RRCHNM Digital Archive and Network Visualization"
 status: past
 dateRange: ""
-image: "/portfolio-rrchnm20.png"
+image: "/images/portfolio-rrchnm20.png"
 roles:
   - "Collaborator"
 link: "https://20.rrchnm.org/"

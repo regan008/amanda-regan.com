@@ -2,7 +2,7 @@
 title: "PressForward"
 status: past
 dateRange: "2016 – 2018"
-image: "/portfolio-pf.png"
+image: "/images/portfolio-pf.png"
 roles:
   - "Software Development Manager"
 link: "https://pressforward.org/"

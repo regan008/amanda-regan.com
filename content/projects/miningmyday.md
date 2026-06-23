@@ -2,7 +2,7 @@
 title: "Mining My Day: Using Text Analysis to Understand Eleanor Roosevelt's Newspaper Columns"
 status: past
 dateRange: "2019 – Present"
-image: "/portfolio-miningmyday.png"
+image: "/images/portfolio-miningmyday.png"
 roles:
   - "Co-Creator"
 link: "https://regan008.shinyapps.io/mining_my_day/"
