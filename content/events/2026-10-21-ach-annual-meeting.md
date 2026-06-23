@@ -4,6 +4,7 @@ type: "talk"
 title: "ACH Annual Meeting"
 date_event: "Oct 21-24"
 venue: "Association for Computers and the Humanities Annual Meeting"
+location: "San Antonio, TX"
 role: "Panelist"
 link: "https://ach.org"
 draft: false

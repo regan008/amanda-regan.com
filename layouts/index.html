@@ -79,6 +79,9 @@
           {{ if .Params.venue }}
           <div class="font-sans text-lg font-semibold leading-snug text-ink">{{ .Params.venue }}</div>
           {{ end }}
+          {{ if .Params.location }}
+          <div class="font-sans text-sm text-[#6B6B6B]">{{ .Params.location }}</div>
+          {{ end }}
           {{ with .Params.link }}
           <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block border-b border-cobalt pb-[2px] font-mono text-xs text-cobalt no-underline hover:text-cobalt/80">Details &rarr;</a>
           {{ end }}
