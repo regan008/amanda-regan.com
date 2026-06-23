@@ -84,47 +84,8 @@
     </div>
   </div>
 
-  {{ with .Params.schedule }}
-  <!-- SCHEDULE -->
-  <div class="px-14 pb-14 pt-2">
-    {{ partial "section-divider.html" (dict "text" "Schedule" "right" "CLICK A WEEK FOR DETAIL ↓") }}
-
-    <div class="grid grid-cols-[60px_104px_1fr_150px_22px] gap-4 border-b-2 border-ink p-3 font-mono text-[10.5px] uppercase tracking-wide text-[#8086a0]">
-      <div>WK</div><div>DATE</div><div>TOPIC</div><div>DUE</div><div></div>
-    </div>
-
-    {{ range . }}
-      {{ with .unit }}
-      <div class="mt-3.5 rounded-sm bg-[#ECEEFB] px-3 py-[9px] font-mono text-[10.5px] font-semibold uppercase tracking-widest2 text-cobalt">{{ . }}</div>
-      {{ end }}
-      <details class="group border-b border-ink/10">
-        <summary class="grid cursor-pointer list-none grid-cols-[60px_104px_1fr_150px_22px] items-baseline gap-4 p-3 [&::-webkit-details-marker]:hidden group-open:bg-[#ECEEFB]">
-          <div class="font-mono text-xs text-cobalt">{{ .week }}</div>
-          <div class="font-mono text-xs text-[#8086a0]">{{ .dates }}</div>
-          <div>
-            <div class="font-sans text-[17px] font-semibold leading-snug text-ink">{{ .topic }}</div>
-            {{ with .summary }}<div class="mt-[3px] font-sans text-xs leading-snug text-[#565a66]">{{ . }}</div>{{ end }}
-          </div>
-          <div class="font-mono text-xs text-[#565a66]">{{ .due }}</div>
-          <div class="font-mono text-sm text-cobalt transition-transform duration-200 group-open:rotate-90">&rsaquo;</div>
-        </summary>
-        <div class="bg-white py-1.5 pb-[26px] pl-[180px] pr-3">
-          {{ range .readings }}
-          <div class="flex gap-2.5 border-b border-ink/[.08] py-2">
-            <span class="flex-none font-mono text-[11px] text-cobalt">&#8599;</span>
-            <span class="font-sans text-sm leading-[1.55] text-[#3a3a3a]">{{ . }}</span>
-          </div>
-          {{ end }}
-          {{ with .dueDetail }}<div class="mt-3 font-mono text-[12.5px] text-cobalt">{{ . }}</div>{{ end }}
-        </div>
-      </details>
-    {{ end }}
-  </div>
-  {{ end }}
-
-  <!-- POLICIES -->
-  <div class="px-14 pb-16">
-    {{ partial "section-divider.html" (dict "text" "Policies & Procedures") }}
+  <!-- SCHEDULE + POLICIES (or, for courses not yet converted, the original plain markdown) -->
+  <div class="prose prose-base max-w-none px-14 pb-16 pt-2 font-sans text-[#3a3a3a] prose-headings:font-heading prose-headings:text-ink prose-a:text-cobalt prose-a:no-underline hover:prose-a:underline prose-table:text-sm">
     {{ .Content }}
   </div>
 </div>

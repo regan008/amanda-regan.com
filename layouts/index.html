@@ -53,33 +53,30 @@
 {{ end }}
 
 <!-- EVENTS -->
-{{ $events := (where .Site.RegularPages "Section" "news") }}
-{{ $events = (where $events "Params.type" "talk") }}
+{{ $events := (where .Site.RegularPages "Section" "events") }}
 {{ $events = (sort $events "Date" "desc") | first .Site.Params.maxEvents }}
 {{ if $events }}
 <section class="border-t border-hairline bg-white">
   <div class="mx-auto max-w-[1180px] px-14 py-[54px]">
-    <div class="mb-2">
+    <div class="mb-7">
       <h2 class="m-0 font-heading text-3xl font-bold text-ink">Events</h2>
       <p class="m-0 mt-2 max-w-[70ch] font-sans text-base text-[#454545]">Upcoming talks, workshops, and conference panels. <a href="/contact/" class="text-cobalt underline">Contact me</a> about booking speaking engagements.</p>
     </div>
-    <div class="mt-8 space-y-8">
+    <div class="space-y-0">
       {{ range $events }}
-      <div class="border-b border-hairline pb-8 last:border-b-0">
-        <div class="mb-3 flex items-baseline gap-4">
-          <div class="font-heading text-5xl font-extrabold leading-none text-ink">
-            {{ .Params.date_event }}
-          </div>
+      <div class="grid grid-cols-[140px_1fr] items-baseline gap-6 border-b border-hairline-soft py-[18px]">
+        <span class="font-heading text-lg font-bold text-ink">{{ .Params.date_event }}</span>
+        <div>
           {{ if .Params.role }}
-          <span class="font-mono text-xs font-medium uppercase tracking-wider text-[#888]">{{ .Params.role }}</span>
+          <div class="mb-1 font-mono text-xs font-medium uppercase tracking-widest text-cobalt">{{ .Params.role }}</div>
+          {{ end }}
+          {{ if .Params.venue }}
+          <div class="font-sans text-base font-semibold leading-snug text-ink">{{ .Params.venue }}</div>
+          {{ end }}
+          {{ with .Params.link }}
+          <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block border-b border-cobalt pb-[2px] font-mono text-xs text-cobalt no-underline hover:text-cobalt/80">Details &rarr;</a>
           {{ end }}
         </div>
-        {{ if .Params.venue }}
-        <h3 class="m-0 font-heading text-lg font-bold text-ink">{{ .Params.venue }}</h3>
-        {{ end }}
-        {{ with .Params.link }}
-        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block border-b border-cobalt pb-[2px] font-mono text-xs text-cobalt no-underline hover:text-cobalt/80">Details &rarr;</a>
-        {{ end }}
       </div>
       {{ end }}
     </div>
