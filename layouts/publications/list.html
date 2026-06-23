@@ -13,8 +13,8 @@
       <div class="mb-6 border-b border-cobalt pb-3 font-mono text-[13px] uppercase tracking-widest2 text-cobalt">Book</div>
       {{ range $books }}
         {{ $book := . }}
-        <div class="mb-12 grid grid-cols-[96px_1fr] gap-7">
-          <div class="flex h-[140px] w-24 items-end rounded-[3px] bg-gradient-to-br from-cobalt to-[#0f2299] p-2.5 font-mono text-[9px] leading-tight text-white/85">{{ $book.Params.publisher }} {{ $book.Params.year }}</div>
+        <div class="mb-12 grid {{ if and $book.Params.cover $book.Params.cover.enabled }}grid-cols-[96px_1fr]{{ end }} gap-7">
+          {{ if and $book.Params.cover $book.Params.cover.enabled }}<div class="flex h-[140px] w-24 items-end rounded-[3px] bg-gradient-to-br from-cobalt to-[#0f2299] p-2.5 font-mono text-[9px] leading-tight text-white/85">{{ $book.Params.publisher }} {{ $book.Params.year }}</div>{{ end }}
           <div>
             <div class="mb-2 font-mono text-[11px] uppercase tracking-wide text-[#9a9a9a]">Monograph{{ with $book.Params.status }} · {{ humanize . }} {{ $book.Params.year }}{{ end }}</div>
             <h3 class="m-0 mb-2.5 font-heading text-2xl font-bold leading-tight text-ink">{{ $book.Title }}</h3>
