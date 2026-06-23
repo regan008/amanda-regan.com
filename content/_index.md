@@ -10,10 +10,20 @@ book:
   description: "Traces how fitness became a mechanism for measuring and regulating women's bodies across nearly a century — never really about health, but an evolving standard for policing who counted as \"fit\" to participate in American life. University of Virginia Press."
   link: "#"
 selectedWork:
+  enabled: false
   eyebrow: ""
   title: "Mapping the Gay Guides"
   description: "An interactive dataset of nearly 200,000 LGBTQ spaces, 1965–2003, mapping queer life far beyond the coastal cities where LGBTQ history is usually located."
   link: "https://www.mappingthegayguides.org"
+presentations:
+  - title: "Digital Methods for Historical Research"
+    venue: "Conference on Digital History"
+    date: "2026"
+    link: "#"
+  - title: "Mapping Queer Life: Computational Approaches to LGBTQ History"
+    venue: "American Historical Association Annual Meeting"
+    date: "2025"
+    link: "#"
 contact:
   heading: "Let's talk history & data"
   text: "Prospective Digital History Ph.D. students, collaborators, and press are all welcome to reach out. Email a sentence or two about your interests and expect a follow-up."
@@ -24,4 +34,4 @@ I am a historian of the late-nineteenth and twentieth-century United States and 
 
 As a digital historian, I develop methods that uncover previously invisible patterns in the historical record, combining large-scale data analysis, geospatial mapping, and algorithmic approaches with traditional archival research. I am also increasingly interested in the impact of AI on historical research and teaching, both what it makes possible and where it falls short.
 
-My research centers on women's and gender history in the twentieth-century United States, with particular attention to the history of the body, fitness, and health. I also work in [LGBTQ history](https://www.mappingthegayguides.org), mapping the geography of queer life across the United States to recover communities and networks that have often been overlooked.
+My research centers on women's and gender history in the twentieth-century United States, with particular attention to the history of the body, fitness, and health. My book, entitled _Shaping Up: Physical Fitness Initiatives for Women, 1880-1965_, is forthcoming from the University of Virginia press in Spring 2027.
