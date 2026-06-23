@@ -1,10 +1,12 @@
 ---
 title: "Amanda E. Regan"
 description: "Amanda E. Regan is a historian of digital and computational history, Assistant Professor at Clemson University, and director of its Digital History Ph.D. program."
-heroEyebrow: "Historian · Digital & Computational"
+heroEyebrow: ""
 heroSummary:
-  - "I develop methods that uncover previously invisible patterns in the historical record — combining large-scale data analysis, geospatial mapping, and algorithmic approaches with traditional archival research."
-  - "Assistant Professor at Clemson, Director of Graduate Studies, and a builder of the first-of-its-kind Digital History Ph.D. Program."
+  - "I am a historian of the late-nineteenth and twentieth-century United States and a specialist in digital and computational history. I am an Assistant Professor in the Department of History and Geography at Clemson University and Director of Graduate Studies overseeing the History MA degree and the first of its kind Digital History Ph.D. Program."
+  - "As a digital historian, I develop methods that uncover previously invisible patterns in the historical record, combining large-scale data analysis, geospatial mapping, and algorithmic approaches with traditional archival research. I am also increasingly interested in the impact of AI on historical research and teaching, both what it makes possible and where it falls short."
+  - "My research centers on women's and gender history in the twentieth-century United States, with particular attention to the history of the body, fitness, and health. I also work in LGBTQ history, mapping the geography of queer life across the United States to recover communities and networks that have often been overlooked."
+
 book:
   eyebrow: "New book · Forthcoming April 2027"
   title: "Shaping Up"
@@ -12,7 +14,7 @@ book:
   description: "Traces how fitness became a mechanism for measuring and regulating women's bodies across nearly a century — never really about health, but an evolving standard for policing who counted as \"fit\" to participate in American life. University of Virginia Press."
   link: "#"
 selectedWork:
-  eyebrow: "NEH-funded · ~200,000 records"
+  eyebrow: ""
   title: "Mapping the Gay Guides"
   description: "An interactive dataset of nearly 200,000 LGBTQ spaces, 1965–2003, mapping queer life far beyond the coastal cities where LGBTQ history is usually located."
   link: "https://www.mappingthegayguides.org"
