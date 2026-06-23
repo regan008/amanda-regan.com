@@ -52,27 +52,34 @@
 </section>
 {{ end }}
 
-<!-- NEWS & TALKS -->
-{{ $news := (where .Site.RegularPages "Section" "news") }}
-{{ $news = (sort $news "Date" "desc") | first 5 }}
-{{ if $news }}
-<section class="border-t border-hairline bg-hairline-soft">
+<!-- EVENTS -->
+{{ $events := (where .Site.RegularPages "Section" "news") }}
+{{ $events = (where $events "Params.type" "talk") }}
+{{ $events = (sort $events "Date" "desc") | first .Site.Params.maxEvents }}
+{{ if $events }}
+<section class="border-t border-hairline bg-white">
   <div class="mx-auto max-w-[1180px] px-14 py-[54px]">
-    <div class="mb-7 flex items-baseline justify-between">
-      <h2 class="m-0 font-heading text-3xl font-bold text-ink">News & talks</h2>
-      <a href="/news/" class="font-mono text-xs text-cobalt no-underline">all updates &rarr;</a>
+    <div class="mb-2">
+      <h2 class="m-0 font-heading text-3xl font-bold text-ink">Events</h2>
+      <p class="m-0 mt-2 max-w-[70ch] font-sans text-base text-[#454545]">Upcoming talks, workshops, and conference panels. <a href="/contact/" class="text-cobalt underline">Contact me</a> about booking speaking engagements.</p>
     </div>
-    <div class="space-y-6">
-      {{ range $news }}
-      <div class="grid grid-cols-[120px_1fr] gap-6 rounded-md border border-hairline bg-white p-5">
-        <div class="flex flex-col justify-between">
-          <div class="font-mono text-sm font-semibold text-cobalt">{{ .Date.Format "Jan 2, 2006" }}</div>
-          <a href="{{ .Permalink }}" class="border-b border-cobalt pb-[3px] font-mono text-xs text-cobalt no-underline">read &rarr;</a>
+    <div class="mt-8 space-y-8">
+      {{ range $events }}
+      <div class="border-b border-hairline pb-8 last:border-b-0">
+        <div class="mb-3 flex items-baseline gap-4">
+          <div class="font-heading text-5xl font-extrabold leading-none text-ink">
+            {{ .Params.date_event }}
+          </div>
+          {{ if .Params.role }}
+          <span class="font-mono text-xs font-medium uppercase tracking-wider text-[#888]">{{ .Params.role }}</span>
+          {{ end }}
         </div>
-        <div>
-          {{ partial "post-type-badge.html" (dict "type" .Params.type) }}
-          <h3 class="m-0 mb-1 mt-2 font-heading text-lg font-bold leading-tight text-ink">{{ .Title }}</h3>
-        </div>
+        {{ if .Params.venue }}
+        <h3 class="m-0 font-heading text-lg font-bold text-ink">{{ .Params.venue }}</h3>
+        {{ end }}
+        {{ with .Params.link }}
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block border-b border-cobalt pb-[2px] font-mono text-xs text-cobalt no-underline hover:text-cobalt/80">Details &rarr;</a>
+        {{ end }}
       </div>
       {{ end }}
     </div>
