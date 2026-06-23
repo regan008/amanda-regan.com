@@ -9,12 +9,6 @@ book:
   subtitle: "Physical Fitness Initiatives for Women, 1880–1965"
   description: "Traces how fitness became a mechanism for measuring and regulating women's bodies across nearly a century — never really about health, but an evolving standard for policing who counted as \"fit\" to participate in American life. University of Virginia Press."
   link: "#"
-selectedWork:
-  enabled: false
-  eyebrow: ""
-  title: "Mapping the Gay Guides"
-  description: "An interactive dataset of nearly 200,000 LGBTQ spaces, 1965–2003, mapping queer life far beyond the coastal cities where LGBTQ history is usually located."
-  link: "https://www.mappingthegayguides.org"
 presentations:
   - title: "Digital Methods for Historical Research"
     venue: "Conference on Digital History"
