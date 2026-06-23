@@ -3,17 +3,39 @@
 
 <section class="border-t border-hairline bg-white">
   <div class="mx-auto max-w-[1040px] px-14 py-12">
-    {{ partial "section-divider.html" (dict "text" "Syllabi") }}
+    {{ $withKey := slice }}
+    {{ $maxAYStart := -1 }}
+    {{ range .Pages }}
+      {{ $sem := .Params.semester }}
+      {{ $year := int (substr $sem -4) }}
+      {{ $season := trim (substr $sem 0 (sub (len $sem) 5)) " " }}
+      {{ $seasonNum := 1 }}
+      {{ $ayStart := sub $year 1 }}
+      {{ if eq $season "Summer" }}{{ $seasonNum = 2 }}{{ else if eq $season "Fall" }}{{ $seasonNum = 3 }}{{ $ayStart = $year }}{{ end }}
+      {{ if gt $ayStart $maxAYStart }}{{ $maxAYStart = $ayStart }}{{ end }}
+      {{ $withKey = $withKey | append (dict "page" . "key" (printf "%04d.%d" $year $seasonNum) "ayStart" $ayStart) }}
+    {{ end }}
+    {{ $minAYStart := sub $maxAYStart 1 }}
+    {{ $withKey = where $withKey "ayStart" ">=" $minAYStart }}
+    {{ $sorted := sort $withKey "key" "desc" }}
 
-    {{ range .Pages.ByTitle }}
-    <a href="{{ .RelPermalink }}" class="grid grid-cols-[1fr_auto] items-center gap-5 border-b border-hairline-soft py-[22px] no-underline">
-      <div>
-        <div class="mb-[7px] font-mono text-[11px] uppercase tracking-wide text-[#9a9a9a]">{{ .Params.coursecode }} · {{ humanize .Params.level }}{{ with .Params.semester }} · {{ . }}{{ end }}</div>
-        <div class="font-heading text-xl font-bold leading-snug text-ink">{{ .Title }}</div>
-        {{ with .Params.summary }}<div class="font-sans text-sm leading-snug text-[#6B6B6B]">{{ . }}</div>{{ end }}
-      </div>
-      <span class="whitespace-nowrap border-b border-cobalt pb-[3px] font-mono text-xs text-cobalt">view syllabus &rarr;</span>
-    </a>
+    {{ $currentSemester := "" }}
+    {{ $first := true }}
+    {{ range $sorted }}
+      {{ $p := .page }}
+      {{ if ne $p.Params.semester $currentSemester }}
+        {{ $currentSemester = $p.Params.semester }}
+        <div class="{{ if not $first }}mt-10{{ end }}">
+          {{ partial "section-divider.html" (dict "text" $currentSemester) }}
+        </div>
+        {{ $first = false }}
+      {{ end }}
+      <a href="{{ $p.RelPermalink }}" class="grid grid-cols-[110px_1fr_140px_auto] items-center gap-4 border-b border-hairline-soft py-3 no-underline">
+        <span class="font-mono text-xs uppercase tracking-wide text-[#9a9a9a]">{{ $p.Params.coursecode }}</span>
+        <span class="font-heading text-base font-semibold leading-snug text-ink">{{ $p.Title }}</span>
+        <span class="font-mono text-[11px] uppercase tracking-wide text-[#9a9a9a]">{{ humanize $p.Params.level }}</span>
+        <span class="whitespace-nowrap border-b border-cobalt pb-[2px] font-mono text-xs text-cobalt">view syllabus &rarr;</span>
+      </a>
     {{ end }}
   </div>
 </section>

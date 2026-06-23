@@ -7,13 +7,12 @@
       {{ partial "eyebrow.html" (dict "text" .Params.heroEyebrow) }}
       <h1 class="m-0 mb-3.5 font-heading text-[60px] font-extrabold leading-none tracking-tight text-ink">{{ .Site.Title }}</h1>
       <div class="mb-6 h-0.5 w-11 bg-cobalt"></div>
-      {{ range .Params.heroSummary }}
-      <p class="m-0 mb-4 max-w-[56ch] font-sans text-lg leading-[1.65] text-[#454545]">{{ . }}</p>
-      {{ end }}
-      <div class="flex items-center gap-5 font-mono text-[12.5px]">
-        {{ partial "button.html" (dict "text" "→ email" "href" (printf "mailto:%s" .Site.Params.social.email) "variant" "primary") }}
-        {{ partial "button.html" (dict "text" "→ github" "href" (printf "https://github.com/%s" .Site.Params.social.github) "variant" "secondary" "external" true) }}
-        <a href="/about/" class="border-b border-cobalt pb-[3px] text-cobalt no-underline">more about me &rarr;</a>
+      <div class="font-sans text-lg leading-[1.65] text-[#454545] [&_p]:m-0 [&_p]:mb-4 [&_p]:max-w-[56ch] [&_a]:text-cobalt [&_a]:underline">
+        {{ .Content }}
+      </div>
+      <div class="flex items-center gap-5">
+        {{ partial "social-icons.html" (dict "site" .Site) }}
+        <a href="/about/" class="border-b border-cobalt pb-[3px] font-mono text-[12.5px] text-cobalt no-underline">more about me &rarr;</a>
       </div>
     </div>
     <img src="/images/headshot-oct25-1.JPG" alt="Amanda E. Regan" class="h-[360px] w-full rounded-lg object-cover shadow-xl">
@@ -22,6 +21,7 @@
 
 <!-- BOOK HERO -->
 {{ with .Params.book }}
+{{ if .enabled }}
 <section class="bg-ink text-white">
   <div class="mx-auto grid max-w-[1180px] grid-cols-[220px_1fr] items-center gap-12 px-14 py-14">
     <div class="flex h-[320px] w-[220px] items-center justify-center rounded bg-white/10 font-mono text-xs text-white/60 shadow-2xl">book cover placeholder</div>
@@ -34,6 +34,7 @@
     </div>
   </div>
 </section>
+{{ end }}
 {{ end }}
 
 <!-- PUBLICATIONS -->
@@ -75,18 +76,20 @@
 {{ end }}
 
 <!-- CONTACT -->
+{{ with .Params.contact }}
 <section id="contact" class="border-t-2 border-cobalt bg-porcelain">
   <div class="mx-auto grid max-w-[1180px] grid-cols-[1fr_auto] items-center gap-10 px-14 py-[54px]">
     <div>
       {{ partial "eyebrow.html" (dict "text" "Get in touch") }}
-      <h2 class="m-0 mb-3.5 font-heading text-[38px] font-extrabold leading-[1.05] tracking-tight text-ink">Let's talk history &amp; data</h2>
-      <p class="m-0 max-w-[60ch] font-sans text-[17px] leading-[1.65] text-[#454545]">Prospective Digital History Ph.D. students, collaborators, and press are all welcome to reach out. Email a sentence or two about your interests and expect a follow-up.</p>
+      <h2 class="m-0 mb-3.5 font-heading text-[38px] font-extrabold leading-[1.05] tracking-tight text-ink">{{ .heading }}</h2>
+      <p class="m-0 max-w-[60ch] font-sans text-[17px] leading-[1.65] text-[#454545]">{{ .text }}</p>
     </div>
     <div class="flex flex-col gap-3 font-mono text-[13px]">
-      {{ partial "button.html" (dict "text" (printf "→ %s" .Site.Params.social.email) "href" (printf "mailto:%s" .Site.Params.social.email) "variant" "primary") }}
-      {{ partial "button.html" (dict "text" (printf "→ github.com/%s" .Site.Params.social.github) "href" (printf "https://github.com/%s" .Site.Params.social.github) "variant" "secondary" "external" true) }}
+      {{ partial "button.html" (dict "text" (printf "→ %s" $.Site.Params.social.email) "href" (printf "mailto:%s" $.Site.Params.social.email) "variant" "primary") }}
+      {{ partial "button.html" (dict "text" (printf "→ github.com/%s" $.Site.Params.social.github) "href" (printf "https://github.com/%s" $.Site.Params.social.github) "variant" "secondary" "external" true) }}
     </div>
   </div>
 </section>
+{{ end }}
 
 {{ end }}

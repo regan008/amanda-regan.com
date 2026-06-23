@@ -2,12 +2,8 @@
 title: "Amanda E. Regan"
 description: "Amanda E. Regan is a historian of digital and computational history, Assistant Professor at Clemson University, and director of its Digital History Ph.D. program."
 heroEyebrow: ""
-heroSummary:
-  - "I am a historian of the late-nineteenth and twentieth-century United States and a specialist in digital and computational history. I am an Assistant Professor in the Department of History and Geography at Clemson University and Director of Graduate Studies overseeing the History MA degree and the first of its kind Digital History Ph.D. Program."
-  - "As a digital historian, I develop methods that uncover previously invisible patterns in the historical record, combining large-scale data analysis, geospatial mapping, and algorithmic approaches with traditional archival research. I am also increasingly interested in the impact of AI on historical research and teaching, both what it makes possible and where it falls short."
-  - "My research centers on women's and gender history in the twentieth-century United States, with particular attention to the history of the body, fitness, and health. I also work in LGBTQ history, mapping the geography of queer life across the United States to recover communities and networks that have often been overlooked."
-
 book:
+  enabled: true
   eyebrow: "New book · Forthcoming April 2027"
   title: "Shaping Up"
   subtitle: "Physical Fitness Initiatives for Women, 1880–1965"
@@ -18,5 +14,14 @@ selectedWork:
   title: "Mapping the Gay Guides"
   description: "An interactive dataset of nearly 200,000 LGBTQ spaces, 1965–2003, mapping queer life far beyond the coastal cities where LGBTQ history is usually located."
   link: "https://www.mappingthegayguides.org"
+contact:
+  heading: "Let's talk history & data"
+  text: "Prospective Digital History Ph.D. students, collaborators, and press are all welcome to reach out. Email a sentence or two about your interests and expect a follow-up."
 draft: false
 ---
+
+I am a historian of the late-nineteenth and twentieth-century United States and a specialist in digital and computational history. I am an Assistant Professor in the Department of History and Geography at Clemson University and Director of Graduate Studies overseeing the History MA degree and the first of its kind Digital History Ph.D. Program.
+
+As a digital historian, I develop methods that uncover previously invisible patterns in the historical record, combining large-scale data analysis, geospatial mapping, and algorithmic approaches with traditional archival research. I am also increasingly interested in the impact of AI on historical research and teaching, both what it makes possible and where it falls short.
+
+My research centers on women's and gender history in the twentieth-century United States, with particular attention to the history of the body, fitness, and health. I also work in [LGBTQ history](https://www.mappingthegayguides.org), mapping the geography of queer life across the United States to recover communities and networks that have often been overlooked.

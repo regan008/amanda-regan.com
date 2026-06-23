@@ -1,6 +1,6 @@
 ---
 title: "Courses"
-description: "Teaching — placeholder intro text."
+description: "Teaching — Amanda E. Regan's graduate and undergraduate digital history courses at Clemson University."
 ---
 
-I teach the graduate digital methods sequence that anchors Clemson's Digital History Ph.D. Placeholder intro text; replace once real content is reintroduced.
+I teach the graduate digital methods sequence that anchors Clemson's Digital History Ph.D. My courses train students to treat primary sources as data and to think computationally as a core historical skill.
