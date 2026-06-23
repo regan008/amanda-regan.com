@@ -1,0 +1,58 @@
+{{ define "main" }}
+
+{{ $allPosts := .Pages.ByDate.Reverse }}
+
+<!-- PAGE HEADER -->
+<section class="border-b border-hairline bg-porcelain">
+  <div class="mx-auto max-w-[1100px] px-14 pb-11 pt-[52px]">
+    <div class="flex items-baseline justify-between">
+      <div>
+        <div class="mb-4 font-mono text-xs font-medium uppercase tracking-widest3 text-cobalt">Writing</div>
+        <h1 class="m-0 font-heading text-[52px] font-extrabold leading-none tracking-tight text-ink">{{ .Title }}</h1>
+      </div>
+      <span class="self-end font-mono text-[13px] text-[#9a9a9a]">{{ len $allPosts }} post{{ if ne (len $allPosts) 1 }}s{{ end }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- YEAR-GROUPED POST LIST -->
+<section class="bg-white">
+  <div class="mx-auto max-w-[1100px] px-14 pb-20">
+    {{ $years := slice }}
+    {{ range $allPosts }}
+      {{ $year := .Date.Format "2006" }}
+      {{ if not (in $years $year) }}
+        {{ $years = $years | append $year }}
+      {{ end }}
+    {{ end }}
+
+    {{ range $years }}
+      {{ $year := . }}
+      {{ $yearPosts := where $allPosts "Date.Year" (int $year) }}
+      <div class="pb-0.5 pt-11">
+        <div class="flex items-center gap-5">
+          <span class="flex-none font-heading text-[22px] font-bold leading-none tracking-tight text-ink">{{ $year }}</span>
+          <div class="h-px flex-1 bg-hairline"></div>
+          <span class="flex-none font-mono text-[11px] text-[#9a9a9a]">{{ len $yearPosts }} post{{ if ne (len $yearPosts) 1 }}s{{ end }}</span>
+        </div>
+      </div>
+
+      {{ range $i, $p := $yearPosts }}
+      <div class="flex items-center justify-between gap-6 py-3.5 {{ if eq $i (sub (len $yearPosts) 1) }}border-b border-hairline-soft{{ else }}border-b border-porcelain{{ end }}">
+        <a href="{{ $p.RelPermalink }}" class="flex-1 font-sans text-base font-medium text-ink no-underline" style="text-wrap:pretty;">{{ $p.Title }}</a>
+        <div class="flex flex-none items-center gap-3">
+          {{ $type := $p.Params.posttype | default "reflection" }}
+          {{ if eq $type "tutorial" }}
+          <span class="whitespace-nowrap rounded-sm border border-cobalt px-2 py-[3px] font-mono text-[10px] font-medium uppercase tracking-wider text-cobalt">Tutorial</span>
+          {{ else }}
+          <span class="whitespace-nowrap rounded-sm border border-[#D8D8D5] px-2 py-[3px] font-mono text-[10px] font-medium uppercase tracking-wider text-[#6B6B6B]">Reflection</span>
+          {{ end }}
+          <span class="whitespace-nowrap font-mono text-xs text-[#9a9a9a]">{{ $p.Date.Format "Jan 2" }}</span>
+        </div>
+      </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}

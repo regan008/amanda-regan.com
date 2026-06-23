@@ -1,0 +1,74 @@
+{{ define "main" }}
+
+{{ $type := .Params.posttype | default "reflection" }}
+{{ $words := .WordCount }}
+{{ $readMins := math.Ceil (div (float $words) 200.0) }}
+
+<!-- POST HEADER -->
+<header class="border-b border-hairline bg-white">
+  <div class="mx-auto max-w-[760px] px-10 pb-11 pt-12">
+    <a href="/posts/" class="mb-7 inline-flex items-center gap-1.5 font-mono text-xs text-[#6B6B6B] no-underline">&larr; posts</a>
+
+    <div class="mb-4">
+      {{ if eq $type "tutorial" }}
+      <span class="inline-block rounded-sm border border-cobalt px-[9px] py-1 font-mono text-[11px] font-medium uppercase tracking-wider text-cobalt">Tutorial</span>
+      {{ else }}
+      <span class="inline-block rounded-sm border border-[#D8D8D5] px-[9px] py-1 font-mono text-[11px] font-medium uppercase tracking-wider text-[#6B6B6B]">Reflection</span>
+      {{ end }}
+    </div>
+
+    <h1 class="m-0 mb-5 font-heading text-[44px] font-extrabold leading-[1.05] tracking-tight text-ink" style="text-wrap:pretty;">{{ .Title }}</h1>
+
+    <div class="flex items-center gap-5 font-mono text-[13px] text-[#9a9a9a]">
+      <span>{{ .Date.Format "January 2, 2006" }}</span>
+      <span class="inline-block h-[3px] w-[3px] rounded-full bg-[#D0D0CC]"></span>
+      <span>Amanda E. Regan</span>
+      <span class="inline-block h-[3px] w-[3px] rounded-full bg-[#D0D0CC]"></span>
+      <span>{{ $readMins }} min read</span>
+    </div>
+  </div>
+</header>
+
+<!-- POST BODY -->
+<main class="mx-auto max-w-[760px] px-10 py-[52px]">
+  <div class="prose prose-base max-w-none font-sans text-[#3a3a3a] prose-headings:font-heading prose-headings:text-ink prose-h2:text-2xl prose-h2:font-bold prose-h2:tracking-tight prose-h3:text-lg prose-h3:font-semibold prose-a:text-cobalt prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-[3px] prose-blockquote:border-cobalt prose-blockquote:not-italic prose-blockquote:text-[#454545] prose-img:my-0 prose-p:leading-relaxed prose-li:leading-relaxed prose-pre:bg-ink prose-pre:text-[#e8e8e8]">
+    {{ .Content }}
+  </div>
+</main>
+
+<!-- POST NAVIGATION -->
+{{ $prevPage := .PrevInSection }}
+{{ $nextPage := .NextInSection }}
+{{ if or $prevPage $nextPage }}
+<div class="border-t border-hairline bg-white">
+  <div class="mx-auto grid max-w-[760px] grid-cols-2 gap-6 px-10 py-8">
+    {{ if $prevPage }}
+    <a href="{{ $prevPage.RelPermalink }}" class="block rounded-sm border border-hairline px-[22px] py-5 no-underline">
+      <div class="mb-2.5 font-mono text-[10px] uppercase tracking-wider text-[#9a9a9a]">&larr; Previous</div>
+      <div class="font-sans text-[15px] font-semibold leading-snug text-ink" style="text-wrap:pretty;">{{ $prevPage.Title }}</div>
+      <div class="mt-2 font-mono text-xs text-[#9a9a9a]">{{ $prevPage.Date.Format "Jan 2, 2006" }}</div>
+    </a>
+    {{ else }}
+    <span></span>
+    {{ end }}
+    {{ if $nextPage }}
+    <a href="{{ $nextPage.RelPermalink }}" class="block rounded-sm border border-hairline px-[22px] py-5 text-right no-underline">
+      <div class="mb-2.5 font-mono text-[10px] uppercase tracking-wider text-[#9a9a9a]">Next &rarr;</div>
+      <div class="font-sans text-[15px] font-semibold leading-snug text-ink" style="text-wrap:pretty;">{{ $nextPage.Title }}</div>
+      <div class="mt-2 font-mono text-xs text-[#9a9a9a]">{{ $nextPage.Date.Format "Jan 2, 2006" }}</div>
+    </a>
+    {{ else }}
+    <span></span>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+<!-- BACK TO INDEX -->
+<div class="border-t border-hairline bg-porcelain">
+  <div class="mx-auto max-w-[760px] px-10 py-6">
+    <a href="/posts/" class="font-mono text-xs text-[#6B6B6B] no-underline">&larr; back to all posts</a>
+  </div>
+</div>
+
+{{ end }}
