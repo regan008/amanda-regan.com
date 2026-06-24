@@ -3,9 +3,8 @@ title: "About"
 description: "Historian of late-nineteenth and twentieth-century US history, specializing in digital methods, AI and historical research, and LGBTQ history."
 layout: "about"
 headshot: "images/headshot-oct25-1.JPG"
+intro: "I am a historian of the late-nineteenth and twentieth-century United States and a specialist in digital and computational history. Currently, I am an Assistant Professor in the Department of History and Geography at Clemson University, where I also serve as Director of Graduate Studies overseeing both the History MA degree and the first of its kind Digital History Ph.D. Program."
 ---
-
-I am a historian of the late-nineteenth and twentieth-century United States and a specialist in digital and computational history. Currently, I am an Assistant Professor in the [Department of History and Geography](https://www.clemson.edu/caah/departments/history/) at Clemson University, where I also serve as Director of Graduate Studies overseeing both the History MA degree and the first of its kind [Digital History Ph.D. Program](https://digitalhistory.clemson.edu/).
 
 I earned my Ph.D. from George Mason University in 2019. From 2013 to 2015 I held a Digital History Fellowship at the [Roy Rosenzweig Center for History and New Media (RRCHNM)](https://rrchnm.org/), where I subsequently managed software development for the [PressForward Project](https://pressforward.org/) and was the managing editor of _[Digital Humanities Now](https://digitalhumanitiesnow.org/)_. Before joining Clemson, I was a Digital Humanities Postdoctoral Fellow at Southern Methodist University's [Center for Presidential History](https://www.smu.edu/cph).
 
