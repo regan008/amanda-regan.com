@@ -6,6 +6,6 @@
     {{ partial "eyebrow.html" (dict "text" $eyebrow) }}
     <h1 class="m-0 mb-4 font-heading text-[46px] font-extrabold leading-[1.02] tracking-tight text-ink">{{ $title }}</h1>
     <div class="mb-[22px] h-0.5 w-11 bg-cobalt"></div>
-    {{ with $intro }}<p class="m-0 max-w-[62ch] font-sans text-lg leading-[1.6] text-[#454545] [&_a]:text-cobalt [&_a]:underline hover:[&_a]:text-cobalt/80">{{ . | safeHTML }}</p>{{ end }}
+    {{ with $intro }}<div class="max-w-[62ch] font-sans text-lg leading-[1.6] text-[#454545] [&_a]:text-cobalt [&_a]:underline hover:[&_a]:text-cobalt/80 [&_p]:m-0">{{ . | safeHTML }}</div>{{ end }}
   </div>
 </section>
