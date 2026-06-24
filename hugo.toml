@@ -3,7 +3,6 @@ languageCode = 'en-us'
 title = 'Amanda Regan'
 
 [params]
-  theme = "winter"
   description = "Amanda E. Regan is a historian of digital and computational history, Assistant Professor at Clemson University, and director of its Digital History Ph.D. program."
   ogimage = "/images/headshot-oct25-1.JPG"
   academicName = "Amanda E. Regan"
@@ -51,8 +50,6 @@ title = 'Amanda Regan'
     name = "OFFICE HOURS"
     url = "/office-hours/"
     weight = 6
-
- 
 
 [markup.goldmark.renderer]
   unsafe = true
