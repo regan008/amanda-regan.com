@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+<!-- INTRO STRIP — headshot right, name + opening paragraph left -->
+<section class="border-b-2 border-cobalt bg-porcelain">
+  <div class="mx-auto max-w-[1100px] px-14 py-14">
+    <div class="grid grid-cols-[1fr_240px] gap-14 items-start">
+
+      <div>
+        <div class="mb-4 font-mono text-xs font-medium uppercase tracking-widest3 text-cobalt">About</div>
+        <h1 class="m-0 mb-3.5 font-heading text-[52px] font-extrabold leading-none tracking-tight text-ink">Amanda Regan</h1>
+        <div class="mb-6 h-[2px] w-10 bg-cobalt"></div>
+
+        <!-- Opening paragraph (first paragraph of content) -->
+        <div class="prose prose-sm max-w-none font-sans text-[18px] leading-[1.75] text-[#2e2e2e] max-w-[60ch] prose-p:m-0 prose-a:text-cobalt prose-a:no-underline hover:prose-a:underline">
+          {{ .Summary | markdownify }}
+        </div>
+      </div>
+
+      <!-- Headshot -->
+      {{ with .Params.headshot }}
+      <img src="{{ . | relURL }}" alt="Amanda E. Regan" class="block w-60 h-[300px] object-cover rounded-lg shadow-xl">
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- READING COLUMN — full bio (starting after first paragraph) -->
+<section class="bg-white">
+  <div class="mx-auto max-w-[1100px] px-14 py-20">
+    <div class="prose prose-base max-w-[68ch] font-sans text-[18px] leading-[1.8] text-[#2e2e2e] prose-p:m-0 prose-p:mb-7 prose-p:last:mb-0 prose-a:text-cobalt prose-a:no-underline hover:prose-a:underline prose-em:font-normal prose-em:italic">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+
+{{ end }}
