@@ -6,6 +6,8 @@ title = 'Amanda Regan'
   theme = "winter"
   description = "Amanda E. Regan is a historian of digital and computational history, Assistant Professor at Clemson University, and director of its Digital History Ph.D. program."
   ogimage = "/images/headshot-oct25-1.JPG"
+  academicName = "Amanda E. Regan"
+  googleSiteVerification = ""
   maxEvents = 3
   [params.social]
     email = "aeregan@clemson.edu"
@@ -14,6 +16,7 @@ title = 'Amanda Regan'
     linkedin = "amanda-regan-67006a2b"
     bluesky = "regan008.bsky.social"
     orcid = "0000-0002-4260-5839"
+    scholar = "nGmh2GUAAAAJ"
 
 
 [menu]

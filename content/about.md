@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "Amanda E. Regan is a historian of digital and computational history, Assistant Professor at Clemson University, and director of its Digital History Ph.D. program."
+description: "Historian of late-nineteenth and twentieth-century US history, specializing in digital methods, AI and historical research, and LGBTQ history."
 ---
 
 {{< img src="images/headshot-oct25-1.JPG" alt="Profile Image" class="w-72 h-72 object-cover rounded-full" >}}

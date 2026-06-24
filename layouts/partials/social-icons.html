@@ -30,6 +30,20 @@
     </svg>
   </a>
   {{ end }}
+  {{ with $social.orcid }}
+  <a href="https://orcid.org/{{ . }}" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="ORCID">
+    <svg xmlns="http://www.w3.org/2000/svg" width="{{ $size }}" height="{{ $size }}" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12 12-5.373 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .949.424.949.949 0 .524-.424.948-.949.948-.525 0-.949-.424-.949-.948 0-.525.424-.949.949-.949zm2.7 7.645h-1.197V6.731h1.197v5.292zm6.553 0h-1.196v-2.266c0-.881-.3-1.48-1.104-1.48-.602 0-.956.406-1.122.799-.058.141-.072.338-.072.535v2.412h-1.197V6.731h1.197v.769h.017c.168-.253.537-.618 1.305-.618 .955 0 1.67.623 1.67 1.972v2.926z"/>
+    </svg>
+  </a>
+  {{ end }}
+  {{ with $social.scholar }}
+  <a href="https://scholar.google.com/citations?user={{ . }}" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="Google Scholar">
+    <svg xmlns="http://www.w3.org/2000/svg" width="{{ $size }}" height="{{ $size }}" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.4c5.28 0 9.6 4.32 9.6 9.6s-4.32 9.6-9.6 9.6-9.6-4.32-9.6-9.6 4.32-9.6 9.6-9.6zm.5 4.8l-3.5 2.1v5.4l3.5 2.1 3.5-2.1v-5.4l-3.5-2.1zm0 3.6l1.5.9v2.4l-1.5.9-1.5-.9v-2.4l1.5-.9z"/>
+    </svg>
+  </a>
+  {{ end }}
   {{ with $social.department }}
   <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="Clemson Faculty Profile">
     <svg xmlns="http://www.w3.org/2000/svg" width="{{ $size }}" height="{{ $size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">

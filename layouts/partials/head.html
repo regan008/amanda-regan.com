@@ -18,6 +18,27 @@
 <meta name="twitter:description" content="{{ $description }}">
 {{ with $image }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
 
+{{ with .Site.Params.googleSiteVerification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
+
+<!-- Google Scholar citation meta tags -->
+{{ if and (eq .Section "publications") (ne .Kind "section") }}
+  <meta name="citation_title" content="{{ .Title }}">
+  <meta name="citation_author" content="{{ .Site.Params.academicName }}">
+  {{ range .Params.coauthors }}<meta name="citation_author" content="{{ . }}">{{ end }}
+  {{ with .Params.year }}<meta name="citation_publication_date" content="{{ . }}">{{ end }}
+  {{ with .Params.venue }}<meta name="citation_journal_title" content="{{ . }}">{{ end }}
+  {{ with .Params.publisher }}<meta name="citation_publisher" content="{{ . }}">{{ end }}
+  {{ with .Params.link }}
+    {{ if strings.Contains . "doi.org" }}
+      {{ $doi := strings.TrimPrefix . "https://doi.org/" }}
+      {{ $doi = strings.TrimPrefix $doi "http://doi.org/" }}
+      <meta name="citation_doi" content="{{ $doi }}">
+    {{ end }}
+    <meta name="citation_abstract_html_url" content="{{ . }}">
+    <meta name="citation_fulltext_html_url" content="{{ . }}">
+  {{ end }}
+{{ end }}
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">

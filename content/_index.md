@@ -1,5 +1,5 @@
 ---
-title: "Amanda E. Regan"
+title: "Amanda Regan"
 description: "Amanda E. Regan is a historian of digital and computational history, Assistant Professor at Clemson University, and director of its Digital History Ph.D. program."
 heroEyebrow: ""
 book:
