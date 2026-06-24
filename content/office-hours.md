@@ -19,7 +19,7 @@ cards:
     buttontext: "Book a time →"
     caption: "via Fantastical — link coming soon"
     variant: light
-  - audience: "Research collaborators & media"
+  - audience: "Beyond Clemson"
     link: "mailto:aeregan@clemson.edu"
     buttontext: "Email me →"
     caption: "aeregan@clemson.edu"
