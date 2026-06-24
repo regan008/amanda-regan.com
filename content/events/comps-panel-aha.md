@@ -1,5 +1,5 @@
 ---
-date: 2025-06-23
+date: 2026-06-23
 type: "talk"
 date_event: "Jan 7-10th"
 venue: "American Historical Association Annual Meeting"

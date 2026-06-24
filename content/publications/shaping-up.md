@@ -10,4 +10,4 @@ cover:
 draft: false
 ---
 
-Traces how fitness became a mechanism for measuring and regulating women's bodies across nearly a century — never really about health, but an evolving standard for policing who counted as "fit" to participate in American life.
+From anthrompometric measurement systems in the 1880s to Cold War family fitness campaigns, _Shaping Up_ demonstrates how physical fitness served as a mechanism for defining and policing American femininity across nearly a century of social change.
