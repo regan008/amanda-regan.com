@@ -44,10 +44,7 @@ title = 'Amanda Regan'
     name = "OFFICE HOURS"
     url = "/office-hours/"
     weight = 6
-  [[menu.main]]
-    name = "CV"
-    url = "https://raw.githubusercontent.com/regan008/CV/master/ARegan-cv.pdf"
-    weight = 7
+
  
 
 [build]
