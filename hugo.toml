@@ -10,13 +10,20 @@ title = 'Amanda Regan'
   googleSiteVerification = ""
   maxEvents = 3
   [params.social]
+    # Email address — will create a mailto: link
     email = "aeregan@clemson.edu"
-    department = "https://www.clemson.edu/cah/academics/history-and-geography/people/facultybio.html?id=5006"
+    # GitHub username (not the full URL)
     github = "regan008"
+    # LinkedIn profile ID (the part after /in/)
     linkedin = "amanda-regan-67006a2b"
+    # Bluesky handle (your.bsky.social format)
     bluesky = "regan008.bsky.social"
+    # ORCID ID (without https://orcid.org/ prefix)
     orcid = "0000-0002-4260-5839"
+    # Google Scholar user ID (from your profile URL: scholar.google.com/citations?user=...)
     scholar = "nGmh2GUAAAAJ"
+    # Department/faculty profile URL (full URL)
+    department = "https://www.clemson.edu/cah/academics/history-and-geography/people/facultybio.html?id=5006"
 
 
 [menu]
