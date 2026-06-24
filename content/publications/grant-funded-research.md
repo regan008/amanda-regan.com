@@ -1,10 +1,11 @@
 ---
 title: "Grant Funded Research and Graduate Student Success"
-pubtype: edited-volume
+pubtype: in-collection
+bookTitle: "Digital Futures of Graduate Study in the Humanities"
 year: 2024
 date: 2024-01-01
-venue: "Digital Futures of Graduate Study in the Humanities"
 publisher: "University of Minnesota Press"
+isbn: "9781517916923" 
 coauthors:
   - Laura Crossley
   - Josh Catalano

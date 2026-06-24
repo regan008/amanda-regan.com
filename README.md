@@ -153,9 +153,12 @@ draft: false
 ---
 title: "Publication Title"
 description: "Brief description"
+pubtype: article | book | edited-volume | review | in-collection
 venue: "Journal Name"               # or Conference Name
 year: 2024
 publisher: "Publisher Name"         # for books/edited volumes
+bookTitle: "Title of the Edited Book"  # for in-collection (book chapters) only
+isbn: "978-0-000-00000-0"           # for books/chapters with no DOI
 coauthors:                          # optional; list of co-authors
   - "Co-Author Name"
 link: "https://doi.org/10.xxxx/xxx" # or full URL to article/book
@@ -163,6 +166,8 @@ link: "https://doi.org/10.xxxx/xxx" # or full URL to article/book
 ```
 
 **Rendered as:** Metadata feeds Google Scholar citation meta tags and renders in publication cards.
+
+**Book chapters (`pubtype: in-collection`):** Use `bookTitle` for the edited volume's title (separate from `title`, which is the chapter title), and `publisher` for the book's publisher. Most book chapters don't have a DOI — add `isbn` instead so Scholar still has an identifier to index against.
 
 ### Events & Talks
 
@@ -313,14 +318,18 @@ Publications pages automatically include Highwire meta tags for Google Scholar i
 <meta name="citation_author" content="...">
 <meta name="citation_publication_date" content="...">
 <meta name="citation_journal_title" content="...">
-<meta name="citation_doi" content="...">
+<meta name="citation_publisher" content="...">
+<meta name="citation_inbook_title" content="...">  <!-- in-collection only -->
+<meta name="citation_doi" content="...">           <!-- when link is a doi.org URL -->
+<meta name="citation_isbn" content="...">          <!-- fallback when no DOI -->
 ```
 
-These are generated from publication frontmatter (`title`, `year`, `venue`, `publisher`, `link`). To enable Scholar indexing:
+These are generated from publication frontmatter (`title`, `year`, `venue`, `publisher`, `bookTitle`, `isbn`, `link`). To enable Scholar indexing:
 
 1. Ensure publication frontmatter is complete (especially `link` and `year`)
-2. Post-deploy, Scholar crawls the pages and indexes them (takes days/weeks)
-3. Monitor Scholar profile for indexed publications
+2. **Identifier priority:** if `link` is a `doi.org` URL, `citation_doi` is emitted automatically. If there's no DOI (common for book chapters), add `isbn` to frontmatter and `citation_isbn` is emitted instead. Omit both fields if neither identifier exists.
+3. Post-deploy, Scholar crawls the pages and indexes them (takes days/weeks)
+4. Monitor Scholar profile for indexed publications
 
 **See:** `SEO_IMPLEMENTATION.md` for full SEO checklist and Wikidata setup.
 

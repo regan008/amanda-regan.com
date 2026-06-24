@@ -7,7 +7,7 @@
     {{ $pubs := where .Site.RegularPages "Section" "publications" }}
     {{ $books := (where $pubs "Params.pubtype" "book").ByDate.Reverse }}
     {{ $editedVolumes := (where $pubs "Params.pubtype" "edited-volume").ByDate.Reverse }}
-    {{ $articlesReviews := (where $pubs "Params.pubtype" "in" (slice "article" "review")).ByDate.Reverse }}
+    {{ $articlesReviews := (where $pubs "Params.pubtype" "in" (slice "article" "review" "in-collection")).ByDate.Reverse }}
 
     {{ if $books }}
       <div class="mb-6 border-b border-cobalt pb-3 font-mono text-[13px] uppercase tracking-widest2 text-cobalt">Book</div>
@@ -25,14 +25,14 @@
     {{ end }}
 
     {{ if $editedVolumes }}
-      <div class="mb-[18px] border-b border-cobalt pb-3 font-mono text-[13px] uppercase tracking-widest2 text-cobalt">Edited volumes</div>
+      <div class="mb-[18px] border-b border-cobalt pb-3 font-mono text-[13px] uppercase tracking-widest2 text-cobalt">Scholarly Editing</div>
       <div class="mb-12">
         {{ range $editedVolumes }}{{ partial "card-publication-row.html" . }}{{ end }}
       </div>
     {{ end }}
 
     {{ if $articlesReviews }}
-      <div class="mb-1.5 border-b border-cobalt pb-3 font-mono text-[13px] uppercase tracking-widest2 text-cobalt">Articles &amp; reviews</div>
+      <div class="mb-1.5 border-b border-cobalt pb-3 font-mono text-[13px] uppercase tracking-widest2 text-cobalt">Journal Articles and Book Chapters</div>
       <div>
         {{ range $articlesReviews }}{{ partial "card-publication-row.html" . }}{{ end }}
       </div>

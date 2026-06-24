@@ -11,7 +11,7 @@ book:
   link: "#"
 contact:
   heading: "Let's talk history & data"
-  text: "Prospective Digital History Ph.D. students, collaborators, and press are all welcome to reach out. Email a sentence or two about your interests and expect a follow-up."
+  text: "If you are a prospective student, interested in my research, want to talk about a collaboration, curious about the possabilities and limits of AI for historical work, or need someone to speak about digital history, get in touch."
 draft: false
 ---
 
