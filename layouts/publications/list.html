@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ partial "hero.html" (dict "eyebrow" "Publications" "title" "Publications" "intro" (.Content | plainify)) }}
+{{ partial "hero.html" (dict "eyebrow" "Publications" "title" "Publications" "intro" .Content) }}
 
 <section class="border-t border-hairline bg-white">
   <div class="mx-auto max-w-[1000px] px-14 py-12">
