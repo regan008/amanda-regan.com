@@ -1,33 +1,9 @@
 {{ define "main" }}
 <section class="bg-white">
-  <div class="mx-auto max-w-[1000px] px-14 py-16">
-    <!-- Book with left column box -->
-    {{ if eq .Params.pubtype "book" }}
-    <div class="grid grid-cols-[96px_1fr] gap-7 mb-12">
-      <!-- Left box with publisher and year -->
-      <div class="h-[140px] rounded bg-gradient-to-br from-cobalt to-[#0f2299] p-2.5 flex flex-col justify-end">
-        <div class="font-mono text-[9px] leading-snug text-white/85 font-medium">{{ .Params.publisher }} {{ .Params.year }}</div>
-      </div>
-      <div>
-        <!-- Metadata line -->
-        <div class="mb-2 font-mono text-xs uppercase tracking-widest2 text-[#9a9a9a]">
-          {{ humanize .Params.pubtype }}{{ with .Params.publisher }} · {{ . }}{{ end }}{{ with .Params.status }} · {{ . }}{{ end }}
-        </div>
-        <!-- Title -->
-        <h1 class="m-0 mb-2.5 font-heading text-[24px] font-bold leading-snug text-ink">{{ .Title }}</h1>
-        <!-- Description -->
-        <div class="prose prose-base max-w-none text-[#454545] prose-p:m-0">{{ .Content }}</div>
-      </div>
-    </div>
-    {{ else }}
-    <!-- Non-book publications (articles, chapters, etc.) -->
+  <div class="mx-auto max-w-[700px] px-14 py-16">
     <div class="mb-4 font-mono text-xs uppercase tracking-widest2 text-cobalt">{{ humanize .Params.pubtype }}{{ with .Params.year }} · {{ . }}{{ end }}</div>
     <h1 class="m-0 mb-6 font-heading text-3xl font-bold leading-tight text-ink">{{ .Title }}</h1>
-    {{ with .Params.publisher }}<div class="mb-4 font-mono text-sm text-[#6B6B6B]">{{ . }}</div>{{ end }}
     <div class="prose prose-base max-w-none text-[#454545]">{{ .Content }}</div>
-    {{ end }}
-
-    <!-- Link and back button -->
     {{ with .Params.link }}<p class="mt-6"><a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-cobalt hover:underline">view publication &rarr;</a></p>{{ end }}
     <p class="mt-10"><a href="/publications/" class="font-mono text-xs text-[#6B6B6B] hover:text-cobalt">&larr; back to publications</a></p>
   </div>
