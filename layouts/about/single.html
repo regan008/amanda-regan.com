@@ -29,10 +29,15 @@
 <!-- READING COLUMN — full bio -->
 <section class="bg-white">
   <div class="mx-auto max-w-[1100px] px-14 py-20">
-    <div class="flex max-w-[68ch] flex-col gap-7">
-      <div class="prose prose-base max-w-none font-sans text-[18px] leading-[1.8] text-[#2e2e2e] prose-p:m-0 prose-a:text-cobalt prose-a:no-underline hover:prose-a:underline prose-em:font-normal prose-em:italic">
-        {{ .Content }}
-      </div>
+    <style>
+      .bio-content p { margin-bottom: 1.75rem; }
+      .bio-content p:last-child { margin-bottom: 0; }
+      .bio-content a { color: #1A39E0; text-decoration: none; }
+      .bio-content a:hover { text-decoration: underline; }
+      .bio-content em { font-style: italic; }
+    </style>
+    <div class="bio-content max-w-[68ch] font-sans text-[18px] leading-[1.8] text-[#2e2e2e]">
+      {{ .Content }}
     </div>
   </div>
 </section>
