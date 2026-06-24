@@ -21,12 +21,12 @@
   {{- with $page.Params.publisher }}{{ $detail = . }}{{ end -}}
   {{- with $page.Params.status }}{{ $detail = printf "%s (%s)." $detail . }}{{ end -}}
 {{- else if eq $pubtype "in-collection" -}}
-  {{- with $page.Params.bookTitle }}{{ $detail = printf "<em>%s</em>" . }}{{ end -}}
+  {{- with $page.Params.coauthors }}{{ $coauthorList := delimit . ", " " and " }}{{ $detail = printf "with %s · " $coauthorList }}{{ end -}}
+  {{- with $page.Params.bookTitle }}{{ $detail = printf "%s<em>%s</em>" $detail . }}{{ end -}}
   {{- with $page.Params.publisher }}{{ $detail = printf "%s · %s" $detail . }}{{ end -}}
-  {{- with $page.Params.coauthors }}{{ $coauthorList := delimit . ", " " and " }}{{ $detail = printf "%s, with %s" $detail $coauthorList }}{{ end -}}
 {{- else -}}
-  {{- with $page.Params.venue }}{{ $detail = printf "<em>%s</em>" . }}{{ end -}}
-  {{- with $page.Params.coauthors }}{{ $coauthorList := delimit . ", " " and " }}{{ $detail = printf "%s, with %s" $detail $coauthorList }}{{ end -}}
+  {{- with $page.Params.coauthors }}{{ $coauthorList := delimit . ", " " and " }}{{ $detail = printf "with %s · " $coauthorList }}{{ end -}}
+  {{- with $page.Params.venue }}{{ $detail = printf "%s<em>%s</em>" $detail . }}{{ end -}}
   {{- with $page.Plain }}{{ $detail = printf "%s %s" $detail . }}{{ end -}}
 {{- end -}}
 <div class="grid grid-cols-[70px_1fr] items-baseline gap-6 border-b border-hairline-soft py-[18px]">
