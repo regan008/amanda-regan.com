@@ -4,9 +4,9 @@ pubtype: edited-volume
 year: 2026
 date: 2026-01-01
 status: in-progress
-venue: "Journal of Digital History"
+venue: "Journal of Digital History."
 role: "Co-editor"
 draft: false
 ---
 
-Co-editor. Add co-editors and contributors.
+Co-editor with Frédéric Clavert and Sean Takats.
