@@ -1,5 +1,5 @@
 baseURL = 'https://amanda-regan.com/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'Amanda Regan'
 
 [params]
@@ -8,6 +8,7 @@ title = 'Amanda Regan'
   academicName = "Amanda E. Regan"
   googleSiteVerification = ""
   maxEvents = 3
+  buildVersion = "1"
   [params.social]
     # Email address — will create a mailto: link
     email = "aeregan@clemson.edu"

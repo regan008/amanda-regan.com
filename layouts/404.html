@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body class="flex min-h-screen flex-col bg-ink text-white font-sans">
+    {{ partial "nav.html" . }}
+
+    <main class="flex-grow flex flex-col items-center justify-center px-14 py-20 text-center relative overflow-hidden">
+
+        <!-- Background 404 ghost number -->
+        <div aria-hidden="true" class="absolute font-heading text-[320px] font-extrabold text-white opacity-5 pointer-events-none select-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap leading-none">404</div>
+
+        <!-- Archival box illustration -->
+        <div class="mb-10 relative z-10">
+            <svg width="120" height="96" viewBox="0 0 120 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Box body -->
+                <rect x="14" y="32" width="92" height="60" rx="3" fill="#1e1e1e" stroke="#3a3a3a" stroke-width="1.5"/>
+                <!-- Box lid (slightly open) -->
+                <path d="M10 36 Q60 14 110 36" stroke="#3a3a3a" stroke-width="1.5" fill="#252525"/>
+                <path d="M10 32 L14 32 L106 32 L110 32 Q60 10 10 32Z" fill="#252525" stroke="#3a3a3a" stroke-width="1.5"/>
+                <!-- Lid tab -->
+                <rect x="50" y="22" width="20" height="10" rx="2" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="1.5"/>
+                <!-- Box label lines -->
+                <rect x="30" y="52" width="60" height="5" rx="1" fill="#2d2d2d"/>
+                <rect x="30" y="63" width="44" height="5" rx="1" fill="#2d2d2d"/>
+                <rect x="30" y="74" width="52" height="5" rx="1" fill="#2d2d2d"/>
+                <!-- Blue "empty" indicator -->
+                <circle cx="90" cy="78" r="6" fill="#1A39E0" opacity=".9"/>
+                <!-- Question mark in circle -->
+                <text x="90" y="82" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" font-weight="600" fill="#fff">?</text>
+            </svg>
+        </div>
+
+        <!-- Error code -->
+        <div class="font-mono text-xs font-semibold text-cobalt tracking-widest uppercase mb-4 z-10 relative">Error 404</div>
+
+        <!-- Headline -->
+        <h1 class="font-heading text-5xl font-extrabold text-white leading-tight mb-5 max-w-2xl z-10 relative">This page has been lost to history.</h1>
+
+        <!-- Subtext -->
+        <p class="font-sans text-lg text-[#8a8a8a] leading-relaxed mb-11 max-w-lg z-10 relative">The document you're looking for isn't in the archive. It may have been moved, renamed, or simply never digitized.</p>
+
+        <!-- Terminal-style suggestion -->
+        <div class="bg-[#0e0e0e] border border-[#2a2a2a] rounded mb-11 p-6 w-full max-w-sm text-left z-10 relative">
+            <div class="font-mono text-xs font-medium text-[#4a4a4a] mb-2.5">// suggested next steps</div>
+            <div class="flex flex-col gap-1.5">
+                <div class="font-mono text-sm text-[#8a8a8a]"><span class="text-cobalt">→</span> check the URL for typos</div>
+                <div class="font-mono text-sm text-[#8a8a8a]"><span class="text-cobalt">→</span> try searching from the home page</div>
+                <div class="font-mono text-sm text-[#8a8a8a]"><span class="text-cobalt">→</span> consult the finding aid (sitemap)</div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <a href="{{ .Site.BaseURL }}" class="font-mono text-xs font-semibold text-ink bg-white px-6 py-3.5 rounded transition-opacity hover:opacity-70 no-underline lowercase tracking-wider z-10 relative inline-block">← back to home</a>
+
+    </main>
+
+    {{ partial "footer.html" . }}
+</body>
+</html>
