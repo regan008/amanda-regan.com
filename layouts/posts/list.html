@@ -1,40 +1,58 @@
 {{ define "main" }}
-<div class="grid grid-cols-12">
-    <div class="col-span-8 col-start-2">
-        <h1 class="text-4xl font-semibold mb-8">{{ .Title }}</h1>
-        <div class="space-y-8">
-            {{ $paginator := .Paginate (.Pages) 5 }}
-            {{ range $paginator.Pages }}
-            <div class="flex flex-col gap-2">
-                <a href="{{ .RelPermalink }}" class="text-2xl font-bold hover:text-accent transition-colors">{{ .Title }}</a>
-                <div class="text-custom-gray-600">
-                    {{ .Summary | plainify | truncate 200 }}
-                </div>
-                <div class="flex justify-between items-center">
-                    <div class="text-sm text-custom-gray-600">
-                        {{ .Date.Format "January 2, 2006" }}
-                    </div>
-                    <a href="{{ .RelPermalink }}" class="text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-2">
-                        Read more
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            {{ end }}
-        </div>
-        <!-- Pagination Controls -->
-        <div class="flex justify-between items-center mt-12">
-            {{ if $paginator.HasPrev }}
-            <a href="{{ $paginator.Prev.URL }}" class="btn btn-outline">Previous</a>
-            {{ else }}
-            <span></span>
-            {{ end }}
-            {{ if $paginator.HasNext }}
-            <a href="{{ $paginator.Next.URL }}" class="btn btn-outline">Next</a>
-            {{ end }}
-        </div>
+
+{{ $allPosts := .Pages.ByDate.Reverse }}
+
+<!-- PAGE HEADER -->
+<section class="border-b border-hairline bg-porcelain">
+  <div class="mx-auto max-w-[1100px] px-14 pb-11 pt-[52px]">
+    <div class="flex items-baseline justify-between">
+      <div>
+        <div class="mb-4 font-mono text-xs font-medium uppercase tracking-widest3 text-cobalt">Writing</div>
+        <h1 class="m-0 font-heading text-[52px] font-extrabold leading-none tracking-tight text-ink">{{ .Title }}</h1>
+      </div>
+      <span class="self-end font-mono text-[13px] text-[#9a9a9a]">{{ len $allPosts }} post{{ if ne (len $allPosts) 1 }}s{{ end }}</span>
     </div>
-</div>
-{{ end }} 
+  </div>
+</section>
+
+<!-- YEAR-GROUPED POST LIST -->
+<section class="bg-white">
+  <div class="mx-auto max-w-[1100px] px-14 pb-20">
+    {{ $years := slice }}
+    {{ range $allPosts }}
+      {{ $year := .Date.Format "2006" }}
+      {{ if not (in $years $year) }}
+        {{ $years = $years | append $year }}
+      {{ end }}
+    {{ end }}
+
+    {{ range $years }}
+      {{ $year := . }}
+      {{ $yearPosts := where $allPosts "Date.Year" (int $year) }}
+      <div class="pb-0.5 pt-11">
+        <div class="flex items-center gap-5">
+          <span class="flex-none font-heading text-[22px] font-bold leading-none tracking-tight text-ink">{{ $year }}</span>
+          <div class="h-px flex-1 bg-hairline"></div>
+          <span class="flex-none font-mono text-[11px] text-[#9a9a9a]">{{ len $yearPosts }} post{{ if ne (len $yearPosts) 1 }}s{{ end }}</span>
+        </div>
+      </div>
+
+      {{ range $i, $p := $yearPosts }}
+      <div class="flex items-center justify-between gap-6 py-3.5 {{ if eq $i (sub (len $yearPosts) 1) }}border-b border-hairline-soft{{ else }}border-b border-porcelain{{ end }}">
+        <a href="{{ $p.RelPermalink }}" class="flex-1 font-sans text-base font-medium text-ink no-underline" style="text-wrap:pretty;">{{ $p.Title }}</a>
+        <div class="flex flex-none items-center gap-3">
+          {{ $type := $p.Params.posttype | default "reflection" }}
+          {{ if eq $type "tutorial" }}
+          <span class="whitespace-nowrap rounded-sm border border-cobalt px-2 py-[3px] font-mono text-[10px] font-medium uppercase tracking-wider text-cobalt">Tutorial</span>
+          {{ else }}
+          <span class="whitespace-nowrap rounded-sm border border-[#D8D8D5] px-2 py-[3px] font-mono text-[10px] font-medium uppercase tracking-wider text-[#6B6B6B]">Reflection</span>
+          {{ end }}
+          <span class="whitespace-nowrap font-mono text-xs text-[#9a9a9a]">{{ $p.Date.Format "Jan 2" }}</span>
+        </div>
+      </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}

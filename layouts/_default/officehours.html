@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ partial "hero.html" (dict "eyebrow" "Office Hours" "title" "Office hours" "intro" (.Params.intro | markdownify)) }}
+
+<section class="border-t border-hairline bg-white">
+  <div class="mx-auto max-w-[980px] px-14 py-12">
+    {{ partial "section-divider.html" (dict "text" "Book an appointment") }}
+
+    <div class="grid grid-cols-2 gap-5">
+      {{ range .Params.cards }}
+      {{ $dark := eq .variant "dark" }}
+      <div class="flex flex-col rounded-lg border p-7 {{ if $dark }}border-ink bg-ink border-t-[3px] border-t-cobalt-soft{{ else }}border-hairline bg-porcelain border-t-[3px] border-t-cobalt{{ end }}">
+        <div class="mb-6 font-heading text-xl font-bold leading-tight {{ if $dark }}text-white{{ else }}text-ink{{ end }}">{{ .audience }}</div>
+        <a href="{{ .link }}" class="inline-flex items-center justify-center gap-2 rounded font-mono text-xs no-underline {{ if $dark }}bg-white text-ink px-[18px] py-[14px] hover:bg-ink/90{{ else }}bg-cobalt text-white px-[18px] py-[14px] hover:bg-[#1430b8]{{ end }}">{{ .buttontext }}</a>
+        <div class="mt-2.5 text-center font-mono text-[10.5px] {{ if $dark }}text-[#7e8296]{{ else }}text-[#9a9a9a]{{ end }}">{{ .caption }}</div>
+      </div>
+      {{ end }}
+    </div>
+
+    <p class="mt-6 font-sans text-[13.5px] leading-[1.6] text-[#9a9a9a]">Booking opens live availability through Fantastical. If none of the open times work, email <a href="mailto:{{ .Site.Params.social.email }}" class="text-cobalt">{{ .Site.Params.social.email }}</a> and we'll sort something out.</p>
+  </div>
+</section>
+{{ end }}

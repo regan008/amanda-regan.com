@@ -1,53 +1,23 @@
 {{- $text := .Get "text" | default (.Inner | markdownify) -}}
-{{- $style := .Get "style" | default "regular" -}}
 {{- $color := .Get "color" | default "neutral" -}}
 {{- $size := .Get "size" | default "md" -}}
 
-{{- $badgeClass := "badge" -}}
-
-{{- /* Add color class */ -}}
-{{- if eq $color "primary" -}}
-  {{- $badgeClass = printf "%s badge-primary" $badgeClass -}}
-{{- else if eq $color "secondary" -}}
-  {{- $badgeClass = printf "%s badge-secondary" $badgeClass -}}
-{{- else if eq $color "accent" -}}
-  {{- $badgeClass = printf "%s badge-accent" $badgeClass -}}
-{{- else if eq $color "info" -}}
-  {{- $badgeClass = printf "%s badge-info" $badgeClass -}}
+{{- $colorClasses := "bg-hairline-soft text-ink" -}}
+{{- if eq $color "accent" -}}
+  {{- $colorClasses = "bg-cobalt text-white" -}}
 {{- else if eq $color "success" -}}
-  {{- $badgeClass = printf "%s badge-success" $badgeClass -}}
+  {{- $colorClasses = "bg-green-100 text-green-800" -}}
 {{- else if eq $color "warning" -}}
-  {{- $badgeClass = printf "%s badge-warning" $badgeClass -}}
+  {{- $colorClasses = "bg-amber-100 text-amber-800" -}}
 {{- else if eq $color "error" -}}
-  {{- $badgeClass = printf "%s badge-error" $badgeClass -}}
-{{- else if eq $color "terracotta" -}}
-  {{- $badgeClass = printf "%s badge-terracotta" $badgeClass -}}
-{{- else if eq $color "teal" -}}
-  {{- $badgeClass = printf "%s badge-teal" $badgeClass -}}
-{{- else if eq $color "burgundy" -}}
-  {{- $badgeClass = printf "%s badge-burgundy" $badgeClass -}}
-{{- else -}}
-  {{- $badgeClass = printf "%s badge-neutral" $badgeClass -}}
+  {{- $colorClasses = "bg-red-100 text-red-800" -}}
 {{- end -}}
 
-{{- /* Add style class */ -}}
-{{- if eq $style "soft" -}}
-  {{- $badgeClass = printf "%s badge-soft" $badgeClass -}}
-{{- else if eq $style "outline" -}}
-  {{- $badgeClass = printf "%s badge-outline" $badgeClass -}}
-{{- else if eq $style "dash" -}}
-  {{- $badgeClass = printf "%s badge-dash" $badgeClass -}}
-{{- end -}}
-
-{{- /* Add size class */ -}}
-{{- if eq $size "xs" -}}
-  {{- $badgeClass = printf "%s badge-xs" $badgeClass -}}
-{{- else if eq $size "sm" -}}
-  {{- $badgeClass = printf "%s badge-sm" $badgeClass -}}
+{{- $sizeClasses := "px-2.5 py-1 text-xs" -}}
+{{- if eq $size "sm" -}}
+  {{- $sizeClasses = "px-2 py-0.5 text-xs" -}}
 {{- else if eq $size "lg" -}}
-  {{- $badgeClass = printf "%s badge-lg" $badgeClass -}}
-{{- else if eq $size "xl" -}}
-  {{- $badgeClass = printf "%s badge-xl" $badgeClass -}}
+  {{- $sizeClasses = "px-3 py-1.5 text-sm" -}}
 {{- end -}}
 
-<span class="{{ $badgeClass }}">{{ $text }}</span> 
+<span class="inline-flex items-center rounded-full font-mono uppercase tracking-wide {{ $colorClasses }} {{ $sizeClasses }}">{{ $text }}</span>

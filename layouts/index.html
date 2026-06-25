@@ -1,40 +1,122 @@
 {{ define "main" }}
-<div class="grid grid-cols-12">
-    <div class="col-span-10 col-start-2">
-        <article class="prose prose-base prose-p:leading-relaxed prose-li:leading-relaxed prose-headings:font-heading prose-headings:text-primary prose-h1:text-4xl prose-h2:text-2xl prose-h2:text-secondary prose-p:text-secondary prose-a:text-accent hover:prose-a:text-accent/80 lg:prose-xl prose-img:my-0 max-w-none">
-            {{ .Content }}
-        </article>
-    </div>
-</div>
 
-<div class="w-full bg-base-200 mt-12">
-    <div class="grid grid-cols-12">
-        <div class="col-span-10 col-start-2 py-8">
-            <h2 class="text-2xl font-heading font-semibold text-white mb-6">News</h2>
-            <div class="space-y-4">
-                {{ range first 3 (where .Site.RegularPages "Section" "news") }}
-                <div class="flex gap-4 w-full p-4 rounded-lg bg-base-300 hover:bg-base-300/80 transition-colors duration-200">
-                    <div class="text-sm text-white min-w-[120px]">{{ .Date.Format "January 2, 2006" }}</div>
-                    <div class="flex flex-col flex-grow min-w-0">
-                        <div class="text-xl font-heading font-medium text-white">{{ .Title }}</div>
-                        <div class="text-base text-white/80 [&_a]:text-white [&_a:hover]:text-white/80 [&_a]:underline">
-                            {{ .Content }}
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-            {{ if gt (len (where .Site.RegularPages "Section" "news")) 3 }}
-            <div class="mt-6 text-right">
-                <a href="/news" class="text-white hover:text-white/80 transition-colors inline-flex items-center gap-2">
-                    View all news
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-            {{ end }}
-        </div>
+<!-- HERO -->
+<section class="relative overflow-hidden bg-porcelain">
+  <div aria-hidden="true" class="absolute inset-x-0 top-0 h-[68px] overflow-hidden select-none break-all font-mono text-[15px] leading-[1.5] tracking-[.12em] text-cobalt opacity-[.07]">0100110101000001010100000100100101001110010001110010000001010100010010000100010100100000010100000100000101010011010101000010110100110001001100010011000000110001001000000100110001000110010001110010000001010100010010000100010101010000010100110101010001001110010001110010000001010011010010000100000101010000010010010100111001000111010011010100000101010000010010010100111001000111001000000101010001001000010001010010000001010000010000010101001101010100001011010011000100110001001100000011000100100000010011000100011001000111</div>
+  <div class="relative mx-auto grid max-w-[1180px] grid-cols-[1.4fr_.9fr] items-center gap-[52px] px-14 py-16">
+    <div>
+      {{ partial "eyebrow.html" (dict "text" .Params.heroEyebrow) }}
+      <h1 class="m-0 mb-3.5 font-heading text-[60px] font-extrabold leading-none tracking-tight text-ink">{{ .Site.Title }}</h1>
+      <div class="mb-6 h-0.5 w-11 bg-cobalt"></div>
+      <div class="font-sans text-lg leading-[1.65] text-[#454545] [&_p]:m-0 [&_p]:mb-4 [&_p]:max-w-[56ch] [&_a]:text-cobalt [&_a]:underline">
+        {{ .Content }}
+      </div>
+      <div class="flex items-center gap-5">
+        {{ partial "social-icons.html" (dict "site" .Site) }}
+        <a href="/about/" class="border-b border-cobalt pb-[3px] font-mono text-[12.5px] text-cobalt no-underline">more about me &rarr;</a>
+      </div>
     </div>
-</div>
-{{ end }} 
+    <img src="/images/headshot-oct25-1.JPG" alt="Amanda E. Regan" class="h-[360px] w-full rounded-lg object-cover shadow-xl">
+  </div>
+</section>
+
+<!-- BOOK HERO -->
+{{ with .Params.book }}
+{{ if .enabled }}
+<section class="bg-ink text-white">
+  <div class="mx-auto grid max-w-[1180px] grid-cols-[220px_1fr] items-center gap-12 px-14 py-14">
+    <div class="flex h-[320px] w-[220px] items-center justify-center rounded bg-white/10 font-mono text-xs text-white/60 shadow-2xl">book cover placeholder</div>
+    <div>
+      {{ partial "eyebrow.html" (dict "text" .eyebrow "dark" true) }}
+      <h2 class="m-0 mb-2.5 font-heading text-[46px] font-extrabold leading-[1.02] tracking-tight text-white">{{ .title }}</h2>
+      <div class="mb-5 font-sans text-[19px] leading-[1.4] text-[#9a9a9a]">{{ .subtitle }}</div>
+      <p class="mb-[26px] max-w-[60ch] font-sans text-[17px] leading-[1.65] text-[#c4c4c4]">{{ .description }}</p>
+      <a href="{{ .link }}" class="border-b border-cobalt pb-1 font-mono text-xs text-white no-underline">read more &rarr;</a>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+<!-- PUBLICATIONS -->
+{{ $pubs := (where .Site.RegularPages "Section" "publications") }}
+{{ $pubs = (sort $pubs "Params.year" "desc") | first 3 }}
+{{ if $pubs }}
+<section class="border-t border-hairline bg-white">
+  <div class="mx-auto max-w-[1180px] px-14 py-[54px]">
+    <div class="mb-7 flex items-baseline justify-between">
+      <h2 class="m-0 font-heading text-3xl font-bold text-ink">Publications</h2>
+      <a href="/publications/" class="font-mono text-xs text-cobalt no-underline">all publications &rarr;</a>
+    </div>
+    {{ range $pubs }}{{ partial "card-publication-row.html" . }}{{ end }}
+  </div>
+</section>
+{{ end }}
+
+<!-- SPEAKING & EVENTS -->
+{{ $events := (where .Site.RegularPages "Section" "events") }}
+{{ $events = (sort $events "Date" "desc") | first .Site.Params.maxEvents }}
+{{ if $events }}
+<section class="border-t border-hairline bg-porcelain">
+  <div class="mx-auto max-w-[1180px] px-14 py-[54px]">
+    <div class="mb-7 flex items-baseline justify-between">
+      <h2 class="m-0 font-heading text-3xl font-bold text-ink">Speaking & events</h2>
+      <span class="font-mono text-xs font-medium uppercase tracking-wider text-[#888]">Upcoming</span>
+    </div>
+    <div>
+      {{ range $events }}
+      <div class="grid grid-cols-[110px_1fr] items-baseline gap-6 border-b border-hairline py-[20px]">
+        <div class="text-sm font-medium text-ink">
+          <div class="font-mono">{{ .Params.date_event }}</div>
+          <div class="font-mono text-xs text-[#6B6B6B]">{{ .Date.Year }}</div>
+        </div>
+        <div>
+          {{ if .Params.role }}
+            {{ if eq .Params.role "Speaker" }}
+              <span class="mb-[9px] inline-block bg-ink text-white px-2 py-1 font-mono text-xs font-medium uppercase tracking-wider rounded-sm">{{ .Params.role }}</span>
+            {{ else if eq .Params.role "Panelist" }}
+              <span class="mb-[9px] inline-block border border-cobalt text-cobalt px-2 py-1 font-mono text-xs font-medium uppercase tracking-wider rounded-sm">{{ .Params.role }}</span>
+            {{ else }}
+              <span class="mb-[9px] inline-block border border-[#cccccc] text-[#888] px-2 py-1 font-mono text-xs font-medium uppercase tracking-wider rounded-sm">{{ .Params.role }}</span>
+            {{ end }}
+          {{ end }}
+          <div class="flex items-baseline gap-2">
+            {{ if .Params.venue }}
+            <div class="font-sans text-lg font-semibold leading-snug text-ink">{{ .Params.venue }}</div>
+            {{ end }}
+            {{ if .Params.location }}
+            <span class="font-sans text-sm text-[#888]">{{ .Params.location }}</span>
+            {{ end }}
+          </div>
+          {{ if .Params.talk_title }}
+          <div class="font-sans text-sm text-[#6B6B6B] mt-1">{{ .Params.talk_title }}</div>
+          {{ end }}
+          {{ with .Params.link }}
+          <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block border-b border-cobalt pb-[2px] font-mono text-xs text-cobalt no-underline hover:text-cobalt/80">Details &rarr;</a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- CONTACT -->
+{{ with .Params.contact }}
+<section id="contact" class="border-t-2 border-cobalt bg-porcelain">
+  <div class="mx-auto grid max-w-[1180px] grid-cols-[1fr_auto] items-center gap-10 px-14 py-[54px]">
+    <div>
+      {{ partial "eyebrow.html" (dict "text" "Get in touch") }}
+      <h2 class="m-0 mb-3.5 font-heading text-[38px] font-extrabold leading-[1.05] tracking-tight text-ink">{{ .heading }}</h2>
+      <p class="m-0 max-w-[60ch] font-sans text-[17px] leading-[1.65] text-[#454545]">{{ .text }}</p>
+    </div>
+    <div class="flex flex-col gap-3 font-mono text-[13px]">
+      {{ partial "button.html" (dict "text" (printf "→ %s" $.Site.Params.social.email) "href" (printf "mailto:%s" $.Site.Params.social.email) "variant" "primary") }}
+      {{ partial "button.html" (dict "text" (printf "→ github.com/%s" $.Site.Params.social.github) "href" (printf "https://github.com/%s" $.Site.Params.social.github) "variant" "secondary" "external" true) }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ end }}

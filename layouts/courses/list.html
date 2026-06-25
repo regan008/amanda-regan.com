@@ -1,47 +1,42 @@
 {{ define "main" }}
-<div class="grid grid-cols-12">
-    <div class="col-span-9 col-start-2">
-        <h1 class="text-4xl font-heading font-medium text-primary mb-12">Courses</h1>
+{{ partial "hero.html" (dict "eyebrow" "Courses" "title" "Teaching" "intro" (.Content | markdownify | safeHTML)) }}
 
-        {{ if .Content }}
-        <div class="prose prose-lg max-w-none mb-8">
-            {{ .Content }}
+<section class="border-t border-hairline bg-white">
+  <div class="mx-auto max-w-[1040px] px-14 py-12">
+    {{ $withKey := slice }}
+    {{ $maxAYStart := -1 }}
+    {{ range .Pages }}
+      {{ $sem := .Params.semester }}
+      {{ $year := int (substr $sem -4) }}
+      {{ $season := trim (substr $sem 0 (sub (len $sem) 5)) " " }}
+      {{ $seasonNum := 1 }}
+      {{ $ayStart := sub $year 1 }}
+      {{ if eq $season "Summer" }}{{ $seasonNum = 2 }}{{ else if eq $season "Fall" }}{{ $seasonNum = 3 }}{{ $ayStart = $year }}{{ end }}
+      {{ if gt $ayStart $maxAYStart }}{{ $maxAYStart = $ayStart }}{{ end }}
+      {{ $withKey = $withKey | append (dict "page" . "key" (printf "%04d.%d" $year $seasonNum) "ayStart" $ayStart) }}
+    {{ end }}
+    {{ $minAYStart := sub $maxAYStart 1 }}
+    {{ $withKey = where $withKey "ayStart" ">=" $minAYStart }}
+    {{ $sorted := sort $withKey "key" "desc" }}
+
+    {{ $currentSemester := "" }}
+    {{ $first := true }}
+    {{ range $sorted }}
+      {{ $p := .page }}
+      {{ if ne $p.Params.semester $currentSemester }}
+        {{ $currentSemester = $p.Params.semester }}
+        <div class="{{ if not $first }}mt-10{{ end }}">
+          {{ partial "section-divider.html" (dict "text" $currentSemester) }}
         </div>
-        {{ end }}
-
-        <table class="w-full border-collapse">
-            <tbody>
-                <!-- Clemson University Section -->
-                <tr class="border-b border-base-200/50">
-                    <td class="py-4 font-bold text-lg bg-base-100/90 text-primary" colspan="2">Clemson University</td>
-                </tr>
-                {{ $clemson := where (where .Site.RegularPages "Section" "courses") ".Params.university" "Clemson University" }}
-                {{ $clemson := where $clemson ".Params.samplesyllabus" "!=" "TRUE" }}
-                {{ range $clemson.ByDate.Reverse }}
-                <tr class="border-b border-base-200/50 hover:bg-base-100">
-                    <td class="py-3 w-1/4">{{ .Params.semester }}</td>
-                    <td class="py-3"><a href="{{ .RelPermalink }}" class="text-accent hover:text-accent/80 transition-colors underline">{{ .Title | markdownify }}</a></td>
-                </tr>
-                {{ end }}
-
-                <!-- George Mason University Section -->
-                <tr class="border-b border-base-200/50">
-                    <td class="py-4 font-bold text-lg bg-base-100/90 text-primary" colspan="2">George Mason University</td>
-                </tr>
-                <tr class="border-b border-base-200/50 hover:bg-base-100">
-                    <td class="py-3 w-1/4">Summer 2019</td>
-                    <td class="py-3"><a href="http://www.amanda-regan.com/390summer19/" target="_blank" class="text-accent hover:text-accent/80 transition-colors underline">History 390: The Digital Past</a></td>
-                </tr>
-                <tr class="border-b border-base-200/50 hover:bg-base-100">
-                    <td class="py-3 w-1/4">Spring 2019</td>
-                    <td class="py-3"><a href="http://www.amanda-regan.com/390spring19/" target="_blank" class="text-accent hover:text-accent/80 transition-colors underline">History 390: The Digital Past</a></td>
-                </tr>
-                <tr class="border-b border-base-200/50 hover:bg-base-100">
-                    <td class="py-3 w-1/4">Fall 2018</td>
-                    <td class="py-3"><a href="http://amanda-regan.com/390fall18-2/" target="_blank" class="text-accent hover:text-accent/80 transition-colors underline">History 390: The Digital Past</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-{{ end }} 
+        {{ $first = false }}
+      {{ end }}
+      <a href="{{ $p.RelPermalink }}" class="grid grid-cols-[110px_1fr_140px_auto] items-center gap-4 border-b border-hairline-soft py-3 no-underline">
+        <span class="font-mono text-xs uppercase tracking-wide text-[#9a9a9a]">{{ $p.Params.coursecode }}</span>
+        <span class="font-heading text-base font-semibold leading-snug text-ink">{{ $p.Title }}</span>
+        <span class="font-mono text-[11px] uppercase tracking-wide text-[#9a9a9a]">{{ humanize $p.Params.level }}</span>
+        <span class="whitespace-nowrap border-b border-cobalt pb-[2px] font-mono text-xs text-cobalt">view syllabus &rarr;</span>
+      </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

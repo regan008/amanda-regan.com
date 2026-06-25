@@ -1,40 +1,64 @@
 baseURL = 'https://amanda-regan.com/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'Amanda Regan'
+disableKinds = ["taxonomy", "term"]
 
 [params]
-  theme = "winter"
+  description = "Amanda E. Regan is a historian of digital and computational history, Assistant Professor at Clemson University, and director of its Digital History Ph.D. program."
+  ogimage = "/images/og-card.jpg"
+  academicName = "Amanda E. Regan"
+  googleSiteVerification = ""
+  maxEvents = 3
+  buildVersion = "1"
   [params.social]
+    # Email address — will create a mailto: link
     email = "aeregan@clemson.edu"
-    department = "https://www.clemson.edu/cah/academics/history-and-geography/people/facultybio.html?id=5006"
+    # GitHub username (not the full URL)
     github = "regan008"
+    # LinkedIn profile ID (the part after /in/)
     linkedin = "amanda-regan-67006a2b"
+    # Bluesky handle (your.bsky.social format)
     bluesky = "regan008.bsky.social"
+    # ORCID ID (without https://orcid.org/ prefix)
     orcid = "0000-0002-4260-5839"
+    # Google Scholar user ID (from your profile URL: scholar.google.com/citations?user=...)
+    scholar = "nGmh2GUAAAAJ"
+    # Department/faculty profile URL (full URL)
+    department = "https://www.clemson.edu/cah/academics/history-and-geography/people/facultybio.html?id=5006"
 
 
 [menu]
   [[menu.main]]
-    name = "ABOUT"
+    name = "HOME"
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "CV"
-    url = "https://raw.githubusercontent.com/regan008/CV/master/ARegan-cv.pdf"
+    name = "ABOUT"
+    url = "/about/"
     weight = 2
   [[menu.main]]
-    name = "RESEARCH"
-    url = "/projects/"
+    name = "PUBLICATIONS"
+    url = "/publications/"
     weight = 3
+  [[menu.main]]
+    name = "DIGITAL PROJECTS"
+    url = "/projects/"
+    weight = 4
+  [[menu.main]]
+    name = "CV"
+    url = "https://raw.githubusercontent.com/regan008/CV/master/ARegan-cv.pdf"
+    weight = 5
   [[menu.main]]
     name = "COURSES"
     url = "/courses/"
-    weight = 4 
+    weight = 6
   [[menu.main]]
     name = "OFFICE HOURS"
     url = "/office-hours/"
-    weight = 5
- 
+    weight = 7
+  
+[markup.goldmark.renderer]
+  unsafe = true
 
 [build]
   writeStats = true

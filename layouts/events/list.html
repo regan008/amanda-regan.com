@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{ partial "hero.html" (dict "eyebrow" "Speaking & Events" "title" "Talks, panels & events" "intro" (.Content | markdownify | safeHTML)) }}
+
+<section class="border-t border-hairline bg-white">
+  <div class="mx-auto max-w-[1180px] px-14 py-[54px]">
+    {{ range .Pages.ByDate.Reverse }}
+    <div class="grid grid-cols-[110px_1fr] items-baseline gap-6 border-b border-hairline py-[20px]">
+      <div class="text-sm font-medium text-ink">
+        <div class="font-mono">{{ .Params.date_event }}</div>
+        <div class="font-mono text-xs text-[#6B6B6B]">{{ .Date.Year }}</div>
+      </div>
+      <div>
+        {{ if .Params.role }}
+          {{ if eq .Params.role "Speaker" }}
+            <span class="mb-[9px] inline-block bg-ink text-white px-2 py-1 font-mono text-xs font-medium uppercase tracking-wider rounded-sm">{{ .Params.role }}</span>
+          {{ else if eq .Params.role "Panelist" }}
+            <span class="mb-[9px] inline-block border border-cobalt text-cobalt px-2 py-1 font-mono text-xs font-medium uppercase tracking-wider rounded-sm">{{ .Params.role }}</span>
+          {{ else }}
+            <span class="mb-[9px] inline-block border border-[#cccccc] text-[#888] px-2 py-1 font-mono text-xs font-medium uppercase tracking-wider rounded-sm">{{ .Params.role }}</span>
+          {{ end }}
+        {{ end }}
+        <div class="flex items-baseline gap-2">
+          {{ if .Params.venue }}
+          <div class="font-sans text-lg font-semibold leading-snug text-ink">{{ .Params.venue }}</div>
+          {{ end }}
+          {{ if .Params.location }}
+          <span class="font-sans text-sm text-[#888]">{{ .Params.location }}</span>
+          {{ end }}
+        </div>
+        {{ if .Params.talk_title }}
+        <div class="font-sans text-sm text-[#6B6B6B] mt-1">{{ .Params.talk_title }}</div>
+        {{ end }}
+        {{ with .Params.link }}
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block border-b border-cobalt pb-[2px] font-mono text-xs text-cobalt no-underline hover:text-cobalt/80">Details &rarr;</a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

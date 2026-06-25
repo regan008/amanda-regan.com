@@ -1,0 +1,35 @@
+#!/bin/sh
+USER=amandau9
+HOST=amanda-regan.com
+DIR=/public_html/
+
+echo "🔍 Checking and fixing file permissions..."
+
+# Fix permissions for directories (755 = rwxr-xr-x)
+find public/ -type d -exec chmod 755 {} \; 2>/dev/null
+find static/ -type d -exec chmod 755 {} \; 2>/dev/null
+
+# Fix permissions for files (644 = rw-r--r--)
+find public/ -type f -exec chmod 644 {} \; 2>/dev/null
+find static/ -type f -exec chmod 644 {} \; 2>/dev/null
+
+# Ensure the deploy script itself has correct permissions
+chmod +x deploy
+
+echo "✅ Permissions fixed. Building site..."
+
+# Build the site
+hugo
+
+# Normalize permissions again after build (for newly generated files)
+find public/ -type d -exec chmod 755 {} \;
+find public/ -type f -exec chmod 644 {} \;
+
+echo "📤 Deploying to server..."
+
+# Deploy with rsync, forcing safe perms on destination regardless of source
+rsync -avz --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r public/ ${USER}@${HOST}:~/${DIR}
+
+echo "🎉 Deployment complete!"
+
+exit 0

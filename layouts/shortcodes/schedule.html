@@ -1,0 +1,7 @@
+<div class="not-prose">
+  {{ partial "section-divider.html" (dict "text" "Schedule" "right" "CLICK A WEEK FOR DETAIL ↓") }}
+  <div class="grid grid-cols-[60px_104px_1fr_150px_22px] gap-4 border-b-2 border-ink p-3 font-mono text-[10.5px] uppercase tracking-wide text-[#8086a0]">
+    <div>WK</div><div>DATE</div><div>TOPIC</div><div>DUE</div><div></div>
+  </div>
+  {{ .Inner }}
+</div>

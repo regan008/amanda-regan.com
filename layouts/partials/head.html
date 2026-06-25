@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+{{ $description := .Description | default .Summary | default .Site.Params.description }}
+<meta name="description" content="{{ $description }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.svg">
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} - Posts" href="{{ .Site.BaseURL }}posts/index.xml">
+
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ $image := .Params.image | default .Site.Params.ogimage }}
+{{ with $image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{ with $image }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
+
+{{ with .Site.Params.googleSiteVerification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
+
+<!-- Google Scholar citation meta tags -->
+{{ if and (eq .Section "publications") (ne .Kind "section") }}
+  <meta name="citation_title" content="{{ .Title }}">
+  <meta name="citation_author" content="{{ .Site.Params.academicName }}">
+  {{ range .Params.coauthors }}<meta name="citation_author" content="{{ . }}">{{ end }}
+  {{ with .Params.year }}<meta name="citation_publication_date" content="{{ . }}">{{ end }}
+  {{ with .Params.venue }}<meta name="citation_journal_title" content="{{ . }}">{{ end }}
+  {{ with .Params.publisher }}<meta name="citation_publisher" content="{{ . }}">{{ end }}
+  {{ if eq .Params.pubtype "in-collection" }}
+    {{ with .Params.bookTitle }}<meta name="citation_inbook_title" content="{{ . }}">{{ end }}
+  {{ end }}
+  {{ $doi := "" }}
+  {{ with .Params.link }}
+    {{ if strings.Contains . "doi.org" }}
+      {{ $doi = strings.TrimPrefix "https://doi.org/" . }}
+      {{ $doi = strings.TrimPrefix "http://doi.org/" $doi }}
+    {{ end }}
+    <meta name="citation_abstract_html_url" content="{{ . }}">
+    <meta name="citation_fulltext_html_url" content="{{ . }}">
+  {{ end }}
+  {{ if $doi }}
+    <meta name="citation_doi" content="{{ $doi }}">
+  {{ else }}
+    {{ with .Params.isbn }}<meta name="citation_isbn" content="{{ . }}">{{ end }}
+  {{ end }}
+{{ end }}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="/css/style.css?v={{ .Site.Params.buildVersion }}">
+<script defer data-domain="amanda-regan.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+{{ if .IsHome }}{{ partial "person-jsonld.html" . }}{{ end }}

@@ -1,0 +1,40 @@
+{{- $page := . -}}
+{{- $pubtype := $page.Params.pubtype -}}
+{{- $label := "Article" -}}
+{{- if eq $pubtype "book" -}}
+  {{- $label = "Book" -}}
+{{- else if eq $pubtype "in-collection" -}}
+  {{- $label = "Book Chapter" -}}
+{{- else if eq $pubtype "edited-volume" -}}
+  {{- $label = "Chapter" -}}
+  {{- if or (eq $page.Params.role "Co-editor") (eq $page.Params.role "Editor") -}}
+    {{- $label = "Special Issue" -}}
+  {{- end -}}
+  {{- with $page.Params.status }}{{ $label = printf "%s · %s" $label (humanize .) }}{{ end -}}
+{{- else if eq $pubtype "review" -}}
+  {{- $label = "Review" -}}
+{{- end -}}
+{{- $labelColor := "text-cobalt" -}}
+{{- if eq $pubtype "review" }}{{ $labelColor = "text-[#9a9a9a]" }}{{ end -}}
+{{- $detail := "" -}}
+{{- if eq $pubtype "book" -}}
+  {{- with $page.Params.publisher }}{{ $detail = . }}{{ end -}}
+  {{- with $page.Params.status }}{{ $detail = printf "%s (%s)." $detail . }}{{ end -}}
+{{- else if eq $pubtype "in-collection" -}}
+  {{- with $page.Params.coauthors }}{{ $coauthorList := delimit . ", " " and " }}{{ $detail = printf "with %s · " $coauthorList }}{{ end -}}
+  {{- with $page.Params.bookTitle }}{{ $detail = printf "%s<em>%s</em>" $detail . }}{{ end -}}
+  {{- with $page.Params.publisher }}{{ $detail = printf "%s · %s" $detail . }}{{ end -}}
+{{- else -}}
+  {{- with $page.Params.coauthors }}{{ $coauthorList := delimit . ", " " and " }}{{ $detail = printf "with %s · " $coauthorList }}{{ end -}}
+  {{- with $page.Params.venue }}{{ $detail = printf "%s<em>%s</em>" $detail . }}{{ end -}}
+  {{- with $page.Plain }}{{ $detail = printf "%s %s" $detail . }}{{ end -}}
+{{- end -}}
+<div class="grid grid-cols-[70px_1fr] items-baseline gap-6 border-b border-hairline-soft py-[18px]">
+  <span class="font-mono text-sm text-[#a3a3a3]">{{ $page.Params.year }}</span>
+  <div>
+    <div class="mb-2 font-mono text-[10px] font-medium uppercase tracking-widest2 {{ $labelColor }}">{{ $label }}</div>
+    <div class="font-sans text-[17px] font-semibold leading-snug text-ink">{{ $page.Title }}</div>
+    {{ if (ne (trim $detail " ") "") }}<div class="font-sans text-sm leading-snug text-[#6B6B6B]">{{ $detail | safeHTML }}</div>{{ end }}
+    {{ with $page.Params.link }}<div class="mt-2 font-sans text-sm"><a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="text-cobalt hover:text-cobalt/80 transition-colors">View publication →</a></div>{{ end }}
+  </div>
+</div>
