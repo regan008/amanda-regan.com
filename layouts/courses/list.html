@@ -30,7 +30,7 @@
         </div>
         {{ $first = false }}
       {{ end }}
-      <a href="{{ $p.RelPermalink }}" class="grid grid-cols-[110px_1fr_140px_auto] items-center gap-4 border-b border-hairline-soft py-3 no-underline">
+      <a href="{{ $p.RelPermalink }}" data-event="Course Link Click" data-event-course="{{ $p.Title }}" class="grid grid-cols-[110px_1fr_140px_auto] items-center gap-4 border-b border-hairline-soft py-3 no-underline">
         <span class="font-mono text-xs uppercase tracking-wide text-[#9a9a9a]">{{ $p.Params.coursecode }}</span>
         <span class="font-heading text-base font-semibold leading-snug text-ink">{{ $p.Title }}</span>
         <span class="font-mono text-[11px] uppercase tracking-wide text-[#9a9a9a]">{{ humanize $p.Params.level }}</span>

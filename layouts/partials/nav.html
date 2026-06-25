@@ -15,7 +15,7 @@
           {{ $active = strings.HasPrefix $current .URL }}
         {{ end }}
       {{ end }}
-      <a href="{{ .URL }}" {{ if $isExternal }}target="_blank" rel="noopener noreferrer"{{ end }} class="{{ if $active }}font-semibold text-cobalt{{ else }}text-[#6B6B6B] hover:text-cobalt{{ end }} transition-colors">{{ .Name | lower | replaceRE " " "_" }}</a>
+      <a href="{{ .URL }}" {{ if $isExternal }}target="_blank" rel="noopener noreferrer"{{ end }} {{ if eq .Name "CV" }}data-event="CV Link Click"{{ end }} class="{{ if $active }}font-semibold text-cobalt{{ else }}text-[#6B6B6B] hover:text-cobalt{{ end }} transition-colors">{{ .Name | lower | replaceRE " " "_" }}</a>
     {{ end }}
   </div>
 </nav>
