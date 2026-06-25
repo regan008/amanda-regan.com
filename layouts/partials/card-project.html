@@ -19,6 +19,6 @@
     </div>
     {{ end }}
     <p class="m-0 mb-3 font-sans text-[15px] leading-[1.5] text-[#454545]">{{ $page.Content | markdownify | safeHTML }}</p>
-    {{ with $page.Params.link }}<a href="{{ . }}" class="border-b border-cobalt pb-[2px] font-mono text-xs text-cobalt no-underline w-fit">{{ $page.Params.linktext | default "View project →" }}</a>{{ end }}
+    {{ with $page.Params.link }}<a href="{{ . }}" class="border-b border-cobalt pb-[2px] font-mono text-xs text-cobalt no-underline" style="display: inline-block;">{{ $page.Params.linktext | default "View project →" }}</a>{{ end }}
   </div>
 </article>
