@@ -4,6 +4,14 @@
 <section class="border-t border-hairline bg-white">
   <div class="mx-auto max-w-[1040px] px-14 py-12">
 
+    {{ $visualizations := where .Pages "Params.type" "visualization" }}
+    {{ if $visualizations }}
+      {{ partial "section-divider.html" (dict "text" "Visualizations") }}
+      <div class="mb-14 grid grid-cols-3 gap-x-7 gap-y-9">
+        {{ range $visualizations }}{{ partial "card-project.html" . }}{{ end }}
+      </div>
+    {{ end }}
+
     {{ $current := where .Pages "Params.status" "current" }}
     {{ if $current }}
       {{ partial "section-divider.html" (dict "text" "Current & in progress") }}
