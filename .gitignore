@@ -4,6 +4,11 @@
 hugo_stats.json
 .hugo_build.lock
 
+# Claude design mockups / internal working files (not for deployment)
+/ClaudeDesignFiles/
+PLAUSIBLE_ANALYTICS_GUIDE.md
+SEO_IMPLEMENTATION.md
+
 # Node.js / npm
 node_modules/
 yarn.lock
