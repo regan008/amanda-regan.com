@@ -18,7 +18,7 @@
       </div>
     </div>
     {{ end }}
-    <p class="m-0 mb-4 font-sans text-[15.5px] leading-[1.6] text-[#454545]">{{ $page.Plain }}</p>
+    <p class="m-0 mb-4 font-sans text-[15.5px] leading-[1.6] text-[#454545]">{{ $page.Content | markdownify | safeHTML }}</p>
     {{ with $page.Params.link }}<a href="{{ . }}" class="border-b border-cobalt pb-[3px] font-mono text-xs text-cobalt no-underline">{{ $page.Params.linktext | default "View project →" }}</a>{{ end }}
   </div>
 </article>
