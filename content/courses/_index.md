@@ -1,6 +1,6 @@
 ---
 title: "Courses"
-description: "Teaching — Amanda E. Regan's graduate and undergraduate digital history courses at Clemson University."
+description: "Digital history syllabi and courses on computational methods, AI, and data-driven historical research. Publicly shared resources for students and scholars."
 ---
 
-I teach a variety of American history courses and those syllabi are aviailable for students on Canvas. In addition to US History courses, most of my teaching is focused on digital methods for graduate students at Clemson, specifically those in the [Digital History Ph.D. program](https://www.clemson.edu/cah/academics/history-and-geography/graduate/digital-history-phd/). My courses train students to treat primary sources as data and to think computationally as a core historical skill.
+I teach American history and digital methods courses, and the syllabi listed below are from my graduate digital methods sequence, which anchors [Clemson's Digital History Ph.D.](https://www.clemson.edu/cah/academics/history-and-geography/graduate/digital-history-phd/). I am committed to making digital methods accessible to students and scholars everywhere, so I share these syllabi publicly. My other course syllabi are available on Canvas for enrolled students, or you can reach out to me directly if you need materials from another course.
