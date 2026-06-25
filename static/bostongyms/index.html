@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston's Gymnasiums, 1909-1922</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZb9ijqQcpLxstizMbHrv+fsXTvrjnYrysccMW1Nrvxiw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { margin-bottom: 30px; }
+        .header h1 { margin: 0 0 10px; font-size: 28px; color: #333; }
+        .header p { margin: 0 0 20px; color: #666; font-size: 16px; }
+
+        .controls { background: white; padding: 15px 20px; border-radius: 4px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+        .control-group { display: flex; align-items: center; gap: 10px; }
+        .control-group label { font-weight: 600; font-size: 14px; color: #333; }
+        #yearSlider { width: 200px; }
+
+        .content { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 1000px) { .content { grid-template-columns: 1fr; } }
+
+        #map { height: 500px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        #chartContainer { background: white; padding: 20px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); height: fit-content; }
+        #chart { max-height: 300px; }
+
+        .legend { background: white; padding: 15px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-top: 20px; }
+        .legend h3 { margin: 0 0 10px; font-size: 14px; font-weight: 600; color: #333; }
+        .legend-item { display: flex; align-items: center; gap: 8px; margin: 8px 0; font-size: 13px; }
+        .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+
+        .marker-public { background: #E4D00A !important; }
+        .marker-private { background: #702963 !important; }
+        .marker-park { background: #2E7D32 !important; }
+
+        .info-box { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; border-radius: 2px; margin-bottom: 20px; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Boston's Gymnasiums, 1909–1922</h1>
+            <p>An interactive map of municipal and private gymnasiums in Boston, with historical context and attendance data.</p>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="yearSlider">Year:</label>
+                <input type="range" id="yearSlider" min="1909" max="1922" value="1915" step="1">
+                <span id="yearDisplay" style="font-weight: 600; color: #1A39E0; min-width: 50px;">1915</span>
+            </div>
+            <button id="resetBtn" style="padding: 8px 16px; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 13px;">Reset</button>
+        </div>
+
+        <div class="content">
+            <div>
+                <div id="map"></div>
+                <div class="legend">
+                    <h3>Legend</h3>
+                    <div class="legend-item">
+                        <div class="legend-dot marker-public" style="width: 14px; height: 14px;"></div>
+                        <span>Municipal Gymnasium (size = attendance)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot marker-private" style="width: 8px; height: 8px;"></div>
+                        <span>Private Gymnasium</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot marker-park" style="width: 8px; height: 8px;"></div>
+                        <span>Park / Playground</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chartContainer">
+                <h3 style="margin-top: 0;">Average Attendance Over Time</h3>
+                <canvas id="chart"></canvas>
+                <p style="font-size: 12px; color: #999; margin-top: 10px; text-align: center;">Red area indicates 1918–1920 influenza pandemic</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data loading
+        const gymData = {};
+        const parkData = {};
+        const attendanceData = {};
+
+        let currentYear = 1915;
+        let chart = null;
+
+        async function loadData() {
+            try {
+                // Load gymnasiums
+                const gymsResp = await fetch('./data/data-gymnasiums.csv');
+                const gymsText = await gymsResp.text();
+                parseCSV(gymsText, gymData);
+
+                // Load gym attendance
+                const attResp = await fetch('./data/data-attendance.csv');
+                const attText = await attResp.text();
+                parseAttendanceCSV(attText, attendanceData);
+
+                // Load parks
+                const parksResp = await fetch('./data/playgrounds.csv');
+                const parksText = await parksResp.text();
+                parseCSV(parksText, parkData);
+
+                initMap();
+                initChart();
+                updateMap();
+            } catch (e) {
+                console.error('Error loading data:', e);
+                document.querySelector('.info-box') ||
+                    (document.querySelector('.header').insertAdjacentHTML('afterend',
+                    '<div class="info-box">⚠️ Error loading map data. Please refresh the page.</div>'));
+            }
+        }
+
+        function parseCSV(csv, target) {
+            const lines = csv.trim().split('\n');
+            const headers = lines[0].replace(/^﻿/, '').split(',');
+            for (let i = 1; i < lines.length; i++) {
+                if (!lines[i].trim()) continue;
+                const values = lines[i].split(',');
+                const row = {};
+                headers.forEach((h, idx) => row[h.trim()] = values[idx]?.trim());
+                if (row.name) target[row.name] = row;
+            }
+        }
+
+        function parseAttendanceCSV(csv, target) {
+            const lines = csv.trim().split('\n');
+            const headers = lines[0].replace(/^﻿/, '').split(',');
+            for (let i = 1; i < lines.length; i++) {
+                if (!lines[i].trim()) continue;
+                const values = lines[i].split(',');
+                const row = {};
+                headers.forEach((h, idx) => row[h.trim()] = values[idx]?.trim());
+                if (row.gymid && row.Year) {
+                    if (!target[row.Year]) target[row.Year] = [];
+                    target[row.Year].push(row);
+                }
+            }
+        }
+
+        const map = L.map('map').setView([42.3601, -71.0589], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 19
+        }).addTo(map);
+
+        let gymMarkers = L.layerGroup().addTo(map);
+        let parkMarkers = L.layerGroup().addTo(map);
+
+        function initMap() {
+            // Add initial markers
+            updateMap();
+        }
+
+        function updateMap() {
+            gymMarkers.clearLayers();
+            parkMarkers.clearLayers();
+
+            const yearAttendance = attendanceData[currentYear] || [];
+            const attMap = {};
+            yearAttendance.forEach(row => {
+                if (!attMap[row.gymid]) attMap[row.gymid] = 0;
+                attMap[row.gymid] += parseInt(row.attendance) || 0;
+            });
+
+            // Add gym markers
+            Object.entries(gymData).forEach(([name, gym]) => {
+                if (!gym.lat || !gym.long) return;
+                const lat = parseFloat(gym.lat);
+                const lon = parseFloat(gym.long);
+                const isPublic = gym.type === 'municipal';
+                const att = attMap[gym.gymid] || 0;
+                const radius = isPublic ? Math.max(4, Math.sqrt(att / 5000)) : 5;
+                const color = isPublic ? '#E4D00A' : '#702963';
+
+                const marker = L.circleMarker([lat, lon], {
+                    radius: radius,
+                    fillColor: color,
+                    color: color,
+                    weight: 1,
+                    opacity: 0.8,
+                    fillOpacity: 0.7
+                });
+
+                let popup = `<strong>${name}</strong><br>`;
+                popup += `Type: ${gym.type}<br>`;
+                if (att) popup += `1${currentYear} attendance: ${att.toLocaleString()}`;
+                marker.bindPopup(popup);
+                gymMarkers.addLayer(marker);
+            });
+
+            // Add park markers
+            Object.entries(parkData).forEach(([name, park]) => {
+                if (!park.lat || !park.long) return;
+                const lat = parseFloat(park.lat);
+                const lon = parseFloat(park.long);
+
+                const marker = L.circleMarker([lat, lon], {
+                    radius: 5,
+                    fillColor: '#2E7D32',
+                    color: '#2E7D32',
+                    weight: 1,
+                    opacity: 0.7,
+                    fillOpacity: 0.6
+                });
+
+                marker.bindPopup(`<strong>${name}</strong><br>Park / Playground`);
+                parkMarkers.addLayer(marker);
+            });
+        }
+
+        function initChart() {
+            // Aggregate attendance by year
+            const yearlyData = {};
+            Object.entries(attendanceData).forEach(([year, rows]) => {
+                yearlyData[year] = rows.reduce((sum, r) => sum + (parseInt(r.attendance) || 0), 0);
+            });
+
+            const years = Object.keys(yearlyData).sort((a,b) => a-b);
+            const values = years.map(y => yearlyData[y]);
+
+            const ctx = document.getElementById('chart').getContext('2d');
+            chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: years,
+                    datasets: [{
+                        label: 'Total Attendance',
+                        data: values,
+                        borderColor: '#1A39E0',
+                        backgroundColor: 'rgba(26, 57, 224, 0.1)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#1A39E0'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { beginAtZero: true, ticks: { callback: v => (v/1000).toFixed(0)+'K' } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+        }
+
+        // Event listeners
+        document.getElementById('yearSlider').addEventListener('input', (e) => {
+            currentYear = parseInt(e.target.value);
+            document.getElementById('yearDisplay').textContent = currentYear;
+            updateMap();
+        });
+
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            currentYear = 1915;
+            document.getElementById('yearSlider').value = currentYear;
+            document.getElementById('yearDisplay').textContent = currentYear;
+            updateMap();
+        });
+
+        // Load data on page load
+        loadData();
+    </script>
+</body>
+</html>

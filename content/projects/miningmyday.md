@@ -10,4 +10,5 @@ linktext: "View →"
 draft: false
 ---
 
-Placeholder description of a long-running, ongoing project — showing the multi-role display with several roles and embedded date ranges.
+
+Mining My Day is a Shiny app that visualizes the common themes, or 'topics', in Eleanor Roosevelt's My Day columns.

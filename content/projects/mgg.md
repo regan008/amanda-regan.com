@@ -10,4 +10,4 @@ linktext: "www.mappingthegayguides.org →"
 draft: false
 ---
 
-Placeholder description of a long-running, ongoing project — showing the multi-role display with several roles and embedded date ranges.
+_Mapping the Gay Guides_ is an in-progress digital history project that maps entries from the Bob Damron's Address Book, an early but longstanding travel guide aimed at gay men since the early 1960s.

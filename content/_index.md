@@ -15,7 +15,7 @@ contact:
 draft: false
 ---
 
-I am a historian of the late-nineteenth and twentieth-century United States and a specialist in digital and computational history. I am an Assistant Professor in the Department of History and Geography at Clemson University and Director of Graduate Studies overseeing the History MA degree and the first of its kind [Digital History Ph.D. Program.](#)
+I am a historian of the late-nineteenth and twentieth-century United States and a specialist in digital and computational history. I am an Assistant Professor in the Department of History and Geography at Clemson University and Director of Graduate Studies overseeing the History MA degree and the first of its kind [Digital History Ph.D. Program.](https://www.clemson.edu/cah/academics/history-and-geography/graduate/digital-history-phd/)
 
 As a digital historian, I develop methods that uncover previously invisible patterns in the historical record, combining large-scale data analysis, geospatial mapping, and algorithmic approaches with traditional archival research. I am also increasingly interested in the impact of AI on historical research and teaching, both what it makes possible and where it falls short.
 
