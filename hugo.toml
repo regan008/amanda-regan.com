@@ -45,7 +45,7 @@ title = 'Amanda Regan'
     weight = 4
   [[menu.main]]
     name = "CV"
-    url = "/cv/"
+    url = "https://raw.githubusercontent.com/regan008/CV/master/ARegan-cv.pdf"
     weight = 5
   [[menu.main]]
     name = "COURSES"
