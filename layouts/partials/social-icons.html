@@ -1,37 +1,37 @@
 {{- $social := .site.Params.social -}}
 <div class="flex items-center gap-4">
   {{ with $social.email }}
-  <a href="mailto:{{ . }}" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="Email">
+  <a href="mailto:{{ . }}" data-event="Social Icon Click" data-event-platform="email" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="Email">
     <i class="fas fa-envelope text-lg"></i>
   </a>
   {{ end }}
   {{ with $social.github }}
-  <a href="https://github.com/{{ . }}" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="GitHub">
+  <a href="https://github.com/{{ . }}" data-event="Social Icon Click" data-event-platform="github" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="GitHub">
     <i class="fab fa-github text-lg"></i>
   </a>
   {{ end }}
   {{ with $social.linkedin }}
-  <a href="https://www.linkedin.com/in/{{ . }}/" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="LinkedIn">
+  <a href="https://www.linkedin.com/in/{{ . }}/" data-event="Social Icon Click" data-event-platform="linkedin" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="LinkedIn">
     <i class="fab fa-linkedin text-lg"></i>
   </a>
   {{ end }}
   {{ with $social.bluesky }}
-  <a href="https://bsky.app/profile/{{ . }}" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="Bluesky">
+  <a href="https://bsky.app/profile/{{ . }}" data-event="Social Icon Click" data-event-platform="bluesky" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="Bluesky">
     <i class="fa-brands fa-bluesky text-lg"></i>
   </a>
   {{ end }}
   {{ with $social.orcid }}
-  <a href="https://orcid.org/{{ . }}" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="ORCID">
+  <a href="https://orcid.org/{{ . }}" data-event="Social Icon Click" data-event-platform="orcid" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="ORCID">
     <i class="fab fa-orcid text-lg"></i>
   </a>
   {{ end }}
   {{ with $social.scholar }}
-  <a href="https://scholar.google.com/citations?user={{ . }}" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="Google Scholar">
+  <a href="https://scholar.google.com/citations?user={{ . }}" data-event="Social Icon Click" data-event-platform="scholar" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="Google Scholar">
     <i class="fas fa-graduation-cap text-lg"></i>
   </a>
   {{ end }}
   {{ with $social.department }}
-  <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="Clemson Faculty Profile">
+  <a href="{{ . }}" data-event="Social Icon Click" data-event-platform="department" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-cobalt transition-colors" aria-label="Clemson Faculty Profile">
     <i class="fas fa-building text-lg"></i>
   </a>
   {{ end }}
