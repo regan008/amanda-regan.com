@@ -4,7 +4,7 @@ title = 'Amanda Regan'
 
 [params]
   description = "Amanda E. Regan is a historian of digital and computational history, Assistant Professor at Clemson University, and director of its Digital History Ph.D. program."
-  ogimage = "/images/headshot-oct25-1.JPG"
+  ogimage = "/images/og-card.jpg"
   academicName = "Amanda E. Regan"
   googleSiteVerification = ""
   maxEvents = 3
@@ -40,22 +40,22 @@ title = 'Amanda Regan'
     url = "/publications/"
     weight = 3
   [[menu.main]]
-    name = "CV"
-    url = "/cv/"
-    weight = 3.5
-  [[menu.main]]
     name = "DIGITAL PROJECTS"
     url = "/projects/"
     weight = 4
   [[menu.main]]
+    name = "CV"
+    url = "/cv/"
+    weight = 5
+  [[menu.main]]
     name = "COURSES"
     url = "/courses/"
-    weight = 5
+    weight = 6
   [[menu.main]]
     name = "OFFICE HOURS"
     url = "/office-hours/"
-    weight = 6
-
+    weight = 7
+  
 [markup.goldmark.renderer]
   unsafe = true
 
