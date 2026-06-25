@@ -40,6 +40,10 @@ title = 'Amanda Regan'
     url = "/publications/"
     weight = 3
   [[menu.main]]
+    name = "CV"
+    url = "/cv/"
+    weight = 3.5
+  [[menu.main]]
     name = "DIGITAL PROJECTS"
     url = "/projects/"
     weight = 4
