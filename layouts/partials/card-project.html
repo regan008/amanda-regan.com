@@ -8,7 +8,7 @@
     {{ end }}
   </div>
   <div class="pt-5">
-    <div class="mb-2.5 font-mono text-[11px] uppercase tracking-wide text-cobalt">{{ $page.Params.dateRange }}{{ with $page.Params.category }} · {{ . }}{{ end }}</div>
+    <div class="mb-2.5 font-mono text-[11px] uppercase tracking-wide text-cobalt">{{ if eq $page.Params.type "visualization" }}Visualization{{ else }}{{ $page.Params.dateRange }}{{ end }}{{ with $page.Params.category }} · {{ . }}{{ end }}</div>
     <h2 class="m-0 mb-3 font-heading text-2xl font-bold leading-tight text-ink">{{ $page.Title }}</h2>
     {{ with $page.Params.roles }}
     <div class="mb-3.5">
