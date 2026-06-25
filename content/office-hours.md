@@ -17,7 +17,7 @@ cards:
   - audience: "Prospective students"
     link: "https://fantastical.app/aeregan/dh-phd-prospective-student-meeting-"
     buttontext: "Book a time →"
-    caption: "via Fantastical — link coming soon"
+    caption: "via Fantastical"
     variant: light
   - audience: "Beyond Clemson"
     link: "mailto:aeregan@clemson.edu"
