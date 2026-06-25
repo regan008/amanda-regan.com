@@ -1,5 +1,5 @@
 {{- $page := . -}}
-<article class="grid grid-cols-[200px_1fr] gap-6 border-b border-hairline py-7 last:border-b-0">
+<article class="gap-6 border-b border-hairline py-7 last:border-b-0" style="display: grid; grid-template-columns: 200px 1fr;">
   <div class="relative aspect-square w-[200px] h-[200px] flex-shrink-0 overflow-hidden rounded-[10px] border border-hairline">
     {{ with $page.Params.image }}
       <img src="{{ . }}" alt="{{ $page.Title }}" class="absolute inset-0 block h-full w-full object-cover">
