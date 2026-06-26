@@ -4,6 +4,7 @@ description: "An interactive map of municipal and private gymnasiums in Boston, 
 lastmod: "2024-06-25"
 slug: "bostongymnasiums"
 ---
+This visualization maps the geography of fitness in Boston, showing where the city's public and private gymnasiums operated between 1909 and 1922. Click on each location to see attendance trends over this thirteen-year period. The map reveals both the strategic placement of municipal gymnasiums in working-class immigrant neighborhoods and the concentration of private facilities in wealthier residential areas. Most striking is the attendance data from 1918, when the influenza pandemic swept through Boston and transformed gymnasiums into emergency medical infrastructure. You can see attendance plummet as the city converted many facilities, especially those near the harbor where the naval presence was strong, into makeshift hospitals. This repurposing of public gymnasiums offers a powerful window into how the city's priorities shifted in response to crisis, temporarily ending the very institutions that reformers and physical educators had spent decades promoting as essential to public health and moral welfare. For more about the fitness landscape in Boston check out my book _Shaping Up: Physical Fitness Initiatives for Women, 1880-1965_ which is forthcoming from the University of Virginia Press in Spring 2027.
 
 {{< rawhtml >}}
 <style>
