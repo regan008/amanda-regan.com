@@ -7,21 +7,345 @@ slug: "bostongymnasiums"
 
 {{< rawhtml >}}
 <style>
-  .gym-frame-container { width: 100%; max-width: 100%; margin: 30px 0; }
-  .gym-frame-container iframe { width: 100%; height: 900px; border: none; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    :root {
+        --cobalt: #1A39E0;
+        --public: #E4B30A;
+        --private: #702963;
+        --park: #2E7D32;
+        --ink: #1a1a1a;
+        --muted: #6b6b6b;
+        --hairline: #e5e5e5;
+    }
+    * { box-sizing: border-box; }
+    .gym-viz { font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--ink); margin: 40px 0; }
+    .gym-viz-wrap { max-width: 100%; margin: 0; padding: 0; }
+
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap; margin-bottom: 20px; padding: 16px 20px; background: #fff; border: 1px solid var(--hairline); border-radius: 6px; }
+    .slider-group { display: flex; align-items: center; gap: 14px; flex: 1 1 320px; min-width: 280px; }
+    .slider-group label { font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); white-space: nowrap; }
+    .year-badge { font-size: 30px; font-weight: 800; color: var(--cobalt); min-width: 80px; font-variant-numeric: tabular-nums; }
+    #yearSlider { flex: 1; min-width: 160px; accent-color: var(--cobalt); height: 6px; }
+    .playbtn { padding: 9px 16px; background: var(--cobalt); color: #fff; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 13px; }
+    .playbtn:hover { background: #1430b8; }
+    .toggles { display: flex; gap: 16px; align-items: center; font-size: 13px; flex: 0 0 auto; }
+    .toggles label { display: flex; align-items: center; gap: 6px; cursor: pointer; user-select: none; }
+
+    .grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; }
+    @media (max-width: 920px) { .grid { grid-template-columns: 1fr; } }
+
+    #map { height: 540px; border-radius: 6px; border: 1px solid var(--hairline); }
+    .panel { background: #fff; border: 1px solid var(--hairline); border-radius: 6px; padding: 18px; }
+    .panel h2 { margin: 0 0 4px; font-size: 15px; font-weight: 700; }
+    .panel .sub { margin: 0 0 14px; font-size: 12px; color: var(--muted); }
+
+    .legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 12px; font-size: 12.5px; color: var(--muted); }
+    .legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .dot { display: inline-block; border-radius: 50%; }
+
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--hairline); }
+    th { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); cursor: pointer; user-select: none; white-space: nowrap; }
+    th:hover { color: var(--ink); }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    tbody tr:hover { background: #f7f8ff; }
+    .table-wrap { max-height: 300px; overflow-y: auto; margin-top: 6px; }
+    .total-row { font-weight: 700; background: #f5f5f5; }
+    .total-row td { border-top: 2px solid var(--ink); }
+    .chart-box { margin-top: 24px; }
+    .nodata { color: #b00; font-size: 12.5px; font-style: italic; margin-top: 8px; }
 </style>
-<div class="gym-frame-container">
-  <iframe src="/bostongyms/" title="Boston Gymnasiums Interactive Map"></iframe>
+
+<div class="gym-viz">
+    <div class="gym-viz-wrap">
+        <div class="topbar">
+            <div class="slider-group">
+                <label for="yearSlider">Year</label>
+                <span class="year-badge" id="yearDisplay">1915</span>
+                <input type="range" id="yearSlider" min="0" max="9" value="6" step="1">
+                <button class="playbtn" id="playBtn">▶ Play</button>
+            </div>
+            <div class="toggles">
+                <label><input type="checkbox" id="tWards" checked> Wards</label>
+                <label><input type="checkbox" id="tParks"> Parks</label>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <div id="map"></div>
+                <div class="legend">
+                    <span><i class="dot" style="width:16px;height:16px;background:var(--public);opacity:.8"></i> Municipal gym (size = attendance)</span>
+                    <span><i class="dot" style="width:10px;height:10px;background:var(--private)"></i> Private gym</span>
+                    <span><i class="dot" style="width:10px;height:10px;background:var(--park)"></i> Park / playground</span>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>Attendance by gymnasium — <span id="tblYear">1915</span></h2>
+                <p class="sub">Municipal gymnasiums only (private gyms did not report attendance). Click a column to sort.</p>
+                <div class="table-wrap">
+                    <table id="attTable">
+                        <thead>
+                            <tr>
+                                <th data-sort="name">Gymnasium</th>
+                                <th class="num" data-sort="total">Total</th>
+                                <th class="num" data-sort="men">Men &amp; boys</th>
+                                <th class="num" data-sort="women">Women &amp; girls</th>
+                            </tr>
+                        </thead>
+                        <tbody id="attBody"></tbody>
+                    </table>
+                </div>
+                <div class="nodata" id="noData" style="display:none;">No attendance data was reported for this year.</div>
+            </div>
+        </div>
+
+        <div class="panel chart-box">
+            <h2>Total municipal gymnasium attendance, 1909–1919</h2>
+            <p class="sub">The shaded band marks the 1918–1919 influenza pandemic. (1914 and post-1919 figures were not reported.)</p>
+            <canvas id="chart" height="90"></canvas>
+        </div>
+    </div>
 </div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin="" referrerpolicy="no-referrer">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin="" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" crossorigin="" referrerpolicy="no-referrer"></script>
+
+<script>
+const MEN_CLASSES = new Set(['men','men and boys','school boys','working boys']);
+const WOMEN_CLASSES = new Set(['women','women and girls','girls','mothers']);
+
+let DATA = null, map, wardLayer, gymLayer, parkLayer, chart;
+let years = [], currentIdx = 6, playTimer = null, sortKey = 'total', sortDir = -1;
+
+function wardFileForYear(y) {
+    if (y <= 1912) return 'wards_1895_1912.geojson';
+    if (y <= 1914) return 'wards_1913_1914.geojson';
+    return 'wards_1915_1925.geojson';
+}
+
+async function init() {
+    DATA = await (await fetch('/bostongyms/data/bostondata.json')).json();
+    years = DATA.years;
+    currentIdx = years.indexOf(1915) >= 0 ? years.indexOf(1915) : 0;
+
+    document.getElementById('yearSlider').max = years.length - 1;
+    document.getElementById('yearSlider').value = currentIdx;
+
+    map = L.map('map', { scrollWheelZoom: false }).setView([42.34, -71.08], 12);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© OpenStreetMap, © CARTO', subdomains: 'abcd', maxZoom: 19
+    }).addTo(map);
+    map.on('click', () => map.scrollWheelZoom.enable());
+
+    wardLayer = L.layerGroup().addTo(map);
+    gymLayer = L.layerGroup().addTo(map);
+    parkLayer = L.layerGroup();
+
+    buildChart();
+    bindEvents();
+    await render();
+}
+
+const wardCache = {};
+async function loadWards(file) {
+    if (!wardCache[file]) wardCache[file] = await (await fetch('/bostongyms/data/' + file)).json();
+    return wardCache[file];
+}
+
+function classSum(classes, set) {
+    let s = 0;
+    for (const [k, v] of Object.entries(classes || {})) if (set.has(k)) s += v;
+    return s;
+}
+
+async function render() {
+    const year = years[currentIdx];
+    document.getElementById('yearDisplay').textContent = year;
+    document.getElementById('tblYear').textContent = year;
+    document.getElementById('yearSlider').value = currentIdx;
+
+    wardLayer.clearLayers();
+    if (document.getElementById('tWards').checked) {
+        const gj = await loadWards(wardFileForYear(year));
+        L.geoJSON(gj, {
+            style: { color: '#9a9a9a', weight: 1, fillColor: '#cfcfcf', fillOpacity: 0.18 },
+            onEachFeature: (f, lyr) => {
+                const n = f.properties.Ward_Num;
+                if (n != null) lyr.bindTooltip('Ward ' + n, { sticky: true });
+            }
+        }).addTo(wardLayer);
+    }
+
+    gymLayer.clearLayers();
+    const att = DATA.attendance[year] || {};
+    DATA.gyms.forEach(g => {
+        const isPublic = g.type === 'public';
+        const rec = att[g.id];
+        const total = rec ? rec.total : 0;
+        const radius = isPublic ? Math.max(5, Math.sqrt(total) / 12) : 6;
+        const color = isPublic ? '#E4B30A' : '#702963';
+        const m = L.circleMarker([g.lat, g.lon], {
+            radius, fillColor: color, color: '#fff', weight: 1.5,
+            opacity: 1, fillOpacity: 0.82
+        });
+        let html = `<strong>${g.name}</strong><br><span style="color:#666">${isPublic ? 'Municipal' : 'Private'} gymnasium</span>`;
+        if (isPublic) {
+            html += total
+                ? `<br>${year} attendance: <strong>${total.toLocaleString()}</strong>`
+                : `<br><em style="color:#999">No ${year} data</em>`;
+        }
+        m.bindPopup(html);
+        gymLayer.addLayer(m);
+    });
+
+    parkLayer.clearLayers();
+    DATA.parks.forEach(p => {
+        const m = L.circleMarker([p.lat, p.lon], {
+            radius: 5, fillColor: '#2E7D32', color: '#fff', weight: 1, fillOpacity: 0.7
+        });
+        m.bindPopup(`<strong>${p.name}</strong><br><span style="color:#666">${p.type || 'Park / playground'}</span>`);
+        parkLayer.addLayer(m);
+    });
+
+    renderTable(year);
+    highlightChart(year);
+}
+
+function renderTable(year) {
+    const att = DATA.attendance[year] || {};
+    const body = document.getElementById('attBody');
+    const noData = document.getElementById('noData');
+    const rows = Object.entries(att).map(([id, rec]) => ({
+        name: DATA.gymName[id] || id,
+        total: rec.total,
+        men: classSum(rec.classes, MEN_CLASSES),
+        women: classSum(rec.classes, WOMEN_CLASSES)
+    }));
+
+    if (rows.length === 0) {
+        body.innerHTML = '';
+        document.getElementById('attTable').style.display = 'none';
+        noData.style.display = 'block';
+        return;
+    }
+    document.getElementById('attTable').style.display = '';
+    noData.style.display = 'none';
+
+    rows.sort((a, b) => {
+        const av = a[sortKey], bv = b[sortKey];
+        if (typeof av === 'string') return sortDir * av.localeCompare(bv);
+        return sortDir * (av - bv);
+    });
+
+    const fmt = n => n ? n.toLocaleString() : '—';
+    let html = rows.map(r =>
+        `<tr><td>${r.name}</td><td class="num">${fmt(r.total)}</td><td class="num">${fmt(r.men)}</td><td class="num">${fmt(r.women)}</td></tr>`
+    ).join('');
+    const tot = rows.reduce((a, r) => ({ total: a.total + r.total, men: a.men + r.men, women: a.women + r.women }), { total: 0, men: 0, women: 0 });
+    html += `<tr class="total-row"><td>All gymnasiums</td><td class="num">${fmt(tot.total)}</td><td class="num">${fmt(tot.men)}</td><td class="num">${fmt(tot.women)}</td></tr>`;
+    body.innerHTML = html;
+}
+
+function yearlyTotals() {
+    return years.map(y => {
+        const att = DATA.attendance[y] || {};
+        return Object.values(att).reduce((s, r) => s + r.total, 0);
+    });
+}
+
+function buildChart() {
+    const ctx = document.getElementById('chart');
+    const totals = yearlyTotals();
+    chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: years,
+            datasets: [{
+                data: totals, borderColor: '#1A39E0',
+                backgroundColor: 'rgba(26,57,224,.08)', borderWidth: 2.5,
+                fill: true, tension: 0.3,
+                pointRadius: years.map((y, i) => i === currentIdx ? 6 : 3),
+                pointBackgroundColor: years.map((y) => y === 1915 ? '#1A39E0' : '#1A39E0')
+            }]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: true,
+            plugins: {
+                legend: { display: false },
+                tooltip: { callbacks: { label: c => c.parsed.y.toLocaleString() + ' visits' } },
+            },
+            scales: {
+                y: { beginAtZero: true, ticks: { callback: v => (v / 1000) + 'K' }, title: { display: true, text: 'Total attendance' } },
+                x: { grid: { display: false } }
+            }
+        },
+        plugins: [{
+            id: 'pandemicBand',
+            beforeDraw(c) {
+                const x = c.scales.x, yA = c.scales.y;
+                const i1 = years.indexOf(1918), i2 = years.indexOf(1919);
+                if (i1 < 0) return;
+                const left = x.getPixelForValue(i1), right = x.getPixelForValue(i2 >= 0 ? i2 : i1);
+                const ctx2 = c.ctx;
+                ctx2.save();
+                ctx2.fillStyle = 'rgba(176,0,0,.08)';
+                ctx2.fillRect(left, yA.top, right - left, yA.bottom - yA.top);
+                ctx2.fillStyle = 'rgba(176,0,0,.6)';
+                ctx2.font = '11px sans-serif';
+                ctx2.fillText('1918 pandemic', left + 4, yA.top + 14);
+                ctx2.restore();
+            }
+        }]
+    });
+}
+
+function highlightChart(year) {
+    const i = years.indexOf(year);
+    chart.data.datasets[0].pointRadius = years.map((y, idx) => idx === i ? 7 : 3);
+    chart.update('none');
+}
+
+function bindEvents() {
+    document.getElementById('yearSlider').addEventListener('input', e => {
+        currentIdx = +e.target.value;
+        render();
+    });
+    document.getElementById('playBtn').addEventListener('click', togglePlay);
+    document.getElementById('tWards').addEventListener('change', render);
+    document.getElementById('tParks').addEventListener('change', e => {
+        if (e.target.checked) parkLayer.addTo(map); else map.removeLayer(parkLayer);
+    });
+    document.querySelectorAll('#attTable th').forEach(th => {
+        th.addEventListener('click', () => {
+            const k = th.dataset.sort;
+            if (sortKey === k) sortDir *= -1; else { sortKey = k; sortDir = k === 'name' ? 1 : -1; }
+            renderTable(years[currentIdx]);
+        });
+    });
+}
+
+function togglePlay() {
+    const btn = document.getElementById('playBtn');
+    if (playTimer) {
+        clearInterval(playTimer); playTimer = null; btn.textContent = '▶ Play';
+        return;
+    }
+    btn.textContent = '❚❚ Pause';
+    playTimer = setInterval(() => {
+        currentIdx = (currentIdx + 1) % years.length;
+        render();
+        if (currentIdx === years.length - 1) { clearInterval(playTimer); playTimer = null; btn.textContent = '▶ Play'; }
+    }, 1100);
+}
+
+init().catch(e => {
+    console.error(e);
+    document.querySelector('.gym-viz-wrap').insertAdjacentHTML('afterbegin',
+        '<div style="background:#fee;border:1px solid #c00;padding:14px;border-radius:6px;margin-bottom:16px">Error loading visualization data. Please refresh.</div>');
+});
+</script>
 {{< /rawhtml >}}
 
-## About This Visualization
 
-This interactive map displays the locations of municipal and private gymnasiums in Boston between 1909 and 1922. Use the year slider to explore how the distribution and attendance of these institutions changed over time.
-
-**Data sources:**
-- Gymnasium locations and attendance: Boston Parks and Recreation Department reports
-- Parks and playgrounds: Historical records and city directories
-- Ward boundaries: Digitized from historical maps via Boston Public Library
-
-The visualization reveals a clear class distinction in physical culture in Boston: municipal gymnasiums (marked in yellow) were concentrated in immigrant-heavy neighborhoods, while private gymnasiums (in purple) were located in middle-class areas.
