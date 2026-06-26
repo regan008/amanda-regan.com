@@ -30,8 +30,6 @@ slug: "bostongymnasiums"
     .toggles { display: flex; gap: 16px; align-items: center; font-size: 13px; flex: 0 0 auto; }
     .toggles label { display: flex; align-items: center; gap: 6px; cursor: pointer; user-select: none; }
 
-    .grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; }
-    @media (max-width: 920px) { .grid { grid-template-columns: 1fr; } }
 
     #map { height: 540px; border-radius: 6px; border: 1px solid var(--hairline); }
     .panel { background: #fff; border: 1px solid var(--hairline); border-radius: 6px; padding: 18px; }
@@ -42,17 +40,7 @@ slug: "bostongymnasiums"
     .legend span { display: inline-flex; align-items: center; gap: 6px; }
     .dot { display: inline-block; border-radius: 50%; }
 
-    table { width: 100%; border-collapse: collapse; font-size: 13px; }
-    th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--hairline); }
-    th { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); cursor: pointer; user-select: none; white-space: nowrap; }
-    th:hover { color: var(--ink); }
-    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
-    tbody tr:hover { background: #f7f8ff; }
-    .table-wrap { max-height: 300px; overflow-y: auto; margin-top: 6px; }
-    .total-row { font-weight: 700; background: #f5f5f5; }
-    .total-row td { border-top: 2px solid var(--ink); }
     .chart-box { margin-top: 24px; }
-    .nodata { color: #b00; font-size: 12.5px; font-style: italic; margin-top: 8px; }
 </style>
 
 <div class="gym-viz">
@@ -70,33 +58,12 @@ slug: "bostongymnasiums"
             </div>
         </div>
 
-        <div class="grid">
-            <div>
-                <div id="map"></div>
-                <div class="legend">
-                    <span><i class="dot" style="width:16px;height:16px;background:var(--public);opacity:.8"></i> Municipal gym (size = attendance)</span>
-                    <span><i class="dot" style="width:10px;height:10px;background:var(--private)"></i> Private gym</span>
-                    <span><i class="dot" style="width:10px;height:10px;background:var(--park)"></i> Park / playground</span>
-                </div>
-            </div>
-
-            <div class="panel">
-                <h2>Attendance by gymnasium — <span id="tblYear">1915</span></h2>
-                <p class="sub">Municipal gymnasiums only (private gyms did not report attendance). Click a column to sort.</p>
-                <div class="table-wrap">
-                    <table id="attTable">
-                        <thead>
-                            <tr>
-                                <th data-sort="name">Gymnasium</th>
-                                <th class="num" data-sort="total">Total</th>
-                                <th class="num" data-sort="men">Men &amp; boys</th>
-                                <th class="num" data-sort="women">Women &amp; girls</th>
-                            </tr>
-                        </thead>
-                        <tbody id="attBody"></tbody>
-                    </table>
-                </div>
-                <div class="nodata" id="noData" style="display:none;">No attendance data was reported for this year.</div>
+        <div>
+            <div id="map"></div>
+            <div class="legend">
+                <span><i class="dot" style="width:16px;height:16px;background:var(--public);opacity:.8"></i> Municipal gym (size = attendance)</span>
+                <span><i class="dot" style="width:10px;height:10px;background:var(--private)"></i> Private gym</span>
+                <span><i class="dot" style="width:10px;height:10px;background:var(--park)"></i> Park / playground</span>
             </div>
         </div>
 
@@ -113,11 +80,8 @@ slug: "bostongymnasiums"
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" crossorigin="" referrerpolicy="no-referrer"></script>
 
 <script>
-const MEN_CLASSES = new Set(['men','men and boys','school boys','working boys']);
-const WOMEN_CLASSES = new Set(['women','women and girls','girls','mothers']);
-
 let DATA = null, map, wardLayer, gymLayer, parkLayer, chart;
-let years = [], currentIdx = 6, playTimer = null, sortKey = 'total', sortDir = -1;
+let years = [], currentIdx = 6, playTimer = null;
 
 function wardFileForYear(y) {
     if (y <= 1912) return 'wards_1895_1912.geojson';
@@ -154,16 +118,9 @@ async function loadWards(file) {
     return wardCache[file];
 }
 
-function classSum(classes, set) {
-    let s = 0;
-    for (const [k, v] of Object.entries(classes || {})) if (set.has(k)) s += v;
-    return s;
-}
-
 async function render() {
     const year = years[currentIdx];
     document.getElementById('yearDisplay').textContent = year;
-    document.getElementById('tblYear').textContent = year;
     document.getElementById('yearSlider').value = currentIdx;
 
     wardLayer.clearLayers();
@@ -209,43 +166,7 @@ async function render() {
         parkLayer.addLayer(m);
     });
 
-    renderTable(year);
     highlightChart(year);
-}
-
-function renderTable(year) {
-    const att = DATA.attendance[year] || {};
-    const body = document.getElementById('attBody');
-    const noData = document.getElementById('noData');
-    const rows = Object.entries(att).map(([id, rec]) => ({
-        name: DATA.gymName[id] || id,
-        total: rec.total,
-        men: classSum(rec.classes, MEN_CLASSES),
-        women: classSum(rec.classes, WOMEN_CLASSES)
-    }));
-
-    if (rows.length === 0) {
-        body.innerHTML = '';
-        document.getElementById('attTable').style.display = 'none';
-        noData.style.display = 'block';
-        return;
-    }
-    document.getElementById('attTable').style.display = '';
-    noData.style.display = 'none';
-
-    rows.sort((a, b) => {
-        const av = a[sortKey], bv = b[sortKey];
-        if (typeof av === 'string') return sortDir * av.localeCompare(bv);
-        return sortDir * (av - bv);
-    });
-
-    const fmt = n => n ? n.toLocaleString() : '—';
-    let html = rows.map(r =>
-        `<tr><td>${r.name}</td><td class="num">${fmt(r.total)}</td><td class="num">${fmt(r.men)}</td><td class="num">${fmt(r.women)}</td></tr>`
-    ).join('');
-    const tot = rows.reduce((a, r) => ({ total: a.total + r.total, men: a.men + r.men, women: a.women + r.women }), { total: 0, men: 0, women: 0 });
-    html += `<tr class="total-row"><td>All gymnasiums</td><td class="num">${fmt(tot.total)}</td><td class="num">${fmt(tot.men)}</td><td class="num">${fmt(tot.women)}</td></tr>`;
-    body.innerHTML = html;
 }
 
 function yearlyTotals() {
@@ -316,13 +237,6 @@ function bindEvents() {
     document.getElementById('tWards').addEventListener('change', render);
     document.getElementById('tParks').addEventListener('change', e => {
         if (e.target.checked) parkLayer.addTo(map); else map.removeLayer(parkLayer);
-    });
-    document.querySelectorAll('#attTable th').forEach(th => {
-        th.addEventListener('click', () => {
-            const k = th.dataset.sort;
-            if (sortKey === k) sortDir *= -1; else { sortKey = k; sortDir = k === 'name' ? 1 : -1; }
-            renderTable(years[currentIdx]);
-        });
     });
 }
 
