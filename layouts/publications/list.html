@@ -2,7 +2,7 @@
 {{ partial "hero.html" (dict "eyebrow" "Publications" "title" "Publications" "intro" .Content) }}
 
 <section class="border-t border-hairline bg-white">
-  <div class="mx-auto max-w-[1000px] px-14 py-12">
+  <div class="mx-auto max-w-[1000px] px-6 sm:px-10 lg:px-14 py-12">
 
     {{ $pubs := where .Site.RegularPages "Section" "publications" }}
     {{ $books := (where $pubs "Params.pubtype" "book").ByDate.Reverse }}

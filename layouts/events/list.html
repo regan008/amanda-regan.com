@@ -2,7 +2,7 @@
 {{ partial "hero.html" (dict "eyebrow" "Speaking & Events" "title" "Talks, panels & events" "intro" (.Content | markdownify | safeHTML)) }}
 
 <section class="border-t border-hairline bg-white">
-  <div class="mx-auto max-w-[1180px] px-14 py-[54px]">
+  <div class="mx-auto max-w-[1180px] px-6 sm:px-10 lg:px-14 py-[54px]">
     {{ range .Pages.ByDate.Reverse }}
     <div class="grid grid-cols-[110px_1fr] items-baseline gap-6 border-b border-hairline py-[20px]">
       <div class="text-sm font-medium text-ink">

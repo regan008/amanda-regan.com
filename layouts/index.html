@@ -3,20 +3,20 @@
 <!-- HERO -->
 <section class="relative overflow-hidden bg-porcelain">
   <div aria-hidden="true" class="absolute inset-x-0 top-0 h-[68px] overflow-hidden select-none break-all font-mono text-[15px] leading-[1.5] tracking-[.12em] text-cobalt opacity-[.07]">0100110101000001010100000100100101001110010001110010000001010100010010000100010100100000010100000100000101010011010101000010110100110001001100010011000000110001001000000100110001000110010001110010000001010100010010000100010101010000010100110101010001001110010001110010000001010011010010000100000101010000010010010100111001000111010011010100000101010000010010010100111001000111001000000101010001001000010001010010000001010000010000010101001101010100001011010011000100110001001100000011000100100000010011000100011001000111</div>
-  <div class="relative mx-auto grid max-w-[1180px] grid-cols-[1.4fr_.9fr] items-center gap-[52px] px-14 py-16">
+  <div class="relative mx-auto grid max-w-[1180px] grid-cols-1 lg:grid-cols-[1.4fr_.9fr] items-center gap-8 lg:gap-[52px] px-6 sm:px-10 lg:px-14 py-12 lg:py-16">
     <div>
       {{ partial "eyebrow.html" (dict "text" .Params.heroEyebrow) }}
-      <h1 class="m-0 mb-3.5 font-heading text-[60px] font-extrabold leading-none tracking-tight text-ink">{{ .Site.Title }}</h1>
+      <h1 class="m-0 mb-3.5 font-heading text-[40px] sm:text-[52px] lg:text-[60px] font-extrabold leading-[1.05] lg:leading-none tracking-tight text-ink">{{ .Site.Title }}</h1>
       <div class="mb-6 h-0.5 w-11 bg-cobalt"></div>
-      <div class="font-sans text-lg leading-[1.65] text-[#454545] [&_p]:m-0 [&_p]:mb-4 [&_p]:max-w-[56ch] [&_a]:text-cobalt [&_a]:underline">
+      <div class="font-sans text-base sm:text-lg leading-[1.65] text-[#454545] [&_p]:m-0 [&_p]:mb-4 [&_p]:max-w-[56ch] [&_a]:text-cobalt [&_a]:underline">
         {{ .Content }}
       </div>
-      <div class="flex items-center gap-5">
+      <div class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
         {{ partial "social-icons.html" (dict "site" .Site) }}
         <a href="/about/" class="border-b border-cobalt pb-[3px] font-mono text-[12.5px] text-cobalt no-underline">more about me &rarr;</a>
       </div>
     </div>
-    <img src="/images/headshot-oct25-1.JPG" alt="Amanda E. Regan" class="h-[360px] w-full rounded-lg object-cover shadow-xl">
+    <img src="/images/headshot-oct25-1.JPG" alt="Amanda E. Regan" class="order-first lg:order-none h-[300px] sm:h-[360px] w-full rounded-lg object-cover shadow-xl">
   </div>
 </section>
 
@@ -24,11 +24,11 @@
 {{ with .Params.book }}
 {{ if .enabled }}
 <section class="bg-ink text-white">
-  <div class="mx-auto grid max-w-[1180px] grid-cols-[220px_1fr] items-center gap-12 px-14 py-14">
-    <div class="flex h-[320px] w-[220px] items-center justify-center rounded bg-white/10 font-mono text-xs text-white/60 shadow-2xl">book cover placeholder</div>
+  <div class="mx-auto grid max-w-[1180px] grid-cols-1 md:grid-cols-[220px_1fr] items-center gap-8 md:gap-12 px-6 sm:px-10 lg:px-14 py-12 md:py-14">
+    <div class="mx-auto md:mx-0 flex h-[320px] w-[220px] items-center justify-center rounded bg-white/10 font-mono text-xs text-white/60 shadow-2xl">book cover placeholder</div>
     <div>
       {{ partial "eyebrow.html" (dict "text" .eyebrow "dark" true) }}
-      <h2 class="m-0 mb-2.5 font-heading text-[46px] font-extrabold leading-[1.02] tracking-tight text-white">{{ .title }}</h2>
+      <h2 class="m-0 mb-2.5 font-heading text-[32px] sm:text-[40px] lg:text-[46px] font-extrabold leading-[1.05] lg:leading-[1.02] tracking-tight text-white">{{ .title }}</h2>
       <div class="mb-5 font-sans text-[19px] leading-[1.4] text-[#9a9a9a]">{{ .subtitle }}</div>
       <p class="mb-[26px] max-w-[60ch] font-sans text-[17px] leading-[1.65] text-[#c4c4c4]">{{ .description }}</p>
       <a href="{{ .link }}" class="border-b border-cobalt pb-1 font-mono text-xs text-white no-underline">read more &rarr;</a>
@@ -43,7 +43,7 @@
 {{ $pubs = (sort $pubs "Params.year" "desc") | first 3 }}
 {{ if $pubs }}
 <section class="border-t border-hairline bg-white">
-  <div class="mx-auto max-w-[1180px] px-14 py-[54px]">
+  <div class="mx-auto max-w-[1180px] px-6 sm:px-10 lg:px-14 py-[54px]">
     <div class="mb-7 flex items-baseline justify-between">
       <h2 class="m-0 font-heading text-3xl font-bold text-ink">Publications</h2>
       <a href="/publications/" class="font-mono text-xs text-cobalt no-underline">all publications &rarr;</a>
@@ -58,7 +58,7 @@
 {{ $events = (sort $events "Date" "desc") | first .Site.Params.maxEvents }}
 {{ if $events }}
 <section class="border-t border-hairline bg-porcelain">
-  <div class="mx-auto max-w-[1180px] px-14 py-[54px]">
+  <div class="mx-auto max-w-[1180px] px-6 sm:px-10 lg:px-14 py-[54px]">
     <div class="mb-7 flex items-baseline justify-between">
       <h2 class="m-0 font-heading text-3xl font-bold text-ink">Speaking & events</h2>
       <span class="font-mono text-xs font-medium uppercase tracking-wider text-[#888]">Upcoming</span>
@@ -105,10 +105,10 @@
 <!-- CONTACT -->
 {{ with .Params.contact }}
 <section id="contact" class="border-t-2 border-cobalt bg-porcelain">
-  <div class="mx-auto grid max-w-[1180px] grid-cols-[1fr_auto] items-center gap-10 px-14 py-[54px]">
+  <div class="mx-auto grid max-w-[1180px] grid-cols-1 md:grid-cols-[1fr_auto] items-center gap-8 md:gap-10 px-6 sm:px-10 lg:px-14 py-[54px]">
     <div>
       {{ partial "eyebrow.html" (dict "text" "Get in touch") }}
-      <h2 class="m-0 mb-3.5 font-heading text-[38px] font-extrabold leading-[1.05] tracking-tight text-ink">{{ .heading }}</h2>
+      <h2 class="m-0 mb-3.5 font-heading text-[28px] sm:text-[34px] lg:text-[38px] font-extrabold leading-[1.05] tracking-tight text-ink">{{ .heading }}</h2>
       <p class="m-0 max-w-[60ch] font-sans text-[17px] leading-[1.65] text-[#454545]">{{ .text }}</p>
     </div>
     <div class="flex flex-col gap-3 font-mono text-[13px]">

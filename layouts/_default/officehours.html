@@ -2,10 +2,10 @@
 {{ partial "hero.html" (dict "eyebrow" "Office Hours" "title" "Office hours" "intro" (.Params.intro | markdownify)) }}
 
 <section class="border-t border-hairline bg-white">
-  <div class="mx-auto max-w-[980px] px-14 py-12">
+  <div class="mx-auto max-w-[980px] px-6 sm:px-10 lg:px-14 py-12">
     {{ partial "section-divider.html" (dict "text" "Book an appointment") }}
 
-    <div class="grid grid-cols-2 gap-5">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
       {{ range .Params.cards }}
       {{ $dark := eq .variant "dark" }}
       <div class="flex flex-col rounded-lg border p-7 {{ if $dark }}border-ink bg-ink border-t-[3px] border-t-cobalt-soft{{ else }}border-hairline bg-porcelain border-t-[3px] border-t-cobalt{{ end }}">

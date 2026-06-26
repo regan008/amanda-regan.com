@@ -2,17 +2,17 @@
 
 <!-- INTRO STRIP — headshot right, name + opening paragraph left -->
 <section class="border-b-2 border-cobalt bg-porcelain">
-  <div class="mx-auto max-w-[1100px] px-14 py-14">
-    <div class="grid grid-cols-[1fr_240px] gap-14 items-start">
+  <div class="mx-auto max-w-[1100px] px-6 sm:px-10 lg:px-14 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_240px] gap-8 md:gap-14 items-start">
 
       <div>
         <div class="mb-4 font-mono text-xs font-medium uppercase tracking-widest3 text-cobalt">About</div>
-        <h1 class="m-0 mb-3.5 font-heading text-[52px] font-extrabold leading-none tracking-tight text-ink">Amanda Regan</h1>
+        <h1 class="m-0 mb-3.5 font-heading text-[34px] sm:text-[44px] lg:text-[52px] font-extrabold leading-[1.05] lg:leading-none tracking-tight text-ink">Amanda Regan</h1>
         <div class="mb-6 h-[2px] w-10 bg-cobalt"></div>
 
         <!-- Opening paragraph from frontmatter -->
         {{ with .Params.intro }}
-        <p class="m-0 font-sans text-[18px] leading-[1.75] text-[#2e2e2e] max-w-[60ch]">
+        <p class="m-0 font-sans text-[16px] sm:text-[18px] leading-[1.75] text-[#2e2e2e] max-w-[60ch]">
           {{ . }}
         </p>
         {{ end }}
@@ -20,7 +20,7 @@
 
       <!-- Headshot -->
       {{ with .Params.headshot }}
-      <img src="{{ . | relURL }}" alt="Amanda E. Regan" class="block w-60 h-[300px] object-cover rounded-lg shadow-xl">
+      <img src="{{ . | relURL }}" alt="Amanda E. Regan" class="order-first md:order-none block w-48 h-[240px] sm:w-60 sm:h-[300px] object-cover rounded-lg shadow-xl">
       {{ end }}
     </div>
   </div>
@@ -28,7 +28,7 @@
 
 <!-- READING COLUMN — full bio -->
 <section class="bg-white">
-  <div class="mx-auto max-w-[1100px] px-14 py-20">
+  <div class="mx-auto max-w-[1100px] px-6 sm:px-10 lg:px-14 py-20">
     <style>
       .bio-content p { margin-bottom: 1.75rem; }
       .bio-content p:last-child { margin-bottom: 0; }

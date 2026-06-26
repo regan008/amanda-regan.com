@@ -1,12 +1,12 @@
 {{ define "main" }}
 <section class="bg-white">
-  <div class="mx-auto max-w-[1180px] px-14 py-[54px]">
+  <div class="mx-auto max-w-[1180px] px-6 sm:px-10 lg:px-14 py-[54px]">
     <article>
       <div class="mb-4 flex items-center justify-between">
         <div class="font-mono text-sm text-cobalt">{{ .Date.Format "January 2, 2006" }}</div>
         {{ partial "post-type-badge.html" (dict "type" .Params.type) }}
       </div>
-      <h1 class="m-0 mb-6 font-heading text-[46px] font-extrabold leading-[1.02] text-ink">{{ .Title }}</h1>
+      <h1 class="m-0 mb-6 font-heading text-[30px] sm:text-[40px] lg:text-[46px] font-extrabold leading-[1.08] lg:leading-[1.02] text-ink">{{ .Title }}</h1>
       <div class="prose prose-base prose-p:leading-relaxed prose-li:leading-relaxed prose-headings:font-heading prose-headings:text-ink prose-h2:text-2xl prose-p:text-[#454545] prose-a:text-cobalt prose-a:underline hover:prose-a:text-cobalt/80 max-w-[70ch]">
         {{ .Content }}
       </div>

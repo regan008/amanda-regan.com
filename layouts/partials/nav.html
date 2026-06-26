@@ -1,21 +1,54 @@
 {{ $current := .RelPermalink }}
-<nav class="sticky top-0 z-20 flex items-center justify-between border-b border-hairline bg-white px-14 py-[22px]">
-  <a href="/" class="flex items-center gap-2.5 font-heading text-lg font-bold tracking-tight text-ink">
-    <span class="inline-block text-cobalt font-mono text-sm leading-none">/</span>
-    Amanda E. Regan
-  </a>
-  <div class="flex gap-6 font-mono text-xs lowercase">
-    {{ range .Site.Menus.main }}
-      {{ $isExternal := strings.HasPrefix .URL "http" }}
-      {{ $active := false }}
-      {{ if not $isExternal }}
-        {{ if eq .URL "/" }}
-          {{ $active = eq $current "/" }}
-        {{ else }}
-          {{ $active = strings.HasPrefix $current .URL }}
+<nav class="sticky top-0 z-30 border-b border-hairline bg-white">
+  <div class="flex items-center justify-between px-6 sm:px-10 lg:px-14 py-[18px] md:py-[22px]">
+    <a href="/" class="flex items-center gap-2.5 font-heading text-base md:text-lg font-bold tracking-tight text-ink">
+      <span class="inline-block text-cobalt font-mono text-sm leading-none">/</span>
+      Amanda E. Regan
+    </a>
+
+    <button type="button" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu"
+      class="md:hidden inline-flex items-center justify-center -mr-2 p-2 text-ink">
+      <svg id="nav-icon-open" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+      </svg>
+      <svg id="nav-icon-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <div id="nav-menu"
+      class="hidden md:flex absolute md:static left-0 right-0 top-full z-20 flex-col md:flex-row gap-0 md:gap-6 border-t md:border-t-0 border-hairline bg-white px-6 sm:px-10 lg:px-0 pb-3 md:pb-0 font-mono text-sm md:text-xs lowercase shadow-lg md:shadow-none">
+      {{ range .Site.Menus.main }}
+        {{ $isExternal := strings.HasPrefix .URL "http" }}
+        {{ $active := false }}
+        {{ if not $isExternal }}
+          {{ if eq .URL "/" }}
+            {{ $active = eq $current "/" }}
+          {{ else }}
+            {{ $active = strings.HasPrefix $current .URL }}
+          {{ end }}
         {{ end }}
+        <a href="{{ .URL }}" {{ if $isExternal }}target="_blank" rel="noopener noreferrer"{{ end }} {{ if eq .Name "CV" }}data-event="CV Link Click"{{ end }} class="border-b border-hairline-soft md:border-b-0 py-3 md:py-0 {{ if $active }}font-semibold text-cobalt{{ else }}text-[#6B6B6B] hover:text-cobalt{{ end }} transition-colors">{{ .Name | lower | replaceRE " " "_" }}</a>
       {{ end }}
-      <a href="{{ .URL }}" {{ if $isExternal }}target="_blank" rel="noopener noreferrer"{{ end }} {{ if eq .Name "CV" }}data-event="CV Link Click"{{ end }} class="{{ if $active }}font-semibold text-cobalt{{ else }}text-[#6B6B6B] hover:text-cobalt{{ end }} transition-colors">{{ .Name | lower | replaceRE " " "_" }}</a>
-    {{ end }}
+    </div>
   </div>
 </nav>
+<script>
+  (function () {
+    var btn = document.getElementById('nav-toggle');
+    var menu = document.getElementById('nav-menu');
+    var iconOpen = document.getElementById('nav-icon-open');
+    var iconClose = document.getElementById('nav-icon-close');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function () {
+      var willOpen = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden', !willOpen);
+      menu.classList.toggle('flex', willOpen);
+      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      if (iconOpen && iconClose) {
+        iconOpen.classList.toggle('hidden', willOpen);
+        iconClose.classList.toggle('hidden', !willOpen);
+      }
+    });
+  })();
+</script>

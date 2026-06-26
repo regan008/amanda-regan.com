@@ -2,14 +2,14 @@
 
 <!-- DARK HERO -->
 <section class="border-b-[3px] border-cobalt bg-ink text-white">
-  <div class="mx-auto max-w-[1040px] px-14 py-11">
+  <div class="mx-auto max-w-[1040px] px-6 sm:px-10 lg:px-14 py-11">
     <div class="font-mono text-[11.5px] tracking-wide text-cobalt-soft">
       <a href="/courses/" class="text-cobalt-soft no-underline">Courses</a>&nbsp;&nbsp;/&nbsp;&nbsp;<span class="text-[#8086a0]">{{ .Params.semester }}</span>
     </div>
     <div class="mt-5 font-mono text-[12.5px] uppercase tracking-widest2 text-[#cfd3e6]">
       {{ .Params.coursecode }} · {{ if eq .Params.level "graduate" }}GRADUATE SEMINAR{{ else }}UNDERGRADUATE{{ end }}
     </div>
-    <h1 class="m-0 mt-2 font-heading text-[48px] font-extrabold leading-[1.02] tracking-tight text-white">{{ .Title }}</h1>
+    <h1 class="m-0 mt-2 font-heading text-[30px] sm:text-[40px] lg:text-[48px] font-extrabold leading-[1.08] lg:leading-[1.02] tracking-tight text-white">{{ .Title }}</h1>
     <div class="mt-7 flex flex-wrap gap-3">
       <div class="rounded-md border border-white/20 px-[18px] py-[13px]">
         <div class="font-mono text-[10.5px] tracking-wide text-cobalt-soft">MEETS</div>
@@ -34,8 +34,8 @@
 <div class="mx-auto max-w-[1040px]">
 
   <!-- BODY: DESCRIPTION + META RAIL -->
-  <div class="grid grid-cols-[1fr_280px]">
-    <div class="px-14 py-[42px]">
+  <div class="grid grid-cols-1 lg:grid-cols-[1fr_280px]">
+    <div class="px-6 sm:px-10 lg:px-14 py-[42px]">
       {{ with .Params.description }}
         {{ partial "section-divider.html" (dict "text" "Course description") }}
         {{ range . }}<p class="m-0 mb-3.5 font-sans text-[15px] leading-[1.7] text-[#3a3a3a]">{{ . }}</p>{{ end }}
@@ -59,7 +59,7 @@
     </div>
 
     <!-- META RAIL -->
-    <div class="border-l border-ink/10 px-8 py-[42px]">
+    <div class="border-t lg:border-t-0 lg:border-l border-ink/10 px-6 sm:px-10 lg:px-8 py-[42px]">
       <a href="#" class="flex items-center justify-center gap-2 rounded-md bg-cobalt p-[13px] font-mono text-xs text-white no-underline">DOWNLOAD PDF &darr;</a>
 
       <div class="mt-7 border-b border-ink/[.14] pb-2 font-mono text-[10.5px] tracking-wide text-[#8086a0]">INSTRUCTOR</div>
@@ -85,15 +85,15 @@
   </div>
 
   <!-- SCHEDULE + POLICIES (or, for courses not yet converted, the original plain markdown) -->
-  <div class="prose prose-base max-w-none px-14 pb-16 pt-2 font-sans text-[#3a3a3a] prose-headings:font-heading prose-headings:text-ink prose-a:text-cobalt prose-a:no-underline hover:prose-a:underline prose-table:text-sm">
+  <div class="prose prose-base max-w-none px-6 sm:px-10 lg:px-14 pb-16 pt-2 font-sans text-[#3a3a3a] prose-headings:font-heading prose-headings:text-ink prose-a:text-cobalt prose-a:no-underline hover:prose-a:underline prose-table:text-sm">
     {{ .Content }}
   </div>
 </div>
 
 <!-- COURSE FOOTER BAND -->
 <div class="bg-ink py-10 text-[#F4F4F2]">
-  <div class="mx-auto flex max-w-[1040px] items-end justify-between gap-6 px-14">
-    <div class="font-heading text-2xl font-bold">Questions about the course? Get in touch.</div>
+  <div class="mx-auto flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6 max-w-[1040px] px-6 sm:px-10 lg:px-14">
+    <div class="font-heading text-xl sm:text-2xl font-bold">Questions about the course? Get in touch.</div>
     <div class="flex gap-[22px] font-mono text-xs">
       <a href="mailto:aeregan@clemson.edu" class="text-cobalt-soft no-underline">EMAIL &#8599;</a>
       <a href="https://github.com/regan008" class="text-cobalt-soft no-underline">GITHUB &#8599;</a>

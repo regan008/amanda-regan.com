@@ -10,7 +10,7 @@
 
 <!-- PAGE HEADER -->
 <section class="border-b-2 border-cobalt bg-porcelain">
-  <div class="mx-auto max-w-[1180px] px-14 pb-10 pt-12">
+  <div class="mx-auto max-w-[1180px] px-6 sm:px-10 lg:px-14 pb-10 pt-12">
     <div class="flex items-baseline justify-between">
       <div>
         <div class="mb-3.5 font-mono text-xs font-medium uppercase tracking-widest3 text-cobalt">Writing from grad school</div>
@@ -23,10 +23,10 @@
 
 <!-- POST LIST -->
 <section class="bg-white">
-  <div class="mx-auto max-w-[1180px] px-14">
+  <div class="mx-auto max-w-[1180px] px-6 sm:px-10 lg:px-14">
     {{ $paginator := .Paginate $allPosts 10 }}
     {{ range $i, $p := $paginator.Pages }}
-    <div class="grid grid-cols-[110px_1fr] items-start gap-x-8 py-7 {{ if not (eq $i (sub (len $paginator.Pages) 1)) }}border-b border-hairline-soft{{ end }}">
+    <div class="grid grid-cols-[88px_1fr] sm:grid-cols-[110px_1fr] items-start gap-x-5 sm:gap-x-8 py-7 {{ if not (eq $i (sub (len $paginator.Pages) 1)) }}border-b border-hairline-soft{{ end }}">
       <div class="pt-[3px]">
         <div class="mb-2.5 font-mono text-[13px] text-[#9a9a9a]">{{ $p.Date.Format "Jan 2006" }}</div>
         {{ $type := $p.Params.posttype | default "reflection" }}
@@ -47,7 +47,7 @@
 
   <!-- PAGINATION -->
   {{ if gt $paginator.TotalPages 1 }}
-  <div class="mx-auto flex max-w-[1180px] items-center justify-between px-14 py-10">
+  <div class="mx-auto flex max-w-[1180px] items-center justify-between px-6 sm:px-10 lg:px-14 py-10">
     {{ if $paginator.HasPrev }}
     <a href="{{ $paginator.Prev.URL }}" class="font-mono text-xs text-cobalt no-underline">&larr; newer</a>
     {{ else }}

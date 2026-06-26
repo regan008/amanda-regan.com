@@ -2,7 +2,7 @@
 {{ partial "hero.html" (dict "eyebrow" "Courses" "title" "Teaching" "intro" (.Content | markdownify | safeHTML)) }}
 
 <section class="border-t border-hairline bg-white">
-  <div class="mx-auto max-w-[1040px] px-14 py-12">
+  <div class="mx-auto max-w-[1040px] px-6 sm:px-10 lg:px-14 py-12">
     {{ $withKey := slice }}
     {{ $maxAYStart := -1 }}
     {{ range .Pages }}
@@ -30,11 +30,11 @@
         </div>
         {{ $first = false }}
       {{ end }}
-      <a href="{{ $p.RelPermalink }}" data-event="Course Link Click" data-event-course="{{ $p.Title }}" class="grid grid-cols-[110px_1fr_140px_auto] items-center gap-4 border-b border-hairline-soft py-3 no-underline">
-        <span class="font-mono text-xs uppercase tracking-wide text-[#9a9a9a]">{{ $p.Params.coursecode }}</span>
+      <a href="{{ $p.RelPermalink }}" data-event="Course Link Click" data-event-course="{{ $p.Title }}" class="flex flex-col gap-1 md:grid md:grid-cols-[110px_1fr_140px_auto] md:items-center md:gap-4 border-b border-hairline-soft py-4 md:py-3 no-underline">
+        <span class="font-mono text-xs uppercase tracking-wide text-[#9a9a9a]">{{ $p.Params.coursecode }}{{ with $p.Params.level }} <span class="md:hidden">· {{ humanize . }}</span>{{ end }}</span>
         <span class="font-heading text-base font-semibold leading-snug text-ink">{{ $p.Title }}</span>
-        <span class="font-mono text-[11px] uppercase tracking-wide text-[#9a9a9a]">{{ humanize $p.Params.level }}</span>
-        <span class="whitespace-nowrap border-b border-cobalt pb-[2px] font-mono text-xs text-cobalt">view syllabus &rarr;</span>
+        <span class="hidden md:inline font-mono text-[11px] uppercase tracking-wide text-[#9a9a9a]">{{ humanize $p.Params.level }}</span>
+        <span class="mt-1 md:mt-0 self-start whitespace-nowrap border-b border-cobalt pb-[2px] font-mono text-xs text-cobalt">view syllabus &rarr;</span>
       </a>
     {{ end }}
   </div>
