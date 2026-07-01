@@ -3,6 +3,7 @@ title: "RRCHNM Digital Archive and Network Visualization"
 status: past
 dateRange: "2014"
 image: "/images/portfolio-rrchnm20.png"
+imageAlt: "Network visualization from the RRCHNM 20th-anniversary digital archive project"
 roles:
   - "Collaborator"
 link: "https://20.rrchnm.org/"

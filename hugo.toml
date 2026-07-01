@@ -5,6 +5,8 @@ disableKinds = ["taxonomy", "term"]
 
 [params]
   description = "Amanda E. Regan is a historian of digital and computational history, Assistant Professor at Clemson University, and director of its Digital History Ph.D. program."
+  # Appended to the homepage <title> and social titles for topical discoverability
+  tagline = "Digital & Computational Historian"
   ogimage = "/images/og-card.jpg"
   academicName = "Amanda E. Regan"
   googleSiteVerification = ""

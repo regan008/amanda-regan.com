@@ -3,6 +3,7 @@ title: "Digital Humanities Now"
 status: past
 dateRange: "2016-2018"
 image: "/images/portfolio-dhnow.png"
+imageAlt: "Screenshot of the Digital Humanities Now publication homepage"
 roles:
   - "Managing Editor"
 link: "https://digitalhumanitiesnow.org/"

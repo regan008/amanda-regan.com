@@ -2,7 +2,8 @@
 <article class="flex flex-col sm:grid sm:grid-cols-[160px_1fr] lg:grid-cols-[200px_1fr] gap-4 sm:gap-6 border-b border-hairline py-7 last:border-b-0">
   <div class="relative aspect-square w-[150px] sm:w-full flex-shrink-0 overflow-hidden rounded-[10px] border border-hairline">
     {{ with $page.Params.image }}
-      <img src="{{ . }}" alt="{{ $page.Title }}" class="absolute inset-0 block h-full w-full object-cover">
+      {{ $alt := $page.Params.imageAlt | default $page.Params.description | default (printf "%s — a digital history project by Amanda Regan" $page.Title) }}
+      <img src="{{ . }}" alt="{{ $alt }}" class="absolute inset-0 block h-full w-full object-cover">
     {{ else }}
       <div class="absolute inset-0 flex items-center justify-center bg-hairline-soft font-mono text-xs uppercase tracking-wide text-[#9a9a9a] text-center px-3">project image</div>
     {{ end }}

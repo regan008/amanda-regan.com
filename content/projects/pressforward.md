@@ -3,6 +3,7 @@ title: "PressForward"
 status: past
 dateRange: "2016 – 2018"
 image: "/images/portfolio-pf.png"
+imageAlt: "Screenshot of the PressForward project, a WordPress tool for collecting and curating web-based scholarship"
 roles:
   - "Software Development Manager"
 link: "https://pressforward.org/"
