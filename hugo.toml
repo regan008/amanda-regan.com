@@ -18,7 +18,7 @@ disableKinds = ["taxonomy", "term"]
     # GitHub username (not the full URL)
     github = "regan008"
     # LinkedIn profile ID (the part after /in/)
-    linkedin = "amanda-regan-67006a2b"
+    linkedin = "amandaeregan"
     # Bluesky handle (your.bsky.social format)
     bluesky = "regan008.bsky.social"
     # ORCID ID (without https://orcid.org/ prefix)
