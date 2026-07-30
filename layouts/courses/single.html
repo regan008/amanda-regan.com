@@ -36,7 +36,7 @@
   <!-- BODY: DESCRIPTION + META RAIL -->
   <div class="grid grid-cols-1 lg:grid-cols-[1fr_280px]">
     <div class="px-6 sm:px-10 lg:px-14 py-[42px]">
-      {{ with .Params.description }}
+      {{ with .Params.courseDescription }}
         {{ partial "section-divider.html" (dict "text" "Course description") }}
         {{ range . }}<p class="m-0 mb-3.5 font-sans text-[15px] leading-[1.7] text-[#3a3a3a]">{{ . }}</p>{{ end }}
       {{ end }}
