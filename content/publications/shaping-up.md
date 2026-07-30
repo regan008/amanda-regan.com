@@ -1,5 +1,5 @@
 ---
-title: "Shaping Up: Physical Fitness Initiatives for Women, 1880–1965"
+title: "Shaping Up: Women, Physical Fitness, and American Society"
 pubtype: book
 year: 2027
 date: 2026-06-01
