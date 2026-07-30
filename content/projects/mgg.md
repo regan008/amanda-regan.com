@@ -1,7 +1,7 @@
 ---
 title: "Mapping the Gay Guides"
 status: current
-dateRange: "2019 – Present"
+dateRange: "2019 – 2026"
 image: "/images/portfolio-mgg.png"
 imageAlt: "Screenshot of the Mapping the Gay Guides interactive map showing LGBTQ locations plotted across the United States"
 roles:
