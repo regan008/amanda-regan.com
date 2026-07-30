@@ -74,10 +74,21 @@
       </div>
 
       {{ with .Params.requiredtexts }}
-      <div class="mt-6 border-b border-ink/[.14] pb-2 font-mono text-[10.5px] tracking-wide text-[#8086a0]">REQUIRED TEXTS</div>
-      <div class="mt-3 font-sans text-xs leading-[1.6] text-[#3a3a3a]">
-        {{ range . }}{{ .author }}, <em>{{ .title }}</em> · <a href="{{ .link }}" class="text-cobalt">link</a><br>{{ end }}
-      </div>
+      <div class="mt-6 border-b border-ink/[.14] pb-2 font-mono text-[10.5px] tracking-wide text-[#8086a0]">REQUIRED TEXTS AND PURCHASES</div>
+      {{/* Two accepted shapes per entry: a cited work (author + title, link optional),
+           or a free-form `item` that may contain inline markdown links. */}}
+      <ul class="m-0 mt-3 list-disc p-0 pl-[16px] font-sans text-xs leading-[1.6] text-[#3a3a3a] marker:text-cobalt [&_a]:text-cobalt">
+        {{ range . }}
+        <li class="mb-2.5 pl-[2px] last:mb-0">
+          {{- with .item -}}
+            {{ . | markdownify | replaceRE "</?p>" "" | safeHTML }}
+          {{- else -}}
+            {{ .author }}, <em>{{ .title }}</em>
+          {{- end -}}
+          {{- with .link }} · <a href="{{ . }}" class="text-cobalt">link</a>{{ end -}}
+        </li>
+        {{ end }}
+      </ul>
       {{ end }}
     </div>
   </div>
