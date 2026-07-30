@@ -1,0 +1,5 @@
+{{- /* A quiet footnote-style aside. Deliberately plainer than the `alert`
+       shortcode: hairline rule, muted text, no panel or icon. */ -}}
+<div class="not-prose mt-10 border-t border-ink/10 pt-4 font-sans text-[13px] leading-[1.65] text-[#8086a0] [&_p]:m-0 [&_a]:text-cobalt [&_a]:underline">
+  {{ .Inner | markdownify }}
+</div>

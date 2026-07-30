@@ -1,4 +1,5 @@
-<div class="not-prose">
-  {{ partial "section-divider.html" (dict "text" "Policies & Procedures") }}
+{{- $title := .Get "title" | default "Policies & Procedures" -}}
+<div class="not-prose mt-8">
+  {{ partial "section-divider.html" (dict "text" $title) }}
   {{ .Inner }}
 </div>
