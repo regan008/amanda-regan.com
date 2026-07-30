@@ -4,6 +4,9 @@
 hugo_stats.json
 .hugo_build.lock
 
+# Syllabus PDFs — build artifacts, never tracked
+/static/courses/*.pdf
+
 # Claude design mockups / internal working files (not for deployment)
 /ClaudeDesignFiles/
 PLAUSIBLE_ANALYTICS_GUIDE.md
