@@ -36,7 +36,7 @@
   <!-- BODY: DESCRIPTION + META RAIL -->
   <div class="grid grid-cols-1 lg:grid-cols-[1fr_280px]">
     <div class="px-6 sm:px-10 lg:px-14 py-[42px]">
-      {{ with .Params.description }}
+      {{ with .Params.courseDescription }}
         {{ partial "section-divider.html" (dict "text" "Course description") }}
         {{ range . }}<p class="m-0 mb-3.5 font-sans text-[15px] leading-[1.7] text-[#3a3a3a]">{{ . }}</p>{{ end }}
       {{ end }}
@@ -74,10 +74,21 @@
       </div>
 
       {{ with .Params.requiredtexts }}
-      <div class="mt-6 border-b border-ink/[.14] pb-2 font-mono text-[10.5px] tracking-wide text-[#8086a0]">REQUIRED TEXTS</div>
-      <div class="mt-3 font-sans text-xs leading-[1.6] text-[#3a3a3a]">
-        {{ range . }}{{ .author }}, <em>{{ .title }}</em> · <a href="{{ .link }}" class="text-cobalt">link</a><br>{{ end }}
-      </div>
+      <div class="mt-6 border-b border-ink/[.14] pb-2 font-mono text-[10.5px] tracking-wide text-[#8086a0]">REQUIRED TEXTS AND PURCHASES</div>
+      {{/* Two accepted shapes per entry: a cited work (author + title, link optional),
+           or a free-form `item` that may contain inline markdown links. */}}
+      <ul class="m-0 mt-3 list-disc p-0 pl-[16px] font-sans text-xs leading-[1.6] text-[#3a3a3a] marker:text-cobalt [&_a]:text-cobalt">
+        {{ range . }}
+        <li class="mb-2.5 pl-[2px] last:mb-0">
+          {{- with .item -}}
+            {{ . | markdownify | replaceRE "</?p>" "" | safeHTML }}
+          {{- else -}}
+            {{ .author }}, <em>{{ .title }}</em>
+          {{- end -}}
+          {{- with .link }} · <a href="{{ . }}" class="text-cobalt">link</a>{{ end -}}
+        </li>
+        {{ end }}
+      </ul>
       {{ end }}
     </div>
   </div>
@@ -88,8 +99,26 @@
   </div>
 </div>
 
+<!-- Expand every schedule week before printing so nothing is hidden in the PDF,
+     then restore the reader's open/closed state afterward. -->
+<script>
+  (function () {
+    var saved = [];
+    window.addEventListener('beforeprint', function () {
+      saved = [];
+      document.querySelectorAll('details').forEach(function (d) {
+        saved.push([d, d.open]);
+        d.open = true;
+      });
+    });
+    window.addEventListener('afterprint', function () {
+      saved.forEach(function (pair) { pair[0].open = pair[1]; });
+    });
+  })();
+</script>
+
 <!-- COURSE FOOTER BAND -->
-<div class="bg-ink py-10 text-[#F4F4F2]">
+<div class="print-hide bg-ink py-10 text-[#F4F4F2]">
   <div class="mx-auto flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6 max-w-[1040px] px-6 sm:px-10 lg:px-14">
     <div class="font-heading text-xl sm:text-2xl font-bold">Questions about the course? Get in touch.</div>
     <div class="flex gap-[22px] font-mono text-xs">

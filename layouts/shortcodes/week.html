@@ -6,19 +6,32 @@
 {{- $dueDetail := .Get "dueDetail" -}}
 {{- $readings := trim .Inner "\n\t " -}}
 <details class="group border-b border-ink/10">
-  <summary class="grid cursor-pointer list-none grid-cols-[60px_104px_1fr_150px_22px] items-baseline gap-4 p-3 [&::-webkit-details-marker]:hidden group-open:bg-[#ECEEFB]">
+  <summary class="grid cursor-pointer list-none grid-cols-[60px_104px_1fr_170px_22px] items-baseline gap-4 p-3 [&::-webkit-details-marker]:hidden group-open:bg-[#ECEEFB]">
     <div class="font-mono text-xs text-cobalt">{{ $wk }}</div>
     <div class="font-mono text-xs text-[#8086a0]">{{ $dates }}</div>
     <div>
       <div class="font-sans text-[17px] font-semibold leading-snug text-ink">{{ $topic }}</div>
       {{ with $summary }}<div class="mt-[3px] font-sans text-xs leading-snug text-[#565a66]">{{ . }}</div>{{ end }}
     </div>
-    <div class="font-mono text-xs text-[#565a66]">{{ $due }}</div>
+    <div class="flex flex-col items-start gap-1 self-center">
+      {{- if eq $due "—" -}}
+        <span class="font-mono text-xs text-[#b4b8c4]">—</span>
+      {{- else -}}
+        {{- range split $due "|" -}}
+          {{- $label := trim . " " -}}
+          {{- if hasPrefix $label "Tech Table" -}}
+            <span class="inline-flex items-center rounded-full border border-ink/15 px-2.5 py-1 font-mono text-[11px] uppercase leading-none tracking-wide text-[#8086a0]">{{ $label }}</span>
+          {{- else -}}
+            <span class="inline-flex items-center rounded-full border border-cobalt/25 bg-cobalt/[0.09] px-2.5 py-1 font-mono text-[11px] font-medium uppercase leading-none tracking-wide text-cobalt">{{ $label }}</span>
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    </div>
     <div class="font-mono text-sm text-cobalt transition-transform duration-200 group-open:rotate-90">&rsaquo;</div>
   </summary>
   <div class="bg-white py-1.5 pb-[26px] pl-[180px] pr-3">
     {{ with $readings }}
-    <div class="[&>ul]:m-0 [&>ul]:list-none [&>ul]:p-0 [&_li]:flex [&_li]:gap-2.5 [&_li]:border-b [&_li]:border-ink/[.08] [&_li]:py-2 [&_li]:font-sans [&_li]:text-sm [&_li]:leading-[1.55] [&_li]:text-[#3a3a3a] [&_li]:before:mr-2.5 [&_li]:before:flex-none [&_li]:before:font-mono [&_li]:before:text-[11px] [&_li]:before:text-cobalt [&_li]:before:content-['↗'] [&_a]:text-cobalt [&_a]:underline [&_p]:m-0 [&_p]:py-1.5 [&_p>strong]:font-mono [&_p>strong]:text-[13px] [&_p>strong]:text-ink [&_p>em]:font-mono [&_p>em]:text-[12.5px] [&_p>em]:text-cobalt [&_p>em]:not-italic">
+    <div class="[&>ul]:m-0 [&>ul]:list-none [&>ul]:p-0 [&>ul>li]:relative [&>ul>li]:block [&>ul>li]:border-b [&>ul>li]:border-ink/[.08] [&>ul>li]:py-2 [&>ul>li]:pl-[30px] [&>ul>li]:font-sans [&>ul>li]:text-sm [&>ul>li]:leading-[1.55] [&>ul>li]:text-[#3a3a3a] [&>ul>li]:before:absolute [&>ul>li]:before:left-0 [&>ul>li]:before:top-[9px] [&>ul>li]:before:font-mono [&>ul>li]:before:text-[11px] [&>ul>li]:before:leading-[1.55] [&>ul>li]:before:text-cobalt [&>ul>li]:before:content-['↗'] [&_a]:text-cobalt [&_a]:underline [&_p]:m-0 [&_p]:py-1.5 [&_p]:font-sans [&_p]:text-sm [&_p]:leading-[1.55] [&_p]:text-[#3a3a3a] [&_p>strong]:font-mono [&_p>strong]:text-[13px] [&_p>strong]:text-ink [&_p>em]:font-mono [&_p>em]:text-[12.5px] [&_p>em]:text-cobalt [&_p>em]:not-italic [&_h5]:mb-0 [&_h5]:mt-3 [&_h5]:font-sans [&_h5]:text-[12.5px] [&_h5]:font-semibold [&_h5]:leading-[1.55] [&_h5]:text-[#3a3a3a] [&_blockquote]:mt-4 [&_blockquote]:border-l-2 [&_blockquote]:border-cobalt [&_blockquote]:bg-[#F1F3FC] [&_blockquote]:px-4 [&_blockquote]:py-3 [&_blockquote_p]:m-0 [&_blockquote_p]:py-0 [&_blockquote_p>strong]:font-mono [&_blockquote_p>strong]:text-[10.5px] [&_blockquote_p>strong]:uppercase [&_blockquote_p>strong]:tracking-wide [&_blockquote_p>strong]:text-[#8086a0] [&_blockquote_ul]:m-0 [&_blockquote_ul]:mt-2 [&_blockquote_ul]:list-none [&_blockquote_ul]:p-0 [&_blockquote_li]:block [&_blockquote_li]:border-0 [&_blockquote_li]:py-[3px] [&_blockquote_li]:pl-0 [&_blockquote_li]:font-sans [&_blockquote_li]:text-[13px] [&_blockquote_li]:leading-[1.5] [&_blockquote_li]:text-[#3a3a3a] [&_blockquote_li>strong]:font-mono [&_blockquote_li>strong]:text-[12px] [&_blockquote_li>strong]:font-semibold [&_blockquote_li>strong]:text-cobalt">
       {{ . | markdownify }}
     </div>
     {{ end }}
