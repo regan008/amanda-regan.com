@@ -19,7 +19,9 @@
       </div>
     </div>
     {{ end }}
-    <p class="m-0 mb-3 font-sans text-[15px] leading-[1.5] text-[#454545]">{{ $page.Content | markdownify | safeHTML }}</p>
+    {{/* Card sits outside `prose`, so Preflight's `a { color: inherit }` would
+         otherwise render inline links indistinguishable from body text. */}}
+    <p class="m-0 mb-3 font-sans text-[15px] leading-[1.5] text-[#454545] [&_a]:text-cobalt [&_a]:no-underline [&_a:hover]:underline">{{ $page.Content | markdownify | safeHTML }}</p>
     {{ with $page.Params.link }}<span style="display: inline-block;"><a href="{{ . }}" data-event="Project Link Click" data-event-project="{{ $page.Title }}" style="border-bottom: 1px solid #1A39E0; padding-bottom: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #1A39E0; text-decoration: none;">{{ $page.Params.linktext | default "View project →" }}</a></span>{{ end }}
   </div>
 </article>
