@@ -1,0 +1,26 @@
+{{- $posts := (where .Site.RegularPages "Section" "posts").ByDate.Reverse -}}
+{{- $items := slice -}}
+{{- range $posts -}}
+  {{- $item := dict
+    "id" .Permalink
+    "url" .Permalink
+    "title" .Title
+    "summary" (.Summary | plainify | htmlUnescape)
+    "content_html" .Content
+    "date_published" (.Date.Format "2006-01-02T15:04:05Z07:00")
+  -}}
+  {{- with .Params.updated }}{{ $item = merge $item (dict "date_modified" (time.Format "2006-01-02T15:04:05Z07:00" .)) }}{{ end -}}
+  {{- with .Params.subjects }}{{ $item = merge $item (dict "tags" .) }}{{ end -}}
+  {{- $items = $items | append $item -}}
+{{- end -}}
+{{- $feed := dict
+  "version" "https://jsonfeed.org/version/1.1"
+  "title" (printf "%s — Writing" .Site.Title)
+  "home_page_url" .Permalink
+  "feed_url" (printf "%sindex.json" .Permalink)
+  "description" .Site.Params.description
+  "language" "en-us"
+  "authors" (slice (dict "name" .Site.Params.academicName "url" .Site.BaseURL))
+  "items" $items
+-}}
+{{ $feed | jsonify (dict "indent" "  ") }}

@@ -7,6 +7,13 @@
       "runtimeArgs": ["server", "--disableFastRender", "--port", "1315"],
       "autoPort": false,
       "port": 1315
+    },
+    {
+      "name": "hugo-drafts",
+      "runtimeExecutable": "hugo",
+      "runtimeArgs": ["server", "-D", "--disableFastRender", "--port", "1316"],
+      "autoPort": false,
+      "port": 1316
     }
   ]
 }

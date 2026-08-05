@@ -16,7 +16,7 @@
         <a href="/about/" class="border-b border-cobalt pb-[3px] font-mono text-[12.5px] text-cobalt no-underline">more about me &rarr;</a>
       </div>
     </div>
-    <img src="/images/headshot-oct25-web.jpg" alt="Portrait of Amanda E. Regan, historian of digital and computational history at Clemson University" class="order-first md:order-none h-[300px] sm:h-[360px] w-full rounded-lg object-cover shadow-xl">
+    <img src="/images/headshot-oct25-home.jpg" alt="Portrait of Amanda E. Regan, historian of digital and computational history at Clemson University" class="order-first md:order-none h-[300px] sm:h-[360px] w-full rounded-lg object-cover shadow-xl">
   </div>
 </section>
 
@@ -53,19 +53,47 @@
 </section>
 {{ end }}
 
+<!-- WRITING -->
+{{ $posts := (where .Site.RegularPages "Section" "posts") }}
+{{ $posts = ($posts.ByDate.Reverse) | first 2 }}
+{{ if $posts }}
+<section class="border-t border-hairline bg-porcelain">
+  <div class="mx-auto max-w-[1180px] px-6 sm:px-10 lg:px-14 py-[54px]">
+    <div class="mb-7 flex items-baseline justify-between">
+      <h2 class="m-0 font-heading text-3xl font-bold text-ink">Writing</h2>
+      <a href="/posts/" class="font-mono text-xs text-cobalt no-underline">all posts &rarr;</a>
+    </div>
+    <div>
+      {{ range $posts }}
+      <a href="{{ .RelPermalink }}" class="group grid grid-cols-[110px_1fr] items-baseline gap-6 border-b border-hairline py-[20px] no-underline">
+        <div class="text-sm font-medium text-ink">
+          <div class="font-mono">{{ .Date.Format "Jan 2" }}</div>
+          <div class="font-mono text-xs text-[#6B6B6B]">{{ .Date.Year }}</div>
+        </div>
+        <div>
+          <div class="font-sans text-lg font-semibold leading-snug text-ink group-hover:text-cobalt">{{ .Title }}</div>
+          <p class="mt-1 max-w-[70ch] font-sans text-sm leading-[1.55] text-[#6B6B6B]">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 200 }}{{ end }}</p>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
 <!-- SPEAKING & EVENTS -->
 {{ $events := (where .Site.RegularPages "Section" "events") }}
 {{ $events = (sort $events "Date" "desc") | first .Site.Params.maxEvents }}
 {{ if $events }}
-<section class="border-t border-hairline bg-porcelain">
-  <div class="mx-auto max-w-[1180px] px-6 sm:px-10 lg:px-14 py-[54px]">
-    <div class="mb-7 flex items-baseline justify-between">
+<section class="border-t border-hairline bg-white">
+  <div class="mx-auto max-w-[1180px] px-6 sm:px-10 lg:px-14 py-10">
+    <div class="mb-5 flex items-baseline justify-between">
       <h2 class="m-0 font-heading text-3xl font-bold text-ink">Speaking & events</h2>
       <span class="font-mono text-xs font-medium uppercase tracking-wider text-[#888]">Upcoming</span>
     </div>
     <div>
       {{ range $events }}
-      <div class="grid grid-cols-[110px_1fr] items-baseline gap-6 border-b border-hairline py-[20px]">
+      <div class="grid grid-cols-[110px_1fr] items-baseline gap-6 border-b border-hairline py-3.5">
         <div class="text-sm font-medium text-ink">
           <div class="font-mono">{{ .Params.date_event }}</div>
           <div class="font-mono text-xs text-[#6B6B6B]">{{ .Date.Year }}</div>
