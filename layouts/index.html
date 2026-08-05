@@ -87,9 +87,8 @@
 {{ if $events }}
 <section class="border-t border-hairline bg-white">
   <div class="mx-auto max-w-[1180px] px-6 sm:px-10 lg:px-14 py-10">
-    <div class="mb-5 flex items-baseline justify-between">
+    <div class="mb-5">
       <h2 class="m-0 font-heading text-3xl font-bold text-ink">Speaking & events</h2>
-      <span class="font-mono text-xs font-medium uppercase tracking-wider text-[#888]">Upcoming</span>
     </div>
     <div>
       {{ range $events }}
@@ -99,6 +98,9 @@
           <div class="font-mono text-xs text-[#6B6B6B]">{{ .Date.Year }}</div>
         </div>
         <div>
+          {{ if eq .Permalink (index $events 0).Permalink }}
+          <span class="mb-[9px] mr-2 inline-block rounded-sm bg-cobalt px-2 py-1 font-mono text-xs font-medium uppercase tracking-wider text-white">Upcoming</span>
+          {{ end }}
           {{ if .Params.role }}
             {{ if eq .Params.role "Speaker" }}
               <span class="mb-[9px] inline-block bg-ink text-white px-2 py-1 font-mono text-xs font-medium uppercase tracking-wider rounded-sm">{{ .Params.role }}</span>
