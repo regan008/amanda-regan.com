@@ -65,14 +65,13 @@
     </div>
     <div>
       {{ range $posts }}
-      <a href="{{ .RelPermalink }}" class="group grid grid-cols-[110px_1fr] items-baseline gap-6 border-b border-hairline py-[20px] no-underline">
+      <a href="{{ .RelPermalink }}" class="group grid grid-cols-[110px_1fr] items-center gap-6 border-b border-hairline py-[20px] no-underline">
         <div class="text-sm font-medium text-ink">
           <div class="font-mono">{{ .Date.Format "Jan 2" }}</div>
           <div class="font-mono text-xs text-[#6B6B6B]">{{ .Date.Year }}</div>
         </div>
         <div>
           <div class="font-sans text-lg font-semibold leading-snug text-ink group-hover:text-cobalt">{{ .Title }}</div>
-          <p class="mt-1 max-w-[70ch] font-sans text-sm leading-[1.55] text-[#6B6B6B]">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 200 }}{{ end }}</p>
         </div>
       </a>
       {{ end }}
