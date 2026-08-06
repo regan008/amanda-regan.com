@@ -1,7 +1,10 @@
 baseURL = 'https://amanda-regan.com/'
 locale = 'en-us'
 title = 'Amanda Regan'
-disableKinds = ["taxonomy", "term"]
+
+# Topic hubs for blog posts: front-matter key `subjects` → /subjects/<term>/
+[taxonomies]
+  subject = "subjects"
 
 [params]
   description = "Amanda E. Regan is a historian of digital and computational history, Assistant Professor at Clemson University, and director of its Digital History Ph.D. program."

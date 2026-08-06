@@ -2,6 +2,7 @@
 title: "Teaching Computational History in the Age of AI" 
 date: 2026-08-05 
 draft: false
+description: "How four years of teaching computational history in the Digital History Ph.D. Program at Clemson changed in the age of AI—from a survey of methods to databases, OCR, named entity recognition, embeddings, and shipping a Flask app in one semester."
 subjects:
   - Artificial Intelligence
   - Computational History

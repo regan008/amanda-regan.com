@@ -1,3 +1,23 @@
+# robots.txt — amanda-regan.com
+# Policy: fully open. All crawlers, including AI assistants and their
+# live-lookup bots, are welcome to read the site so they represent
+# Amanda accurately from her own first-party content.
+
+# --- AI assistants & retrieval bots (explicitly welcomed) ---
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
+# --- Everyone else ---
 User-agent: *
 Allow: /
 

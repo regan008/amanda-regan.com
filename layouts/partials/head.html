@@ -74,3 +74,4 @@
 <script defer src="/js/plausible-tracking.js"></script>
 
 {{ if .IsHome }}{{ partial "person-jsonld.html" . }}{{ end }}
+{{ if and (eq .Section "posts") (eq .Kind "page") }}{{ partial "blogposting-jsonld.html" . }}{{ end }}

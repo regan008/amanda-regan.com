@@ -1,0 +1,37 @@
+{{- /* BlogPosting structured data for blog posts.
+       Ties each post to Amanda's scholarly identity (ORCID, Scholar, etc.)
+       via author.sameAs, and exposes headline, dates, and topic keywords. */ -}}
+{{- $description := .Description | default .Summary | default .Site.Params.description -}}
+{{- $image := .Params.image | default .Site.Params.ogimage -}}
+{{- $modified := .Date -}}
+{{- with .Params.updated }}{{ $modified = (time.AsTime .) }}{{ end -}}
+
+{{- $sameAs := slice -}}
+{{- with .Site.Params.social.orcid }}{{ $sameAs = $sameAs | append (printf "https://orcid.org/%s" .) }}{{ end -}}
+{{- with .Site.Params.social.scholar }}{{ $sameAs = $sameAs | append (printf "https://scholar.google.com/citations?user=%s" .) }}{{ end -}}
+{{- with .Site.Params.social.github }}{{ $sameAs = $sameAs | append (printf "https://github.com/%s" .) }}{{ end -}}
+{{- with .Site.Params.social.linkedin }}{{ $sameAs = $sameAs | append (printf "https://www.linkedin.com/in/%s" .) }}{{ end -}}
+{{- with .Site.Params.social.bluesky }}{{ $sameAs = $sameAs | append (printf "https://bsky.app/profile/%s" .) }}{{ end -}}
+{{- with .Site.Params.social.department }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+
+{{- $author := dict
+    "@type" "Person"
+    "name" .Site.Params.academicName
+    "url" (absURL "/about/")
+    "sameAs" $sameAs -}}
+
+{{- $data := dict
+    "@context" "https://schema.org"
+    "@type" "BlogPosting"
+    "headline" .Title
+    "description" $description
+    "url" .Permalink
+    "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" ($modified.Format "2006-01-02T15:04:05Z07:00")
+    "author" $author
+    "publisher" $author -}}
+{{- with $image }}{{ $data = merge $data (dict "image" (. | absURL)) }}{{ end -}}
+{{- with .Params.subjects }}{{ $data = merge $data (dict "keywords" (delimit . ", ")) }}{{ end -}}
+
+<script type="application/ld+json">{{ jsonify (dict "indent" "  ") $data | safeJS }}</script>
