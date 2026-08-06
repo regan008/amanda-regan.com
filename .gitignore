@@ -30,8 +30,8 @@ pnpm-lock.yaml
 ._*
 .Spotlight-V100
 .Trashes
-* (Amanda Regan's conflicted copy *)
-*.conflicted copy *
+# Dropbox conflicted copies (any machine name / any file type)
+*conflicted copy*
 
 # Windows
 Thumbs.db
