@@ -3,13 +3,16 @@
 
 <section class="border-t border-hairline bg-white">
   <div class="mx-auto max-w-[1180px] px-6 sm:px-10 lg:px-14 py-[54px]">
-    {{ range .Pages.ByDate.Reverse }}
+    {{ range (sort .Pages "Params.event_date" "desc") }}
     <div class="grid grid-cols-[110px_1fr] items-baseline gap-6 border-b border-hairline py-[20px]">
       <div class="text-sm font-medium text-ink">
         <div class="font-mono">{{ .Params.date_event }}</div>
-        <div class="font-mono text-xs text-[#6B6B6B]">{{ .Date.Year }}</div>
+        <div class="font-mono text-xs text-[#6B6B6B]">{{ (.Params.event_date | default .Date) | time.Format "2006" }}</div>
       </div>
       <div>
+        {{ if ge (time.AsTime (.Params.event_date | default .Date)) now }}
+        <span class="mb-[9px] mr-2 inline-block rounded-sm bg-cobalt px-2 py-1 font-mono text-xs font-medium uppercase tracking-wider text-white">Upcoming</span>
+        {{ end }}
         {{ if .Params.role }}
           {{ if eq .Params.role "Speaker" }}
             <span class="mb-[9px] inline-block bg-ink text-white px-2 py-1 font-mono text-xs font-medium uppercase tracking-wider rounded-sm">{{ .Params.role }}</span>
