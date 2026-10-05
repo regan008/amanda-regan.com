@@ -25,13 +25,24 @@
 {{ if .enabled }}
 <section class="bg-ink text-white">
   <div class="mx-auto grid max-w-[1180px] grid-cols-1 md:grid-cols-[220px_1fr] items-center gap-8 md:gap-12 px-6 sm:px-10 lg:px-14 py-12 md:py-14">
+    {{ with .cover }}
+    <img src="{{ . }}" alt="{{ $.Params.book.title }} book cover" class="mx-auto md:mx-0 h-[320px] w-[220px] rounded object-cover shadow-2xl" />
+    {{ else }}
     <div class="mx-auto md:mx-0 flex h-[320px] w-[220px] items-center justify-center rounded bg-white/10 font-mono text-xs text-white/60 shadow-2xl">book cover placeholder</div>
+    {{ end }}
     <div>
       {{ partial "eyebrow.html" (dict "text" .eyebrow "dark" true) }}
       <h2 class="m-0 mb-2.5 font-heading text-[32px] sm:text-[40px] lg:text-[46px] font-extrabold leading-[1.05] lg:leading-[1.02] tracking-tight text-white">{{ .title }}</h2>
       <div class="mb-5 font-sans text-[19px] leading-[1.4] text-[#9a9a9a]">{{ .subtitle }}</div>
-      <p class="mb-[26px] max-w-[60ch] font-sans text-[17px] leading-[1.65] text-[#c4c4c4]">{{ .description }}</p>
-      <a href="{{ .link }}" class="border-b border-cobalt pb-1 font-mono text-xs text-white no-underline">read more &rarr;</a>
+      <p class="mb-[26px] max-w-[60ch] font-sans text-[17px] leading-[1.65] text-[#c4c4c4]">{{ .description | markdownify | replaceRE "</?p>" "" | safeHTML }}</p>
+      {{ with .preorder }}
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-2.5">
+        <span class="font-mono text-[11px] uppercase tracking-widest2 text-[#9a9a9a]">Preorder</span>
+        {{ range . }}
+        {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="border-b border-cobalt pb-1 font-mono text-xs text-white no-underline hover:text-cobalt-soft">{{ .label }} &rarr;</a>{{ end }}
+        {{ end }}
+      </div>
+      {{ end }}
     </div>
   </div>
 </section>
