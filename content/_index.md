@@ -13,7 +13,7 @@ book:
     - label: "UVA Press"
       url: "https://www.upress.virginia.edu/title/10278/"
     - label: "Amazon"
-      url: "https://www.amazon.com/Shaping-Up-Physical-Fitness-American/dp/081395665X"
+      url: "https://www.amazon.com/Shaping-Up-Physical-Fitness-American/dp/0813956668"
 contact:
   heading: "Let's talk history & data"
   text: "If you are a prospective student, interested in my research, want to talk about a collaboration, curious about the possabilities and limits of AI for historical work, or need someone to speak about digital history, get in touch."
