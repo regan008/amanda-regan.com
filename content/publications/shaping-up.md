@@ -6,7 +6,8 @@ date: 2026-06-01
 status: forthcoming
 publisher: "University of Virginia Press"
 cover:
-  enabled: false
+  enabled: true
+  image: "/images/shapingup_cover.JPG"
 draft: false
 ---
 
